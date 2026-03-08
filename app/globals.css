@@ -227,6 +227,8 @@
 
 /* Leaflet CSS import */
 @import "leaflet/dist/leaflet.css";
+@import "leaflet.markercluster/dist/MarkerCluster.css";
+@import "leaflet.markercluster/dist/MarkerCluster.Default.css";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
@@ -242,6 +244,12 @@
 
 /* Provider marker: remove default Leaflet divIcon styling */
 .provider-marker {
+  background: none !important;
+  border: none !important;
+}
+
+/* Cluster marker: remove default Leaflet divIcon styling */
+.provider-cluster {
   background: none !important;
   border: none !important;
 }

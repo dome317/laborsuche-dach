@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect, useRef, useCallback } from "react";
+import { useEffect, useRef } from "react";
 import { useLeafletMap } from "@/hooks/useLeafletMap";
 import { useProviders } from "@/contexts/ProviderContext";
 import type { Provider, ProviderCategory } from "@/types/provider";
-import type { Marker } from "leaflet";
+import type { Marker, MarkerClusterGroup } from "leaflet";
 
 export const CATEGORY_COLORS: Record<ProviderCategory, string> = {
   dexa_body_composition: "#2563EB",
@@ -69,6 +69,31 @@ export function getMainCategory(provider: Provider): ProviderCategory {
   return "blutlabor";
 }
 
+/** Determine majority category color for a cluster */
+function getClusterColor(childMarkers: Marker[]): string {
+  const counts: Record<ProviderCategory, number> = {
+    dexa_body_composition: 0,
+    blutlabor: 0,
+    both: 0,
+  };
+
+  childMarkers.forEach((m) => {
+    const cat = (m.options as { category?: ProviderCategory }).category;
+    if (cat) counts[cat]++;
+  });
+
+  let maxCat: ProviderCategory = "dexa_body_composition";
+  let maxCount = 0;
+  for (const [cat, count] of Object.entries(counts)) {
+    if (count > maxCount) {
+      maxCount = count;
+      maxCat = cat as ProviderCategory;
+    }
+  }
+
+  return CATEGORY_COLORS[maxCat];
+}
+
 export function useProviderMarkers() {
   const map = useLeafletMap();
   const {
@@ -77,25 +102,70 @@ export function useProviderMarkers() {
     setSelectedProviderId,
   } = useProviders();
   const markersRef = useRef<Map<string, Marker>>(new Map());
+  const clusterGroupRef = useRef<MarkerClusterGroup | null>(null);
   const leafletRef = useRef<typeof import("leaflet") | null>(null);
 
-  // Load leaflet once
+  // Load leaflet + markercluster once
   useEffect(() => {
-    import("leaflet").then((L) => {
+    Promise.all([
+      import("leaflet"),
+      import("leaflet.markercluster"),
+    ]).then(([L]) => {
       leafletRef.current = L;
     });
   }, []);
 
-  // Render markers based on filtered providers
+  // Render markers with clustering
   useEffect(() => {
     if (!map || !leafletRef.current) return;
     const L = leafletRef.current;
+
+    // Create cluster group if needed
+    if (!clusterGroupRef.current) {
+      clusterGroupRef.current = L.markerClusterGroup({
+        showCoverageOnHover: false,
+        maxClusterRadius: 50,
+        spiderfyOnMaxZoom: true,
+        iconCreateFunction: (cluster) => {
+          const childMarkers = cluster.getAllChildMarkers();
+          const count = cluster.getChildCount();
+          const color = getClusterColor(childMarkers);
+
+          // Size based on count
+          const size = count < 10 ? 36 : count < 50 ? 44 : 52;
+
+          return L.divIcon({
+            html: `<div style="
+              width: ${size}px;
+              height: ${size}px;
+              border-radius: 50%;
+              background: ${color};
+              border: 3px solid white;
+              box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: white;
+              font-weight: bold;
+              font-size: ${size < 40 ? "13" : "15"}px;
+              font-family: sans-serif;
+            ">${count}</div>`,
+            className: "provider-cluster",
+            iconSize: [size, size],
+            iconAnchor: [size / 2, size / 2],
+          });
+        },
+      });
+      map.addLayer(clusterGroupRef.current);
+    }
+
+    const clusterGroup = clusterGroupRef.current;
 
     // Remove old markers that are no longer in filtered set
     const filteredIds = new Set(filteredProviders.map((p) => p.id));
     markersRef.current.forEach((marker, id) => {
       if (!filteredIds.has(id)) {
-        marker.remove();
+        clusterGroup.removeLayer(marker);
         markersRef.current.delete(id);
       }
     });
@@ -141,7 +211,10 @@ export function useProviderMarkers() {
         popupAnchor: [0, -height],
       });
 
-      const marker = L.marker([lat, lng], { icon }).addTo(map);
+      const marker = L.marker([lat, lng], {
+        icon,
+        category, // Store category for cluster color calculation
+      } as L.MarkerOptions & { category: ProviderCategory });
       marker.on("click", () => {
         setSelectedProviderId(provider.id);
       });
@@ -150,11 +223,12 @@ export function useProviderMarkers() {
         marker.setZIndexOffset(1000);
       }
 
+      clusterGroup.addLayer(marker);
       markersRef.current.set(provider.id, marker);
     });
   }, [map, filteredProviders, selectedProviderId, setSelectedProviderId]);
 
-  // Fit bounds when filtered providers change (not on selection change)
+  // Fit bounds when filtered providers change
   useEffect(() => {
     if (!map || filteredProviders.length === 0) return;
 
@@ -186,7 +260,11 @@ export function useProviderMarkers() {
   // Cleanup on unmount
   useEffect(() => {
     return () => {
-      markersRef.current.forEach((m) => m.remove());
+      if (clusterGroupRef.current) {
+        clusterGroupRef.current.clearLayers();
+        clusterGroupRef.current.remove();
+        clusterGroupRef.current = null;
+      }
       markersRef.current.clear();
     };
   }, []);
