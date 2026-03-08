@@ -21,15 +21,16 @@ def load_config() -> dict:
         return yaml.safe_load(f)
 
 
-def normalize_domain(url: str | None) -> str | None:
-    """Extract and normalize domain from URL."""
+def normalize_url_key(url: str | None) -> str | None:
+    """Extract normalized URL key for dedup (domain + path, no query/fragment)."""
     if not url:
         return None
     try:
         parsed = urlparse(url)
-        domain = parsed.netloc or parsed.path
-        domain = domain.lower().removeprefix("www.")
-        return domain
+        domain = (parsed.netloc or parsed.path).lower().removeprefix("www.")
+        # Include path to distinguish multi-location businesses (e.g. meindirektlabor.de/standorte/kiel/)
+        path = parsed.path.rstrip("/").lower()
+        return domain + path if path and path != "/" else domain
     except Exception:
         return None
 
@@ -122,7 +123,7 @@ def main() -> None:
     to_remove: set[int] = set()
 
     for i, c in enumerate(candidates):
-        domain = normalize_domain(c.get("raw_website"))
+        domain = normalize_url_key(c.get("raw_website"))
         phone = normalize_phone_for_dedup(c.get("raw_phone"))
 
         # Hard match: same domain

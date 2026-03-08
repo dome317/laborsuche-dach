@@ -99,7 +99,11 @@ def main() -> None:
         if address:
             address = normalize_address(address)
 
-        print(f"  [{i+1}/{len(candidates)}] Geocoding {candidate.get('raw_name', 'unknown')}...")
+        name = candidate.get('raw_name', 'unknown')
+        try:
+            print(f"  [{i+1}/{len(candidates)}] Geocoding {name}...")
+        except UnicodeEncodeError:
+            print(f"  [{i+1}/{len(candidates)}] Geocoding {name.encode('ascii', 'replace').decode()}...")
         time.sleep(1.1)  # Rate limiting
 
         lat, lng = geocode_address(geolocator, address, city, country, cache)

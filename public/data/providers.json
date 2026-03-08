@@ -1,117 +1,169 @@
 {
   "meta": {
-    "version": "0.2.0",
-    "generatedAt": "2026-03-08T12:00:00Z",
-    "totalCount": 5,
-    "regions": ["DE", "AT"]
+    "version": "2.0.0",
+    "generatedAt": "2026-03-08T23:33:02Z",
+    "totalCount": 88,
+    "regions": [
+      "AT",
+      "CH",
+      "DE"
+    ]
   },
   "providers": [
     {
-      "id": "dexa-muc-001",
-      "name": "DEXA Zentrum München",
-      "slug": "dexa-zentrum-muenchen",
-      "categories": ["dexa_body_composition"],
+      "id": "blut-cgn-001",
+      "name": "Mein Direktlabor - Labor Köln",
+      "slug": "mein-direktlabor-labor-koeln",
+      "categories": [
+        "blutlabor"
+      ],
       "address": {
-        "street": "Leopoldstraße 31",
-        "postalCode": "80802",
-        "city": "München",
-        "state": "Bayern",
+        "street": "Hauptstraße 71-73",
+        "postalCode": "",
+        "city": "Köln",
+        "state": "Nordrhein-Westfalen",
         "country": "DE"
       },
       "location": {
         "type": "Point",
-        "coordinates": [11.5820, 48.1551]
+        "coordinates": [
+          6.9952764,
+          50.8933481
+        ]
       },
       "contact": {
-        "phone": "+49 89 12345678",
-        "website": "https://www.dexa-zentrum-muenchen.de",
-        "email": "info@dexa-zentrum-muenchen.de",
-        "bookingUrl": "https://www.dexa-zentrum-muenchen.de/termin"
+        "phone": "+492219355560",
+        "website": "https://www.meindirektlabor.de",
+        "email": null,
+        "bookingUrl": null
       },
       "services": [
         {
-          "type": "dexa_body_composition",
-          "name": "DEXA Ganzkörper Body Composition",
-          "description": "Ganzkörper-Körperzusammensetzung: Fettmasse, Magermasse, Knochenmineralgehalt. Regionale Analyse inkl. viszerales Fett.",
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
           "selfPay": true,
-          "price": {
-            "amount": 149,
-            "currency": "EUR",
-            "note": "Erstmessung inkl. Auswertungsgespräch"
-          },
+          "price": null,
           "verification": {
-            "status": "verified",
-            "confidence": 0.9,
-            "date": "2026-03-01",
-            "method": "website_service_page",
-            "notes": "Telefonisch bestätigt, Selbstzahler-DEXA Body Comp verfügbar"
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
           }
         }
       ],
       "selfPay": true,
-      "verified": true,
+      "verified": false,
       "source": {
-        "origin": "manual_research",
-        "primaryUrl": "https://www.dexa-zentrum-muenchen.de",
-        "collectedAt": "2026-03-01T10:00:00Z"
+        "origin": "apify",
+        "primaryUrl": "https://www.meindirektlabor.de",
+        "collectedAt": "2026-03-08T23:33:02Z"
       },
-      "tags": ["dexa", "body-composition", "selbstzahler", "muenchen"]
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "köln"
+      ]
     },
     {
-      "id": "blut-hh-001",
-      "name": "Mein Direktlabor Hamburg",
-      "slug": "mein-direktlabor-hamburg",
-      "categories": ["blutlabor"],
+      "id": "blut-düs-012",
+      "name": "MVZ amedes für Praenatal-Medizin und Genetik GmbH",
+      "slug": "mvz-amedes-fuer-praenatal-medizin-und-genetik-gmbh",
+      "categories": [
+        "blutlabor"
+      ],
       "address": {
-        "street": "Mönckebergstraße 22",
-        "postalCode": "20095",
+        "street": "Graf-Adolf-Straße 35",
+        "postalCode": "",
+        "city": "Düsseldorf",
+        "state": "Nordrhein-Westfalen",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          6.7824307,
+          51.2185534
+        ]
+      },
+      "contact": {
+        "phone": "+49211384570",
+        "website": "http://www.praenatal.de",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "http://www.praenatal.de",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "düsseldorf"
+      ]
+    },
+    {
+      "id": "blut-hh-014",
+      "name": "Mein Direktlabor - Labor Stephansplatz",
+      "slug": "mein-direktlabor-labor-stephansplatz",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Stephanspl. 3",
+        "postalCode": "",
         "city": "Hamburg",
         "state": "Hamburg",
         "country": "DE"
       },
       "location": {
         "type": "Point",
-        "coordinates": [10.0014, 53.5520]
+        "coordinates": [
+          9.9883831,
+          53.5578644
+        ]
       },
       "contact": {
-        "phone": "+49 40 98765432",
-        "website": "https://www.meindirektlabor.de/hamburg",
-        "email": "hamburg@meindirektlabor.de",
-        "bookingUrl": "https://www.meindirektlabor.de/hamburg/termin"
+        "phone": "+494076696700",
+        "website": "https://www.meindirektlabor.de/standorte/standort/labor-stephansplatz",
+        "email": null,
+        "bookingUrl": null
       },
       "services": [
         {
           "type": "blood_test_self_pay",
-          "name": "Großes Blutbild Selbstzahler",
-          "description": "Komplettes Blutbild mit Differenzierung. Ohne Überweisung, Ergebnis in 24h online abrufbar.",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
           "selfPay": true,
           "price": {
-            "amount": 89,
+            "amount": 16.0,
             "currency": "EUR",
-            "note": "Ergebnis online in 24h"
+            "note": "ab 16 "
           },
           "verification": {
             "status": "verified",
             "confidence": 0.95,
-            "date": "2026-03-02",
-            "method": "official_directory",
-            "notes": "Online-Buchung und Preise öffentlich einsehbar"
-          }
-        },
-        {
-          "type": "blood_test_self_pay",
-          "name": "Schilddrüsen-Check",
-          "description": "TSH, fT3, fT4 — Schilddrüsenfunktion als Selbstzahler-Leistung.",
-          "selfPay": true,
-          "price": {
-            "amount": 49,
-            "currency": "EUR",
-            "note": null
-          },
-          "verification": {
-            "status": "verified",
-            "confidence": 0.95,
-            "date": "2026-03-02",
+            "date": "2026-03-08",
             "method": "official_directory",
             "notes": null
           }
@@ -121,181 +173,5028 @@
       "verified": true,
       "source": {
         "origin": "meindirektlabor",
-        "primaryUrl": "https://www.meindirektlabor.de/hamburg",
-        "collectedAt": "2026-03-02T14:00:00Z"
+        "primaryUrl": "https://www.meindirektlabor.de/standorte/standort/labor-stephansplatz",
+        "collectedAt": "2026-03-08T23:33:02Z"
       },
-      "tags": ["blutlabor", "selbstzahler", "hamburg", "direktlabor"]
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "hamburg",
+        "direktlabor"
+      ]
     },
     {
-      "id": "dexa-ber-001",
-      "name": "BodyScan Berlin",
-      "slug": "bodyscan-berlin",
-      "categories": ["dexa_body_composition"],
+      "id": "blut-bay-029",
+      "name": "Mein Direktlabor - Labor Bayreuth",
+      "slug": "mein-direktlabor-labor-bayreuth",
+      "categories": [
+        "blutlabor"
+      ],
       "address": {
-        "street": "Friedrichstraße 113",
-        "postalCode": "10117",
-        "city": "Berlin",
-        "state": "Berlin",
+        "street": "Karl-Marx-Straße 7A",
+        "postalCode": "",
+        "city": "Bayreuth",
+        "state": "Bayreuth",
         "country": "DE"
       },
       "location": {
         "type": "Point",
-        "coordinates": [13.3886, 52.5244]
+        "coordinates": [
+          11.5752803,
+          49.9500954
+        ]
       },
       "contact": {
-        "phone": "+49 30 55667788",
-        "website": "https://www.bodyscan-berlin.de",
-        "email": "kontakt@bodyscan-berlin.de",
+        "phone": "+49921507204566",
+        "website": "https://www.meindirektlabor.de/standorte/standort/labor-staber-bayreuth",
+        "email": null,
         "bookingUrl": null
       },
       "services": [
         {
-          "type": "dexa_body_composition",
-          "name": "DEXA Body Composition Scan",
-          "description": "Präzise Messung von Körperfett, Muskelmasse und Knochendichte. Segmentale Analyse für Arme, Beine und Rumpf.",
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
           "selfPay": true,
           "price": {
-            "amount": 129,
+            "amount": 18.0,
             "currency": "EUR",
-            "note": "Folgemessung 99 EUR"
+            "note": "ab 18 "
           },
           "verification": {
             "status": "verified",
-            "confidence": 0.85,
-            "date": "2026-03-03",
-            "method": "website_homepage",
-            "notes": "Website bestätigt DEXA Body Composition, Preise verifiziert"
+            "confidence": 0.95,
+            "date": "2026-03-08",
+            "method": "official_directory",
+            "notes": null
           }
         }
       ],
       "selfPay": true,
       "verified": true,
       "source": {
-        "origin": "google_places",
-        "primaryUrl": "https://www.bodyscan-berlin.de",
-        "collectedAt": "2026-03-03T09:00:00Z"
+        "origin": "meindirektlabor",
+        "primaryUrl": "https://www.meindirektlabor.de/standorte/standort/labor-staber-bayreuth",
+        "collectedAt": "2026-03-08T23:33:02Z"
       },
-      "tags": ["dexa", "body-composition", "selbstzahler", "berlin"]
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "bayreuth",
+        "direktlabor"
+      ]
     },
     {
-      "id": "blut-han-001",
-      "name": "Labor Hannover Nord",
-      "slug": "labor-hannover-nord",
-      "categories": ["blutlabor"],
+      "id": "blut-lei-030",
+      "name": "Bioscientia Labor Stuttgart",
+      "slug": "bioscientia-labor-stuttgart",
+      "categories": [
+        "blutlabor"
+      ],
       "address": {
-        "street": "Podbielskistraße 168",
-        "postalCode": "30177",
-        "city": "Hannover",
-        "state": "Niedersachsen",
+        "street": "Leinfelder Str. 60",
+        "postalCode": "",
+        "city": "Leinfelden-Echterdingen",
+        "state": "Leinfelden-Echterdingen",
         "country": "DE"
       },
       "location": {
         "type": "Point",
-        "coordinates": [9.7850, 52.3963]
+        "coordinates": [
+          9.1597942,
+          48.691338
+        ]
       },
       "contact": {
-        "phone": "+49 511 33445566",
-        "website": "https://www.labor-hannover-nord.de",
-        "email": "info@labor-hannover-nord.de",
+        "phone": "+497116522430",
+        "website": "https://labor-stuttgart.bioscientia.de",
+        "email": null,
         "bookingUrl": null
       },
       "services": [
         {
           "type": "blood_test_self_pay",
-          "name": "Basis-Blutcheck Selbstzahler",
-          "description": "Blutbild, Leber- und Nierenwerte, Blutzucker, Cholesterin. Keine Überweisung nötig.",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
           "selfPay": true,
-          "price": {
-            "amount": 69,
-            "currency": "EUR",
-            "note": "Ergebnis in 2 Werktagen"
-          },
+          "price": null,
           "verification": {
             "status": "unverified",
             "confidence": 0.6,
-            "date": "2026-03-04",
+            "date": "2026-03-08",
             "method": "google_places",
-            "notes": "Selbstzahler-Option auf Website erwähnt, Preise nicht vollständig"
+            "notes": null
           }
         }
       ],
       "selfPay": true,
       "verified": false,
       "source": {
-        "origin": "manual_research",
-        "primaryUrl": "https://www.labor-hannover-nord.de",
-        "collectedAt": "2026-03-04T11:00:00Z"
+        "origin": "apify",
+        "primaryUrl": "https://labor-stuttgart.bioscientia.de",
+        "collectedAt": "2026-03-08T23:33:02Z"
       },
-      "tags": ["blutlabor", "selbstzahler", "hannover"]
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "leinfelden-echterdingen"
+      ]
     },
     {
-      "id": "both-wien-001",
-      "name": "Diagnostikum Wien",
-      "slug": "diagnostikum-wien",
-      "categories": ["dexa_body_composition", "blutlabor"],
+      "id": "blut-mai-031",
+      "name": "Mein Direktlabor - Labor Mainz",
+      "slug": "mein-direktlabor-labor-mainz",
+      "categories": [
+        "blutlabor"
+      ],
       "address": {
-        "street": "Mariahilfer Straße 45",
-        "postalCode": "1060",
-        "city": "Wien",
-        "state": "Wien",
-        "country": "AT"
+        "street": "Wallstraße 3",
+        "postalCode": "",
+        "city": "Mainz",
+        "state": "Mainz",
+        "country": "DE"
       },
       "location": {
         "type": "Point",
-        "coordinates": [16.3523, 48.1962]
+        "coordinates": [
+          8.2565751,
+          50.0001244
+        ]
       },
       "contact": {
-        "phone": "+43 1 9876543",
-        "website": "https://www.diagnostikum-wien.at",
-        "email": "office@diagnostikum-wien.at",
-        "bookingUrl": "https://www.diagnostikum-wien.at/buchen"
+        "phone": "+494961315760860",
+        "website": "https://www.meindirektlabor.de/standorte/standort/labor-mainz",
+        "email": null,
+        "bookingUrl": null
       },
       "services": [
         {
-          "type": "dexa_body_composition",
-          "name": "DEXA Körperzusammensetzung",
-          "description": "Ganzkörper-DEXA zur Bestimmung von Fett- und Muskelmasse. Inklusive viszeralem Fett-Score.",
-          "selfPay": true,
-          "price": {
-            "amount": 159,
-            "currency": "EUR",
-            "note": "Privatleistung"
-          },
-          "verification": {
-            "status": "verified",
-            "confidence": 0.9,
-            "date": "2026-03-05",
-            "method": "website_service_page",
-            "notes": "Als Selbstzahler-Leistung auf Website bestätigt"
-          }
-        },
-        {
           "type": "blood_test_self_pay",
-          "name": "Blutanalyse Premium",
-          "description": "Umfangreiches Blutbild mit über 40 Parametern. Hormonstatus, Vitamine, Mineralstoffe.",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
           "selfPay": true,
           "price": {
-            "amount": 199,
+            "amount": 15.0,
             "currency": "EUR",
-            "note": "Alle Parameter inkl. Befundbesprechung"
+            "note": "ab 15 "
           },
           "verification": {
             "status": "verified",
-            "confidence": 0.7,
-            "date": "2026-03-05",
-            "method": "website_homepage",
-            "notes": "Blutanalyse auf Homepage erwähnt"
+            "confidence": 0.95,
+            "date": "2026-03-08",
+            "method": "official_directory",
+            "notes": null
           }
         }
       ],
       "selfPay": true,
       "verified": true,
       "source": {
-        "origin": "manual_research",
-        "primaryUrl": "https://www.diagnostikum-wien.at",
-        "collectedAt": "2026-03-05T15:00:00Z"
+        "origin": "meindirektlabor",
+        "primaryUrl": "https://www.meindirektlabor.de/standorte/standort/labor-mainz",
+        "collectedAt": "2026-03-08T23:33:02Z"
       },
-      "tags": ["dexa", "body-composition", "blutlabor", "selbstzahler", "wien", "österreich"]
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "mainz",
+        "direktlabor"
+      ]
+    },
+    {
+      "id": "blut-kar-032",
+      "name": "Mein Direktlabor - Labor Karlsruhe",
+      "slug": "mein-direktlabor-labor-karlsruhe",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Am Rüppurrer Schloß 1",
+        "postalCode": "",
+        "city": "Karlsruhe",
+        "state": "Karlsruhe",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          8.4051121,
+          48.9814584
+        ]
+      },
+      "contact": {
+        "phone": "+497216277550",
+        "website": "https://www.meindirektlabor.de/standorte/standort/bioscientia-labor-karlsruhe",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": {
+            "amount": 18.0,
+            "currency": "EUR",
+            "note": "ab 18 "
+          },
+          "verification": {
+            "status": "verified",
+            "confidence": 0.95,
+            "date": "2026-03-08",
+            "method": "official_directory",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "meindirektlabor",
+        "primaryUrl": "https://www.meindirektlabor.de/standorte/standort/bioscientia-labor-karlsruhe",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "karlsruhe",
+        "direktlabor"
+      ]
+    },
+    {
+      "id": "blut-kar-033",
+      "name": "Bioscientia MVZ Labor Karlsruhe GmbH",
+      "slug": "bioscientia-mvz-labor-karlsruhe-gmbh",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Am Rüppurrer Schloß 1",
+        "postalCode": "",
+        "city": "Karlsruhe",
+        "state": "Karlsruhe",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          8.4051121,
+          48.9814584
+        ]
+      },
+      "contact": {
+        "phone": "+497216277500",
+        "website": "http://labor-karlsruhe.bioscientia.de",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "http://labor-karlsruhe.bioscientia.de",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "karlsruhe"
+      ]
+    },
+    {
+      "id": "blut-hei-035",
+      "name": "Mein Direktlabor - Labor Kiel",
+      "slug": "mein-direktlabor-labor-kiel",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Laboer Weg 20A",
+        "postalCode": "",
+        "city": "Heikendorf",
+        "state": "Heikendorf",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          10.2071804,
+          54.3742033
+        ]
+      },
+      "contact": {
+        "phone": "+494312183866",
+        "website": "https://www.meindirektlabor.de/standorte/standort/labor-kiel",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.95,
+            "date": "2026-03-08",
+            "method": "official_directory",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "meindirektlabor",
+        "primaryUrl": "https://www.meindirektlabor.de/standorte/standort/labor-kiel",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "heikendorf",
+        "direktlabor"
+      ]
+    },
+    {
+      "id": "blut-gie-037",
+      "name": "Bioscientia MVZ Labor Mittelhessen GmbH",
+      "slug": "bioscientia-mvz-labor-mittelhessen-gmbh",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Rudolf-Diesel-Straße 4",
+        "postalCode": "",
+        "city": "Gießen",
+        "state": "Gießen",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          8.7178881,
+          50.5907859
+        ]
+      },
+      "contact": {
+        "phone": "+49641300210",
+        "website": "https://ldm-labor.de",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": {
+            "amount": 12.0,
+            "currency": "EUR",
+            "note": "ab 12 "
+          },
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "https://ldm-labor.de",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "gießen"
+      ]
+    },
+    {
+      "id": "blut-hh-042",
+      "name": "Mein Direktlabor - Labor Hamburg-Nord",
+      "slug": "mein-direktlabor-labor-hamburg-nord",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Essener Str. 110",
+        "postalCode": "",
+        "city": "Hamburg",
+        "state": "Hamburg",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          10.0007641,
+          53.675406
+        ]
+      },
+      "contact": {
+        "phone": "+494053805888",
+        "website": "https://www.meindirektlabor.de/standorte/standort/mein-direktlabor-hamburg-nord",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.95,
+            "date": "2026-03-08",
+            "method": "official_directory",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "meindirektlabor",
+        "primaryUrl": "https://www.meindirektlabor.de/standorte/standort/mein-direktlabor-hamburg-nord",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "hamburg",
+        "direktlabor"
+      ]
+    },
+    {
+      "id": "blut-ber-043",
+      "name": "Mein Direktlabor - Labor Berlin-Marzahn",
+      "slug": "mein-direktlabor-labor-berlin-marzahn",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Mehrower Allee 22",
+        "postalCode": "",
+        "city": "Berlin",
+        "state": "Berlin",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          13.5613015,
+          52.5554586
+        ]
+      },
+      "contact": {
+        "phone": "+493048526128",
+        "website": "https://www.meindirektlabor.de/standorte/standort/bioscientia-berlin-marzahn",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": {
+            "amount": 12.0,
+            "currency": "EUR",
+            "note": "ab 12 "
+          },
+          "verification": {
+            "status": "verified",
+            "confidence": 0.95,
+            "date": "2026-03-08",
+            "method": "official_directory",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "meindirektlabor",
+        "primaryUrl": "https://www.meindirektlabor.de/standorte/standort/bioscientia-berlin-marzahn",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "berlin",
+        "direktlabor"
+      ]
+    },
+    {
+      "id": "blut-fre-044",
+      "name": "Mein Direktlabor - Labor Freiburg",
+      "slug": "mein-direktlabor-labor-freiburg",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Berliner Allee 2",
+        "postalCode": "",
+        "city": "Freiburg im Breisgau",
+        "state": "Freiburg im Breisgau",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          7.829449,
+          48.0080463
+        ]
+      },
+      "contact": {
+        "phone": "+4976140006580",
+        "website": "https://www.meindirektlabor.de/standorte/standort/bioscientia-labor-freiburg",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": {
+            "amount": 18.0,
+            "currency": "EUR",
+            "note": "ab 18 "
+          },
+          "verification": {
+            "status": "verified",
+            "confidence": 0.95,
+            "date": "2026-03-08",
+            "method": "official_directory",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "meindirektlabor",
+        "primaryUrl": "https://www.meindirektlabor.de/standorte/standort/bioscientia-labor-freiburg",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "freiburg im breisgau",
+        "direktlabor"
+      ]
+    },
+    {
+      "id": "blut-ber-047",
+      "name": "Labor Berlin - Charité Vivantes GmbH",
+      "slug": "labor-berlin-charit-vivantes-gmbh",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Sylter Str. 2",
+        "postalCode": "",
+        "city": "Berlin",
+        "state": "Berlin",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          13.338093,
+          52.5415198
+        ]
+      },
+      "contact": {
+        "phone": "+49304050260",
+        "website": "http://www.laborberlin.com",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "http://www.laborberlin.com",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "berlin"
+      ]
+    },
+    {
+      "id": "blut-bre-049",
+      "name": "Medizinisches Labor Bremen",
+      "slug": "medizinisches-labor-bremen",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Haferwende 12",
+        "postalCode": "",
+        "city": "Bremen",
+        "state": "Bremen",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          8.8805736,
+          53.110856
+        ]
+      },
+      "contact": {
+        "phone": "+4942120720",
+        "website": "http://www.mlhb.de",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "http://www.mlhb.de",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "bremen"
+      ]
+    },
+    {
+      "id": "blut-bay-050",
+      "name": "Labor Staber Bayreuth",
+      "slug": "labor-staber-bayreuth",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Karl-Marx-Straße 7a",
+        "postalCode": "",
+        "city": "Bayreuth",
+        "state": "Bayreuth",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          11.5752803,
+          49.9500954
+        ]
+      },
+      "contact": {
+        "phone": "+4992150720450",
+        "website": "http://www.labor-staber.de",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "http://www.labor-staber.de",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "bayreuth"
+      ]
+    },
+    {
+      "id": "blut-st.-054",
+      "name": "Bioscientia MVZ Labor Saar GmbH",
+      "slug": "bioscientia-mvz-labor-saar-gmbh",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Otto-Kaiser-Str. 8a",
+        "postalCode": "",
+        "city": "St. Ingbert",
+        "state": "St. Ingbert",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          7.1420454,
+          49.2728655
+        ]
+      },
+      "contact": {
+        "phone": "+4968949550100",
+        "website": "https://labor-saar.bioscientia.de",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": {
+            "amount": 11.0,
+            "currency": "EUR",
+            "note": "ab 11 "
+          },
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "https://labor-saar.bioscientia.de",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "st. ingbert"
+      ]
+    },
+    {
+      "id": "blut-old-066",
+      "name": "Mein Direktlabor - Labor Oldenburg",
+      "slug": "mein-direktlabor-labor-oldenburg",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Koppelstraße 1",
+        "postalCode": "",
+        "city": "Oldenburg",
+        "state": "Oldenburg",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          8.2178336,
+          53.1352392
+        ]
+      },
+      "contact": {
+        "phone": "+4944136140833",
+        "website": "https://www.meindirektlabor.de/standorte/standort/labor-oldenburg",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.95,
+            "date": "2026-03-08",
+            "method": "official_directory",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "meindirektlabor",
+        "primaryUrl": "https://www.meindirektlabor.de/standorte/standort/labor-oldenburg",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "oldenburg",
+        "direktlabor"
+      ]
+    },
+    {
+      "id": "blut-ful-067",
+      "name": "Mein Direktlabor - Labor Fulda",
+      "slug": "mein-direktlabor-labor-fulda",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Gerloser Weg 20",
+        "postalCode": "",
+        "city": "Fulda",
+        "state": "Fulda",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          9.6751425,
+          50.5615873
+        ]
+      },
+      "contact": {
+        "phone": "+4966195272922",
+        "website": "https://www.meindirektlabor.de/standorte/standort/bioscientia-labor-fulda",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": {
+            "amount": 18.0,
+            "currency": "EUR",
+            "note": "ab 18 "
+          },
+          "verification": {
+            "status": "verified",
+            "confidence": 0.95,
+            "date": "2026-03-08",
+            "method": "official_directory",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "meindirektlabor",
+        "primaryUrl": "https://www.meindirektlabor.de/standorte/standort/bioscientia-labor-fulda",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "fulda",
+        "direktlabor"
+      ]
+    },
+    {
+      "id": "blut-hei-068",
+      "name": "MVZ Labor Dr. Limbach & Kollegen eGbR",
+      "slug": "mvz-labor-dr-limbach-kollegen-egbr",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "MVZ Heidelberg",
+        "postalCode": "",
+        "city": "Heidelberg",
+        "state": "Heidelberg",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          8.694724,
+          49.4093582
+        ]
+      },
+      "contact": {
+        "phone": "+49622134320",
+        "website": "http://www.labor-limbach.de",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "http://www.labor-limbach.de",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "heidelberg"
+      ]
+    },
+    {
+      "id": "blut-ing-075",
+      "name": "Mein Direktlabor - Labor Ingelheim",
+      "slug": "mein-direktlabor-labor-ingelheim",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Konrad-Adenauer-Straße 17",
+        "postalCode": "",
+        "city": "Ingelheim am Rhein",
+        "state": "Ingelheim am Rhein",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          8.0498828,
+          49.9820998
+        ]
+      },
+      "contact": {
+        "phone": "+4961327817400",
+        "website": "https://www.meindirektlabor.de/standorte/standort/labor-ingelheim",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.95,
+            "date": "2026-03-08",
+            "method": "official_directory",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "meindirektlabor",
+        "primaryUrl": "https://www.meindirektlabor.de/standorte/standort/labor-ingelheim",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "ingelheim am rhein",
+        "direktlabor"
+      ]
+    },
+    {
+      "id": "blut-kie-088",
+      "name": "KiELab | Dr. med. Harald Erichsen",
+      "slug": "kielab-dr-med-harald-erichsen",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Dreieckspl. 11",
+        "postalCode": "",
+        "city": "Kiel",
+        "state": "Kiel",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          10.1349392,
+          54.3282783
+        ]
+      },
+      "contact": {
+        "phone": "+494316673300",
+        "website": "https://www.kielab.de",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "https://www.kielab.de",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "kiel"
+      ]
+    },
+    {
+      "id": "blut-aug-099",
+      "name": "Labor Augsburg MVZ GmbH",
+      "slug": "labor-augsburg-mvz-gmbh",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "August-Wessels-Straße 5",
+        "postalCode": "",
+        "city": "Augsburg",
+        "state": "Bayern",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          10.8720686,
+          48.3858332
+        ]
+      },
+      "contact": {
+        "phone": "+4982142010",
+        "website": "http://www.labor-augsburg-mvz.de",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "http://www.labor-augsburg-mvz.de",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "augsburg"
+      ]
+    },
+    {
+      "id": "blut-pot-105",
+      "name": "IMD Labor Potsdam",
+      "slug": "imd-labor-potsdam",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Friedrich-Ebert-Straße 33",
+        "postalCode": "",
+        "city": "Potsdam",
+        "state": "Potsdam",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          13.0589204,
+          52.4043324
+        ]
+      },
+      "contact": {
+        "phone": "+49331280950",
+        "website": "http://www.imd-potsdam.de",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "http://www.imd-potsdam.de",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "potsdam"
+      ]
+    },
+    {
+      "id": "blut-ber-110",
+      "name": "Labor im CfG - Exklusiv für Versicherte der AOK Nordost und Selbstzahlende",
+      "slug": "labor-im-cfg-exklusiv-fuer-versicherte-der-aok-nordost-und-selbstzahlende",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Ostender Str. 1",
+        "postalCode": "",
+        "city": "Berlin",
+        "state": "Berlin",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          13.354899,
+          52.548278
+        ]
+      },
+      "contact": {
+        "phone": null,
+        "website": "https://nordost.aok.de/inhalt/labor-im-centrum-fuer-gesundheit",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "https://nordost.aok.de/inhalt/labor-im-centrum-fuer-gesundheit",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "berlin"
+      ]
+    },
+    {
+      "id": "blut-neu-138",
+      "name": "LADR Medizinisches Versorgungszentrum Neuruppin",
+      "slug": "ladr-medizinisches-versorgungszentrum-neuruppin",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Zur Mesche 20",
+        "postalCode": "",
+        "city": "Neuruppin",
+        "state": "Neuruppin",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          12.7925067,
+          52.9275872
+        ]
+      },
+      "contact": {
+        "phone": "+49339135010",
+        "website": "https://ladr.de/fachlabore/neuruppin/kontakt",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "https://ladr.de/fachlabore/neuruppin/kontakt",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "neuruppin"
+      ]
+    },
+    {
+      "id": "blut-fra-184",
+      "name": "Zentrallabor",
+      "slug": "zentrallabor",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Zentrallabor",
+        "postalCode": "",
+        "city": "Frankfurt am Main",
+        "state": "Frankfurt am Main",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          8.6820917,
+          50.1106444
+        ]
+      },
+      "contact": {
+        "phone": "+496963017204",
+        "website": "https://www.unimedizin-ffm.de/einrichtungen/kliniken/zentrum-der-inneren-medizin/zentrallabor/einsenderinfos/probenannahmezeiten/blutentnahme-termine",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "https://www.unimedizin-ffm.de/einrichtungen/kliniken/zentrum-der-inneren-medizin/zentrallabor/einsenderinfos/probenannahmezeiten/blutentnahme-termine",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "frankfurt am main"
+      ]
+    },
+    {
+      "id": "blut-fra-202",
+      "name": "MAIN MEDIC • ALL MVZ | Hausarzt | Kardiologie | Gastroenterologie | Orthopädie | Dermatologie Frankfurt Westend",
+      "slug": "main-medic-all-mvz-hausarzt-kardiologie-gastroenterologie-orthopaedie-dermatologie-frankfurt-westend",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Zimmerweg 6",
+        "postalCode": "",
+        "city": "Frankfurt am Main",
+        "state": "Frankfurt am Main",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          8.6661676,
+          50.1122569
+        ]
+      },
+      "contact": {
+        "phone": "+4969756669990",
+        "website": "http://www.mainmedicall.de",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "http://www.mainmedicall.de",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "frankfurt am main"
+      ]
+    },
+    {
+      "id": "blut-mai-204",
+      "name": "MVZ GANZIMMUN GmbH - Arztpraxis",
+      "slug": "mvz-ganzimmun-gmbh-arztpraxis",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Erich-Dombrowski-Straße 3",
+        "postalCode": "",
+        "city": "Mainz",
+        "state": "Mainz",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          8.2097649,
+          49.9587847
+        ]
+      },
+      "contact": {
+        "phone": "+4961317205220",
+        "website": "https://www.mvz-ganzimmun.de",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "https://www.mvz-ganzimmun.de",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "mainz"
+      ]
+    },
+    {
+      "id": "dexa-ber-209",
+      "name": "Medicover Berlin-Mitte MVZ",
+      "slug": "medicover-berlin-mitte-mvz",
+      "categories": [
+        "dexa_body_composition"
+      ],
+      "address": {
+        "street": "Hausvogteipl. 4",
+        "postalCode": "",
+        "city": "Berlin",
+        "state": "Berlin",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          13.3957314,
+          52.513405
+        ]
+      },
+      "contact": {
+        "phone": "+493020633000",
+        "website": "http://www.medicover.de/de/facilities/medicover-berlin-mitte-mvz",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "dexa_body_composition",
+          "name": "DEXA Body Composition Scan",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.9,
+            "date": "2026-03-08",
+            "method": "website_service_page",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "http://www.medicover.de/de/facilities/medicover-berlin-mitte-mvz",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "dexa",
+        "body-composition",
+        "selbstzahler",
+        "berlin"
+      ]
+    },
+    {
+      "id": "dexa-lan-222",
+      "name": "Zentrum für Endokrinologie und Stoffwechsel Landshut Privat- und Selbstzahlerpraxis",
+      "slug": "zentrum-fuer-endokrinologie-und-stoffwechsel-landshut-privat-und-selbstzahlerpraxis",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Zweibrückenstraße 655",
+        "postalCode": "",
+        "city": "Landshut",
+        "state": "Landshut",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          12.1510047,
+          48.539495
+        ]
+      },
+      "contact": {
+        "phone": "+4987166003416",
+        "website": "https://endokrinologie.bayern/landshut",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "dexa_bone_density",
+          "name": "DEXA Knochendichtemessung",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.3,
+            "date": "2026-03-08",
+            "method": "unconfirmed",
+            "notes": null
+          }
+        },
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "https://endokrinologie.bayern/landshut",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "dexa",
+        "knochendichte",
+        "blutlabor",
+        "selbstzahler",
+        "landshut"
+      ]
+    },
+    {
+      "id": "blut-sch-226",
+      "name": "Labor MVZ Westmecklenburg",
+      "slug": "labor-mvz-westmecklenburg",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Ellerried 7",
+        "postalCode": "",
+        "city": "Schwerin",
+        "state": "Schwerin",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          11.3963365,
+          53.5972981
+        ]
+      },
+      "contact": {
+        "phone": "+49385644240",
+        "website": "http://www.labor-schwerin.de",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": {
+            "amount": 14.0,
+            "currency": "EUR",
+            "note": "ab 14 "
+          },
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "http://www.labor-schwerin.de",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "schwerin"
+      ]
+    },
+    {
+      "id": "blut-hei-229",
+      "name": "Labor Blackholm MVZ",
+      "slug": "labor-blackholm-mvz",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Bahnhofstraße 14",
+        "postalCode": "",
+        "city": "Heilbronn",
+        "state": "Heilbronn",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          9.2113994,
+          49.143281
+        ]
+      },
+      "contact": {
+        "phone": "+49713178760",
+        "website": "https://www.blackholm.com",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "https://www.blackholm.com",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "heilbronn"
+      ]
+    },
+    {
+      "id": "dexa-ing-246",
+      "name": "Zentrum für Endokrinologie und Stoffwechsel Ingolstadt",
+      "slug": "zentrum-fuer-endokrinologie-und-stoffwechsel-ingolstadt",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Am Pulverl 1",
+        "postalCode": "",
+        "city": "Ingolstadt",
+        "state": "Ingolstadt",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          11.4329981,
+          48.7442266
+        ]
+      },
+      "contact": {
+        "phone": "+4984188699525",
+        "website": "https://endokrinologie.bayern/ingolstadt",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "dexa_bone_density",
+          "name": "DEXA Knochendichtemessung",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.3,
+            "date": "2026-03-08",
+            "method": "unconfirmed",
+            "notes": null
+          }
+        },
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "https://endokrinologie.bayern/ingolstadt",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "dexa",
+        "knochendichte",
+        "blutlabor",
+        "selbstzahler",
+        "ingolstadt"
+      ]
+    },
+    {
+      "id": "blut-obe-254",
+      "name": "Praxis Dr. med Manfred Siedl",
+      "slug": "praxis-dr-med-manfred-siedl",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Schillerstraße 7",
+        "postalCode": "",
+        "city": "Oberderdingen",
+        "state": "Oberderdingen",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          8.7974042,
+          49.0637497
+        ]
+      },
+      "contact": {
+        "phone": "+4970455229952",
+        "website": "http://www.dr-siedl.de",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "http://www.dr-siedl.de",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "oberderdingen"
+      ]
+    },
+    {
+      "id": "blut-zwi-270",
+      "name": "Medizinisches Labor Westsachsen (LG Sachsen-West)",
+      "slug": "medizinisches-labor-westsachsen-lg-sachsen-west",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Leipziger Str. 160",
+        "postalCode": "",
+        "city": "Zwickau",
+        "state": "Zwickau",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          12.4905221,
+          50.7370309
+        ]
+      },
+      "contact": {
+        "phone": "+49375272150",
+        "website": "http://www.labor-westsachsen.de",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "http://www.labor-westsachsen.de",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "zwickau"
+      ]
+    },
+    {
+      "id": "blut-st.-281",
+      "name": "Mein Direktlabor - Labor Saar",
+      "slug": "mein-direktlabor-labor-saar",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Otto-Kaiser-Str. 8a",
+        "postalCode": "",
+        "city": "St. Ingbert",
+        "state": "St. Ingbert",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          7.1420454,
+          49.2728655
+        ]
+      },
+      "contact": {
+        "phone": "+49689495500",
+        "website": "https://www.meindirektlabor.de/standorte/standort/labor-saar",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": {
+            "amount": 11.0,
+            "currency": "EUR",
+            "note": "ab 11 "
+          },
+          "verification": {
+            "status": "verified",
+            "confidence": 0.95,
+            "date": "2026-03-08",
+            "method": "official_directory",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "meindirektlabor",
+        "primaryUrl": "https://www.meindirektlabor.de/standorte/standort/labor-saar",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "st. ingbert",
+        "direktlabor"
+      ]
+    },
+    {
+      "id": "dexa-bad-287",
+      "name": "Praxis Rechmeier - offenes MRT, Gelenk- und Schmerztherapie & Nuklearmedizin",
+      "slug": "praxis-rechmeier-offenes-mrt-gelenk-und-schmerztherapie-nuklearmedizin",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Kurgartenstraße 1",
+        "postalCode": "",
+        "city": "Bad Neuenahr-Ahrweiler",
+        "state": "Bad Neuenahr-Ahrweiler",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          7.1373962,
+          50.5414388
+        ]
+      },
+      "contact": {
+        "phone": "+492641914800",
+        "website": "http://www.praxis-rechmeier.de",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "dexa_bone_density",
+          "name": "DEXA Knochendichtemessung",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.3,
+            "date": "2026-03-08",
+            "method": "unconfirmed",
+            "notes": null
+          }
+        },
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "http://www.praxis-rechmeier.de",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "dexa",
+        "knochendichte",
+        "blutlabor",
+        "selbstzahler",
+        "bad neuenahr-ahrweiler"
+      ]
+    },
+    {
+      "id": "blut-nue-322",
+      "name": "Zentrum für lnnovative Radiologie Nürnberg / MRT / CT - Privatpraxis Dr. Sajad Hamel",
+      "slug": "zentrum-fuer-lnnovative-radiologie-nuernberg-mrt-ct-privatpraxis-dr-sajad-hamel",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Forchheimer Str. 8",
+        "postalCode": "",
+        "city": "Nürnberg",
+        "state": "Bayern",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          11.0628027,
+          49.4736573
+        ]
+      },
+      "contact": {
+        "phone": "+4991137662323",
+        "website": "http://www.innovative-radiologie.de",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "http://www.innovative-radiologie.de",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "nürnberg"
+      ]
+    },
+    {
+      "id": "blut-ber-326",
+      "name": "PRIMENOSTICS – Privatpraxis für Radiologie und Nuklearmedizin",
+      "slug": "primenostics-privatpraxis-fuer-radiologie-und-nuklearmedizin",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Marburger Str. 12",
+        "postalCode": "",
+        "city": "Berlin",
+        "state": "Berlin",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          13.3365416,
+          52.5020601
+        ]
+      },
+      "contact": {
+        "phone": "+493056796129",
+        "website": "https://primenostics-berlin.de",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "https://primenostics-berlin.de",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "berlin"
+      ]
+    },
+    {
+      "id": "blut-kie-347",
+      "name": "Offener MRT Kiel | Dr. med Jürgen Knepel und Dr. med. Tim Schäfer",
+      "slug": "offener-mrt-kiel-dr-med-juergen-knepel-und-dr-med-tim-schaefer",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Exerzierplatz 20a Innenhof",
+        "postalCode": "",
+        "city": "Kiel",
+        "state": "Kiel",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          10.135555,
+          54.3227085
+        ]
+      },
+      "contact": {
+        "phone": "+4943199699430",
+        "website": "https://www.orthopaedie-knepel-schaefer.de/leistungen/offener-mrt/?utm_source=local&utm_medium=organic&utm_campaign=gmb",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "https://www.orthopaedie-knepel-schaefer.de/leistungen/offener-mrt/?utm_source=local&utm_medium=organic&utm_campaign=gmb",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "kiel"
+      ]
+    },
+    {
+      "id": "blut-aac-362",
+      "name": "DirectClinics",
+      "slug": "directclinics",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Katschhof 3",
+        "postalCode": "",
+        "city": "Aachen",
+        "state": "Aachen",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          6.0841679,
+          50.7750439
+        ]
+      },
+      "contact": {
+        "phone": "+492414757070",
+        "website": "http://www.directclinics.de",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": {
+            "amount": 500.0,
+            "currency": "EUR",
+            "note": "500 €"
+          },
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "http://www.directclinics.de",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "aachen"
+      ]
+    },
+    {
+      "id": "blut-ber-374",
+      "name": "Radiologie-Eins",
+      "slug": "radiologie-eins",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Clayallee 225 A",
+        "postalCode": "",
+        "city": "Berlin",
+        "state": "Berlin",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          13.268694,
+          52.4491211
+        ]
+      },
+      "contact": {
+        "phone": "+493081003733",
+        "website": "https://www.radiologie-eins.de/?utm_source=local&utm_medium=organic&utm_campaign=gmb",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "https://www.radiologie-eins.de/?utm_source=local&utm_medium=organic&utm_campaign=gmb",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "berlin"
+      ]
+    },
+    {
+      "id": "blut-ber-375",
+      "name": "Orthopädische Privatpraxis Berlin Dr. med. C. Topar",
+      "slug": "orthopaedische-privatpraxis-berlin-dr-med-c-topar",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Clayallee 225 A",
+        "postalCode": "",
+        "city": "Berlin",
+        "state": "Berlin",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          13.268694,
+          52.4491211
+        ]
+      },
+      "contact": {
+        "phone": "+493085071777",
+        "website": "https://www.orthopaede-berlin.com",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "https://www.orthopaede-berlin.com",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "berlin"
+      ]
+    },
+    {
+      "id": "dexa-ber-376",
+      "name": "Orthopädiezentrum Kurfürstendamm",
+      "slug": "orthopaediezentrum-kurfuerstendamm",
+      "categories": [
+        "dexa_body_composition"
+      ],
+      "address": {
+        "street": "Kurfürstendamm 182-183",
+        "postalCode": "",
+        "city": "Berlin",
+        "state": "Berlin",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          13.2967021,
+          52.4979828
+        ]
+      },
+      "contact": {
+        "phone": "+49308928013",
+        "website": "https://www.ok-kudamm.de",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "dexa_body_composition",
+          "name": "DEXA Body Composition Scan",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.9,
+            "date": "2026-03-08",
+            "method": "website_service_page",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "https://www.ok-kudamm.de",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "dexa",
+        "body-composition",
+        "selbstzahler",
+        "berlin"
+      ]
+    },
+    {
+      "id": "dexa-dor-388",
+      "name": "Radiologische Praxis Dr. med. Amirfallah & Partner",
+      "slug": "radiologische-praxis-dr-med-amirfallah-partner",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Europapl. 7",
+        "postalCode": "",
+        "city": "Dortmund",
+        "state": "Nordrhein-Westfalen",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          7.5251927,
+          51.5015209
+        ]
+      },
+      "contact": {
+        "phone": "+492317250500",
+        "website": "http://www.die-radiologen.de",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "dexa_bone_density",
+          "name": "DEXA Knochendichtemessung",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.3,
+            "date": "2026-03-08",
+            "method": "unconfirmed",
+            "notes": null
+          }
+        },
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "http://www.die-radiologen.de",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "dexa",
+        "knochendichte",
+        "blutlabor",
+        "selbstzahler",
+        "dortmund"
+      ]
+    },
+    {
+      "id": "dexa-düs-391",
+      "name": "Orthopäde Düsseldorf | Privatpraxis MVZ OU Golzheim",
+      "slug": "orthopaede-duesseldorf-privatpraxis-mvz-ou-golzheim",
+      "categories": [
+        "dexa_body_composition"
+      ],
+      "address": {
+        "street": "Kaiserswerther Str. 253",
+        "postalCode": "",
+        "city": "Düsseldorf",
+        "state": "Nordrhein-Westfalen",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          6.7640806,
+          51.2509518
+        ]
+      },
+      "contact": {
+        "phone": "+492114576995",
+        "website": "http://ou-golzheim.de/?utm_source=google&utm_medium=gmb&utm_campaign=profil-praxis",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "dexa_body_composition",
+          "name": "DEXA Body Composition Scan",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.9,
+            "date": "2026-03-08",
+            "method": "website_service_page",
+            "notes": null
+          }
+        },
+        {
+          "type": "dexa_bone_density",
+          "name": "DEXA Knochendichtemessung",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.9,
+            "date": "2026-03-08",
+            "method": "website_service_page",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "http://ou-golzheim.de/?utm_source=google&utm_medium=gmb&utm_campaign=profil-praxis",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "dexa",
+        "body-composition",
+        "knochendichte",
+        "selbstzahler",
+        "düsseldorf"
+      ]
+    },
+    {
+      "id": "blut-dor-392",
+      "name": "Privatpraxis für offene MRT Dr. Nader Amirfallah",
+      "slug": "privatpraxis-fuer-offene-mrt-dr-nader-amirfallah",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Europapl. 11",
+        "postalCode": "",
+        "city": "Dortmund",
+        "state": "Nordrhein-Westfalen",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          7.522389,
+          51.5015406
+        ]
+      },
+      "contact": {
+        "phone": "+492314788888",
+        "website": "http://www.mrt-dortmund.de",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "http://www.mrt-dortmund.de",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "dortmund"
+      ]
+    },
+    {
+      "id": "dexa-aac-393",
+      "name": "Gesundheitszentrum Walheim",
+      "slug": "gesundheitszentrum-walheim",
+      "categories": [
+        "dexa_body_composition"
+      ],
+      "address": {
+        "street": "Physiotherapie und med. Fitness",
+        "postalCode": "",
+        "city": "Aachen",
+        "state": "Aachen",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          6.083862,
+          50.776351
+        ]
+      },
+      "contact": {
+        "phone": "+4924089577620",
+        "website": "http://www.gesundheitszentrum-walheim.de",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "dexa_body_composition",
+          "name": "DEXA Body Composition Scan",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.9,
+            "date": "2026-03-08",
+            "method": "website_service_page",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "http://www.gesundheitszentrum-walheim.de",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "dexa",
+        "body-composition",
+        "selbstzahler",
+        "aachen"
+      ]
+    },
+    {
+      "id": "blut-dre-405",
+      "name": "Apparategemeinschaft Osteologie",
+      "slug": "apparategemeinschaft-osteologie",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Enderstraße 59",
+        "postalCode": "",
+        "city": "Dresden",
+        "state": "Sachsen",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          13.8034887,
+          51.0295016
+        ]
+      },
+      "contact": {
+        "phone": "+493512163990",
+        "website": "https://www.knochendichtemessung-dresden.de/terminvereinbarung.html",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "https://www.knochendichtemessung-dresden.de/terminvereinbarung.html",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "dresden"
+      ]
+    },
+    {
+      "id": "blut-lei-410",
+      "name": "PRIMENOSTICS – Privatpraxis für Radiologie und Nuklearmedizin",
+      "slug": "primenostics-privatpraxis-fuer-radiologie-und-nuklearmedizin",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Grimmaische Str. 13-15",
+        "postalCode": "",
+        "city": "Leipzig",
+        "state": "Sachsen",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          12.3772759,
+          51.3400434
+        ]
+      },
+      "contact": {
+        "phone": "+4934192881231",
+        "website": "https://primenostics-leipzig.de",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "https://primenostics-leipzig.de",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "leipzig"
+      ]
+    },
+    {
+      "id": "dexa-mün-420",
+      "name": "Z.O.R. - Praxis für Orthopädie und Sportmedizin Dr. Ulrich Frohberger",
+      "slug": "z-o-r-praxis-fuer-orthopaedie-und-sportmedizin-dr-ulrich-frohberger",
+      "categories": [
+        "dexa_body_composition"
+      ],
+      "address": {
+        "street": "Roggenmarkt 15",
+        "postalCode": "",
+        "city": "Münster",
+        "state": "Münster",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          7.6284822,
+          51.9637502
+        ]
+      },
+      "contact": {
+        "phone": "+4925160323",
+        "website": "https://frohberger.de",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "dexa_body_composition",
+          "name": "DEXA Body Composition Scan",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.9,
+            "date": "2026-03-08",
+            "method": "website_service_page",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "https://frohberger.de",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "dexa",
+        "body-composition",
+        "selbstzahler",
+        "münster"
+      ]
+    },
+    {
+      "id": "blut-ber-424",
+      "name": "Praxis für Radiologie - Zentrum für Microdosismammographie",
+      "slug": "praxis-fuer-radiologie-zentrum-fuer-microdosismammographie",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Berliner Str. 25",
+        "postalCode": "",
+        "city": "Berlin",
+        "state": "Berlin",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          13.3255395,
+          52.4870258
+        ]
+      },
+      "contact": {
+        "phone": "+493043731803",
+        "website": "https://www.doctolib.de/praxis/berliner-strasse-25-13507-berlin/praxis-fuer-radiologie-zentrum-fuer-microdosismammographie?utm_source=google&utm_medium=organic&utm_term=praxis&utm_content=berliner-strasse-25-13507-berlin&utm_campaign=google-maps",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "https://www.doctolib.de/praxis/berliner-strasse-25-13507-berlin/praxis-fuer-radiologie-zentrum-fuer-microdosismammographie?utm_source=google&utm_medium=organic&utm_term=praxis&utm_content=berliner-strasse-25-13507-berlin&utm_campaign=google-maps",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "berlin"
+      ]
+    },
+    {
+      "id": "dexa-ess-428",
+      "name": "Frau Prof. Dr. Dr. med. Dagmar Führer-Sakel",
+      "slug": "frau-prof-dr-dr-med-dagmar-fuehrer-sakel",
+      "categories": [
+        "dexa_body_composition"
+      ],
+      "address": {
+        "street": "Hufelandstraße 55",
+        "postalCode": "",
+        "city": "Essen",
+        "state": "Essen",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          6.9880092,
+          51.4347062
+        ]
+      },
+      "contact": {
+        "phone": "+492017236303",
+        "website": "http://endokrinologie.de",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "dexa_body_composition",
+          "name": "DEXA Body Composition Scan",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.9,
+            "date": "2026-03-08",
+            "method": "website_service_page",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "http://endokrinologie.de",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "dexa",
+        "body-composition",
+        "selbstzahler",
+        "essen"
+      ]
+    },
+    {
+      "id": "dexa-muc-429",
+      "name": "Orthopädiezentrum Theresie München, Dres. Schneider, Obersteiner & Kollegen",
+      "slug": "orthopaediezentrum-theresie-muenchen-dres-schneider-obersteiner-kollegen",
+      "categories": [
+        "dexa_body_composition"
+      ],
+      "address": {
+        "street": "Theresienhöhe 13A",
+        "postalCode": "",
+        "city": "München",
+        "state": "Bayern",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          11.545774,
+          48.1333623
+        ]
+      },
+      "contact": {
+        "phone": "+498955276020",
+        "website": "http://www.oz-theresie.de",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "dexa_body_composition",
+          "name": "DEXA Body Composition Scan",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.9,
+            "date": "2026-03-08",
+            "method": "website_service_page",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "http://www.oz-theresie.de",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "dexa",
+        "body-composition",
+        "selbstzahler",
+        "münchen"
+      ]
+    },
+    {
+      "id": "dexa-cgn-444",
+      "name": "Orthopädie em Veedel - Köln Lindenthal",
+      "slug": "orthopaedie-em-veedel-koeln-lindenthal",
+      "categories": [
+        "dexa_body_composition"
+      ],
+      "address": {
+        "street": "Dürener Str. 199-203",
+        "postalCode": "",
+        "city": "Köln",
+        "state": "Nordrhein-Westfalen",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          6.91384,
+          50.929925
+        ]
+      },
+      "contact": {
+        "phone": "+4922195587654",
+        "website": "https://orthopaedie-em-veedel.de/?utm_source=google&utm_medium=organic&utm_campaign=gmb",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "dexa_body_composition",
+          "name": "DEXA Body Composition Scan",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.9,
+            "date": "2026-03-08",
+            "method": "website_service_page",
+            "notes": null
+          }
+        },
+        {
+          "type": "dexa_bone_density",
+          "name": "DEXA Knochendichtemessung",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.9,
+            "date": "2026-03-08",
+            "method": "website_service_page",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "https://orthopaedie-em-veedel.de/?utm_source=google&utm_medium=organic&utm_campaign=gmb",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "dexa",
+        "body-composition",
+        "knochendichte",
+        "selbstzahler",
+        "köln"
+      ]
+    },
+    {
+      "id": "blut-bad-473",
+      "name": "DIAGNOSTIKUM Prof. Dr. Pauls & Dr. med. Zallet| Radiologie, MRT & CT nahe Lübeck | Privatpraxis & BG-Zulassung",
+      "slug": "diagnostikum-prof-dr-pauls-dr-med-zallet-radiologie-mrt-ct-nahe-luebeck-privatpraxis-bg-zulassung",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Eutiner Ring 3",
+        "postalCode": "",
+        "city": "Bad Schwartau",
+        "state": "Bad Schwartau",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          10.695523,
+          53.91945
+        ]
+      },
+      "contact": {
+        "phone": "+4945198988585",
+        "website": "http://www.diagnostikum-online.de",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "http://www.diagnostikum-online.de",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "bad schwartau"
+      ]
+    },
+    {
+      "id": "dexa-saa-477",
+      "name": "Bodymed Center Dudweiler - Herrensohr",
+      "slug": "bodymed-center-dudweiler-herrensohr",
+      "categories": [
+        "dexa_body_composition"
+      ],
+      "address": {
+        "street": "Saarbrücker Str. 134",
+        "postalCode": "",
+        "city": "Saarbrücken",
+        "state": "Saarbrücken",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          7.0445824,
+          49.2108999
+        ]
+      },
+      "contact": {
+        "phone": "+4915737170344",
+        "website": "http://www.bodymed.com/center/dudweiler-herrensohr",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "dexa_body_composition",
+          "name": "DEXA Body Composition Scan",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.9,
+            "date": "2026-03-08",
+            "method": "website_service_page",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "http://www.bodymed.com/center/dudweiler-herrensohr",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "dexa",
+        "body-composition",
+        "selbstzahler",
+        "saarbrücken"
+      ]
+    },
+    {
+      "id": "blut-cgn-489",
+      "name": "Greenscan Köln GmbH",
+      "slug": "greenscan-koeln-gmbh",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Waltherstraße 49-51",
+        "postalCode": "",
+        "city": "Köln",
+        "state": "Nordrhein-Westfalen",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          7.0712519,
+          50.982964
+        ]
+      },
+      "contact": {
+        "phone": "+4922195582850",
+        "website": "https://www.greenscan-koeln.de",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "https://www.greenscan-koeln.de",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "köln"
+      ]
+    },
+    {
+      "id": "blut-ber-494",
+      "name": "Dr. Josephine Reiche – Praxis für Integrative Medizin & Therapiezentrum für Funktionelle Medizin",
+      "slug": "dr-josephine-reiche-praxis-fuer-integrative-medizin-therapiezentrum-fuer-funktionelle-medizin",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Robinienweg 2",
+        "postalCode": "",
+        "city": "Berlin",
+        "state": "Berlin",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          13.3148298,
+          52.6134085
+        ]
+      },
+      "contact": {
+        "phone": "+493040582646",
+        "website": "https://drreiche.de",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "https://drreiche.de",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "berlin"
+      ]
+    },
+    {
+      "id": "dexa-übe-503",
+      "name": "Laktatleistungsdiagnostik - Dr Dietze",
+      "slug": "laktatleistungsdiagnostik-dr-dietze",
+      "categories": [
+        "dexa_body_composition"
+      ],
+      "address": {
+        "street": "Auf dem Stein 18",
+        "postalCode": "",
+        "city": "Überlingen",
+        "state": "Überlingen",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          9.1511542,
+          47.7703567
+        ]
+      },
+      "contact": {
+        "phone": "+491701234667",
+        "website": "http://www.laktatleistungsdiagnostik.de",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "dexa_body_composition",
+          "name": "DEXA Body Composition Scan",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.9,
+            "date": "2026-03-08",
+            "method": "website_service_page",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "http://www.laktatleistungsdiagnostik.de",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "dexa",
+        "body-composition",
+        "selbstzahler",
+        "überlingen"
+      ]
+    },
+    {
+      "id": "blut-übe-504",
+      "name": "Dr. med. Dorothea Klopscheck",
+      "slug": "dr-med-dorothea-klopscheck",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Im Facharztzentrum",
+        "postalCode": "",
+        "city": "Überlingen",
+        "state": "Überlingen",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          9.1605106,
+          47.7664456
+        ]
+      },
+      "contact": {
+        "phone": "+49755163458",
+        "website": "http://www.praxis-klopscheck.de",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "http://www.praxis-klopscheck.de",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "überlingen"
+      ]
+    },
+    {
+      "id": "dexa-gie-508",
+      "name": "Radiologie in Gießen",
+      "slug": "radiologie-in-giessen",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Liebigstraße 20",
+        "postalCode": "",
+        "city": "Gießen",
+        "state": "Gießen",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          8.6681847,
+          50.5797152
+        ]
+      },
+      "contact": {
+        "phone": "+496419719941",
+        "website": "https://evidia.de/standorte/radiologie-giessen",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "dexa_bone_density",
+          "name": "DEXA Knochendichtemessung",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.3,
+            "date": "2026-03-08",
+            "method": "unconfirmed",
+            "notes": null
+          }
+        },
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "https://evidia.de/standorte/radiologie-giessen",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "dexa",
+        "knochendichte",
+        "blutlabor",
+        "selbstzahler",
+        "gießen"
+      ]
+    },
+    {
+      "id": "blut-nor-510",
+      "name": "Radiologie Norderstedt Dres. Lemke Krüger Schreiter mit Kernspin MRT Mammographie CT DXA Röntgen",
+      "slug": "radiologie-norderstedt-dres-lemke-krueger-schreiter-mit-kernspin-mrt-mammographie-ct-dxa-roentgen",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Ärztehaus am Herold-Center",
+        "postalCode": "",
+        "city": "Norderstedt",
+        "state": "Norderstedt",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          9.9891914,
+          53.7089898
+        ]
+      },
+      "contact": {
+        "phone": "+49405287330",
+        "website": "http://www.radiologie-norderstedt.de",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "http://www.radiologie-norderstedt.de",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "norderstedt"
+      ]
+    },
+    {
+      "id": "dexa-kem-519",
+      "name": "Radiologische Praxis am Klinikum Kempten",
+      "slug": "radiologische-praxis-am-klinikum-kempten",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Robert-Weixler-Straße 48a",
+        "postalCode": "",
+        "city": "Kempten (Allgäu)",
+        "state": "Kempten (Allgäu)",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          10.3016533,
+          47.7330443
+        ]
+      },
+      "contact": {
+        "phone": "+49831523205",
+        "website": "https://www.radiologie-kempten.de",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "dexa_bone_density",
+          "name": "DEXA Knochendichtemessung",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.3,
+            "date": "2026-03-08",
+            "method": "unconfirmed",
+            "notes": null
+          }
+        },
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "https://www.radiologie-kempten.de",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "dexa",
+        "knochendichte",
+        "blutlabor",
+        "selbstzahler",
+        "kempten (allgäu)"
+      ]
+    },
+    {
+      "id": "blut-ros-524",
+      "name": "AlpRad Rosenheim/MedicalCube - Radiologisches Zentrum Alpenrand",
+      "slug": "alprad-rosenheim-medicalcube-radiologisches-zentrum-alpenrand",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Luitpoldstraße 4",
+        "postalCode": "",
+        "city": "Rosenheim",
+        "state": "Rosenheim",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          12.1168539,
+          47.8514416
+        ]
+      },
+      "contact": {
+        "phone": "+498031619950",
+        "website": "https://www.alprad-radiologie.de",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "https://www.alprad-radiologie.de",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "rosenheim"
+      ]
+    },
+    {
+      "id": "blut-bad-543",
+      "name": "MRT Privatpraxis, MRT Schöne Aussicht - radprax Bad Homburg",
+      "slug": "mrt-privatpraxis-mrt-schoene-aussicht-radprax-bad-homburg",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Louisenstraße 101",
+        "postalCode": "",
+        "city": "Bad Homburg vor der Höhe",
+        "state": "Bad Homburg vor der Höhe",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          8.6206569,
+          50.2248697
+        ]
+      },
+      "contact": {
+        "phone": "+4961729452220",
+        "website": "http://www.mrtschoeneaussicht.de",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "http://www.mrtschoeneaussicht.de",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "bad homburg vor der höhe"
+      ]
+    },
+    {
+      "id": "blut-kau-560",
+      "name": "Radiologie Kaufbeuren MRT Prostata Zentrum",
+      "slug": "radiologie-kaufbeuren-mrt-prostata-zentrum",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Bergstraße 2",
+        "postalCode": "",
+        "city": "Kaufbeuren",
+        "state": "Kaufbeuren",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          10.6152132,
+          47.8823606
+        ]
+      },
+      "contact": {
+        "phone": "+498341909367367",
+        "website": "https://www.mrt-prostatazentrum.de",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "unverified",
+            "confidence": 0.6,
+            "date": "2026-03-08",
+            "method": "google_places",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": false,
+      "source": {
+        "origin": "apify",
+        "primaryUrl": "https://www.mrt-prostatazentrum.de",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "kaufbeuren"
+      ]
+    },
+    {
+      "id": "dexa-zrh-566",
+      "name": "Ayun",
+      "slug": "ayun",
+      "categories": [
+        "dexa_body_composition"
+      ],
+      "address": {
+        "street": "",
+        "postalCode": "",
+        "city": "Zürich",
+        "state": "Zürich",
+        "country": "CH"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          8.5410422,
+          47.3744489
+        ]
+      },
+      "contact": {
+        "phone": null,
+        "website": "https://www.ayun.ch",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "dexa_body_composition",
+          "name": "DEXA Body Composition Scan",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.9,
+            "date": "2026-03-08",
+            "method": "website_service_page",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "megeni",
+        "primaryUrl": "https://www.ayun.ch",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "dexa",
+        "body-composition",
+        "selbstzahler",
+        "zürich",
+        "schweiz"
+      ]
+    },
+    {
+      "id": "blut-cgn-567",
+      "name": "Mein Direktlabor auf der FIBO",
+      "slug": "mein-direktlabor-auf-der-fibo",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "",
+        "postalCode": "",
+        "city": "Köln",
+        "state": "Nordrhein-Westfalen",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          6.959974,
+          50.938361
+        ]
+      },
+      "contact": {
+        "phone": null,
+        "website": "https://www.meindirektlabor.de/standorte/standort/fibo-2026",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.95,
+            "date": "2026-03-08",
+            "method": "official_directory",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "meindirektlabor",
+        "primaryUrl": "https://www.meindirektlabor.de/standorte/standort/fibo-2026",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "köln",
+        "direktlabor"
+      ]
+    },
+    {
+      "id": "blut-wes-568",
+      "name": "Mein Direktlabor Sylt",
+      "slug": "mein-direktlabor-sylt",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "",
+        "postalCode": "",
+        "city": "Westerland",
+        "state": "Westerland",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          8.3071734,
+          54.9064856
+        ]
+      },
+      "contact": {
+        "phone": null,
+        "website": "https://www.meindirektlabor.de/standorte/standort/mein-direktlabor-sylt",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.95,
+            "date": "2026-03-08",
+            "method": "official_directory",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "meindirektlabor",
+        "primaryUrl": "https://www.meindirektlabor.de/standorte/standort/mein-direktlabor-sylt",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "westerland",
+        "direktlabor"
+      ]
+    },
+    {
+      "id": "blut-sch-569",
+      "name": "Mein Direktlabor Scheeßel",
+      "slug": "mein-direktlabor-scheessel",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "",
+        "postalCode": "",
+        "city": "Scheeßel",
+        "state": "Scheeßel",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          9.4840648,
+          53.1667961
+        ]
+      },
+      "contact": {
+        "phone": null,
+        "website": "https://www.meindirektlabor.de/standorte/standort/mein-direktlabor-scheessel",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.95,
+            "date": "2026-03-08",
+            "method": "official_directory",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "meindirektlabor",
+        "primaryUrl": "https://www.meindirektlabor.de/standorte/standort/mein-direktlabor-scheessel",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "scheeßel",
+        "direktlabor"
+      ]
+    },
+    {
+      "id": "blut-bre-570",
+      "name": "Labor Bremen",
+      "slug": "labor-bremen",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "",
+        "postalCode": "",
+        "city": "Bremen",
+        "state": "Bremen",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          8.8071646,
+          53.0758196
+        ]
+      },
+      "contact": {
+        "phone": null,
+        "website": "https://www.meindirektlabor.de/standorte/standort/labor-bremen",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": {
+            "amount": 10.72,
+            "currency": "EUR",
+            "note": "10,72 €"
+          },
+          "verification": {
+            "status": "verified",
+            "confidence": 0.95,
+            "date": "2026-03-08",
+            "method": "official_directory",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "meindirektlabor",
+        "primaryUrl": "https://www.meindirektlabor.de/standorte/standort/labor-bremen",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "bremen",
+        "direktlabor"
+      ]
+    },
+    {
+      "id": "blut-cel-571",
+      "name": "Labor Celle",
+      "slug": "labor-celle",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "",
+        "postalCode": "",
+        "city": "Celle",
+        "state": "Celle",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          10.081052,
+          52.624056
+        ]
+      },
+      "contact": {
+        "phone": null,
+        "website": "https://www.meindirektlabor.de/standorte/standort/labor-celle",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": {
+            "amount": 10.72,
+            "currency": "EUR",
+            "note": "10,72 €"
+          },
+          "verification": {
+            "status": "verified",
+            "confidence": 0.95,
+            "date": "2026-03-08",
+            "method": "official_directory",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "meindirektlabor",
+        "primaryUrl": "https://www.meindirektlabor.de/standorte/standort/labor-celle",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "celle",
+        "direktlabor"
+      ]
+    },
+    {
+      "id": "blut-ber-572",
+      "name": "Bioscientia Berlin-Tiergarten",
+      "slug": "bioscientia-berlin-tiergarten",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "",
+        "postalCode": "",
+        "city": "Berlin",
+        "state": "Berlin",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          13.3951309,
+          52.5173885
+        ]
+      },
+      "contact": {
+        "phone": null,
+        "website": "https://www.meindirektlabor.de/standorte/standort/bioscientia-berlin-tiergarten",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": {
+            "amount": 12.0,
+            "currency": "EUR",
+            "note": "ab 12 "
+          },
+          "verification": {
+            "status": "verified",
+            "confidence": 0.95,
+            "date": "2026-03-08",
+            "method": "official_directory",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "meindirektlabor",
+        "primaryUrl": "https://www.meindirektlabor.de/standorte/standort/bioscientia-berlin-tiergarten",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "berlin",
+        "direktlabor"
+      ]
+    },
+    {
+      "id": "blut-ber-573",
+      "name": "Labor 28",
+      "slug": "labor-28",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "",
+        "postalCode": "",
+        "city": "Berlin",
+        "state": "Berlin",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          13.3951309,
+          52.5173885
+        ]
+      },
+      "contact": {
+        "phone": null,
+        "website": "https://www.meindirektlabor.de/standorte/standort/labor-28",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.95,
+            "date": "2026-03-08",
+            "method": "official_directory",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "meindirektlabor",
+        "primaryUrl": "https://www.meindirektlabor.de/standorte/standort/labor-28",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "berlin",
+        "direktlabor"
+      ]
+    },
+    {
+      "id": "blut-düs-574",
+      "name": "Medizinische Laboratorien Düsseldorf",
+      "slug": "medizinische-laboratorien-duesseldorf",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "",
+        "postalCode": "",
+        "city": "Düsseldorf",
+        "state": "Nordrhein-Westfalen",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          6.7763137,
+          51.2254018
+        ]
+      },
+      "contact": {
+        "phone": null,
+        "website": "https://www.meindirektlabor.de/standorte/standort/medizinische-laboratorien-duesseldorf",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.95,
+            "date": "2026-03-08",
+            "method": "official_directory",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "meindirektlabor",
+        "primaryUrl": "https://www.meindirektlabor.de/standorte/standort/medizinische-laboratorien-duesseldorf",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "düsseldorf",
+        "direktlabor"
+      ]
+    },
+    {
+      "id": "blut-cgn-575",
+      "name": "Mein Direktlabor Köln",
+      "slug": "mein-direktlabor-koeln",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "",
+        "postalCode": "",
+        "city": "Köln",
+        "state": "Nordrhein-Westfalen",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          6.959974,
+          50.938361
+        ]
+      },
+      "contact": {
+        "phone": null,
+        "website": "https://www.meindirektlabor.de/standorte/standort/mein-direktlabor-koeln",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.95,
+            "date": "2026-03-08",
+            "method": "official_directory",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "meindirektlabor",
+        "primaryUrl": "https://www.meindirektlabor.de/standorte/standort/mein-direktlabor-koeln",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "köln",
+        "direktlabor"
+      ]
+    },
+    {
+      "id": "blut-kli-576",
+      "name": "Mein Direktlabor Klipphausen",
+      "slug": "mein-direktlabor-klipphausen",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "",
+        "postalCode": "",
+        "city": "Klipphausen",
+        "state": "Klipphausen",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          13.5293546,
+          51.0749571
+        ]
+      },
+      "contact": {
+        "phone": null,
+        "website": "https://www.meindirektlabor.de/standorte/standort/mein-direktlabor-klipphausen",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.95,
+            "date": "2026-03-08",
+            "method": "official_directory",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "meindirektlabor",
+        "primaryUrl": "https://www.meindirektlabor.de/standorte/standort/mein-direktlabor-klipphausen",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "klipphausen",
+        "direktlabor"
+      ]
+    },
+    {
+      "id": "blut-jen-577",
+      "name": "Bioscientia Labor Jena",
+      "slug": "bioscientia-labor-jena",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "",
+        "postalCode": "",
+        "city": "Jena",
+        "state": "Jena",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          11.5879359,
+          50.9281717
+        ]
+      },
+      "contact": {
+        "phone": null,
+        "website": "https://www.meindirektlabor.de/standorte/standort/bioscientia-labor-jena",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": {
+            "amount": 16.0,
+            "currency": "EUR",
+            "note": "ab 16 "
+          },
+          "verification": {
+            "status": "verified",
+            "confidence": 0.95,
+            "date": "2026-03-08",
+            "method": "official_directory",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "meindirektlabor",
+        "primaryUrl": "https://www.meindirektlabor.de/standorte/standort/bioscientia-labor-jena",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "jena",
+        "direktlabor"
+      ]
+    },
+    {
+      "id": "blut-got-578",
+      "name": "Bioscientia Labor Gotha",
+      "slug": "bioscientia-labor-gotha",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "",
+        "postalCode": "",
+        "city": "Gotha",
+        "state": "Gotha",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          10.7014435,
+          50.9494849
+        ]
+      },
+      "contact": {
+        "phone": null,
+        "website": "https://www.meindirektlabor.de/standorte/standort/labor-gotha",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": {
+            "amount": 16.0,
+            "currency": "EUR",
+            "note": "ab 16 "
+          },
+          "verification": {
+            "status": "verified",
+            "confidence": 0.95,
+            "date": "2026-03-08",
+            "method": "official_directory",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "meindirektlabor",
+        "primaryUrl": "https://www.meindirektlabor.de/standorte/standort/labor-gotha",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "gotha",
+        "direktlabor"
+      ]
+    },
+    {
+      "id": "blut-gie-579",
+      "name": "Bioscientia Labor Mittelhessen",
+      "slug": "bioscientia-labor-mittelhessen",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "",
+        "postalCode": "",
+        "city": "Gießen",
+        "state": "Gießen",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          8.6938161,
+          50.5808795
+        ]
+      },
+      "contact": {
+        "phone": null,
+        "website": "https://www.meindirektlabor.de/standorte/standort/labor-giessen",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": {
+            "amount": 12.0,
+            "currency": "EUR",
+            "note": "ab 12 "
+          },
+          "verification": {
+            "status": "verified",
+            "confidence": 0.95,
+            "date": "2026-03-08",
+            "method": "official_directory",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "meindirektlabor",
+        "primaryUrl": "https://www.meindirektlabor.de/standorte/standort/labor-giessen",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "gießen",
+        "direktlabor"
+      ]
+    },
+    {
+      "id": "blut-wor-580",
+      "name": "Mein Direktlabor bei der WoGe",
+      "slug": "mein-direktlabor-bei-der-woge",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "",
+        "postalCode": "",
+        "city": "Worms",
+        "state": "Worms",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          8.3620898,
+          49.6302618
+        ]
+      },
+      "contact": {
+        "phone": null,
+        "website": "https://www.meindirektlabor.de/standorte/standort/mein-direktlabor-bei-der-woge",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": {
+            "amount": 12.0,
+            "currency": "EUR",
+            "note": "ab 12 "
+          },
+          "verification": {
+            "status": "verified",
+            "confidence": 0.95,
+            "date": "2026-03-08",
+            "method": "official_directory",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "meindirektlabor",
+        "primaryUrl": "https://www.meindirektlabor.de/standorte/standort/mein-direktlabor-bei-der-woge",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "worms",
+        "direktlabor"
+      ]
+    },
+    {
+      "id": "blut-lei-581",
+      "name": "Bioscientia Labor Stuttgart",
+      "slug": "bioscientia-labor-stuttgart",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "",
+        "postalCode": "",
+        "city": "Leinfelden-Echterdingen",
+        "state": "Leinfelden-Echterdingen",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          9.1525725,
+          48.6901796
+        ]
+      },
+      "contact": {
+        "phone": null,
+        "website": "https://www.meindirektlabor.de/standorte/standort/bioscientia-labor-stuttgart",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": {
+            "amount": 18.0,
+            "currency": "EUR",
+            "note": "ab 18 "
+          },
+          "verification": {
+            "status": "verified",
+            "confidence": 0.95,
+            "date": "2026-03-08",
+            "method": "official_directory",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "meindirektlabor",
+        "primaryUrl": "https://www.meindirektlabor.de/standorte/standort/bioscientia-labor-stuttgart",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "leinfelden-echterdingen",
+        "direktlabor"
+      ]
+    },
+    {
+      "id": "blut-aug-582",
+      "name": "Labor Augsburg",
+      "slug": "labor-augsburg",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "",
+        "postalCode": "",
+        "city": "Augsburg",
+        "state": "Bayern",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          10.8979522,
+          48.3690341
+        ]
+      },
+      "contact": {
+        "phone": null,
+        "website": "https://www.meindirektlabor.de/standorte/standort/labor-augsburg",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.95,
+            "date": "2026-03-08",
+            "method": "official_directory",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "meindirektlabor",
+        "primaryUrl": "https://www.meindirektlabor.de/standorte/standort/labor-augsburg",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "augsburg",
+        "direktlabor"
+      ]
+    },
+    {
+      "id": "blut-muc-583",
+      "name": "Labor Staber München",
+      "slug": "labor-staber-muenchen",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "",
+        "postalCode": "",
+        "city": "München",
+        "state": "Bayern",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          11.5753822,
+          48.1371079
+        ]
+      },
+      "contact": {
+        "phone": null,
+        "website": "https://www.meindirektlabor.de/standorte/standort/labor-staber-muenchen",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": {
+            "amount": 18.0,
+            "currency": "EUR",
+            "note": "ab 18 "
+          },
+          "verification": {
+            "status": "verified",
+            "confidence": 0.95,
+            "date": "2026-03-08",
+            "method": "official_directory",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "meindirektlabor",
+        "primaryUrl": "https://www.meindirektlabor.de/standorte/standort/labor-staber-muenchen",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "münchen",
+        "direktlabor"
+      ]
+    },
+    {
+      "id": "blut-nue-584",
+      "name": "Labor Staber Nürnberg",
+      "slug": "labor-staber-nuernberg",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "",
+        "postalCode": "",
+        "city": "Nürnberg",
+        "state": "Bayern",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          11.077298,
+          49.453872
+        ]
+      },
+      "contact": {
+        "phone": null,
+        "website": "https://www.meindirektlabor.de/standorte/standort/labor-staber-nuernberg",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": {
+            "amount": 18.0,
+            "currency": "EUR",
+            "note": "ab 18 "
+          },
+          "verification": {
+            "status": "verified",
+            "confidence": 0.95,
+            "date": "2026-03-08",
+            "method": "official_directory",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "meindirektlabor",
+        "primaryUrl": "https://www.meindirektlabor.de/standorte/standort/labor-staber-nuernberg",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "nürnberg",
+        "direktlabor"
+      ]
+    },
+    {
+      "id": "dexa-wien-591",
+      "name": "Radiologie Währing",
+      "slug": "radiologie-waehring",
+      "categories": [
+        "dexa_body_composition"
+      ],
+      "address": {
+        "street": "Währinger Straße 138",
+        "postalCode": "1180",
+        "city": "Wien",
+        "state": "Wien",
+        "country": "AT"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          16.3399199,
+          48.2272133
+        ]
+      },
+      "contact": {
+        "phone": "+4314706862",
+        "website": "https://www.radiologiewaehring.at/unsere-leistungen",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "dexa_body_composition",
+          "name": "DEXA Body Composition Scan",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.9,
+            "date": "2026-03-08",
+            "method": "website_service_page",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "manual",
+        "primaryUrl": "https://www.radiologiewaehring.at/unsere-leistungen",
+        "collectedAt": "2026-03-08T23:33:02Z"
+      },
+      "tags": [
+        "dexa",
+        "body-composition",
+        "selbstzahler",
+        "wien",
+        "österreich"
+      ]
     }
   ]
 }
