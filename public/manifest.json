@@ -1,0 +1,11 @@
+{
+  "name": "Laborsuche DACH",
+  "short_name": "Laborsuche",
+  "start_url": "/?source=pwa",
+  "display": "standalone",
+  "theme_color": "#2563EB",
+  "background_color": "#ffffff",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

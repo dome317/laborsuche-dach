@@ -15,9 +15,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Next.js Leaflet Starter",
+  title: "Laborsuche DACH",
   description:
-    "Enterprise-grade Next.js 16 starter template with vanilla Leaflet integration",
+    "DEXA Body Composition Scans & Blutuntersuchungen als Selbstzahler in Deutschland, Österreich und der Schweiz finden",
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({
