@@ -101,6 +101,8 @@ export function useProviderMarkers() {
     selectedProviderId,
     setSelectedProviderId,
     setViewportBounds,
+    hoveredProviderId,
+    setHoveredProviderId,
   } = useProviders();
   const markersRef = useRef<Map<string, Marker>>(new Map());
   const clusterGroupRef = useRef<MarkerClusterGroup | null>(null);
@@ -176,37 +178,35 @@ export function useProviderMarkers() {
       const [lng, lat] = provider.location.coordinates;
       const category = getMainCategory(provider);
       const isSelected = provider.id === selectedProviderId;
+      const isHovered = provider.id === hoveredProviderId;
+      const highlighted = isSelected || isHovered;
 
       const existing = markersRef.current.get(provider.id);
       if (existing) {
-        // Update icon for selection state
-        const iconSvg = createMarkerIcon(category, isSelected);
-        const size = isSelected ? 44 : 36;
-        const height = isSelected ? 58 : 48;
+        // Update icon for selection/hover state
+        const iconSvg = createMarkerIcon(category, highlighted);
+        const size = highlighted ? 44 : 36;
+        const height = highlighted ? 58 : 48;
         existing.setIcon(
           L.divIcon({
             html: iconSvg,
-            className: "provider-marker",
+            className: `provider-marker${highlighted ? " provider-marker-active" : ""}`,
             iconSize: [size, height],
             iconAnchor: [size / 2, height],
             popupAnchor: [0, -height],
           })
         );
-        if (isSelected) {
-          existing.setZIndexOffset(1000);
-        } else {
-          existing.setZIndexOffset(0);
-        }
+        existing.setZIndexOffset(isSelected ? 1000 : isHovered ? 500 : 0);
         return;
       }
 
       // Create new marker
-      const iconSvg = createMarkerIcon(category, isSelected);
-      const size = isSelected ? 44 : 36;
-      const height = isSelected ? 58 : 48;
+      const iconSvg = createMarkerIcon(category, highlighted);
+      const size = highlighted ? 44 : 36;
+      const height = highlighted ? 58 : 48;
       const icon = L.divIcon({
         html: iconSvg,
-        className: "provider-marker",
+        className: `provider-marker${highlighted ? " provider-marker-active" : ""}`,
         iconSize: [size, height],
         iconAnchor: [size / 2, height],
         popupAnchor: [0, -height],
@@ -219,6 +219,13 @@ export function useProviderMarkers() {
       marker.on("click", () => {
         setSelectedProviderId(provider.id);
       });
+      // Bidirectional hover: marker → sidebar
+      marker.on("mouseover", () => {
+        setHoveredProviderId(provider.id);
+      });
+      marker.on("mouseout", () => {
+        setHoveredProviderId(null);
+      });
 
       if (isSelected) {
         marker.setZIndexOffset(1000);
@@ -227,7 +234,7 @@ export function useProviderMarkers() {
       clusterGroup.addLayer(marker);
       markersRef.current.set(provider.id, marker);
     });
-  }, [map, filteredProviders, selectedProviderId, setSelectedProviderId]);
+  }, [map, filteredProviders, selectedProviderId, setSelectedProviderId, hoveredProviderId, setHoveredProviderId]);
 
   // Fit bounds when filtered providers change
   useEffect(() => {

@@ -158,9 +158,11 @@ function ProviderCard({
   provider: Provider;
   onSelect: () => void;
 }) {
+  const { hoveredProviderId, setHoveredProviderId } = useProviders();
   const category = getMainCategory(provider);
   const color = CATEGORY_COLORS[category];
   const label = CATEGORY_LABELS[category];
+  const isHovered = hoveredProviderId === provider.id;
 
   const lowestPrice = provider.services.reduce<number | null>((min, s) => {
     if (!s.price?.amount) return min;
@@ -170,7 +172,13 @@ function ProviderCard({
   return (
     <button
       onClick={onSelect}
-      className="w-full text-left px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors border-b border-gray-100 dark:border-gray-800 last:border-b-0"
+      onMouseEnter={() => setHoveredProviderId(provider.id)}
+      onMouseLeave={() => setHoveredProviderId(null)}
+      className={`w-full text-left px-4 py-3 transition-colors border-b border-gray-100 dark:border-gray-800 last:border-b-0 ${
+        isHovered
+          ? "bg-blue-50 dark:bg-blue-900/20"
+          : "hover:bg-gray-50 dark:hover:bg-gray-800/50"
+      }`}
     >
       <div className="flex items-start justify-between gap-2">
         <div className="min-w-0 flex-1">
@@ -201,19 +209,53 @@ function ProviderCard({
 
 // --- Provider List ---
 function ProviderList() {
-  const { viewportProviders: filteredProviders, setSelectedProviderId } = useProviders();
+  const {
+    viewportProviders: visibleProviders,
+    filteredProviders,
+    selectedCategory,
+    setSelectedProviderId,
+    setSelectedCategory,
+  } = useProviders();
 
   if (filteredProviders.length === 0) {
     return (
-      <div className="px-4 py-8 text-center text-sm text-gray-500 dark:text-gray-400">
-        Keine Anbieter gefunden.
+      <div className="px-4 py-12 text-center">
+        <div className="text-3xl mb-3">🔍</div>
+        <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
+          Keine Anbieter für diesen Filter gefunden
+        </p>
+        <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+          Versuche einen anderen Filter oder Suchbegriff.
+        </p>
+        {selectedCategory !== "all" && (
+          <button
+            onClick={() => setSelectedCategory("all")}
+            className="mt-3 text-xs text-blue-600 dark:text-blue-400 hover:underline"
+          >
+            Alle Anbieter anzeigen
+          </button>
+        )}
+      </div>
+    );
+  }
+
+  if (visibleProviders.length === 0) {
+    return (
+      <div className="px-4 py-12 text-center">
+        <div className="text-3xl mb-3">🗺️</div>
+        <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
+          Keine Anbieter im Kartenausschnitt
+        </p>
+        <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+          Zoome heraus oder verschiebe die Karte.
+        </p>
       </div>
     );
   }
 
   return (
     <div>
-      {filteredProviders.map((provider) => (
+      {visibleProviders.map((provider) => (
         <ProviderCard
           key={provider.id}
           provider={provider}

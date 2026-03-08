@@ -36,6 +36,8 @@ interface ProviderContextValue {
   viewportCategoryCounts: Record<CategoryFilter, number>;
   isLoading: boolean;
   setViewportBounds: (bounds: ViewportBounds | null) => void;
+  hoveredProviderId: string | null;
+  setHoveredProviderId: (id: string | null) => void;
 }
 
 const ProviderContext = createContext<ProviderContextValue | null>(null);
@@ -90,6 +92,7 @@ export function ProviderProvider({ children }: { children: ReactNode }) {
   );
   const [searchQuery, setSearchQuery] = useState(initial.search);
   const [viewportBounds, setViewportBounds] = useState<ViewportBounds | null>(null);
+  const [hoveredProviderId, setHoveredProviderId] = useState<string | null>(null);
 
   // Load providers
   useEffect(() => {
@@ -216,6 +219,8 @@ export function ProviderProvider({ children }: { children: ReactNode }) {
       viewportCategoryCounts,
       isLoading,
       setViewportBounds,
+      hoveredProviderId,
+      setHoveredProviderId,
     }),
     [
       providers,
@@ -228,6 +233,7 @@ export function ProviderProvider({ children }: { children: ReactNode }) {
       categoryCounts,
       viewportCategoryCounts,
       isLoading,
+      hoveredProviderId,
     ]
   );
 

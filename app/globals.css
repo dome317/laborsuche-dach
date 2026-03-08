@@ -246,6 +246,14 @@
 .provider-marker {
   background: none !important;
   border: none !important;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+/* Active/hovered marker: scale up with drop shadow */
+.provider-marker-active {
+  transform: scale(1.2);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  z-index: 1000 !important;
 }
 
 /* Cluster marker: remove default Leaflet divIcon styling */
