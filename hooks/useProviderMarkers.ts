@@ -108,12 +108,14 @@ export function useProviderMarkers() {
   const clusterGroupRef = useRef<MarkerClusterGroup | null>(null);
   const leafletRef = useRef<typeof import("leaflet") | null>(null);
 
-  // Load leaflet + markercluster once (markercluster expects global L)
+  // Load leaflet + markercluster once (markercluster expects mutable global L)
   useEffect(() => {
     import("leaflet").then(async (L) => {
-      (window as unknown as Record<string, unknown>).L = L;
+      // ES module namespace is frozen; markercluster needs a mutable L on window
+      const mutableL = Object.create(L) as typeof L;
+      (window as unknown as Record<string, unknown>).L = mutableL;
       await import("leaflet.markercluster");
-      leafletRef.current = L;
+      leafletRef.current = mutableL;
     });
   }, []);
 
