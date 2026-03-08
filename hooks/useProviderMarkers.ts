@@ -108,12 +108,11 @@ export function useProviderMarkers() {
   const clusterGroupRef = useRef<MarkerClusterGroup | null>(null);
   const leafletRef = useRef<typeof import("leaflet") | null>(null);
 
-  // Load leaflet + markercluster once
+  // Load leaflet + markercluster once (markercluster expects global L)
   useEffect(() => {
-    Promise.all([
-      import("leaflet"),
-      import("leaflet.markercluster"),
-    ]).then(([L]) => {
+    import("leaflet").then(async (L) => {
+      (window as unknown as Record<string, unknown>).L = L;
+      await import("leaflet.markercluster");
       leafletRef.current = L;
     });
   }, []);
