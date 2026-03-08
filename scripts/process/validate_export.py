@@ -85,7 +85,7 @@ class ProviderModel(BaseModel):
     id: str
     name: str
     slug: str
-    categories: list[Literal["dexa_body_composition", "blutlabor", "both"]]
+    categories: list[Literal["dexa_body_composition", "blutlabor"]]
     address: AddressModel
     location: LocationModel
     contact: ContactModel
@@ -180,19 +180,21 @@ def compute_confidence(candidate: dict) -> float:
 
 
 def determine_categories(services: list[str]) -> list[str]:
-    """Determine provider categories from service list."""
+    """Determine provider categories from service list.
+
+    Only body composition and blutlabor are relevant categories.
+    Bone-density-only providers are excluded upstream (candidate_to_provider returns None).
+    """
     has_dexa = "dexa_body_composition" in services
     has_blut = "blood_test_self_pay" in services
 
     if has_dexa and has_blut:
-        return ["both"]
+        return ["dexa_body_composition", "blutlabor"]
     if has_dexa:
         return ["dexa_body_composition"]
     if has_blut:
         return ["blutlabor"]
-    if "dexa_bone_density" in services:
-        return ["dexa_body_composition"]  # Still shows on map under DEXA category
-    return ["blutlabor"]  # Fallback
+    return []  # No relevant category — will be excluded
 
 
 def build_services(candidate: dict) -> list[dict]:
@@ -298,6 +300,11 @@ def candidate_to_provider(candidate: dict, index: int) -> dict | None:
     if not services:
         return None
 
+    # Skip bone-density-only providers (not relevant for the challenge)
+    relevant_services = [s for s in services if s in ("dexa_body_composition", "blood_test_self_pay")]
+    if not relevant_services:
+        return None
+
     website = candidate.get("raw_website", "")
     if not website:
         return None
@@ -314,7 +321,7 @@ def candidate_to_provider(candidate: dict, index: int) -> dict | None:
         "id": provider_id,
         "name": candidate.get("raw_name", ""),
         "slug": slugify(candidate.get("raw_name", "")),
-        "categories": determine_categories(services),
+        "categories": determine_categories(relevant_services),
         "address": {
             "street": street,
             "postalCode": plz,
@@ -400,7 +407,7 @@ def main() -> None:
     dexa_bd = sum(1 for p in providers if "dexa_bone_density" in [s["type"] for s in p["services"]]
                   and "dexa_body_composition" not in [s["type"] for s in p["services"]])
     blut = sum(1 for p in providers if "blood_test_self_pay" in [s["type"] for s in p["services"]])
-    both = sum(1 for p in providers if "both" in p["categories"])
+    both = sum(1 for p in providers if "dexa_body_composition" in p["categories"] and "blutlabor" in p["categories"])
     verified = sum(1 for p in providers if p["verification"]["confidence"] >= 0.8)
     has_price = sum(1 for p in providers if any(s.get("price") for s in p["services"]))
     needs_review_count = sum(1 for c in candidates if c.get("classification_status") == "needs_review")
