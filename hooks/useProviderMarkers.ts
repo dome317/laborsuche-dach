@@ -6,25 +6,28 @@ import { useProviders } from "@/contexts/ProviderContext";
 import type { Provider, ProviderCategory } from "@/types/provider";
 import type { Marker, MarkerClusterGroup } from "leaflet";
 
-export const CATEGORY_COLORS: Record<ProviderCategory, string> = {
+/** Visual category for marker rendering — derived from categories array */
+export type MarkerCategory = "dexa_body_composition" | "blutlabor" | "both";
+
+export const CATEGORY_COLORS: Record<MarkerCategory, string> = {
   dexa_body_composition: "#2563EB",
   blutlabor: "#10B981",
   both: "#8B5CF6",
 };
 
-export const CATEGORY_LABELS: Record<ProviderCategory, string> = {
+export const CATEGORY_LABELS: Record<MarkerCategory, string> = {
   dexa_body_composition: "DEXA Body Scan",
   blutlabor: "Blutlabor",
-  both: "Beides",
+  both: "DEXA + Blutlabor",
 };
 
-const CATEGORY_LABELS_SHORT: Record<ProviderCategory, string> = {
+const CATEGORY_LABELS_SHORT: Record<MarkerCategory, string> = {
   dexa_body_composition: "DEXA",
   blutlabor: "Blut",
   both: "DEXA+Blut",
 };
 
-function createMarkerIcon(category: ProviderCategory, selected: boolean): string {
+function createMarkerIcon(category: MarkerCategory, selected: boolean): string {
   const color = CATEGORY_COLORS[category];
   const label = CATEGORY_LABELS_SHORT[category];
   const isDEXA = category === "dexa_body_composition" || category === "both";
@@ -62,32 +65,34 @@ function createMarkerIcon(category: ProviderCategory, selected: boolean): string
   `;
 }
 
-export function getMainCategory(provider: Provider): ProviderCategory {
-  if (provider.categories.includes("both")) return "both";
-  if (provider.categories.includes("dexa_body_composition"))
-    return "dexa_body_composition";
+/** Derive visual marker category from provider's categories array */
+export function getMainCategory(provider: Provider): MarkerCategory {
+  const hasDEXA = provider.categories.includes("dexa_body_composition");
+  const hasBlut = provider.categories.includes("blutlabor");
+  if (hasDEXA && hasBlut) return "both";
+  if (hasDEXA) return "dexa_body_composition";
   return "blutlabor";
 }
 
 /** Determine majority category color for a cluster */
 function getClusterColor(childMarkers: Marker[]): string {
-  const counts: Record<ProviderCategory, number> = {
+  const counts: Record<MarkerCategory, number> = {
     dexa_body_composition: 0,
     blutlabor: 0,
     both: 0,
   };
 
   childMarkers.forEach((m) => {
-    const cat = (m.options as { category?: ProviderCategory }).category;
+    const cat = (m.options as { category?: MarkerCategory }).category;
     if (cat) counts[cat]++;
   });
 
-  let maxCat: ProviderCategory = "dexa_body_composition";
+  let maxCat: MarkerCategory = "dexa_body_composition";
   let maxCount = 0;
   for (const [cat, count] of Object.entries(counts)) {
     if (count > maxCount) {
       maxCount = count;
-      maxCat = cat as ProviderCategory;
+      maxCat = cat as MarkerCategory;
     }
   }
 
@@ -216,7 +221,7 @@ export function useProviderMarkers() {
       const marker = L.marker([lat, lng], {
         icon,
         category, // Store category for cluster color calculation
-      } as L.MarkerOptions & { category: ProviderCategory });
+      } as L.MarkerOptions & { category: MarkerCategory });
       marker.on("click", () => {
         setSelectedProviderId(provider.id);
       });

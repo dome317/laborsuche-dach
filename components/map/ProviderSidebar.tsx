@@ -21,15 +21,13 @@ import {
   CATEGORY_LABELS,
   getMainCategory,
 } from "@/hooks/useProviderMarkers";
-import type { Provider, ProviderCategory } from "@/types/provider";
-
-type CategoryFilter = ProviderCategory | "all";
+import type { CategoryFilter } from "@/contexts/ProviderContext";
+import type { Provider } from "@/types/provider";
 
 const FILTER_OPTIONS: { key: CategoryFilter; label: string }[] = [
   { key: "all", label: "Alle" },
   { key: "dexa_body_composition", label: "DEXA Body Scan" },
   { key: "blutlabor", label: "Blutlabor" },
-  { key: "both", label: "Beides" },
 ];
 
 // --- Filter Chips ---
@@ -43,7 +41,7 @@ function FilterChips({ compact = false }: { compact?: boolean }) {
         const isActive = selectedCategory === key;
         const count = categoryCounts[key];
         const color =
-          key === "all" ? "#6B7280" : CATEGORY_COLORS[key as ProviderCategory];
+          key === "all" ? "#6B7280" : CATEGORY_COLORS[key as keyof typeof CATEGORY_COLORS];
 
         return (
           <button

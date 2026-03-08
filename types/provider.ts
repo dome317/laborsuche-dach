@@ -49,7 +49,7 @@ export interface ProviderService {
   } | null
 }
 
-export type ProviderCategory = "dexa_body_composition" | "blutlabor" | "both"
+export type ProviderCategory = "dexa_body_composition" | "blutlabor"
 
 export interface ProvidersData {
   meta: {

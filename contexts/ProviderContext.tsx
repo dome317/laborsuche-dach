@@ -12,7 +12,7 @@ import {
 import Fuse from "fuse.js";
 import type { Provider, ProviderCategory, ProvidersData } from "@/types/provider";
 
-type CategoryFilter = ProviderCategory | "all";
+export type CategoryFilter = ProviderCategory | "all";
 
 interface ViewportBounds {
   north: number;
@@ -66,11 +66,8 @@ export function haversineKm(
   return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 }
 
-function getMainCategory(provider: Provider): ProviderCategory {
-  if (provider.categories.includes("both")) return "both";
-  if (provider.categories.includes("dexa_body_composition"))
-    return "dexa_body_composition";
-  return "blutlabor";
+function hasCategory(provider: Provider, cat: ProviderCategory): boolean {
+  return provider.categories.includes(cat);
 }
 
 // Read initial state from URL params
@@ -88,7 +85,6 @@ function getInitialParams(): {
     "all",
     "dexa_body_composition",
     "blutlabor",
-    "both",
   ];
   return {
     category: category && validCategories.includes(category) ? category : "all",
@@ -136,17 +132,16 @@ export function ProviderProvider({ children }: { children: ReactNode }) {
     });
   }, [providers]);
 
-  // Category counts (before search filter)
+  // Category counts (before search filter) — providers can count for multiple categories
   const categoryCounts = useMemo(() => {
     const counts: Record<CategoryFilter, number> = {
       all: providers.length,
       dexa_body_composition: 0,
       blutlabor: 0,
-      both: 0,
     };
     providers.forEach((p) => {
-      const cat = getMainCategory(p);
-      counts[cat]++;
+      if (hasCategory(p, "dexa_body_composition")) counts.dexa_body_composition++;
+      if (hasCategory(p, "blutlabor")) counts.blutlabor++;
     });
     return counts;
   }, [providers]);
@@ -155,10 +150,10 @@ export function ProviderProvider({ children }: { children: ReactNode }) {
   const filteredProviders = useMemo(() => {
     let result = providers;
 
-    // Category filter
+    // Category filter — show all providers that have this category
     if (selectedCategory !== "all") {
       result = result.filter(
-        (p) => getMainCategory(p) === selectedCategory
+        (p) => hasCategory(p, selectedCategory)
       );
     }
 
@@ -207,11 +202,10 @@ export function ProviderProvider({ children }: { children: ReactNode }) {
       all: viewportProviders.length,
       dexa_body_composition: 0,
       blutlabor: 0,
-      both: 0,
     };
     viewportProviders.forEach((p) => {
-      const cat = getMainCategory(p);
-      counts[cat]++;
+      if (hasCategory(p, "dexa_body_composition")) counts.dexa_body_composition++;
+      if (hasCategory(p, "blutlabor")) counts.blutlabor++;
     });
     return counts;
   }, [viewportProviders]);

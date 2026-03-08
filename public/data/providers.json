@@ -221,7 +221,7 @@
       "id": "both-wien-001",
       "name": "Diagnostikum Wien",
       "slug": "diagnostikum-wien",
-      "categories": ["both"],
+      "categories": ["dexa_body_composition", "blutlabor"],
       "address": {
         "street": "Mariahilfer Straße 45",
         "postalCode": "1060",
