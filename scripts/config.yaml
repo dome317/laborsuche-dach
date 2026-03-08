@@ -1,0 +1,59 @@
+regions:
+  DE:
+    cities: [München, Berlin, Hamburg, Hannover, Köln, Frankfurt, Stuttgart, Nürnberg]
+  AT:
+    cities: [Wien, Graz]
+  CH:
+    cities: [Zürich, Bern, Basel]
+
+keywords:
+  body_comp_positive:
+    - { term: "körperzusammensetzung", weight: 3 }
+    - { term: "body composition", weight: 3 }
+    - { term: "viszerales fett", weight: 3 }
+    - { term: "fettmessung", weight: 3 }
+    - { term: "körperfettanalyse", weight: 3 }
+    - { term: "körperfettverteilung", weight: 3 }
+    - { term: "ganzkörper-dexa", weight: 2 }
+    - { term: "ganzkörper dexa", weight: 2 }
+    - { term: "muskelmasse", weight: 2 }
+    - { term: "fettmasse", weight: 2 }
+    - { term: "lean mass", weight: 2 }
+    - { term: "fat mass", weight: 2 }
+    - { term: "fett- und muskelanalyse", weight: 2 }
+    - { term: "appendicular lean mass", weight: 2 }
+    - { term: "körperfettanteil", weight: 1 }
+    - { term: "longevity check", weight: 1 }
+    - { term: "longevity", weight: 1 }
+    - { term: "sportmedizin", weight: 1 }
+
+  bone_density_signals:
+    - { term: "osteodensitometrie", weight: 4 }
+    - { term: "nur knochendichte", weight: 4 }
+    - { term: "knochendichtemessung allein", weight: 3 }
+    - { term: "osteoporose", weight: 2 }
+    - { term: "frakturrisiko", weight: 2 }
+    - { term: "t-score", weight: 2 }
+    - { term: "z-score", weight: 1 }
+    - { term: "frax", weight: 1 }
+
+  blut_selbstzahler_positive:
+    - { term: "selbstzahler", weight: 3 }
+    - { term: "ohne überweisung", weight: 3 }
+    - { term: "direktlabor", weight: 3 }
+    - { term: "privatperson", weight: 2 }
+    - { term: "igel", weight: 1 }
+    - { term: "blutabnahme", weight: 1 }
+
+classification:
+  body_comp_confirmed_threshold: 3
+  body_comp_review_threshold: 0
+  bone_only_threshold: 3  # bone >= 3 AND body_comp < 1 -> bone only
+
+geocoding:
+  provider: nominatim
+  rate_limit_seconds: 1.1
+
+dedup:
+  name_similarity_threshold: 85
+  geo_proximity_meters: 50
