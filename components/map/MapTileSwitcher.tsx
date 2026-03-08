@@ -21,10 +21,10 @@ export function MapTileSwitcher({
   // Map tile providers to display options with PNG previews
   const layerOptions = [
     {
-      id: "osm",
+      id: "voyager",
       label: "Basic",
       image: "/map-basic.png",
-      provider: TILE_PROVIDERS.find((p) => p.id === "osm"),
+      provider: TILE_PROVIDERS.find((p) => p.id === "voyager"),
     },
     {
       id: "satellite",
