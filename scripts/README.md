@@ -1,14 +1,21 @@
 # Scraping & Processing Pipeline
 
-Vierstufige Pipeline zur Datenerhebung und -verarbeitung für die Laborsuche DACH.
+Sechsstufige Pipeline zur Datenerhebung und -verarbeitung für die Laborsuche DACH.
+
+## Design-Entscheidung
+
+**Service-Level Klassifikation**, nicht Provider-Level. Ein Anbieter kann gleichzeitig Body Composition und Knochendichte anbieten — deshalb zwei separate Scores (`body_comp_score`, `bone_density_score`).
 
 ## Pipeline-Stufen
 
 ```
-1. discover   → Kandidaten finden (Google Places API, Webrecherche)
-2. classify   → DEXA Body Comp vs. Knochendichte unterscheiden (Keyword-Scoring)
-3. geocode    → Adressen geocodieren und Koordinaten validieren
-4. validate   → Daten prüfen, Duplikate entfernen, providers.json erzeugen
+data/raw/*.json (Apify + Chrome + manuell)
+  → ingest_merge.py     (Format-Vereinheitlichung aller Quellen)
+  → enrich.py           (Website-Text fetchen + Snippets speichern)
+  → classify.py         (Dual-Score: body_comp + bone_density + blut)
+  → geocode.py          (Nur für fehlende Koordinaten, Nominatim + Cache)
+  → deduplicate.py      (Website/Phone/Adresse + Fuzzy-Name)
+  → validate_export.py  (Pydantic-Validierung + Confidence + JSON-Export)
 ```
 
 ## Setup
@@ -28,35 +35,48 @@ pip install -r requirements.txt
 bash scripts/run_pipeline.sh
 
 # Einzelne Stufen
-python scripts/scrape/discover.py
+python scripts/process/ingest_merge.py
+python scripts/process/enrich.py
 python scripts/process/classify.py
 python scripts/process/geocode.py
-python scripts/process/validate.py
+python scripts/process/deduplicate.py
+python scripts/process/validate_export.py
 ```
+
+## Rohdaten
+
+Rohdaten liegen in `data/raw/` als JSON-Dateien. Unterstützte Formate:
+
+- **Apify** (Google Maps Scraper): Felder wie `title`, `placeId`, `location.lat`
+- **Manuell/meindirektlabor**: Felder wie `name`, `address`, `lat`, `lng`
+
+Der Ingest-Schritt erkennt das Format automatisch.
+
+## Manuelle Review
+
+Nach der Klassifikation werden Einträge ohne klare Service-Zuordnung in `data/processed/needs_review.csv` exportiert. Diese Datei manuell prüfen und ggf. Rohdaten ergänzen.
 
 ## Neue Region hinzufügen
 
-1. `config.yaml` editieren — neue Region unter `regions` eintragen
-2. Suchbegriffe und Radius anpassen
-3. Pipeline erneut ausführen
-4. Ergebnis prüfen und nach `public/data/providers.json` kopieren
+1. Stadt in `config.yaml` unter `regions` eintragen
+2. Rohdaten in `data/raw/` ablegen (beliebiges unterstütztes Format)
+3. Pipeline erneut ausführen: `bash scripts/run_pipeline.sh`
 
 ## Abhängigkeiten
 
 | Paket | Zweck |
 |-------|-------|
-| httpx | HTTP-Requests (async-fähig) |
+| httpx | HTTP-Requests für Website-Enrichment |
 | beautifulsoup4 | HTML-Parsing für Website-Analyse |
-| geopy | Geocoding (Nominatim, Google) |
+| geopy | Geocoding (Nominatim) |
 | pydantic | Schema-Validierung der Provider-Daten |
 | rapidfuzz | Fuzzy-Matching für Duplikat-Erkennung |
-| anthropic | Claude API für Grenzfall-Klassifikation |
 | pyyaml | Config-Dateien lesen |
 
 ## Datenfluss
 
 ```
-data/raw/          → Rohdaten aus Scraping (nicht im Git)
-data/processed/    → Bereinigte Zwischenergebnisse
-public/data/       → Finale providers.json (im Git)
+data/raw/          → Rohdaten aus Scraping/Recherche
+data/processed/    → Bereinigte Zwischenergebnisse (candidates → enriched → classified → geocoded → deduplicated)
+public/data/       → Finale providers.json (im Git, vom Frontend konsumiert)
 ```
