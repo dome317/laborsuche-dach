@@ -1,50 +1,21 @@
 "use client";
 
-import { useState, useCallback, useMemo } from "react";
+import { useMemo } from "react";
 import { LeafletMap } from "./LeafletMap";
 import { LeafletTileLayer } from "./LeafletTileLayer";
-import { LeafletGeoJSON } from "./LeafletGeoJSON";
-import { MapSearchBar } from "./MapSearchBar";
 import { MapTopBar } from "./MapTopBar";
 import { MapTileSwitcher } from "./MapTileSwitcher";
 import { MapControls } from "./MapControls";
-import { MapDetailsPanel } from "./MapDetailsPanel";
+import { ProviderSidebar } from "./ProviderSidebar";
 import { useMapTileProvider } from "@/hooks/useMapTileProvider";
 import { useProviderMarkers } from "@/hooks/useProviderMarkers";
 
-// Memoized style object to prevent unnecessary re-renders
-const GEOJSON_STYLE = {
-  fillColor: "#3b82f6",
-  fillOpacity: 0.2,
-  color: "#2563eb",
-  weight: 2,
-} as const;
-
 export function MapMain() {
-  const [selectedCountry, setSelectedCountry] =
-    useState<GeoJSON.Feature | null>(null);
-
   const { tileProvider, currentProviderId, setProviderId } =
     useMapTileProvider();
 
-  // Load provider markers onto the map
+  // Load provider markers onto the map (uses ProviderContext)
   useProviderMarkers();
-
-  const handleCountrySelect = useCallback(async (countryId: string) => {
-    try {
-      const response = await fetch(
-        `/api/countries/${encodeURIComponent(countryId)}`
-      );
-      const feature = await response.json();
-      setSelectedCountry(feature);
-    } catch (error) {
-      console.error("Error loading country GeoJSON:", error);
-    }
-  }, []);
-
-  const handleClearSelection = useCallback(() => {
-    setSelectedCountry(null);
-  }, []);
 
   const tileLayerProps = useMemo(
     () => ({
@@ -64,15 +35,10 @@ export function MapMain() {
           attribution={tileLayerProps.attribution}
           maxZoom={tileLayerProps.maxZoom}
         />
-        <LeafletGeoJSON data={selectedCountry} style={GEOJSON_STYLE} />
       </LeafletMap>
 
-      {/* Search Bar */}
-      <MapSearchBar
-        onCountrySelect={handleCountrySelect}
-        selectedCountry={selectedCountry}
-        onClearSelection={handleClearSelection}
-      />
+      {/* Provider Sidebar (desktop: left panel, mobile: bottom drawer) */}
+      <ProviderSidebar />
 
       {/* Top Bar */}
       <MapTopBar />
@@ -85,12 +51,6 @@ export function MapMain() {
 
       {/* Map Controls */}
       <MapControls />
-
-      {/* Country Details Panel */}
-      <MapDetailsPanel
-        country={selectedCountry}
-        onClose={handleClearSelection}
-      />
     </div>
   );
 }
