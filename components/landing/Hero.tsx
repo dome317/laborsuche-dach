@@ -7,12 +7,11 @@ export function Hero() {
       {/* Content */}
       <div className="max-w-4xl mx-auto space-y-6">
         <h1 className="scroll-m-20 border-b pb-2 text-4xl sm:text-7xl text-white font-extrabold tracking-tight first:mt-0 text-balance">
-          Next.js Leaflet Starter
+          Laborsuche DACH
         </h1>
 
         <p className="text-lg sm:text-xl md:text-2xl text-white/80 max-w-2xl mx-auto">
-          Open-source starter kit that recreates the Google Maps experience
-          using Next.js and pure Leaflet.
+          DEXA Body Composition Scans und Blutlabore im DACH-Raum
         </p>
       </div>
     </div>

@@ -99,7 +99,7 @@ def main() -> None:
     failed = 0
     no_website = 0
 
-    with httpx.Client(headers=HEADERS, verify=False) as client:
+    with httpx.Client(headers=HEADERS) as client:
         for i, candidate in enumerate(candidates):
             website = candidate.get("raw_website")
             if not website:
