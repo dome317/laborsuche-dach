@@ -1,0 +1,192 @@
+"use client";
+
+import {
+  createContext,
+  useContext,
+  useState,
+  useCallback,
+  useMemo,
+  useEffect,
+  type ReactNode,
+} from "react";
+import Fuse from "fuse.js";
+import type { Provider, ProviderCategory, ProvidersData } from "@/types/provider";
+
+type CategoryFilter = ProviderCategory | "all";
+
+interface ProviderContextValue {
+  providers: Provider[];
+  filteredProviders: Provider[];
+  selectedCategory: CategoryFilter;
+  setSelectedCategory: (cat: CategoryFilter) => void;
+  selectedProviderId: string | null;
+  setSelectedProviderId: (id: string | null) => void;
+  selectedProvider: Provider | null;
+  searchQuery: string;
+  setSearchQuery: (q: string) => void;
+  categoryCounts: Record<CategoryFilter, number>;
+  isLoading: boolean;
+}
+
+const ProviderContext = createContext<ProviderContextValue | null>(null);
+
+export function useProviders() {
+  const ctx = useContext(ProviderContext);
+  if (!ctx) throw new Error("useProviders must be used within ProviderProvider");
+  return ctx;
+}
+
+function getMainCategory(provider: Provider): ProviderCategory {
+  if (provider.categories.includes("both")) return "both";
+  if (provider.categories.includes("dexa_body_composition"))
+    return "dexa_body_composition";
+  return "blutlabor";
+}
+
+// Read initial state from URL params
+function getInitialParams(): {
+  category: CategoryFilter;
+  selected: string | null;
+  search: string;
+} {
+  if (typeof window === "undefined")
+    return { category: "all", selected: null, search: "" };
+
+  const params = new URLSearchParams(window.location.search);
+  const category = params.get("category") as CategoryFilter | null;
+  const validCategories: CategoryFilter[] = [
+    "all",
+    "dexa_body_composition",
+    "blutlabor",
+    "both",
+  ];
+  return {
+    category: category && validCategories.includes(category) ? category : "all",
+    selected: params.get("selected"),
+    search: params.get("q") || "",
+  };
+}
+
+export function ProviderProvider({ children }: { children: ReactNode }) {
+  const [providers, setProviders] = useState<Provider[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  const initial = useMemo(() => getInitialParams(), []);
+  const [selectedCategory, setSelectedCategory] = useState<CategoryFilter>(
+    initial.category
+  );
+  const [selectedProviderId, setSelectedProviderId] = useState<string | null>(
+    initial.selected
+  );
+  const [searchQuery, setSearchQuery] = useState(initial.search);
+
+  // Load providers
+  useEffect(() => {
+    fetch("/data/providers.json")
+      .then((r) => r.json())
+      .then((data: ProvidersData) => {
+        setProviders(data.providers);
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        console.error("Failed to load providers:", err);
+        setIsLoading(false);
+      });
+  }, []);
+
+  // Fuse.js index
+  const fuse = useMemo(() => {
+    if (providers.length === 0) return null;
+    return new Fuse(providers, {
+      keys: ["name", "address.city", "address.postalCode"],
+      threshold: 0.4,
+    });
+  }, [providers]);
+
+  // Category counts (before search filter)
+  const categoryCounts = useMemo(() => {
+    const counts: Record<CategoryFilter, number> = {
+      all: providers.length,
+      dexa_body_composition: 0,
+      blutlabor: 0,
+      both: 0,
+    };
+    providers.forEach((p) => {
+      const cat = getMainCategory(p);
+      counts[cat]++;
+    });
+    return counts;
+  }, [providers]);
+
+  // Filtered providers
+  const filteredProviders = useMemo(() => {
+    let result = providers;
+
+    // Category filter
+    if (selectedCategory !== "all") {
+      result = result.filter(
+        (p) => getMainCategory(p) === selectedCategory
+      );
+    }
+
+    // Search filter
+    if (searchQuery.trim() && fuse) {
+      const searchResults = fuse.search(searchQuery.trim());
+      const searchIds = new Set(searchResults.map((r) => r.item.id));
+      result = result.filter((p) => searchIds.has(p.id));
+    }
+
+    return result;
+  }, [providers, selectedCategory, searchQuery, fuse]);
+
+  // Selected provider
+  const selectedProvider = useMemo(
+    () => providers.find((p) => p.id === selectedProviderId) ?? null,
+    [providers, selectedProviderId]
+  );
+
+  // Sync state to URL
+  useEffect(() => {
+    const params = new URLSearchParams();
+    if (selectedCategory !== "all") params.set("category", selectedCategory);
+    if (selectedProviderId) params.set("selected", selectedProviderId);
+    if (searchQuery.trim()) params.set("q", searchQuery.trim());
+
+    const newUrl =
+      params.toString() === ""
+        ? window.location.pathname
+        : `${window.location.pathname}?${params.toString()}`;
+
+    window.history.replaceState(null, "", newUrl);
+  }, [selectedCategory, selectedProviderId, searchQuery]);
+
+  const value = useMemo<ProviderContextValue>(
+    () => ({
+      providers,
+      filteredProviders,
+      selectedCategory,
+      setSelectedCategory,
+      selectedProviderId,
+      setSelectedProviderId,
+      selectedProvider,
+      searchQuery,
+      setSearchQuery,
+      categoryCounts,
+      isLoading,
+    }),
+    [
+      providers,
+      filteredProviders,
+      selectedCategory,
+      selectedProviderId,
+      selectedProvider,
+      searchQuery,
+      categoryCounts,
+      isLoading,
+    ]
+  );
+
+  return (
+    <ProviderContext.Provider value={value}>{children}</ProviderContext.Provider>
+  );
+}
