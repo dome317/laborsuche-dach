@@ -368,12 +368,26 @@ def main() -> None:
 
     providers = []
     skipped = 0
+    invalid = 0
     for i, candidate in enumerate(candidates):
         provider = candidate_to_provider(candidate, i + 1)
-        if provider:
-            providers.append(provider)
-        else:
+        if not provider:
             skipped += 1
+            continue
+
+        # Validate each provider individually with Pydantic
+        try:
+            ProviderModel(**provider)
+            providers.append(provider)
+        except Exception as e:
+            invalid += 1
+            name = provider.get("name", "unknown")
+            print(f"  INVALID: {name} — {e}", file=sys.stderr)
+
+    total_input = len(candidates)
+    if total_input > 0 and invalid / total_input > 0.2:
+        print(f"ERROR: {invalid}/{total_input} entries ({invalid/total_input*100:.0f}%) failed validation. Aborting.", file=sys.stderr)
+        sys.exit(1)
 
     # Collect regions
     regions = sorted(set(p["address"]["country"] for p in providers))
@@ -388,13 +402,6 @@ def main() -> None:
         },
         "providers": providers,
     }
-
-    # Validate with Pydantic
-    try:
-        validated = ProvidersDataModel(**data)
-    except Exception as e:
-        print(f"WARNING: Pydantic validation errors: {e}", file=sys.stderr)
-        print("Exporting with warnings...", file=sys.stderr)
 
     # Write output
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
@@ -417,14 +424,15 @@ def main() -> None:
 
     print(f"""
 === Datenqualitaet Report ===
-Gesamt:                  {len(providers)}
+Valide exportiert:       {len(providers)}
+Invalide uebersprungen:  {invalid}
+Ohne Daten uebersprungen:{skipped}
 DEXA Body Composition:   {dexa_bc}
 DEXA Bone Density Only:  {dexa_bd}
 Blutlabor Selbstzahler:  {blut}
 Beides:                  {both}
 Verifiziert (>=0.8):     {verified} ({verified_pct})
 Needs Review:            {needs_review_count}
-Uebersprungen:           {skipped}
 Regionen:                {regions}
 Preise erfasst:          {has_price} ({price_pct})
 """)
