@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import {
   Search,
   ArrowLeft,
@@ -33,12 +33,12 @@ const FILTER_OPTIONS: { key: CategoryFilter; label: string }[] = [
 ];
 
 // --- Filter Chips ---
-function FilterChips() {
+function FilterChips({ compact = false }: { compact?: boolean }) {
   const { selectedCategory, setSelectedCategory, categoryCounts } =
     useProviders();
 
   return (
-    <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-none">
+    <div className={`flex gap-2 overflow-x-auto pb-1 scrollbar-none ${compact ? "px-1" : ""}`}>
       {FILTER_OPTIONS.map(({ key, label }) => {
         const isActive = selectedCategory === key;
         const count = categoryCounts[key];
@@ -52,7 +52,9 @@ function FilterChips() {
             className={`flex-shrink-0 px-3 py-1.5 rounded-full text-xs font-medium transition-all border ${
               isActive
                 ? "text-white shadow-sm"
-                : "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600"
+                : compact
+                  ? "bg-white/90 dark:bg-gray-800/90 text-gray-700 dark:text-gray-300 border-gray-200/80 dark:border-gray-700/80 hover:border-gray-300 dark:hover:border-gray-600"
+                  : "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600"
             }`}
             style={
               isActive
@@ -60,10 +62,64 @@ function FilterChips() {
                 : undefined
             }
           >
-            {label} ({count})
+            {compact ? `${label} (${count})` : `${label} (${count})`}
           </button>
         );
       })}
+    </div>
+  );
+}
+
+// --- Mobile Filter Bar (above the map) ---
+function MobileFilterBar() {
+  const { searchQuery, setSearchQuery } = useProviders();
+  const [searchOpen, setSearchOpen] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (searchOpen && inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, [searchOpen]);
+
+  return (
+    <div className="fixed top-0 left-0 right-0 z-[1050] p-2 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm safe-area-top">
+      <div className="flex items-center gap-2">
+        {searchOpen ? (
+          <div className="relative flex-1">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
+            <input
+              ref={inputRef}
+              type="text"
+              placeholder="Suche..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full pl-9 pr-8 py-1.5 text-sm bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-gray-100 placeholder:text-gray-400"
+            />
+            <button
+              onClick={() => {
+                setSearchOpen(false);
+                if (!searchQuery) setSearchQuery("");
+              }}
+              className="absolute right-2 top-1/2 -translate-y-1/2 p-0.5 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700"
+            >
+              <X className="h-3.5 w-3.5 text-gray-400" />
+            </button>
+          </div>
+        ) : (
+          <>
+            <div className="flex-1 overflow-x-auto">
+              <FilterChips compact />
+            </div>
+            <button
+              onClick={() => setSearchOpen(true)}
+              className="flex-shrink-0 h-8 w-8 flex items-center justify-center rounded-full bg-white/90 dark:bg-gray-800/90 border border-gray-200/80 dark:border-gray-700/80 shadow-sm"
+            >
+              <Search className="h-4 w-4 text-gray-600 dark:text-gray-300" />
+            </button>
+          </>
+        )}
+      </div>
     </div>
   );
 }
@@ -354,7 +410,8 @@ export function ProviderSidebar() {
     return () => window.removeEventListener("resize", check);
   }, []);
 
-  const listView = (
+  // Desktop list view: includes search + filters
+  const desktopListView = (
     <div className="flex flex-col h-full">
       <div className="px-4 pt-4 pb-2 space-y-3 border-b border-gray-100 dark:border-gray-800">
         <SearchInput />
@@ -366,34 +423,49 @@ export function ProviderSidebar() {
     </div>
   );
 
-  const content = selectedProvider ? <ProviderDetail /> : listView;
+  // Mobile list view: no search/filters (they're in MobileFilterBar above the map)
+  const mobileListView = (
+    <div className="flex flex-col h-full">
+      <div className="flex-1 overflow-y-auto scrollbar-thin">
+        <ProviderList />
+      </div>
+    </div>
+  );
 
   if (isMobile) {
+    const mobileContent = selectedProvider ? <ProviderDetail /> : mobileListView;
+
     return (
-      <Drawer.Root
-        open
-        snapPoints={snapPoints}
-        activeSnapPoint={snap}
-        setActiveSnapPoint={setSnap}
-        modal={false}
-        noBodyStyles
-        dismissible={false}
-      >
-        <Drawer.Portal>
-          <Drawer.Content
-            className="fixed flex flex-col bg-white dark:bg-gray-900 rounded-t-[10px] bottom-0 left-0 right-0 h-full max-h-[97%] !z-[1100] shadow-[0_-10px_40px_rgba(0,0,0,0.2)]"
-            aria-describedby={undefined}
-          >
-            <div className="mx-auto mt-4 h-2 w-[100px] rounded-full bg-gray-300 dark:bg-gray-600 flex-shrink-0" />
-            <Drawer.Title className="sr-only">Anbieter</Drawer.Title>
-            <div className="flex-1 overflow-hidden">{content}</div>
-          </Drawer.Content>
-        </Drawer.Portal>
-      </Drawer.Root>
+      <>
+        {/* Filter bar above the map */}
+        <MobileFilterBar />
+
+        <Drawer.Root
+          open
+          snapPoints={snapPoints}
+          activeSnapPoint={snap}
+          setActiveSnapPoint={setSnap}
+          modal={false}
+          noBodyStyles
+          dismissible={false}
+        >
+          <Drawer.Portal>
+            <Drawer.Content
+              className="fixed flex flex-col bg-white dark:bg-gray-900 rounded-t-[10px] bottom-0 left-0 right-0 h-full max-h-[97%] !z-[1100] shadow-[0_-10px_40px_rgba(0,0,0,0.2)]"
+              aria-describedby={undefined}
+            >
+              <div className="mx-auto mt-4 h-2 w-[100px] rounded-full bg-gray-300 dark:bg-gray-600 flex-shrink-0" />
+              <Drawer.Title className="sr-only">Anbieter</Drawer.Title>
+              <div className="flex-1 overflow-hidden">{mobileContent}</div>
+            </Drawer.Content>
+          </Drawer.Portal>
+        </Drawer.Root>
+      </>
     );
   }
 
   // Desktop sidebar
+  const content = selectedProvider ? <ProviderDetail /> : desktopListView;
   return (
     <div className="absolute top-0 left-0 h-full w-96 bg-white dark:bg-gray-900 shadow-2xl z-[1000] flex flex-col">
       {content}
