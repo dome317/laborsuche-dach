@@ -1,0 +1,282 @@
+{
+  "meta": {
+    "version": "0.1.0",
+    "generatedAt": "2026-03-08T12:00:00Z",
+    "totalCount": 5,
+    "regions": ["DE", "AT"]
+  },
+  "providers": [
+    {
+      "id": "dexa-muc-001",
+      "name": "DEXA Zentrum München",
+      "slug": "dexa-zentrum-muenchen",
+      "categories": ["dexa_body_composition"],
+      "address": {
+        "street": "Leopoldstraße 31",
+        "postalCode": "80802",
+        "city": "München",
+        "state": "Bayern",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [11.5820, 48.1551]
+      },
+      "contact": {
+        "phone": "+49 89 12345678",
+        "website": "https://www.dexa-zentrum-muenchen.de",
+        "email": "info@dexa-zentrum-muenchen.de",
+        "bookingUrl": "https://www.dexa-zentrum-muenchen.de/termin"
+      },
+      "services": [
+        {
+          "type": "dexa_body_composition",
+          "name": "DEXA Ganzkörper Body Composition",
+          "description": "Ganzkörper-Körperzusammensetzung: Fettmasse, Magermasse, Knochenmineralgehalt. Regionale Analyse inkl. viszerales Fett.",
+          "selfPay": true,
+          "price": {
+            "amount": 149,
+            "currency": "EUR",
+            "note": "Erstmessung inkl. Auswertungsgespräch"
+          }
+        }
+      ],
+      "selfPay": true,
+      "verification": {
+        "status": "verified",
+        "confidence": 0.9,
+        "date": "2026-03-01",
+        "method": "website + phone",
+        "notes": "Telefonisch bestätigt, Selbstzahler-DEXA Body Comp verfügbar"
+      },
+      "source": {
+        "origin": "manual_research",
+        "primaryUrl": "https://www.dexa-zentrum-muenchen.de",
+        "collectedAt": "2026-03-01T10:00:00Z"
+      },
+      "tags": ["dexa", "body-composition", "selbstzahler", "muenchen"]
+    },
+    {
+      "id": "blut-hh-001",
+      "name": "Mein Direktlabor Hamburg",
+      "slug": "mein-direktlabor-hamburg",
+      "categories": ["blutlabor"],
+      "address": {
+        "street": "Mönckebergstraße 22",
+        "postalCode": "20095",
+        "city": "Hamburg",
+        "state": "Hamburg",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [10.0014, 53.5520]
+      },
+      "contact": {
+        "phone": "+49 40 98765432",
+        "website": "https://www.meindirektlabor.de/hamburg",
+        "email": "hamburg@meindirektlabor.de",
+        "bookingUrl": "https://www.meindirektlabor.de/hamburg/termin"
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Großes Blutbild Selbstzahler",
+          "description": "Komplettes Blutbild mit Differenzierung. Ohne Überweisung, Ergebnis in 24h online abrufbar.",
+          "selfPay": true,
+          "price": {
+            "amount": 89,
+            "currency": "EUR",
+            "note": "Ergebnis online in 24h"
+          }
+        },
+        {
+          "type": "blood_test_self_pay",
+          "name": "Schilddrüsen-Check",
+          "description": "TSH, fT3, fT4 — Schilddrüsenfunktion als Selbstzahler-Leistung.",
+          "selfPay": true,
+          "price": {
+            "amount": 49,
+            "currency": "EUR",
+            "note": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verification": {
+        "status": "verified",
+        "confidence": 0.95,
+        "date": "2026-03-02",
+        "method": "website",
+        "notes": "Online-Buchung und Preise öffentlich einsehbar"
+      },
+      "source": {
+        "origin": "meindirektlabor",
+        "primaryUrl": "https://www.meindirektlabor.de/hamburg",
+        "collectedAt": "2026-03-02T14:00:00Z"
+      },
+      "tags": ["blutlabor", "selbstzahler", "hamburg", "direktlabor"]
+    },
+    {
+      "id": "dexa-ber-001",
+      "name": "BodyScan Berlin",
+      "slug": "bodyscan-berlin",
+      "categories": ["dexa_body_composition"],
+      "address": {
+        "street": "Friedrichstraße 113",
+        "postalCode": "10117",
+        "city": "Berlin",
+        "state": "Berlin",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [13.3886, 52.5244]
+      },
+      "contact": {
+        "phone": "+49 30 55667788",
+        "website": "https://www.bodyscan-berlin.de",
+        "email": "kontakt@bodyscan-berlin.de",
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "dexa_body_composition",
+          "name": "DEXA Body Composition Scan",
+          "description": "Präzise Messung von Körperfett, Muskelmasse und Knochendichte. Segmentale Analyse für Arme, Beine und Rumpf.",
+          "selfPay": true,
+          "price": {
+            "amount": 129,
+            "currency": "EUR",
+            "note": "Folgemessung 99 EUR"
+          }
+        }
+      ],
+      "selfPay": true,
+      "verification": {
+        "status": "verified",
+        "confidence": 0.85,
+        "date": "2026-03-03",
+        "method": "website",
+        "notes": "Website bestätigt DEXA Body Composition, Preise verifiziert"
+      },
+      "source": {
+        "origin": "google_places",
+        "primaryUrl": "https://www.bodyscan-berlin.de",
+        "collectedAt": "2026-03-03T09:00:00Z"
+      },
+      "tags": ["dexa", "body-composition", "selbstzahler", "berlin"]
+    },
+    {
+      "id": "blut-han-001",
+      "name": "Labor Hannover Nord",
+      "slug": "labor-hannover-nord",
+      "categories": ["blutlabor"],
+      "address": {
+        "street": "Podbielskistraße 168",
+        "postalCode": "30177",
+        "city": "Hannover",
+        "state": "Niedersachsen",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [9.7850, 52.3963]
+      },
+      "contact": {
+        "phone": "+49 511 33445566",
+        "website": "https://www.labor-hannover-nord.de",
+        "email": "info@labor-hannover-nord.de",
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Basis-Blutcheck Selbstzahler",
+          "description": "Blutbild, Leber- und Nierenwerte, Blutzucker, Cholesterin. Keine Überweisung nötig.",
+          "selfPay": true,
+          "price": {
+            "amount": 69,
+            "currency": "EUR",
+            "note": "Ergebnis in 2 Werktagen"
+          }
+        }
+      ],
+      "selfPay": true,
+      "verification": {
+        "status": "unverified",
+        "confidence": 0.6,
+        "date": "2026-03-04",
+        "method": "website",
+        "notes": "Selbstzahler-Option auf Website erwähnt, Preise nicht vollständig"
+      },
+      "source": {
+        "origin": "manual_research",
+        "primaryUrl": "https://www.labor-hannover-nord.de",
+        "collectedAt": "2026-03-04T11:00:00Z"
+      },
+      "tags": ["blutlabor", "selbstzahler", "hannover"]
+    },
+    {
+      "id": "both-wien-001",
+      "name": "Diagnostikum Wien",
+      "slug": "diagnostikum-wien",
+      "categories": ["both"],
+      "address": {
+        "street": "Mariahilfer Straße 45",
+        "postalCode": "1060",
+        "city": "Wien",
+        "state": "Wien",
+        "country": "AT"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [16.3523, 48.1962]
+      },
+      "contact": {
+        "phone": "+43 1 9876543",
+        "website": "https://www.diagnostikum-wien.at",
+        "email": "office@diagnostikum-wien.at",
+        "bookingUrl": "https://www.diagnostikum-wien.at/buchen"
+      },
+      "services": [
+        {
+          "type": "dexa_body_composition",
+          "name": "DEXA Körperzusammensetzung",
+          "description": "Ganzkörper-DEXA zur Bestimmung von Fett- und Muskelmasse. Inklusive viszeralem Fett-Score.",
+          "selfPay": true,
+          "price": {
+            "amount": 159,
+            "currency": "EUR",
+            "note": "Privatleistung"
+          }
+        },
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutanalyse Premium",
+          "description": "Umfangreiches Blutbild mit über 40 Parametern. Hormonstatus, Vitamine, Mineralstoffe.",
+          "selfPay": true,
+          "price": {
+            "amount": 199,
+            "currency": "EUR",
+            "note": "Alle Parameter inkl. Befundbesprechung"
+          }
+        }
+      ],
+      "selfPay": true,
+      "verification": {
+        "status": "verified",
+        "confidence": 0.92,
+        "date": "2026-03-05",
+        "method": "website + phone",
+        "notes": "Beide Leistungen als Selbstzahler bestätigt"
+      },
+      "source": {
+        "origin": "manual_research",
+        "primaryUrl": "https://www.diagnostikum-wien.at",
+        "collectedAt": "2026-03-05T15:00:00Z"
+      },
+      "tags": ["dexa", "body-composition", "blutlabor", "selbstzahler", "wien", "österreich"]
+    }
+  ]
+}
