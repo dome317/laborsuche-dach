@@ -1,15 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
-import {
-  Search,
-  ChevronRight,
-  MapPin,
-  Ruler,
-  RotateCcw,
-  Locate,
-  PencilRuler,
-} from "lucide-react";
+import { Search, ChevronRight, MapPin, Locate } from "lucide-react";
 import { useGeolocation } from "@/hooks/useGeolocation";
 import { MapUser } from "./MapUser";
 
@@ -23,10 +15,6 @@ interface MapSearchBarProps {
   onCountrySelect: (countryId: string) => void;
   selectedCountry?: GeoJSON.Feature | null;
   onClearSelection?: () => void;
-  onMeasurementClick?: () => void;
-  onPOIClick?: () => void;
-  isPOIPanelOpen?: boolean;
-  onClosePOIPanel?: () => void;
 }
 
 /**
@@ -47,10 +35,6 @@ export function MapSearchBar({
   onCountrySelect,
   selectedCountry,
   onClearSelection,
-  onMeasurementClick,
-  onPOIClick,
-  isPOIPanelOpen,
-  onClosePOIPanel,
 }: MapSearchBarProps) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
@@ -176,7 +160,6 @@ export function MapSearchBar({
 
   const selectedCountryName = selectedCountry?.properties?.NAME || "";
   const hasSelection = !!selectedCountry;
-  const hasPOIPanel = !!isPOIPanelOpen;
 
   return (
     <div className="search-container absolute left-0 right-0 sm:left-4 sm:right-auto top-3 z-[1001] px-4 sm:px-0">
@@ -186,35 +169,7 @@ export function MapSearchBar({
           isExpanded ? "rounded-t-lg" : "rounded-full"
         } w-full sm:w-[360px]`}
       >
-        {hasPOIPanel ? (
-          <>
-            {/* POI Panel Open Display */}
-            <span className="text-sm text-gray-800 dark:text-gray-200 font-semibold flex-1 truncate">
-              My Places
-            </span>
-            <button
-              onClick={() => {
-                onClosePOIPanel?.();
-                setSearchQuery("");
-                setIsExpanded(false);
-              }}
-              className="h-5 w-5 flex-shrink-0 text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-colors"
-              aria-label="Close POI panel"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <line x1="18" y1="6" x2="6" y2="18" />
-                <line x1="6" y1="6" x2="18" y2="18" />
-              </svg>
-            </button>
-          </>
-        ) : hasSelection ? (
+        {hasSelection ? (
           <>
             {/* Selected Country Display */}
             <span className="text-sm text-gray-800 dark:text-gray-200 font-semibold flex-1 truncate">
@@ -397,57 +352,6 @@ export function MapSearchBar({
         </div>
       </div>
 
-      {/* Map Tools Panel - Visible when search is expanded */}
-      {isExpanded && (
-        <div className="mt-2 bg-white dark:bg-gray-800 rounded-2xl shadow-lg transition-all duration-300">
-          <div className="px-3 py-3.5">
-            <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">
-              Map Tools
-            </div>
-            <div className="grid grid-cols-4 gap-1">
-              <button
-                onClick={() => {
-                  onMeasurementClick?.();
-                  setIsExpanded(false);
-                }}
-                className="flex flex-col items-center gap-1 px-2 py-2 rounded-2xl bg-stone-200 dark:bg-gray-700 hover:bg-stone-300 dark:hover:bg-gray-600 transition-colors"
-              >
-                <Ruler className="h-4 w-4 text-blue-600 dark:text-blue-400" />
-                <span className="text-[10px] font-medium text-gray-700 dark:text-gray-300 text-center leading-tight">
-                  Measure
-                </span>
-              </button>
-
-              <button
-                onClick={() => {
-                  onPOIClick?.();
-                  setIsExpanded(false);
-                }}
-                className="flex flex-col items-center gap-1 px-2 py-2 rounded-2xl bg-stone-200 dark:bg-gray-700 hover:bg-stone-300 dark:hover:bg-gray-600 transition-colors"
-              >
-                <MapPin className="h-4 w-4 text-indigo-600 dark:text-indigo-400" />
-                <span className="text-[10px] font-medium text-gray-700 dark:text-gray-300 text-center leading-tight">
-                  My Places
-                </span>
-              </button>
-
-              <button className="flex flex-col items-center gap-1 px-2 py-2 rounded-2xl bg-stone-200 dark:bg-gray-700 hover:bg-stone-300 dark:hover:bg-gray-600 transition-colors opacity-50 cursor-not-allowed">
-                <PencilRuler className="h-4 w-4 text-purple-600 dark:text-purple-400" />
-                <span className="text-[10px] font-medium text-gray-700 dark:text-gray-300 text-center leading-tight">
-                  Draw
-                </span>
-              </button>
-
-              <button className="flex flex-col items-center gap-1 px-2 py-2 rounded-2xl bg-stone-200 dark:bg-gray-700 hover:bg-stone-300 dark:hover:bg-gray-600 transition-colors opacity-50 cursor-not-allowed">
-                <RotateCcw className="h-4 w-4 text-orange-600 dark:text-orange-400" />
-                <span className="text-[10px] font-medium text-gray-700 dark:text-gray-300 text-center leading-tight">
-                  Reset
-                </span>
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
