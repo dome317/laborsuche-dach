@@ -34,7 +34,7 @@ const FILTER_OPTIONS: { key: CategoryFilter; label: string }[] = [
 
 // --- Filter Chips ---
 function FilterChips({ compact = false }: { compact?: boolean }) {
-  const { selectedCategory, setSelectedCategory, categoryCounts } =
+  const { selectedCategory, setSelectedCategory, viewportCategoryCounts: categoryCounts } =
     useProviders();
 
   return (
@@ -201,7 +201,7 @@ function ProviderCard({
 
 // --- Provider List ---
 function ProviderList() {
-  const { filteredProviders, setSelectedProviderId } = useProviders();
+  const { viewportProviders: filteredProviders, setSelectedProviderId } = useProviders();
 
   if (filteredProviders.length === 0) {
     return (

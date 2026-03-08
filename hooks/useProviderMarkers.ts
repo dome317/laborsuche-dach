@@ -100,6 +100,7 @@ export function useProviderMarkers() {
     filteredProviders,
     selectedProviderId,
     setSelectedProviderId,
+    setViewportBounds,
   } = useProviders();
   const markersRef = useRef<Map<string, Marker>>(new Map());
   const clusterGroupRef = useRef<MarkerClusterGroup | null>(null);
@@ -256,6 +257,32 @@ export function useProviderMarkers() {
     const [lng, lat] = provider.location.coordinates;
     map.flyTo([lat, lng], 14, { duration: 0.8 });
   }, [map, selectedProviderId, filteredProviders]);
+
+  // Track viewport bounds for sidebar filtering
+  useEffect(() => {
+    if (!map) return;
+
+    const updateBounds = () => {
+      const b = map.getBounds();
+      setViewportBounds({
+        north: b.getNorth(),
+        south: b.getSouth(),
+        east: b.getEast(),
+        west: b.getWest(),
+      });
+    };
+
+    // Initial bounds
+    updateBounds();
+
+    map.on("moveend", updateBounds);
+    map.on("zoomend", updateBounds);
+
+    return () => {
+      map.off("moveend", updateBounds);
+      map.off("zoomend", updateBounds);
+    };
+  }, [map, setViewportBounds]);
 
   // Cleanup on unmount
   useEffect(() => {

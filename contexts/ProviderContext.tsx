@@ -14,9 +14,17 @@ import type { Provider, ProviderCategory, ProvidersData } from "@/types/provider
 
 type CategoryFilter = ProviderCategory | "all";
 
+interface ViewportBounds {
+  north: number;
+  south: number;
+  east: number;
+  west: number;
+}
+
 interface ProviderContextValue {
   providers: Provider[];
   filteredProviders: Provider[];
+  viewportProviders: Provider[];
   selectedCategory: CategoryFilter;
   setSelectedCategory: (cat: CategoryFilter) => void;
   selectedProviderId: string | null;
@@ -25,7 +33,9 @@ interface ProviderContextValue {
   searchQuery: string;
   setSearchQuery: (q: string) => void;
   categoryCounts: Record<CategoryFilter, number>;
+  viewportCategoryCounts: Record<CategoryFilter, number>;
   isLoading: boolean;
+  setViewportBounds: (bounds: ViewportBounds | null) => void;
 }
 
 const ProviderContext = createContext<ProviderContextValue | null>(null);
@@ -79,6 +89,7 @@ export function ProviderProvider({ children }: { children: ReactNode }) {
     initial.selected
   );
   const [searchQuery, setSearchQuery] = useState(initial.search);
+  const [viewportBounds, setViewportBounds] = useState<ViewportBounds | null>(null);
 
   // Load providers
   useEffect(() => {
@@ -139,6 +150,35 @@ export function ProviderProvider({ children }: { children: ReactNode }) {
     return result;
   }, [providers, selectedCategory, searchQuery, fuse]);
 
+  // Viewport-filtered providers (only those visible on map)
+  const viewportProviders = useMemo(() => {
+    if (!viewportBounds) return filteredProviders;
+    return filteredProviders.filter((p) => {
+      const [lng, lat] = p.location.coordinates;
+      return (
+        lat >= viewportBounds.south &&
+        lat <= viewportBounds.north &&
+        lng >= viewportBounds.west &&
+        lng <= viewportBounds.east
+      );
+    });
+  }, [filteredProviders, viewportBounds]);
+
+  // Viewport category counts (for filter chips)
+  const viewportCategoryCounts = useMemo(() => {
+    const counts: Record<CategoryFilter, number> = {
+      all: viewportProviders.length,
+      dexa_body_composition: 0,
+      blutlabor: 0,
+      both: 0,
+    };
+    viewportProviders.forEach((p) => {
+      const cat = getMainCategory(p);
+      counts[cat]++;
+    });
+    return counts;
+  }, [viewportProviders]);
+
   // Selected provider
   const selectedProvider = useMemo(
     () => providers.find((p) => p.id === selectedProviderId) ?? null,
@@ -164,6 +204,7 @@ export function ProviderProvider({ children }: { children: ReactNode }) {
     () => ({
       providers,
       filteredProviders,
+      viewportProviders,
       selectedCategory,
       setSelectedCategory,
       selectedProviderId,
@@ -172,16 +213,20 @@ export function ProviderProvider({ children }: { children: ReactNode }) {
       searchQuery,
       setSearchQuery,
       categoryCounts,
+      viewportCategoryCounts,
       isLoading,
+      setViewportBounds,
     }),
     [
       providers,
       filteredProviders,
+      viewportProviders,
       selectedCategory,
       selectedProviderId,
       selectedProvider,
       searchQuery,
       categoryCounts,
+      viewportCategoryCounts,
       isLoading,
     ]
   );
