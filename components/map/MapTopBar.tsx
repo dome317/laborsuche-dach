@@ -9,7 +9,7 @@ import { MapUser } from "./MapUser";
  */
 export const MapTopBar = memo(function MapTopBar() {
   return (
-    <div className="absolute left-4 right-4 top-4 flex items-center gap-2 z-[1000]">
+    <div className="absolute left-4 right-4 top-4 flex items-center gap-2 z-[1000] pointer-events-none">
       {/* Spacer for search bar */}
       <div className="w-[360px]" />
 
