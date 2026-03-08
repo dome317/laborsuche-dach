@@ -43,3 +43,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# python
+__pycache__/
+.venv/
+*.pyc
+
+# scraping raw data (not in repo)
+data/raw/
+
+# logs
+*.log

@@ -1,199 +1,157 @@
-# Next.js Leaflet Starter
+# Laborsuche DACH
 
-A production-ready Next.js 16 starter template with vanilla Leaflet integration. Build modern, interactive map applications with a Google Maps-inspired UI.
+**Das Problem:** Wer in Deutschland, Österreich oder der Schweiz einen DEXA
+Body Composition Scan oder eine Blutuntersuchung als Selbstzahler sucht,
+steht vor einem Informationsvakuum. Google zeigt hauptsächlich Praxen die
+nur Knochendichtemessung anbieten — nicht Body Composition.
 
-[![Next.js](https://img.shields.io/badge/Next.js-16.0.7-black?logo=next.js)](https://nextjs.org/)
-[![React](https://img.shields.io/badge/React-19.2.1-61DAFB?logo=react)](https://react.dev/)
-[![Leaflet](https://img.shields.io/badge/Leaflet-1.9-199900?logo=leaflet)](https://leafletjs.com/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-06B6D4?logo=tailwindcss)](https://tailwindcss.com/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![GitHub Template](https://img.shields.io/badge/Template-Use%20this%20template-brightgreen?logo=github)](https://github.com/wellywahyudi/nextjs-leaflet-starter/generate)
+Auf [janbahmann.de/blog/koerperfett-reduzieren](https://www.janbahmann.de/blog/koerperfett-reduzieren)
+wird die DEXA-Messung für Selbstzahler empfohlen — aber wohin genau? Diese
+Laborsuche schließt die Lücke zwischen Coaching-Empfehlung und konkretem
+Anbieter in der Nähe.
 
-![Demo Screenshot](screenshot.png)
+<!-- Screenshots nach manueller Erstellung einbinden:
+![Desktop](docs/screenshots/desktop.png)
+![Mobile](docs/screenshots/mobile.png)
+-->
 
-📖 **Read the full story:** [I Built a Google Maps Clone Using Next.js 16 + Leaflet](https://dev.to/wellywahyudi/i-built-a-google-maps-clone-using-nextjs-16-leaflet-now-its-an-open-source-starter-kit-9n5)
+## Quick Start
 
-## ✨ Features
-
-### Core Map Features
-
-- **Modern Map Interface** — Google Maps-inspired UI with smooth animations
-- **Multiple Tile Providers** — OpenStreetMap, Satellite (Esri), and Dark mode (CARTO)
-- **Theme-Aware Basemaps** — Auto-switches map style based on light/dark theme
-- **GeoJSON Support** — Render and style geographic features with fly-to animations
-- **Country Search** — Debounced search with keyboard navigation (↑↓ Enter Esc)
-- **Map Controls** — Zoom, fullscreen, geolocation, and reset view
-- **Responsive Design** — Mobile-first approach with adaptive layouts
-- **Server Components** — Next.js 16 App Router with optimized client boundaries
-
-### 🆕 POI (Point of Interest) Management
-
-- **Full CRUD Operations** — Create, read, update, and delete custom places
-- **14 Category Types** — Food & Drink, Shopping, Transport, Lodging, Health, Entertainment, Nature, Services, Education, Religion, Business, Tourism, Emergency, Utilities
-- **Interactive Location Picker** — Click-to-select with live cursor tracking and crosshair cursor
-- **LocalStorage Persistence** — Your places are saved automatically
-- **GeoJSON Import/Export** — Share and backup your places
-- **Category Filtering** — Filter places by category with color-coded markers
-- **Fly-to Animation** — Smooth navigation to any saved place
-- **Mobile-Optimized** — Drawer UI on mobile, side panel on desktop
-- **Toast Notifications** — Beautiful, colorful feedback for all actions
-
-### 🎯 Advanced Features
-
-- **Context Menu** — Right-click for quick actions (copy coordinates, add marker, measure, save place)
-- **Measurement Tools** — Distance and area measurement with interactive drawing
-- **User Markers** — Add custom markers anywhere on the map
-- **Real-time Coordinate Display** — Live lat/lng tracking when selecting locations
-- **Dark Mode Support** — Seamless theme switching with persistent preferences
-- **Error Boundaries** — Graceful error handling with fallback UI
-
-## 🛠 Tech Stack
-
-| Category      | Technology                              |
-| ------------- | --------------------------------------- |
-| Framework     | Next.js 16.0.7 (App Router)             |
-| UI            | React 19.2.1, Tailwind CSS 4, shadcn/ui |
-| Maps          | Leaflet 1.9 (vanilla, no wrapper)       |
-| Icons         | Lucide React                            |
-| Theming       | next-themes                             |
-| Notifications | Sonner (toast notifications)            |
-| Drawers       | Vaul (mobile-optimized)                 |
-| Language      | TypeScript 5                            |
-
-## 🚀 Quick Start
+### Lokal starten
 
 ```bash
-# Clone the repository
-git clone https://github.com/wellywahyudi/nextjs-leaflet-starter.git
-cd nextjs-leaflet-starter
-
-# Install dependencies
 npm install
-
-# Start development server
 npm run dev
+# → http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the landing page, then navigate to `/map` for the interactive map.
-
-## 📁 Project Structure
-
-```
-├── app/
-│   ├── api/countries/     # Country search API
-│   ├── map/               # Map page (Server Component)
-│   └── page.tsx           # Landing page
-├── components/
-│   ├── landing/           # Hero, navigation, tech stack
-│   ├── map/               # Map components (controls, layers, search)
-│   └── ui/                # shadcn/ui components
-├── contexts/              # MapContext, ThemeContext
-├── hooks/                 # useLeafletMap, useMapControls, useMapTileProvider
-├── constants/             # Map config, tile providers
-└── types/                 # TypeScript definitions
-```
-
-## 🗺 Map Components
-
-| Component             | Description                                 |
-| --------------------- | ------------------------------------------- |
-| `LeafletMap`          | Core map container with initialization      |
-| `LeafletTileLayer`    | Dynamic tile layer switching                |
-| `LeafletGeoJSON`      | GeoJSON rendering with styling              |
-| `LeafletMarker`       | Custom markers with popups                  |
-| `MapControls`         | Zoom, fullscreen, location, reset           |
-| `MapTileSwitcher`     | Tile provider switcher with previews        |
-| `MapSearchBar`        | Country search with autocomplete            |
-| `MapContextMenu`      | Right-click menu for quick actions          |
-| `MapPOIPanel`         | POI management with CRUD operations         |
-| `MapMeasurementPanel` | Distance and area measurement tools         |
-| `MapDetailsPanel`     | Country information with REST Countries API |
-| `MapErrorBoundary`    | Error handling with fallback UI             |
-
-## 🎨 Customization
-
-### Default Map View
-
-Edit `constants/map-config.ts`:
-
-```typescript
-export const DEFAULT_MAP_CONFIG: MapConfig = {
-  defaultCenter: [-2.911154, 120.074263], // Indonesia
-  defaultZoom: 5,
-  minZoom: 3,
-  maxZoom: 18,
-};
-```
-
-### Add Tile Providers
-
-Edit `constants/tile-providers.ts`:
-
-```typescript
-export const TILE_PROVIDERS: TileProvider[] = [
-  {
-    id: "custom",
-    name: "Custom Map",
-    url: "https://your-tile-server/{z}/{x}/{y}.png",
-    attribution: "© Your Attribution",
-    maxZoom: 19,
-    category: "standard",
-  },
-  // ...existing providers
-];
-```
-
-## 📜 Scripts
+### Mit Docker
 
 ```bash
-npm run dev      # Start development server
-npm run build    # Build for production
-npm run start    # Start production server
-npm run lint     # Run ESLint
+docker compose up
+# → http://localhost:3000
 ```
 
-## 🚢 Deploy to Vercel
+## Features
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/wellywahyudi/nextjs-leaflet-starter)
+- **Interaktive Karte** mit farbcodierten Markern (DEXA = Blau, Blutlabor = Grün, Beides = Violett)
+- **Filterfunktion** (Alle / DEXA Body Composition / Blutlabor Selbstzahler)
+- **Detail-Ansicht** mit Preisen, Kontakt, Buchungslinks
+- **Fuzzy-Suche** nach Name, Stadt oder PLZ
+- **Deep-Links** für Coaches: `?category=dexa&city=hannover`
+- **WhatsApp-Share** zum Teilen mit Coaching-Kunden
+- **Marker-Clustering** bei vielen Anbietern im gleichen Gebiet
+- **Geolocation** mit Entfernungsanzeige ("2,3 km entfernt")
+- **Responsive** — Desktop-Sidebar + Mobile Bottom-Drawer
+- **PWA-installierbar** — "Zum Startbildschirm hinzufügen"
 
-### Manual Deployment
+## Datenqualität
 
-1. Install Vercel CLI:
+| Metrik | Wert |
+|--------|------|
+| Gesamt-Einträge | [ZAHL] |
+| DEXA Body Composition | [ZAHL] |
+| Blutlabor Selbstzahler | [ZAHL] |
+| Verifiziert | [ZAHL] ([X]%) |
+| Telefonisch verifiziert | [ZAHL] DEXA-Anbieter |
+| Regionen | [LISTE] |
 
-```bash
-npm i -g vercel
+### Recherche-Transparenz
+
+**DEXA Body Composition:** [X] Kandidaten via Google Places API gefunden →
+Keyword-Scoring klassifiziert [Y] als Body Composition → [Z] manuell +
+telefonisch bestätigt. Erkenntnis: [N] von [M] angerufenen Praxen boten
+nur Knochendichte, obwohl die Website "DEXA Scan" bewarb.
+
+**Blutlabor:** meindirektlabor.de (Sonic Healthcare) lieferte [X] Standorte
+als Basis. Ergänzt durch Bioscientia, Synlab und Einzellabore.
+
+## Recherche-Methodik
+
+### 1. Kandidatensuche
+
+Google Places API via Apify (kostenloser Tier) + manuelle Recherche auf
+megeni.com, dexascan.com, meindirektlabor.de.
+
+### 2. Klassifikation (DEXA Body Comp vs. Knochendichte)
+
+Keyword-Scoring auf Website-Texten:
+- "Body Composition" / "Körperzusammensetzung" / "viszerales Fett" → +Score
+- "Osteoporose" ohne Body-Comp-Kontext / "nur Knochendichte" → −Score
+- Grenzfälle: Claude API als Classifier (mit Confidence-Score)
+
+### 3. Verifizierung
+
+Website-Prüfung + telefonische Verifizierung bei [X] DEXA-Anbietern.
+Jeder Eintrag hat eine nachvollziehbare `verification`-Chain im Schema.
+
+## Architektur-Entscheidungen
+
+**Next.js + Leaflet:** Basierend auf einem bewährten Leaflet-Starter,
+angepasst auf den Provider-Use-Case. Kein API-Key nötig — Reviewer
+kann sofort starten.
+
+**Statisches JSON statt Backend:** Für [ZAHL] Einträge ist kein
+Backend/DB nötig. JSON liegt im Repo, ist versionierbar und
+vom Reviewer direkt prüfbar.
+
+**DEXA ≠ Knochendichte:** Die zentrale Designentscheidung im Datenmodell.
+Das `services`-Array trennt explizit `dexa_body_composition` von
+`dexa_bone_density`. Ein Anbieter kann beides anbieten.
+
+## Datenmodell
+
+```json
+{
+  "id": "dexa-muc-001",
+  "name": "DEXA Zentrum München",
+  "categories": ["dexa_body_composition"],
+  "address": { "street": "...", "city": "München", "country": "DE" },
+  "location": { "type": "Point", "coordinates": [11.582, 48.155] },
+  "contact": { "phone": "...", "website": "...", "bookingUrl": "..." },
+  "services": [{
+    "type": "dexa_body_composition",
+    "name": "DEXA Ganzkörper Body Composition",
+    "selfPay": true,
+    "price": { "amount": 149, "currency": "EUR" }
+  }],
+  "verification": {
+    "status": "verified",
+    "confidence": 0.9,
+    "date": "2026-03-01",
+    "method": "website + phone"
+  }
+}
 ```
 
-2. Deploy:
+Das `verification`-Objekt mit `confidence` Score und `method`
+zeigt für jeden Eintrag: woher stammt er, wie sicher sind wir,
+wann wurde er geprüft.
 
-```bash
-vercel
-```
+## Tech Stack
 
-3. Follow the prompts to link your project
+| Komponente | Wahl |
+|-----------|------|
+| Framework | Next.js 16 + TypeScript |
+| Karte | Leaflet + Carto Voyager Tiles |
+| Clustering | leaflet.markercluster |
+| Suche | fuse.js |
+| Styling | Tailwind CSS 4 |
+| Container | Docker (standalone build) |
 
-### Environment Variables
+## Was ich bei mehr Zeit machen würde
 
-No environment variables required for basic deployment. The app uses public GeoJSON data from the `/public/data` directory.
+- **Feedback-Loop:** Coaches/Kunden melden Aktualisierungen zurück (~1 Woche)
+- **Embed-Modus:** `<iframe>` Integration für bestehende Plattformen (~2 Tage)
+- **Automatisiertes Monitoring:** Scraper als Cron-Job prüft ob Anbieter noch aktiv (~3 Tage)
+- **Coach vs. Kunden-Ansicht:** Interne Ansicht mit Notizen, externe mit vereinfachter Sprache (~1 Woche)
+- **Aggregierte DEXA-Benchmarks:** Anonymisierte Scan-Ergebnisse als Coaching-KPI (Vision)
 
-## 📊 Production Readiness
+## Abschließender Gedanke
 
-This starter is production-ready with:
-
-- ✅ Error boundaries and graceful fallbacks
-- ✅ Optimized bundle size with code splitting
-- ✅ Memory leak prevention with proper cleanup
-- ✅ Toast notifications instead of blocking alerts
-- ✅ TypeScript strict mode
-- ✅ Responsive design (mobile-first)
-- ✅ Accessibility features (ARIA labels, keyboard navigation)
-- ✅ Dark mode support
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📄 License
-
-MIT License — feel free to use this starter for personal or commercial projects.
+Diese Laborsuche löst ein konkretes Problem für Coaching-Kunden,
+die objektive Daten zu ihrem Körperfettanteil und ihren Blutwerten
+brauchen. Der eigentliche Wert liegt nicht in der Karte — sondern
+darin, dass ein datenbasiertes Coaching-Unternehmen zum ersten Mal
+eine kuratierte Infrastruktur für die diagnostischen Touchpoints
+seiner Kunden aufbaut.
