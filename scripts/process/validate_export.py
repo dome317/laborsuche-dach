@@ -197,10 +197,40 @@ def determine_categories(services: list[str]) -> list[str]:
     return []  # No relevant category — will be excluded
 
 
+DEXA_PRICE_KEYWORDS = ("dexa", "dxa", "body", "scan", "composition", "körper", "fett")
+BLOOD_PRICE_KEYWORDS = ("blut", "blood", "labor", "test", "check", "analyse")
+
+
+def _match_price_to_service(prices: list[dict], svc_type: str, country: str) -> dict | None:
+    """Find the best matching price for a service type. Returns price obj or None."""
+    if not prices:
+        return None
+
+    # Determine which keywords to look for
+    if svc_type in ("dexa_body_composition", "dexa_bone_density"):
+        keywords = DEXA_PRICE_KEYWORDS
+    elif svc_type in ("blood_test_self_pay", "blood_test_referral"):
+        keywords = BLOOD_PRICE_KEYWORDS
+    else:
+        keywords = ()
+
+    # Try to find a price whose context matches the service
+    for p in prices:
+        context = (p.get("context") or "").lower()
+        if any(kw in context for kw in keywords):
+            currency = p.get("currency", "EUR")
+            if country == "CH":
+                currency = "CHF"
+            return {"amount": p["amount"], "currency": currency, "note": p.get("context")}
+
+    return None
+
+
 def build_services(candidate: dict) -> list[dict]:
     """Build service objects from classified data."""
     classified = candidate.get("classified_services", [])
     prices = candidate.get("extracted_prices", [])
+    country = candidate.get("raw_country", "DE")
     result = []
 
     service_names = {
@@ -210,17 +240,7 @@ def build_services(candidate: dict) -> list[dict]:
     }
 
     for svc_type in classified:
-        price_obj = None
-        if prices:
-            p = prices[0]  # Use first extracted price
-            currency = p.get("currency", "EUR")
-            if candidate.get("raw_country") == "CH":
-                currency = "CHF"
-            price_obj = {
-                "amount": p["amount"],
-                "currency": currency,
-                "note": p.get("context"),
-            }
+        price_obj = _match_price_to_service(prices, svc_type, country)
 
         result.append({
             "type": svc_type,

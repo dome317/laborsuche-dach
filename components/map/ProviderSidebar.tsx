@@ -162,9 +162,12 @@ function ProviderCard({
   const label = CATEGORY_LABELS[category];
   const isHovered = hoveredProviderId === provider.id;
 
-  const lowestPrice = provider.services.reduce<number | null>((min, s) => {
+  const cheapest = provider.services.reduce<{ amount: number; currency: string } | null>((min, s) => {
     if (!s.price?.amount) return min;
-    return min === null ? s.price.amount : Math.min(min, s.price.amount);
+    if (min === null || s.price.amount < min.amount) {
+      return { amount: s.price.amount, currency: s.price.currency };
+    }
+    return min;
   }, null);
 
   // Distance from user
@@ -202,9 +205,9 @@ function ProviderCard({
             )}
           </p>
         </div>
-        {lowestPrice !== null && (
+        {cheapest !== null && (
           <span className="text-sm font-semibold text-gray-700 dark:text-gray-300 flex-shrink-0">
-            ab {lowestPrice} €
+            ab {cheapest.amount} {cheapest.currency === "CHF" ? "CHF" : "€"}
           </span>
         )}
       </div>
@@ -372,7 +375,7 @@ function ProviderDetail() {
                   </span>
                   <span className="text-sm font-semibold text-gray-700 dark:text-gray-300 flex-shrink-0">
                     {service.price?.amount
-                      ? `${service.price.amount} ${service.price.currency}`
+                      ? `${service.price.amount} ${service.price.currency === "CHF" ? "CHF" : "€"}`
                       : "Auf Anfrage"}
                   </span>
                 </div>

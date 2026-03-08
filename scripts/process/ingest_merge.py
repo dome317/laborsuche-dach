@@ -10,22 +10,27 @@ RAW_DIR = Path(__file__).resolve().parent.parent.parent / "data" / "raw"
 OUT_DIR = Path(__file__).resolve().parent.parent.parent / "data" / "processed"
 
 
-def normalize_phone(phone: str | None) -> str | None:
-    """Normalize phone numbers to international format."""
+COUNTRY_PHONE_CODES = {"DE": "+49", "AT": "+43", "CH": "+41"}
+
+
+def normalize_phone(phone: str | None, country: str = "DE") -> str | None:
+    """Normalize phone numbers to international format based on country."""
     if not phone:
         return None
     # Remove all non-digit characters except leading +
     cleaned = re.sub(r"[^\d+]", "", phone)
-    # Add country code if missing
-    if cleaned.startswith("0049"):
-        cleaned = "+" + cleaned[2:]
-    elif cleaned.startswith("049"):
-        cleaned = "+49" + cleaned[3:]
-    elif cleaned.startswith("0") and not cleaned.startswith("+"):
-        cleaned = "+49" + cleaned[1:]  # Assume DE
-    if not cleaned.startswith("+"):
-        cleaned = "+49" + cleaned
-    return cleaned
+    # Already has international prefix
+    if cleaned.startswith("+"):
+        return cleaned
+    # Remove known double-zero prefixes
+    for code in ("0049", "0043", "0041"):
+        if cleaned.startswith(code):
+            return "+" + cleaned[2:]
+    # Local number starting with 0 → add country code
+    country_code = COUNTRY_PHONE_CODES.get(country, "+49")
+    if cleaned.startswith("0"):
+        return country_code + cleaned[1:]
+    return country_code + cleaned
 
 
 def normalize_website(url: str | None) -> str | None:
@@ -68,7 +73,7 @@ def parse_apify_entry(entry: dict, source_file: str) -> dict:
         "raw_address": addr or None,
         "raw_city": city,
         "raw_country": country,
-        "raw_phone": normalize_phone(entry.get("phone", entry.get("phoneUnformatted"))),
+        "raw_phone": normalize_phone(entry.get("phone", entry.get("phoneUnformatted")), country),
         "raw_website": normalize_website(entry.get("website", entry.get("url"))),
         "raw_lat": float(lat) if lat else None,
         "raw_lng": float(lng) if lng else None,
@@ -86,7 +91,7 @@ def parse_manual_entry(entry: dict, source_file: str) -> dict:
         "raw_address": entry.get("address"),
         "raw_city": entry.get("city", ""),
         "raw_country": country,
-        "raw_phone": normalize_phone(entry.get("phone")),
+        "raw_phone": normalize_phone(entry.get("phone"), country),
         "raw_website": normalize_website(entry.get("website")),
         "raw_lat": float(entry["lat"]) if entry.get("lat") else None,
         "raw_lng": float(entry["lng"]) if entry.get("lng") else None,
