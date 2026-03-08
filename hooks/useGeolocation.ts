@@ -129,8 +129,8 @@ export function useGeolocation() {
     const handleLocationError = (e: ErrorEvent) => {
       setIsLocating(false);
       cleanupEventHandlers();
-      console.error('Location error:', e.message);
-      toast.error('Unable to find your location. Please check your browser permissions.');
+      console.warn('Location unavailable:', e.message);
+      toast.error('Standort nicht verfügbar. Bitte HTTPS verwenden oder Standortzugriff erlauben.');
     };
 
     // Store handler references
