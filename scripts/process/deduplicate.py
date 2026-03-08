@@ -63,11 +63,26 @@ def extract_plz(address: str | None) -> str | None:
     return match.group(1) if match else None
 
 
+# Source types that are more authoritative than generic scrapers
+AUTHORITATIVE_SOURCES = ("meindirektlabor", "medkompass", "labor-berlin", "synlab")
+
+
 def merge_entries(primary: dict, duplicate: dict) -> dict:
     """Merge duplicate into primary, keeping richer data."""
     for key in duplicate:
         if key not in primary or primary[key] is None:
             primary[key] = duplicate[key]
+
+    # Track all source types encountered during merging
+    sources = set(primary.get("all_source_types", [primary.get("source_type", "")]))
+    sources.add(duplicate.get("source_type", ""))
+    sources.discard("")
+    primary["all_source_types"] = sorted(sources)
+
+    # Prefer authoritative source_type over generic apify
+    dup_source = duplicate.get("source_type", "")
+    if dup_source in AUTHORITATIVE_SOURCES and primary.get("source_type") not in AUTHORITATIVE_SOURCES:
+        primary["source_type"] = dup_source
 
     # Prefer entry with more classified services
     primary_services = primary.get("classified_services", [])
@@ -75,11 +90,15 @@ def merge_entries(primary: dict, duplicate: dict) -> dict:
     if len(dup_services) > len(primary_services):
         primary["classified_services"] = dup_services
 
-    # Prefer entry with more extracted prices
+    # Merge extracted prices (union, deduplicated by amount)
     primary_prices = primary.get("extracted_prices", [])
     dup_prices = duplicate.get("extracted_prices", [])
-    if len(dup_prices) > len(primary_prices):
-        primary["extracted_prices"] = dup_prices
+    existing_amounts = {p["amount"] for p in primary_prices}
+    for p in dup_prices:
+        if p["amount"] not in existing_amounts:
+            primary_prices.append(p)
+            existing_amounts.add(p["amount"])
+    primary["extracted_prices"] = primary_prices
 
     return primary
 

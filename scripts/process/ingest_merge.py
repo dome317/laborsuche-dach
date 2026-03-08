@@ -46,7 +46,12 @@ def normalize_website(url: str | None) -> str | None:
 
 
 def parse_apify_entry(entry: dict, source_file: str) -> dict:
-    """Parse Apify Google Maps format."""
+    """Parse Apify Google Places format.
+
+    Expected fields: title, street, city, postalCode, countryCode,
+    phone, website, location.lat, location.lng, url, categories, ...
+    """
+    # Coordinates: location.lat/lng or flat latitude/longitude
     lat = None
     lng = None
     if "location" in entry and isinstance(entry["location"], dict):
@@ -56,21 +61,34 @@ def parse_apify_entry(entry: dict, source_file: str) -> dict:
         lat = entry.get("latitude")
         lng = entry.get("longitude")
 
+    # Country detection
     city = entry.get("city", "")
     country = "DE"
-    addr = entry.get("address", entry.get("street", ""))
-    if any(c in (addr + " " + city).lower() for c in ["österreich", "austria", "wien", "graz"]):
-        country = "AT"
-    elif any(c in (addr + " " + city).lower() for c in ["schweiz", "switzerland", "zürich", "bern", "basel"]):
-        country = "CH"
     if entry.get("countryCode"):
         cc = entry["countryCode"].upper()
         if cc in ("DE", "AT", "CH"):
             country = cc
+    else:
+        # Fallback: guess from city/address text
+        street = entry.get("street", "")
+        text = (street + " " + city).lower()
+        if any(c in text for c in ["österreich", "austria", "wien", "graz"]):
+            country = "AT"
+        elif any(c in text for c in ["schweiz", "switzerland", "zürich", "bern", "basel"]):
+            country = "CH"
+
+    # Address: use street field directly (Apify gives "Straße Hausnr")
+    street = entry.get("street", entry.get("address", ""))
+    postal_code = entry.get("postalCode", "")
+
+    # Build full address string for geocoding (street + PLZ + city)
+    addr_parts = [p for p in [street, postal_code, city] if p]
+    raw_address = ", ".join(addr_parts) if addr_parts else None
 
     return {
         "raw_name": entry.get("title", entry.get("name", "")),
-        "raw_address": addr or None,
+        "raw_address": raw_address,
+        "raw_postal_code": postal_code or None,
         "raw_city": city,
         "raw_country": country,
         "raw_phone": normalize_phone(entry.get("phone", entry.get("phoneUnformatted")), country),
@@ -89,6 +107,7 @@ def parse_manual_entry(entry: dict, source_file: str) -> dict:
     return {
         "raw_name": entry.get("name", ""),
         "raw_address": entry.get("address"),
+        "raw_postal_code": entry.get("postalCode", entry.get("postal_code")),
         "raw_city": entry.get("city", ""),
         "raw_country": country,
         "raw_phone": normalize_phone(entry.get("phone"), country),

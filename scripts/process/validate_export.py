@@ -178,7 +178,17 @@ DEXA_PRICE_KEYWORDS = ("dexa", "dxa", "body", "scan", "composition", "körper", 
 BLOOD_PRICE_KEYWORDS = ("blut", "blood", "labor", "test", "check", "analyse")
 
 
-def _match_price_to_service(prices: list[dict], svc_type: str, country: str) -> dict | None:
+def _make_price_obj(p: dict, country: str) -> dict:
+    """Create a price object from extracted price data."""
+    currency = p.get("currency", "EUR")
+    if country == "CH":
+        currency = "CHF"
+    return {"amount": p["amount"], "currency": currency, "note": p.get("context")}
+
+
+def _match_price_to_service(
+    prices: list[dict], svc_type: str, country: str, num_service_types: int
+) -> dict | None:
     """Find the best matching price for a service type. Returns price obj or None."""
     if not prices:
         return None
@@ -195,12 +205,24 @@ def _match_price_to_service(prices: list[dict], svc_type: str, country: str) -> 
     for p in prices:
         context = (p.get("context") or "").lower()
         if any(kw in context for kw in keywords):
-            currency = p.get("currency", "EUR")
-            if country == "CH":
-                currency = "CHF"
-            return {"amount": p["amount"], "currency": currency, "note": p.get("context")}
+            return _make_price_obj(p, country)
+
+    # Fallback: if provider has only one service type, assign the first price
+    # (context is often just "149 €" with no service keywords)
+    if num_service_types == 1 and prices:
+        return _make_price_obj(prices[0], country)
 
     return None
+
+
+OFFICIAL_SOURCES = ("meindirektlabor", "medkompass", "labor-berlin", "synlab")
+
+
+def _has_official_source(candidate: dict) -> bool:
+    """Check if candidate has an official/authoritative source (including merged sources)."""
+    source_type = candidate.get("source_type", "")
+    all_sources = candidate.get("all_source_types", [source_type])
+    return any(s in OFFICIAL_SOURCES for s in all_sources)
 
 
 def _compute_service_verification(candidate: dict, svc_type: str) -> dict:
@@ -209,6 +231,7 @@ def _compute_service_verification(candidate: dict, svc_type: str) -> dict:
     blut_score = candidate.get("blut_score", 0)
     service_page = candidate.get("service_page_text")
     source_type = candidate.get("source_type", "")
+    is_official = _has_official_source(candidate)
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
     if svc_type in ("dexa_body_composition", "dexa_bone_density"):
@@ -219,8 +242,8 @@ def _compute_service_verification(candidate: dict, svc_type: str) -> dict:
             return {"status": "verified", "confidence": 0.7, "date": today, "method": "website_homepage", "notes": None}
     elif svc_type in ("blood_test_self_pay", "blood_test_referral"):
         score = blut_score
-        official_sources = ("meindirektlabor", "medkompass", "labor-berlin", "synlab")
-        if score >= 3 and source_type in official_sources:
+        # Official directory sources (meindirektlabor etc.) get highest confidence
+        if is_official:
             return {"status": "verified", "confidence": 0.95, "date": today, "method": "official_directory", "notes": None}
         if score >= 3 and source_type == "apify":
             return {"status": "unverified", "confidence": 0.6, "date": today, "method": "google_places", "notes": None}
@@ -245,8 +268,9 @@ def build_services(candidate: dict) -> list[dict]:
         "blood_test_self_pay": "Blutuntersuchung Selbstzahler",
     }
 
+    num_service_types = len(classified)
     for svc_type in classified:
-        price_obj = _match_price_to_service(prices, svc_type, country)
+        price_obj = _match_price_to_service(prices, svc_type, country, num_service_types)
         verification = _compute_service_verification(candidate, svc_type)
 
         result.append({
@@ -338,6 +362,9 @@ def candidate_to_provider(candidate: dict, index: int) -> dict | None:
         return None
 
     street, plz = extract_street_and_plz(candidate.get("raw_address"))
+    # Prefer explicit raw_postal_code from Apify/manual data over regex extraction
+    if candidate.get("raw_postal_code"):
+        plz = candidate["raw_postal_code"]
     city = candidate.get("raw_city", "")
     country = candidate.get("raw_country", "DE")
     now_iso = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
