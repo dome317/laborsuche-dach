@@ -15,7 +15,7 @@ import {
   X,
 } from "lucide-react";
 import { Drawer } from "vaul";
-import { useProviders } from "@/contexts/ProviderContext";
+import { useProviders, haversineKm } from "@/contexts/ProviderContext";
 import {
   CATEGORY_COLORS,
   CATEGORY_LABELS,
@@ -158,7 +158,7 @@ function ProviderCard({
   provider: Provider;
   onSelect: () => void;
 }) {
-  const { hoveredProviderId, setHoveredProviderId } = useProviders();
+  const { hoveredProviderId, setHoveredProviderId, userPosition } = useProviders();
   const category = getMainCategory(provider);
   const color = CATEGORY_COLORS[category];
   const label = CATEGORY_LABELS[category];
@@ -168,6 +168,16 @@ function ProviderCard({
     if (!s.price?.amount) return min;
     return min === null ? s.price.amount : Math.min(min, s.price.amount);
   }, null);
+
+  // Distance from user
+  const distance = userPosition
+    ? haversineKm(
+        userPosition.lat,
+        userPosition.lng,
+        provider.location.coordinates[1],
+        provider.location.coordinates[0]
+      )
+    : null;
 
   return (
     <button
@@ -187,6 +197,11 @@ function ProviderCard({
           </h3>
           <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
             {provider.address.city}
+            {distance !== null && (
+              <span className="ml-1.5 text-blue-600 dark:text-blue-400">
+                · {distance < 1 ? `${Math.round(distance * 1000)} m` : `${distance.toFixed(1).replace(".", ",")} km`} entfernt
+              </span>
+            )}
           </p>
         </div>
         {lowestPrice !== null && (

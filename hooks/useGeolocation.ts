@@ -3,6 +3,7 @@
 import { useState, useCallback, useRef, useEffect } from 'react';
 import { toast } from 'sonner';
 import { useLeafletMap } from './useLeafletMap';
+import { useProviders } from '@/contexts/ProviderContext';
 import type { Circle, Marker, LocationEvent, ErrorEvent } from 'leaflet';
 
 /**
@@ -31,9 +32,16 @@ import type { Circle, Marker, LocationEvent, ErrorEvent } from 'leaflet';
  * }
  * ```
  */
+export interface UserPosition {
+  lat: number;
+  lng: number;
+}
+
 export function useGeolocation() {
   const map = useLeafletMap();
+  const { setUserPosition: setCtxPosition } = useProviders();
   const [isLocating, setIsLocating] = useState(false);
+  const [userPosition, setUserPosition] = useState<UserPosition | null>(null);
   
   // Store references for cleanup
   const locationCircleRef = useRef<Circle | null>(null);
@@ -83,6 +91,9 @@ export function useGeolocation() {
     const handleLocationFound = async (e: LocationEvent) => {
       setIsLocating(false);
       cleanupEventHandlers();
+      const pos = { lat: e.latlng.lat, lng: e.latlng.lng };
+      setUserPosition(pos);
+      setCtxPosition(pos);
 
       try {
         // Dynamically import Leaflet to add markers
@@ -147,5 +158,6 @@ export function useGeolocation() {
     isLocating,
     isAvailable: !!map,
     clearLocationMarkers,
+    userPosition,
   };
 }

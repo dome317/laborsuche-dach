@@ -38,6 +38,8 @@ interface ProviderContextValue {
   setViewportBounds: (bounds: ViewportBounds | null) => void;
   hoveredProviderId: string | null;
   setHoveredProviderId: (id: string | null) => void;
+  userPosition: { lat: number; lng: number } | null;
+  setUserPosition: (pos: { lat: number; lng: number } | null) => void;
 }
 
 const ProviderContext = createContext<ProviderContextValue | null>(null);
@@ -46,6 +48,22 @@ export function useProviders() {
   const ctx = useContext(ProviderContext);
   if (!ctx) throw new Error("useProviders must be used within ProviderProvider");
   return ctx;
+}
+
+/** Haversine distance in km between two lat/lng points */
+export function haversineKm(
+  lat1: number, lng1: number,
+  lat2: number, lng2: number
+): number {
+  const R = 6371;
+  const dLat = ((lat2 - lat1) * Math.PI) / 180;
+  const dLng = ((lng2 - lng1) * Math.PI) / 180;
+  const a =
+    Math.sin(dLat / 2) ** 2 +
+    Math.cos((lat1 * Math.PI) / 180) *
+    Math.cos((lat2 * Math.PI) / 180) *
+    Math.sin(dLng / 2) ** 2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 }
 
 function getMainCategory(provider: Provider): ProviderCategory {
@@ -93,6 +111,7 @@ export function ProviderProvider({ children }: { children: ReactNode }) {
   const [searchQuery, setSearchQuery] = useState(initial.search);
   const [viewportBounds, setViewportBounds] = useState<ViewportBounds | null>(null);
   const [hoveredProviderId, setHoveredProviderId] = useState<string | null>(null);
+  const [userPosition, setUserPosition] = useState<{ lat: number; lng: number } | null>(null);
 
   // Load providers
   useEffect(() => {
@@ -153,19 +172,34 @@ export function ProviderProvider({ children }: { children: ReactNode }) {
     return result;
   }, [providers, selectedCategory, searchQuery, fuse]);
 
-  // Viewport-filtered providers (only those visible on map)
+  // Viewport-filtered providers (only those visible on map), sorted by distance if location known
   const viewportProviders = useMemo(() => {
-    if (!viewportBounds) return filteredProviders;
-    return filteredProviders.filter((p) => {
-      const [lng, lat] = p.location.coordinates;
-      return (
-        lat >= viewportBounds.south &&
-        lat <= viewportBounds.north &&
-        lng >= viewportBounds.west &&
-        lng <= viewportBounds.east
-      );
-    });
-  }, [filteredProviders, viewportBounds]);
+    let result = filteredProviders;
+    if (viewportBounds) {
+      result = result.filter((p) => {
+        const [lng, lat] = p.location.coordinates;
+        return (
+          lat >= viewportBounds.south &&
+          lat <= viewportBounds.north &&
+          lng >= viewportBounds.west &&
+          lng <= viewportBounds.east
+        );
+      });
+    }
+
+    // Sort by distance when user position is known
+    if (userPosition) {
+      result = [...result].sort((a, b) => {
+        const [aLng, aLat] = a.location.coordinates;
+        const [bLng, bLat] = b.location.coordinates;
+        const distA = haversineKm(userPosition.lat, userPosition.lng, aLat, aLng);
+        const distB = haversineKm(userPosition.lat, userPosition.lng, bLat, bLng);
+        return distA - distB;
+      });
+    }
+
+    return result;
+  }, [filteredProviders, viewportBounds, userPosition]);
 
   // Viewport category counts (for filter chips)
   const viewportCategoryCounts = useMemo(() => {
@@ -221,6 +255,8 @@ export function ProviderProvider({ children }: { children: ReactNode }) {
       setViewportBounds,
       hoveredProviderId,
       setHoveredProviderId,
+      userPosition,
+      setUserPosition,
     }),
     [
       providers,
@@ -234,6 +270,7 @@ export function ProviderProvider({ children }: { children: ReactNode }) {
       viewportCategoryCounts,
       isLoading,
       hoveredProviderId,
+      userPosition,
     ]
   );
 
