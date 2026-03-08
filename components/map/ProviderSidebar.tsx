@@ -189,18 +189,16 @@ function ProviderDetail() {
   return (
     <div className="flex flex-col h-full">
       {/* Back button */}
-      <div className="px-4 py-3 border-b border-gray-100 dark:border-gray-800 flex items-center gap-2">
-        <button
-          onClick={() => setSelectedProviderId(null)}
-          className="p-1 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-          aria-label="Zurück zur Liste"
-        >
-          <ArrowLeft className="h-5 w-5 text-gray-600 dark:text-gray-400" />
-        </button>
+      <button
+        onClick={() => setSelectedProviderId(null)}
+        className="w-full px-4 py-3 border-b border-gray-100 dark:border-gray-800 flex items-center gap-2 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors"
+        aria-label="Zurück zur Liste"
+      >
+        <ArrowLeft className="h-5 w-5 text-gray-600 dark:text-gray-400" />
         <span className="text-sm text-gray-500 dark:text-gray-400">
           Zurück zur Liste
         </span>
-      </div>
+      </button>
 
       <div className="flex-1 overflow-y-auto scrollbar-thin">
         {/* Header */}
