@@ -1,3 +1,11 @@
+export interface ServiceVerification {
+  status: "verified" | "unverified" | "excluded"
+  confidence: number            // 0.0 - 1.0
+  date: string                  // ISO date
+  method: string                // z.B. "website_service_page", "official_directory"
+  notes: string | null
+}
+
 export interface Provider {
   id: string                    // z.B. "dexa-muc-001"
   name: string
@@ -22,13 +30,7 @@ export interface Provider {
   }
   services: ProviderService[]
   selfPay: boolean
-  verification: {
-    status: "verified" | "unverified" | "excluded"
-    confidence: number            // 0.0 - 1.0
-    date: string                  // ISO date
-    method: string                // z.B. "website + phone"
-    notes: string | null
-  }
+  verified: boolean             // true if any service is verified
   source: {
     origin: string                // z.B. "google_places", "meindirektlabor"
     primaryUrl: string
@@ -47,6 +49,7 @@ export interface ProviderService {
     currency: "EUR" | "CHF"
     note: string | null
   } | null
+  verification: ServiceVerification
 }
 
 export type ProviderCategory = "dexa_body_composition" | "blutlabor"

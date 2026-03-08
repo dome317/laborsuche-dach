@@ -22,12 +22,21 @@ class PriceModel(BaseModel):
     note: str | None
 
 
+class ServiceVerificationModel(BaseModel):
+    status: Literal["verified", "unverified", "excluded"]
+    confidence: float
+    date: str
+    method: str
+    notes: str | None
+
+
 class ProviderServiceModel(BaseModel):
     type: Literal["dexa_body_composition", "dexa_bone_density", "blood_test_self_pay", "blood_test_referral"]
     name: str
     description: str | None
     selfPay: bool
     price: PriceModel | None
+    verification: ServiceVerificationModel
 
 
 class AddressModel(BaseModel):
@@ -67,14 +76,6 @@ class ContactModel(BaseModel):
         return v
 
 
-class VerificationModel(BaseModel):
-    status: Literal["verified", "unverified", "excluded"]
-    confidence: float
-    date: str
-    method: str
-    notes: str | None
-
-
 class SourceModel(BaseModel):
     origin: str
     primaryUrl: str
@@ -91,7 +92,7 @@ class ProviderModel(BaseModel):
     contact: ContactModel
     services: list[ProviderServiceModel]
     selfPay: bool
-    verification: VerificationModel
+    verified: bool
     source: SourceModel
     tags: list[str]
 
@@ -155,30 +156,6 @@ def guess_state(city: str, country: str) -> str:
     return de_states.get(city.lower(), city)
 
 
-def compute_confidence(candidate: dict) -> float:
-    """Compute verification confidence based on available data."""
-    enrichment = candidate.get("enrichment_status", "")
-    services = candidate.get("classified_services", [])
-    service_page = candidate.get("service_page_text")
-    body_comp_score = candidate.get("body_comp_score", 0)
-
-    if not services:
-        return 0.3
-
-    confidence = 0.4  # Base: has classified services
-
-    if enrichment == "success":
-        confidence = 0.6
-        if any(s in services for s in ["dexa_body_composition", "blood_test_self_pay"]):
-            confidence = 0.7
-        if body_comp_score >= 3 or candidate.get("blut_score", 0) >= 3:
-            confidence = 0.8
-        if service_page:
-            confidence = 0.85
-
-    return round(confidence, 2)
-
-
 def determine_categories(services: list[str]) -> list[str]:
     """Determine provider categories from service list.
 
@@ -226,8 +203,37 @@ def _match_price_to_service(prices: list[dict], svc_type: str, country: str) -> 
     return None
 
 
+def _compute_service_verification(candidate: dict, svc_type: str) -> dict:
+    """Compute verification for a specific service based on scores and source."""
+    body_comp_score = candidate.get("body_comp_score", 0)
+    blut_score = candidate.get("blut_score", 0)
+    service_page = candidate.get("service_page_text")
+    source_type = candidate.get("source_type", "")
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
+    if svc_type in ("dexa_body_composition", "dexa_bone_density"):
+        score = body_comp_score
+        if score >= 3 and service_page:
+            return {"status": "verified", "confidence": 0.9, "date": today, "method": "website_service_page", "notes": None}
+        if score >= 3:
+            return {"status": "verified", "confidence": 0.7, "date": today, "method": "website_homepage", "notes": None}
+    elif svc_type in ("blood_test_self_pay", "blood_test_referral"):
+        score = blut_score
+        official_sources = ("meindirektlabor", "medkompass", "labor-berlin", "synlab")
+        if score >= 3 and source_type in official_sources:
+            return {"status": "verified", "confidence": 0.95, "date": today, "method": "official_directory", "notes": None}
+        if score >= 3 and source_type == "apify":
+            return {"status": "unverified", "confidence": 0.6, "date": today, "method": "google_places", "notes": None}
+        if score >= 3:
+            return {"status": "verified", "confidence": 0.7, "date": today, "method": "website_homepage", "notes": None}
+    else:
+        score = 0
+
+    return {"status": "unverified", "confidence": 0.3, "date": today, "method": "unconfirmed", "notes": None}
+
+
 def build_services(candidate: dict) -> list[dict]:
-    """Build service objects from classified data."""
+    """Build service objects from classified data with per-service verification."""
     classified = candidate.get("classified_services", [])
     prices = candidate.get("extracted_prices", [])
     country = candidate.get("raw_country", "DE")
@@ -241,6 +247,7 @@ def build_services(candidate: dict) -> list[dict]:
 
     for svc_type in classified:
         price_obj = _match_price_to_service(prices, svc_type, country)
+        verification = _compute_service_verification(candidate, svc_type)
 
         result.append({
             "type": svc_type,
@@ -248,6 +255,7 @@ def build_services(candidate: dict) -> list[dict]:
             "description": None,
             "selfPay": True,
             "price": price_obj,
+            "verification": verification,
         })
 
     return result
@@ -333,9 +341,10 @@ def candidate_to_provider(candidate: dict, index: int) -> dict | None:
     city = candidate.get("raw_city", "")
     country = candidate.get("raw_country", "DE")
     now_iso = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-    confidence = compute_confidence(candidate)
 
     provider_id = generate_id(candidate, index)
+    services_list = build_services(candidate)
+    is_verified = any(s["verification"]["status"] == "verified" for s in services_list)
 
     return {
         "id": provider_id,
@@ -359,15 +368,9 @@ def candidate_to_provider(candidate: dict, index: int) -> dict | None:
             "email": None,
             "bookingUrl": None,
         },
-        "services": build_services(candidate),
+        "services": services_list,
         "selfPay": True,
-        "verification": {
-            "status": "verified" if confidence >= 0.7 else "unverified",
-            "confidence": confidence,
-            "date": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
-            "method": "pipeline_v2",
-            "notes": None,
-        },
+        "verified": is_verified,
         "source": {
             "origin": candidate.get("source_type", "unknown"),
             "primaryUrl": website,
@@ -435,7 +438,7 @@ def main() -> None:
                   and "dexa_body_composition" not in [s["type"] for s in p["services"]])
     blut = sum(1 for p in providers if "blood_test_self_pay" in [s["type"] for s in p["services"]])
     both = sum(1 for p in providers if "dexa_body_composition" in p["categories"] and "blutlabor" in p["categories"])
-    verified = sum(1 for p in providers if p["verification"]["confidence"] >= 0.8)
+    verified = sum(1 for p in providers if p["verified"])
     has_price = sum(1 for p in providers if any(s.get("price") for s in p["services"]))
     needs_review_count = sum(1 for c in candidates if c.get("classification_status") == "needs_review")
 

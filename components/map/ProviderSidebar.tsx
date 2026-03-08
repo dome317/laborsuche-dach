@@ -293,7 +293,7 @@ function ProviderDetail() {
   const label = CATEGORY_LABELS[category];
   const [lng, lat] = provider.location.coordinates;
 
-  const isVerified = provider.verification.status === "verified";
+  const isVerified = provider.verified;
   const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`;
   const shareText = encodeURIComponent(
     `Schau mal: ${provider.name} – ${provider.contact.website}`
@@ -364,33 +364,51 @@ function ProviderDetail() {
             Leistungen
           </h3>
           <div className="space-y-2">
-            {provider.services.map((service, i) => (
-              <div
-                key={i}
-                className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-3"
-              >
-                <div className="flex justify-between items-start gap-2">
-                  <span className="text-sm font-medium text-gray-900 dark:text-white">
-                    {service.name}
-                  </span>
-                  <span className="text-sm font-semibold text-gray-700 dark:text-gray-300 flex-shrink-0">
-                    {service.price?.amount
-                      ? `${service.price.amount} ${service.price.currency === "CHF" ? "CHF" : "€"}`
-                      : "Auf Anfrage"}
-                  </span>
+            {provider.services.map((service, i) => {
+              const svcVerified = service.verification.status === "verified";
+              return (
+                <div
+                  key={i}
+                  className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-3"
+                >
+                  <div className="flex justify-between items-start gap-2">
+                    <div className="min-w-0 flex-1">
+                      <span className="text-sm font-medium text-gray-900 dark:text-white">
+                        {service.name}
+                      </span>
+                      <span
+                        className={`inline-flex items-center gap-0.5 ml-2 text-[10px] font-medium ${
+                          svcVerified
+                            ? "text-green-600 dark:text-green-400"
+                            : "text-yellow-600 dark:text-yellow-400"
+                        }`}
+                      >
+                        {svcVerified ? (
+                          <><CheckCircle className="h-3 w-3" /> Verifiziert</>
+                        ) : (
+                          <><AlertTriangle className="h-3 w-3" /> Nicht best&auml;tigt</>
+                        )}
+                      </span>
+                    </div>
+                    <span className="text-sm font-semibold text-gray-700 dark:text-gray-300 flex-shrink-0">
+                      {service.price?.amount
+                        ? `${service.price.amount} ${service.price.currency === "CHF" ? "CHF" : "€"}`
+                        : "Auf Anfrage"}
+                    </span>
+                  </div>
+                  {service.description && (
+                    <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                      {service.description}
+                    </p>
+                  )}
+                  {service.price?.note && (
+                    <p className="text-xs text-gray-400 dark:text-gray-500 mt-1 italic">
+                      {service.price.note}
+                    </p>
+                  )}
                 </div>
-                {service.description && (
-                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                    {service.description}
-                  </p>
-                )}
-                {service.price?.note && (
-                  <p className="text-xs text-gray-400 dark:text-gray-500 mt-1 italic">
-                    {service.price.note}
-                  </p>
-                )}
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
 
