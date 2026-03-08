@@ -36,7 +36,7 @@ export function useMapTileProvider() {
   }, [manualProviderId, theme]);
 
   // Get the current provider ID for UI state
-  const currentProviderId = manualProviderId || (theme === "dark" ? "dark" : "osm");
+  const currentProviderId = manualProviderId || (theme === "dark" ? "dark" : "voyager");
 
   // Handler that resets manual selection when theme changes
   const setProviderId = (id: string | null) => {

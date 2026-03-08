@@ -9,11 +9,11 @@ import type { MapConfig } from '@/types/map';
  * Center: Indonesia coordinates
  */
 export const DEFAULT_MAP_CONFIG: MapConfig = {
-  defaultCenter: [-2.911154, 120.074263],
-  defaultZoom: 5,
+  defaultCenter: [48.5, 10.5],  // DACH region center
+  defaultZoom: 6,
   minZoom: 3,
   maxZoom: 18,
-  zoomControl: false, // Using custom controls in dock
+  zoomControl: false,
   attributionControl: true,
 };
 

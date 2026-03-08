@@ -240,6 +240,12 @@
   }
 }
 
+/* Provider marker: remove default Leaflet divIcon styling */
+.provider-marker {
+  background: none !important;
+  border: none !important;
+}
+
 /* Custom thin scrollbar styles */
 @layer utilities {
   .scrollbar-thin {

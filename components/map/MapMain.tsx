@@ -10,6 +10,7 @@ import { MapTileSwitcher } from "./MapTileSwitcher";
 import { MapControls } from "./MapControls";
 import { MapDetailsPanel } from "./MapDetailsPanel";
 import { useMapTileProvider } from "@/hooks/useMapTileProvider";
+import { useProviderMarkers } from "@/hooks/useProviderMarkers";
 
 // Memoized style object to prevent unnecessary re-renders
 const GEOJSON_STYLE = {
@@ -25,6 +26,9 @@ export function MapMain() {
 
   const { tileProvider, currentProviderId, setProviderId } =
     useMapTileProvider();
+
+  // Load provider markers onto the map
+  useProviderMarkers();
 
   const handleCountrySelect = useCallback(async (countryId: string) => {
     try {
