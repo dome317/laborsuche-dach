@@ -1,8 +1,9 @@
 # Laborsuche DACH
 
-Interaktive Karte für zwei konkrete Gesundheits-Use-Cases im DACH-Raum:
+Interaktive Karte für drei diagnostische Kategorien im DACH-Raum:
 
 - **DEXA Body Composition Scans** — Ganzkörper-Körperzusammensetzungsanalyse (Fett, Muskelmasse, viszerales Fett)
+- **DXA Knochendichtemessung** — Osteodensitometrie zur Osteoporose-Diagnostik
 - **Blutuntersuchungen als Selbstzahler** — Labore ohne ärztliche Überweisung
 
 Die wichtigste fachliche Unterscheidung in diesem Projekt:
@@ -12,19 +13,19 @@ Die wichtigste fachliche Unterscheidung in diesem Projekt:
 
 | Metrik | Wert |
 |---|---:|
-| Provider gesamt | 89 |
+| Provider gesamt | 85 |
 | DEXA Body Composition | 15 |
 | DXA Knochendichte (bone-only) | 17 |
-| Blutlabor Selbstzahler | 57 |
-| Verifiziert | 85 / 89 (95,5%) |
-| Mit Telefon | 89 / 89 (100%) |
-| Mit Adresse | 89 / 89 (100%) |
-| Mit öffentlichem Preis | 16 / 89 |
-| Länder | DE (61), AT (20), CH (8) |
+| Blutlabor Selbstzahler | 53 |
+| Verifiziert | 85 / 85 (100%) |
+| Mit Telefon | 85 / 85 (100%) |
+| Mit Adresse | 85 / 85 (100%) |
+| Mit öffentlichem Preis | 16 / 85 |
+| Länder | DE (57), AT (20), CH (8) |
 
 ## Warum eine dritte Kategorie „Knochendichte"?
 
-Die Aufgabe verlangt DEXA Body Composition und Blutlabor. Wir zeigen zusätzlich 17 DXA-Knochendichte-Anbieter als eigene Kategorie, weil genau dort der häufigste Recherchefehler passiert: Websites schreiben „DEXA", bieten aber nur Knochendichte an.
+Die Aufgabe verlangt DEXA Body Composition und Blutlabor. Ich zeige zusätzlich 17 DXA-Knochendichte-Anbieter als eigene Kategorie, weil genau dort der häufigste Recherchefehler passiert: Websites schreiben „DEXA", bieten aber nur Knochendichte an.
 
 Die Kategorie ist kein Scope-Creep, sondern ein Transparenz-Layer: Sie zeigt, welche Treffer im Discovery-Schritt bewusst **nicht** als Body-Composition-Anbieter gezählt wurden.
 
@@ -60,15 +61,15 @@ docker compose up --build
 
 ## Screenshots
 
-![Desktop — Sidebar mit Suche, Filtern und Anbieterliste](docs/screenshots/desktop-map.png)
-![Mobil — Vollbild-Karte mit Filter-Chips und Anbieterliste](docs/screenshots/mobile-drawer.png)
-![Mobil — Anbieter-Detailansicht mit Leistungen und Preisen](docs/screenshots/provider-detail.png)
+![Desktop – Kartenansicht](docs/screenshots/desktop-map.png)
+![Mobile – Bottom Drawer](docs/screenshots/mobile-drawer.png)
+![Provider Detail](docs/screenshots/provider-detail.png)
 
 ## Architektur-Entscheidungen
 
 ### Next.js + statisches JSON statt Backend
 
-Für 89 Standorte ist ein Backend nicht nötig. Ein eingechecktes JSON hat für eine Coding Challenge klare Vorteile: Reviewer kann das Ergebnis direkt prüfen, Daten sind versionierbar, kein API-Key nötig, lokaler Start in unter einer Minute.
+Für 85 Standorte ist ein Backend nicht nötig. Ein eingechecktes JSON hat für eine Coding Challenge klare Vorteile: Reviewer kann das Ergebnis direkt prüfen, Daten sind versionierbar, kein API-Key nötig, lokaler Start in unter einer Minute.
 
 ### Vanilla Leaflet statt Google Maps
 
@@ -80,7 +81,7 @@ Ein Anbieter kann gleichzeitig DEXA Body Composition, Knochendichte und Bluttest
 
 ### Datenqualität vor Datenmenge
 
-Der Discovery-Teil liefert absichtlich viel zu viele Kandidaten (779). Danach wird streng aussortiert: falsche DEXA-Treffer, generische Labore ohne Selbstzahler-Hinweis, Duplikate, unvollständige Datensätze. Das Verhältnis Discovery → Export (779 → 89) ist bewusst streng.
+Der Discovery-Teil liefert absichtlich viel zu viele Kandidaten (779). Danach wird streng aussortiert: falsche DEXA-Treffer, generische Labore ohne Selbstzahler-Hinweis, Duplikate, unvollständige Datensätze. Das Verhältnis Discovery → Export (779 → 85) ist bewusst streng.
 
 ## Datenerhebung
 
@@ -206,8 +207,8 @@ interface ProviderService {
 - **Suche:** Fuzzy-Search nach Name, Stadt, PLZ (fuse.js)
 - **Detail-Panel:** Leistungen, Preise, Verifizierung, CTA-Buttons
 - **Mobile:** Bottom Drawer mit Snap-Points, Touch-optimierte Tap-Targets
-- **Geolocation** mit Entfernungssortierung
-- **CTAs:** Route planen (Google Maps), Anrufen/Nummer kopieren, Website, Termin buchen, WhatsApp teilen
+- **Standort-Erkennung:** Browser-Geolocation erkennt den aktuellen Standort und sortiert alle Anbieter automatisch nach Entfernung — der nächste Anbieter steht immer oben
+- **CTAs:** Route planen (Google Maps), Anrufen/Nummer kopieren, Website, Termin buchen, WhatsApp teilen — ein Tap genügt
 - **Deutsche Karten-Labels** (OSM DE Tiles)
 - **Responsive** Desktop-Sidebar + Mobile-Drawer
 
@@ -232,7 +233,6 @@ data/raw/                   Rohdaten-Samples
 ## Bekannte Grenzen
 
 - Öffentliche Preise sind im Markt selten — fehlende Preise sind absichtlich `null` statt geraten
-- 4 Einträge sind aktuell noch `unverified` und sollten vor produktiver Nutzung nachverifiziert werden
 - Die Rohdaten aus dem Apify-Discovery-Schritt sind als Sample (je 50 Einträge) eingecheckt, nicht vollständig
 - DEXA Body Composition in Deutschland ist regulierungsbedingt dünn besetzt (3 Anbieter) — das ist kein Datenleck, sondern Marktgegebenheit
 
@@ -240,7 +240,6 @@ data/raw/                   Rohdaten-Samples
 
 - **Evidenz-Links** pro Service direkt im Datensatz speichern (source_url pro Leistung)
 - **Service-spezifische Verifikation** konsequent durchziehen statt teilweise provider-weit
-- Die letzten 4 **unverified Einträge** manuell schließen oder entfernen
 - **Preisextraktion** für Direktlabor-Standorte systematisieren (GOÄ-Preislisten parsen)
 - **E2E-Tests** für Karte, Filter und Reset-View (Playwright)
 - Bone-only standardmäßig als optionalen **Transparenz-Layer** statt gleichrangige Primärkategorie
