@@ -781,8 +781,7 @@
       "name": "Training & Diagnostics Zürich",
       "slug": "training-diagnostics-zuerich",
       "categories": [
-        "dexa_body_composition",
-        "knochendichte"
+        "dexa_body_composition"
       ],
       "address": {
         "street": "Sihlquai 253",
@@ -820,20 +819,6 @@
             "confidence": 0.95,
             "date": "2026-03-09",
             "method": "llm_recherche_manual",
-            "notes": null
-          }
-        },
-        {
-          "type": "dexa_bone_density",
-          "name": "Knochendichtemessung",
-          "description": null,
-          "selfPay": true,
-          "price": null,
-          "verification": {
-            "status": "verified",
-            "confidence": 0.9,
-            "date": "2026-03-09",
-            "method": "llm_recherche",
             "notes": null
           }
         }
@@ -1075,8 +1060,7 @@
       "name": "Praxis für Endokrinologie Nürnberg",
       "slug": "praxis-fuer-endokrinologie-nuernberg",
       "categories": [
-        "dexa_body_composition",
-        "knochendichte"
+        "dexa_body_composition"
       ],
       "address": {
         "street": "Karolinenstraße 1",
@@ -1110,20 +1094,6 @@
             "confidence": 0.95,
             "date": "2026-03-09",
             "method": "llm_recherche_manual",
-            "notes": null
-          }
-        },
-        {
-          "type": "dexa_bone_density",
-          "name": "Knochendichtemessung",
-          "description": null,
-          "selfPay": true,
-          "price": null,
-          "verification": {
-            "status": "verified",
-            "confidence": 0.9,
-            "date": "2026-03-09",
-            "method": "llm_recherche",
             "notes": null
           }
         }
