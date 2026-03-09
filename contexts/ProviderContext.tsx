@@ -84,6 +84,7 @@ function getInitialParams(): {
   const validCategories: CategoryFilter[] = [
     "all",
     "dexa_body_composition",
+    "knochendichte",
     "blutlabor",
   ];
   return {
@@ -137,10 +138,12 @@ export function ProviderProvider({ children }: { children: ReactNode }) {
     const counts: Record<CategoryFilter, number> = {
       all: providers.length,
       dexa_body_composition: 0,
+      knochendichte: 0,
       blutlabor: 0,
     };
     providers.forEach((p) => {
       if (hasCategory(p, "dexa_body_composition")) counts.dexa_body_composition++;
+      if (hasCategory(p, "knochendichte")) counts.knochendichte++;
       if (hasCategory(p, "blutlabor")) counts.blutlabor++;
     });
     return counts;
@@ -201,10 +204,12 @@ export function ProviderProvider({ children }: { children: ReactNode }) {
     const counts: Record<CategoryFilter, number> = {
       all: viewportProviders.length,
       dexa_body_composition: 0,
+      knochendichte: 0,
       blutlabor: 0,
     };
     viewportProviders.forEach((p) => {
       if (hasCategory(p, "dexa_body_composition")) counts.dexa_body_composition++;
+      if (hasCategory(p, "knochendichte")) counts.knochendichte++;
       if (hasCategory(p, "blutlabor")) counts.blutlabor++;
     });
     return counts;

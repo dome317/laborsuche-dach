@@ -7,37 +7,31 @@ import type { Provider, ProviderCategory } from "@/types/provider";
 import type { Marker, MarkerClusterGroup } from "leaflet";
 
 /** Visual category for marker rendering — derived from categories array */
-export type MarkerCategory = "dexa_body_composition" | "blutlabor" | "both";
+export type MarkerCategory = "dexa_body_composition" | "knochendichte" | "blutlabor";
 
 export const CATEGORY_COLORS: Record<MarkerCategory, string> = {
   dexa_body_composition: "#7C3AED", // Violet
-  blutlabor: "#DC2626", // Warm-Red
-  both: "#7C3AED",
+  knochendichte: "#2563EB",         // Blue
+  blutlabor: "#DC2626",             // Warm-Red
 };
 
 export const CATEGORY_LABELS: Record<MarkerCategory, string> = {
   dexa_body_composition: "DEXA Body Scan",
+  knochendichte: "Knochendichte",
   blutlabor: "Blutlabor",
-  both: "DEXA + Blutlabor",
-};
-
-const CATEGORY_LABELS_SHORT: Record<MarkerCategory, string> = {
-  dexa_body_composition: "DEXA",
-  blutlabor: "Blut",
-  both: "DEXA+Blut",
 };
 
 function createMarkerIcon(category: MarkerCategory, selected: boolean): string {
   const color = CATEGORY_COLORS[category];
-  const isDEXA = category === "dexa_body_composition" || category === "both";
-  const isBlut = category === "blutlabor";
 
-  // Body scan icon for DEXA, droplet for Blutlabor
   let iconSvg = "";
-  if (isDEXA) {
-    // Simplified body silhouette
+  if (category === "dexa_body_composition") {
+    // Body silhouette
     iconSvg = `<circle cx="12" cy="4" r="2" fill="white"/><line x1="12" y1="6" x2="12" y2="15" stroke="white" stroke-width="2" stroke-linecap="round"/><line x1="8" y1="9" x2="16" y2="9" stroke="white" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="15" x2="9" y2="20" stroke="white" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="15" x2="15" y2="20" stroke="white" stroke-width="2" stroke-linecap="round"/>`;
-  } else if (isBlut) {
+  } else if (category === "knochendichte") {
+    // Bone icon (simplified)
+    iconSvg = `<path d="M18 6c0-1.7-1.3-3-3-3s-3 1.3-3 3c0 .7.3 1.4.7 1.9L11 10l-1.7-2.1c.4-.5.7-1.2.7-1.9 0-1.7-1.3-3-3-3S4 4.3 4 6c0 1 .5 1.9 1.2 2.4L4 18c0 1.7 1.3 3 3 3s3-1.3 3-3c0-.7-.3-1.4-.7-1.9L11 14l1.7 2.1c-.4.5-.7 1.2-.7 1.9 0 1.7 1.3 3 3 3s3-1.3 3-3c0-1-.5-1.9-1.2-2.4z" fill="white" stroke="none"/>`;
+  } else {
     // Droplet
     iconSvg = `<path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" fill="white"/>`;
   }
@@ -58,12 +52,10 @@ function createMarkerIcon(category: MarkerCategory, selected: boolean): string {
   `;
 }
 
-/** Derive visual marker category from provider's categories array */
+/** Derive visual marker category from provider's categories array (primary for display) */
 export function getMainCategory(provider: Provider): MarkerCategory {
-  const hasDEXA = provider.categories.includes("dexa_body_composition");
-  const hasBlut = provider.categories.includes("blutlabor");
-  if (hasDEXA && hasBlut) return "both";
-  if (hasDEXA) return "dexa_body_composition";
+  if (provider.categories.includes("dexa_body_composition")) return "dexa_body_composition";
+  if (provider.categories.includes("knochendichte")) return "knochendichte";
   return "blutlabor";
 }
 
@@ -71,8 +63,8 @@ export function getMainCategory(provider: Provider): MarkerCategory {
 function getClusterColor(childMarkers: Marker[]): string {
   const counts: Record<MarkerCategory, number> = {
     dexa_body_composition: 0,
+    knochendichte: 0,
     blutlabor: 0,
-    both: 0,
   };
 
   childMarkers.forEach((m) => {

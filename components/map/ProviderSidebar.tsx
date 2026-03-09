@@ -16,6 +16,7 @@ import {
   Calendar,
   Droplet,
   Copy,
+  Bone,
 } from "lucide-react";
 import { Drawer } from "vaul";
 import { useProviders, haversineKm } from "@/contexts/ProviderContext";
@@ -31,6 +32,7 @@ import { BodyScanIcon } from "@/components/icons/BodyScanIcon";
 const FILTER_OPTIONS: { key: CategoryFilter; label: string }[] = [
   { key: "all", label: "Alle" },
   { key: "dexa_body_composition", label: "DEXA Body Scan" },
+  { key: "knochendichte", label: "Knochendichte" },
   { key: "blutlabor", label: "Blutlabor" },
 ];
 
@@ -38,6 +40,9 @@ const FILTER_OPTIONS: { key: CategoryFilter; label: string }[] = [
 function CategoryIcon({ category, size = 14 }: { category: string; size?: number }) {
   if (category === "blutlabor") {
     return <Droplet className="flex-shrink-0" style={{ width: size, height: size }} />;
+  }
+  if (category === "knochendichte") {
+    return <Bone className="flex-shrink-0" style={{ width: size, height: size }} />;
   }
   return <BodyScanIcon className="flex-shrink-0" size={size} />;
 }
@@ -377,15 +382,22 @@ function ProviderDetail() {
       <div className="flex-1 overflow-y-auto scrollbar-thin">
         {/* Header: Above the fold */}
         <div className="px-4 pt-4 pb-3">
-          {/* 1. Category Badge + Name */}
-          <div className="flex items-center gap-2 mb-1">
-            <span
-              className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium text-white"
-              style={{ backgroundColor: color }}
-            >
-              <CategoryIcon category={category} size={12} />
-              {label}
-            </span>
+          {/* 1. Category Badges */}
+          <div className="flex flex-wrap items-center gap-1.5 mb-1">
+            {provider.categories.map((cat) => {
+              const catColor = CATEGORY_COLORS[cat as keyof typeof CATEGORY_COLORS] || color;
+              const catLabel = CATEGORY_LABELS[cat as keyof typeof CATEGORY_LABELS] || cat;
+              return (
+                <span
+                  key={cat}
+                  className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium text-white"
+                  style={{ backgroundColor: catColor }}
+                >
+                  <CategoryIcon category={cat} size={12} />
+                  {catLabel}
+                </span>
+              );
+            })}
           </div>
           <h2 className="text-lg font-semibold text-slate-700 dark:text-white">
             {provider.name}

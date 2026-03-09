@@ -52,7 +52,7 @@ export interface ProviderService {
   verification: ServiceVerification
 }
 
-export type ProviderCategory = "dexa_body_composition" | "blutlabor"
+export type ProviderCategory = "dexa_body_composition" | "knochendichte" | "blutlabor"
 
 export interface ProvidersData {
   meta: {
