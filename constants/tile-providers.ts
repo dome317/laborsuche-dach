@@ -10,9 +10,9 @@ import type { TileProvider } from '@/types/map';
 export const TILE_PROVIDERS: TileProvider[] = [
   {
     id: 'voyager',
-    name: 'Carto Voyager',
-    url: 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    name: 'OpenStreetMap DE',
+    url: 'https://tile.openstreetmap.de/{z}/{x}/{y}.png',
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> Mitwirkende',
     maxZoom: 19,
     category: 'standard',
   },
