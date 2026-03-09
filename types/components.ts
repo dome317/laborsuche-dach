@@ -3,7 +3,6 @@
  */
 
 import type { ReactNode } from 'react';
-import type { Icon as LeafletIcon } from 'leaflet';
 
 /**
  * LeafletMap component props
@@ -28,17 +27,6 @@ export interface LeafletTileLayerProps {
   attribution?: string;
   maxZoom?: number;
   subdomains?: string[];
-}
-
-/**
- * LeafletMarker component props
- */
-export interface LeafletMarkerProps {
-  position: [number, number];
-  icon?: LeafletIcon;
-  popup?: string | ReactNode;
-  draggable?: boolean;
-  onDragEnd?: (position: [number, number]) => void;
 }
 
 /**

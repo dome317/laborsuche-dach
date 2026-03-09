@@ -53,10 +53,50 @@ def extract_prices(text: str) -> list[dict]:
     return prices
 
 
+def _has_dexa_body_comp_context(text: str) -> bool:
+    """Check if text has DEXA/DXA combined with body composition keywords."""
+    text_lower = text.lower()
+    has_dexa = "dexa" in text_lower or "dxa" in text_lower
+    if not has_dexa:
+        return False
+    body_comp_context = [
+        "body composition", "körperzusammensetzung", "fettmasse", "muskelmasse",
+        "body scan", "bodyscan", "körperfett", "ganzkörperfett", "fettverteilung",
+        "lean mass", "magermasse", "viszerales fett",
+    ]
+    return any(kw in text_lower for kw in body_comp_context)
+
+
+def _count_blut_self_pay_matches(text: str) -> int:
+    """Count how many distinct self-pay keywords appear in the text."""
+    text_lower = text.lower()
+    self_pay_keywords = [
+        "selbstzahler", "ohne überweisung", "direktlabor", "privatperson",
+        "privat", "igel", "walk-in", "ohne termin",
+    ]
+    return sum(1 for kw in self_pay_keywords if kw in text_lower)
+
+
+def _is_blutentnahme_only_radiology(text: str) -> bool:
+    """Check if 'Blutentnahme' only appears in radiology/contrast agent context."""
+    text_lower = text.lower()
+    if "blutentnahme" not in text_lower:
+        return False
+    # If the text also mentions contrast agents but no self-pay keywords, it's radiology
+    radiology_context = ["kontrastmittel", "radiologie", "mrt", "ct-"]
+    has_radiology = any(kw in text_lower for kw in radiology_context)
+    has_self_pay = _count_blut_self_pay_matches(text) > 0
+    return has_radiology and not has_self_pay
+
+
 def classify_candidate(candidate: dict, config: dict) -> dict:
     """Classify a single candidate with dual-axis scoring."""
     keywords = config["keywords"]
     thresholds = config["classification"]
+
+    # Auto-confirm llm_recherche entries
+    source_origin = candidate.get("source", {}).get("origin", "") or candidate.get("source_type", "")
+    is_llm_recherche = source_origin == "llm_recherche"
 
     # Combine texts (service page weighted 2x)
     homepage_text = candidate.get("website_text", "") or ""
@@ -82,23 +122,44 @@ def classify_candidate(candidate: dict, config: dict) -> dict:
     if "nur knochendichte" in combined_lower or "keine fettmessung" in combined_lower:
         body_comp_score = 0
 
+    # DEXA Body Comp: require DEXA/DXA + body composition context keywords
+    # DEXA/DXA alone → bone_only, NOT body_comp
+    if body_comp_score > 0 and not is_llm_recherche:
+        if not _has_dexa_body_comp_context(combined_text):
+            body_comp_score = 0
+
+    # Blood: "Blutentnahme" alone is not enough, reject radiology context
+    if not is_llm_recherche and _is_blutentnahme_only_radiology(combined_text):
+        blut_score = 0
+
     # Determine services
     services: list[str] = []
-    bc_threshold = thresholds["body_comp_confirmed_threshold"]
     bd_threshold = thresholds["bone_only_threshold"]
 
-    if body_comp_score >= bc_threshold:
-        services.append("dexa_body_composition")
-    if bone_density_score >= bd_threshold:
-        if body_comp_score < 1:
-            services.append("dexa_bone_density")
-        else:
-            services.append("dexa_bone_density")
-    if blut_score >= bc_threshold:
-        services.append("blood_test_self_pay")
+    if is_llm_recherche:
+        # LLM-recherche entries: use raw_category directly
+        raw_cat = candidate.get("raw_category", "")
+        if raw_cat == "dexa_body_composition":
+            services.append("dexa_body_composition")
+        elif raw_cat == "blutlabor":
+            services.append("blood_test_self_pay")
+    else:
+        # Tightened thresholds: body_comp needs >= 5, blood needs >= 2 distinct keyword matches
+        if body_comp_score >= 5:
+            services.append("dexa_body_composition")
+        if bone_density_score >= bd_threshold:
+            if body_comp_score < 1:
+                services.append("dexa_bone_density")
+            else:
+                services.append("dexa_bone_density")
+        if blut_score >= 3 and _count_blut_self_pay_matches(combined_text) >= 2:
+            services.append("blood_test_self_pay")
 
     # Status
-    status = "confirmed" if services else "needs_review"
+    if is_llm_recherche:
+        status = "confirmed"
+    else:
+        status = "confirmed" if services else "needs_review"
 
     # Extract prices
     prices = extract_prices(combined_text)

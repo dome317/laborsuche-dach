@@ -1,0 +1,573 @@
+name,city,website,body_comp_score,bone_density_score,blut_score,enrichment_status
+Labor Dr. Wisplinghoff,Köln,https://www.wisplinghoff.de,0,0,0,success
+MVZ Labor Dr. Quade & Kollegen GmbH,Köln,https://www.lab-quade.de,0,0,0,success
+Praxis für Labormedizin und Mikrobiologie,Bochum,https://medlab-bochum.de,0,0,0,success
+LIS - Labor im Sommershof,Köln,https://lis.koeln,0,0,0,success
+Labmed Dortmund GmbH,Dortmund,http://www.labmed.de,0,0,0,success
+Praxis für Labormedizin und Mikrobiologie ÜbaG GbR,Wuppertal,http://www.medlab-wuppertal.de,0,0,0,success
+Dr. Wisplinghoff MPU,Essen,https://mpu.wisplinghoff.de,0,0,0,success
+Prof. Dr. med. habil. Heiner Trobisch,Duisburg,https://www.mvz-trobisch.de,0,0,0,success
+MVZ amedes für Praenatal-Medizin und Genetik GmbH,Düsseldorf,http://www.praenatal.de,0,0,6,success
+MVZ MEDICOVER Köln,Köln,http://www.medicover.de/de/facilities/medicover-koeln-mvz,0,0,0,success
+Praxis für Endokrinologie Köln,Köln,https://endokonsilamkattenbug.de,0,0,0,failed
+Meinkabtest GmbH,Köln,https://www.meinlabtest.de,0,0,0,success
+Endokonsil | Praxis am Kortumhaus,Bochum,https://www.endokonsil-gruppe.de,0,2,0,success
+Endokrinologische Gemeinschaftspraxis am Aachener Platz GbR,Düsseldorf,http://www.endo-duesseldorf.de,0,0,0,success
+Medizinisches Versorgungszentrum für Labormedizin und Mikrobiologie Ruhr GmbH (mvzlm Ruhr),Essen,http://www.mvzlm.de,0,0,2,success
+BMA-Labor,Bochum,http://www.bma-labor.de,0,0,0,success
+MVZ Labor Bochum Mlb GmbH,Bochum,https://labor-augsburg-mvz.de/laborgruppe/mvz-labor-bochum-mlb,0,0,0,success
+Ärztliche Laborgemeinschaft Dortmund GbR,Dortmund,http://laborzentrum-rosental.de,0,0,1,success
+BIO-LABOR Hemer,Hemer,https://www.biolabor-hemer.de,0,0,0,success
+Eurofins Medizinisches Labor Iserlohn,Iserlohn,http://www.gelamed.de,0,0,0,success
+Institut für Medizinische Laboratoriumsdiagnostik (IML) Bochum GmbH,Bochum,http://www.iml-bochum.de,0,0,0,success
+Institut für Laboranalytik Essen-Nord GmbH,Essen,https://www.google.com/maps/search/?api=1&query=Institut%20f%C3%BCr%20Laboranalytik%20Essen-Nord%20GmbH&query_place_id=ChIJ3TOsCGrouEcRH1LF6bPymzo,0,0,0,success
+MVZ Labor Limbach Aachen,Würselen,https://www.labor-aachen.de/unser-labor,0,0,0,success
+MVZ Laboratoriumsmedizin Dres. med. Wisplinghoff und Kollegen,Aachen,https://www.wisplinghoff.de/das-labor/standort-aachen,0,0,0,success
+Labor Amedes,Aachen,https://www.google.com/maps/search/?api=1&query=Labor%20Amedes&query_place_id=ChIJ5RTgo9-ZwEcRrgox4c37L90,0,0,0,success
+Bioscientia Labor Stuttgart,Leinfelden-Echterdingen,https://labor-stuttgart.bioscientia.de,0,0,3,success
+Bioscientia MVZ Labor Karlsruhe GmbH,Karlsruhe,http://labor-karlsruhe.bioscientia.de,0,0,3,success
+Med Laborunion GmbH,Reichshof,https://www.laborunion.de,0,0,0,success
+City Labor,Leipzig,http://city-labor.de,0,0,0,success
+Bioscientia MVZ Labor Mittelhessen GmbH,Gießen,https://ldm-labor.de,0,0,9,success
+Laborgemeinschaft,Hannover,https://www.google.com/maps/search/?api=1&query=Laborgemeinschaft&query_place_id=ChIJvZeeHkFzsEcRKWUF84c7vOU,0,0,0,success
+Med Laborunion GmbH,Köln,https://www.google.com/maps/search/?api=1&query=Med%20Laborunion%20GmbH&query_place_id=ChIJhV5LywElv0cRQ6E_5YCHwCM,0,0,0,success
+MPU - Labor Dr. Wisplinghoff,Köln,https://mpu.wisplinghoff.de,0,0,0,success
+MVZ Gerinnungsdiagnostik und Medizinische Genetik Essen GbR - ZOTZ | KLIMAS,Essen,http://www.zotzklimas.de,0,0,0,success
+Laborarztpraxis Rhein-Main MVZ GbR,Frankfurt am Main,https://www.laborarztpraxis.de,0,0,0,success
+BMP Labor für medizinische Materialprüfung GmbH,Aachen,https://www.google.com/maps/search/?api=1&query=BMP%20Labor%20f%C3%BCr%20medizinische%20Materialpr%C3%BCfung%20GmbH&query_place_id=ChIJ7YwpFouZwEcReb1urrQ76hs,0,0,0,success
+"Mikrobiologisches Labor für Umwelt, Lebensmittel und Industrie",Dachau,http://www.micdac.de,0,0,0,success
+MVZ Labor Frankfurt-West GmbH,Frankfurt am Main,https://www.google.com/maps/search/?api=1&query=MVZ%20Labor%20Frankfurt-West%20GmbH&query_place_id=ChIJjaJlW0IJvUcRssJ93JTAhDg,0,0,0,success
+Labor Dr. Heidrich & Kollegen MVZ GmbH,Hamburg,http://www.labor-heidrich.de,0,0,0,success
+MVZ Labor Ravensburg Labor Dr. Gärtner,Ravensburg,http://www.labor-gaertner.de,0,0,0,success
+Labor Dr. Fenner und Kollegen,Hamburg,https://www.fennerlabor.de,0,0,0,success
+Medizinisches Labor Bremen,Bremen,http://www.mlhb.de,0,0,3,success
+Labor Staber Bayreuth,Bayreuth,http://www.labor-staber.de,0,0,3,success
+Labor 28 MVZ GmbH,Berlin,http://www.labor28.de,0,0,2,success
+Labor Staber München,München,http://www.labor-staber.de,0,0,3,success
+Laborärzte Singen,Singen (Hohentwiel),http://www.labor-blessing.de,0,0,0,success
+Bioscientia MVZ Labor Saar GmbH,St. Ingbert,https://labor-saar.bioscientia.de,0,0,6,success
+Medizinisches Labor Ostsachsen MVZ GbR Standort Dresden,Dresden,https://www.labor-ostsachsen.de,0,0,0,success
+BML Laboratorien & Labortechnik GmbH,Singen (Hohentwiel),http://www.bml-laboratorien.de,0,0,0,success
+ALOMED Analytisches Labor Dr. Elisabeth Müller,Radolfzell am Bodensee,https://www.alomed.de,0,0,0,success
+"Labor Dr. Brunner, Labormedizinisches Versorgungszentrum Konstanz GmbH",Konstanz,https://www.labor-brunner.de,0,0,0,success
+Laborgemeinschaft Rottweil,Villingen-Schwenningen,https://www.xing.com/pages/laborgemeinschaftrottweil,0,0,0,success
+Bioscientia Labor Freiburg,Freiburg im Breisgau,https://bioscientia.de/standorte/freiburg,0,0,0,success
+Analytik-Labor Oberndorf - Dr. Harald Scheich,Oberndorf am Neckar,http://www.analytik-lab.de,0,0,0,success
+"Bioscientia Institut für Medizinische Diagnostik GmbH, Labor Jena",Jena,https://www.bioscientia.de/de/standorte/jena,0,0,0,success
+Bioscientia Labor Ingelheim,Ingelheim am Rhein,https://bioscientia.de,0,0,0,success
+MVZ Labor Dr. Limbach & Kollegen eGbR,Heidelberg,http://www.labor-limbach.de,0,0,4,success
+MVZ Medizinisches Labor Nord MLN GmbH,Hamburg,https://www.mln.de,0,0,0,success
+Medizinisches Labor Oldenburg,Oldenburg,https://www.medlab-oldenburg.de,0,0,0,success
+Labor Dr. Krause & Kollegen MVZ GmbH,Kiel,http://www.labor-krause.de,0,0,0,success
+"Institut für Laboratoriumsmedizin, Mikrobiologie und Transfusionsmedizin",Hamburg,https://dbknb.de/lab,0,0,0,success
+Bioscientia Labor Berlin,Berlin,https://bioscientia.de,0,0,0,success
+nordlab Partnerschaftspraxis für Laboratoriumsmedizin / Mikrobiologie,Braunschweig,https://www.nordlab.de/index.php/de,0,0,0,success
+MDI Limbach Berlin GmbH,Berlin,https://www.mdi-limbach-berlin.de,0,0,0,success
+Labor Staber Nürnberg,Nürnberg,http://www.labor-staber.de,0,0,3,success
+MVZ Ganzimmun GmbH,Mainz,http://www.ganzimmun.de,0,0,0,success
+MVZ Labor Limbach Bonn GmbH,Bonn,http://www.labor-limbach-bonn.de,0,0,0,success
+Mein Labor Berlin,Berlin,https://mein.laborberlin.com,0,0,2,success
+Labor Mohr,Kiel,http://www.labormohr.de,0,0,0,success
+Ärztliche Laborgemeinschaft Neumünster,Neumünster,http://labor-krause.de,0,0,0,success
+LADR Laborzentrum Nord,Flintbek,https://ladr.de/fachlabore/flintbek/kontakt,0,0,0,success
+Laborgemeinschaft der Ärzte,Neubrandenburg,https://www.iflb.de/das-labor/laborgemeinschaften,0,0,0,success
+IMD Labor Greifswald,Greifswald,http://www.imd-greifswald.de,0,0,0,success
+MVZ Laboratoriumsmedizin Berlin Dres. med. Wisplinghoff und Kollegen,Berlin,https://www.wisplinghoff.de/das-labor/standort-berlin-mpu,0,0,0,success
+UKSH Kiel | Hämatologie Labor,Kiel,http://www.uksh.de/haematologielabor-kiel,0,0,0,success
+ZytoLabore regional Standort Kiel,Kronshagen,http://www.zytolabore.de,0,0,0,success
+MVZ Labor Limbach VORPOMMERN-RÜGEN GmbH,Stralsund,https://www.labor-stralsund.de/metanavigation/kontakt/ansprechpartner,0,0,0,success
+Institut für Klinische Chemie und Laboratoriumsmedizin,Greifswald,http://www.medizin.uni-greifswald.de/klinchem,0,0,0,failed
+IGL Labor GmbH Institut für ganzheitliche Labordiagnostik,Wittbek,https://www.igl-labor.de,0,0,0,success
+Ärztliche Laborgemeinschaft Heide,Heide,http://labor-krause.de,0,0,0,success
+synlab Medizinisches Versorgungszentrum Bayreuth GmbH,Bayreuth,https://www.google.com/maps/search/?api=1&query=synlab%20Medizinisches%20Versorgungszentrum%20Bayreuth%20GmbH&query_place_id=ChIJ97sA58CioUcR8g03PW2ysQE,0,0,0,success
+Labor Lang,Nürnberg,http://www.labor-lang.de,0,0,0,success
+Labor ParaDocs,Argenbühl,http://www.laborparadocs.de,0,0,0,success
+Labor Becker (Memmingen),Memmingen,http://www.labor-becker.de,0,0,0,success
+Labor Enders,Stuttgart,https://www.labor-enders.de,0,0,0,success
+Labor Augsburg MVZ GmbH,Augsburg,http://www.labor-augsburg-mvz.de,0,0,3,success
+IMD Institut für Medizinische Diagnostik Berlin-Potsdam GbR,Berlin,https://www.imd-berlin.de,0,0,0,success
+IFLb Laboratoriumsmedizin Berlin GmbH,Berlin,http://www.iflb.de,0,0,0,failed
+MVZ Laborverbund GmbH,Hennigsdorf,http://www.hospital-laborverbund.com,0,0,1,success
+IMD Labor Potsdam,Potsdam,http://www.imd-potsdam.de,0,0,3,success
+Labor Potsdam,Potsdam,http://laborpotsdam.de,0,0,0,success
+Hauptstadtlabor Berlin,Berlin,https://www.hauptstadtlabor-berlin.de,0,0,0,success
+Medlab Mitte – Labor des MVZ Ärztehaus Mitte,Berlin,https://www.google.com/maps/search/?api=1&query=Medlab%20Mitte%20%E2%80%93%20Labor%20des%20MVZ%20%C3%84rztehaus%20Mitte&query_place_id=ChIJI_RvT89RqEcRq_-qSEs9Ktg,0,0,0,success
+IHP Labor Berlin,Berlin,https://www.ihp-labor.de,0,0,0,success
+ATOS MVZ Kantpraxis Berlin,Berlin,https://www.kantpraxis.de,0,0,0,success
+Labor im CfG - Exklusiv für Versicherte der AOK Nordost und Selbstzahlende,Berlin,https://nordost.aok.de/inhalt/labor-im-centrum-fuer-gesundheit,0,0,3,success
+KORMANN LAB,Tübingen,https://www.google.com/maps/search/?api=1&query=KORMANN%20LAB&query_place_id=ChIJleJz7i3lmUcRA2GirHML9uI,0,0,0,success
+Fluentes Labor für integrierte Diagnostik GmbH,Berlin,http://www.fluentes.de,0,0,0,success
+Berater Das Labor. GmbH,Potsdam,https://www.daslabor.com,0,0,0,success
+meineLaborwerte | Spandau,Berlin,https://www.meinelaborwerte.com,0,0,2,success
+Institut für Laboratoriumsmedizin,Brandenburg an der Havel,http://www.labor-brandenburg.de,0,0,0,success
+Citolabor Berlin Neukölln,Berlin,https://www.bioscientia.de,0,0,0,success
+Analytisches Zentrum Biopharm GmbH Berlin,Berlin,http://www.az-biopharm.de,0,0,0,success
+Medz. Versorgzent. Labor,Berlin,https://www.google.com/maps/search/?api=1&query=Medz.%20Versorgzent.%20Labor&query_place_id=ChIJK3xUuG1SqEcRaZXE8v_e60Y,0,0,0,success
+Laborbetreuung IMD GmbH,Berlin,https://www.google.com/maps/search/?api=1&query=Laborbetreuung%20IMD%20GmbH&query_place_id=ChIJuTn5KZVaqEcRW5MQkSGSifs,0,0,0,success
+MEDICALAB Berlin - Labor für medizinische Diagnostik,Berlin,https://www.atos-labor.de,0,0,0,success
+MVZ Windscheidstraße,Berlin,https://www.iflb.de/service/blutentnahmestelle,0,0,1,success
+Haus 222 - Labormedizin/ Mikrobiologie/ Hämatologisches Speziallabor,Berlin,https://www.google.com/maps/search/?api=1&query=Haus%20222%20-%20Labormedizin%2F%20Mikrobiologie%2F%20H%C3%A4matologisches%20Speziallabor&query_place_id=ChIJ9TaSQ22zqUcReygU3sHieaE,0,0,0,success
+LADR Laborzentrum an den Immanuel Kliniken | Zweigpraxis Bernau,Bernau bei Berlin,https://www.ladr.de/ein-starker-verbund/labor-vor-ort/facharztlabore/bernau,0,0,0,success
+LADR Medizinisches Versorgungszentrum Berlin,Berlin,http://www.ladr.de,0,2,0,success
+Dr. Rölleke Labor,Potsdam,http://www.dr-roelleke.de,0,0,2,success
+ALAB GmbH Analyselabor in Berlin,Berlin,http://www.alab-berlin.de,0,0,2,success
+Lyvy,Berlin,https://www.lyvy.de,0,0,0,success
+ProfiLab24 GmbH,Berlin,https://profilab24.com,0,0,0,success
+Labor Becker (Bamberg),Bamberg,http://www.labor-becker.de,0,0,0,success
+Chemisches Labor,Schonungen,http://www.labor-graser.de,0,0,0,success
+Krebs-Scan | Krebsfrüherkennung mit nur einem Bluttest | optimal-versichert + HanseMerkur,Erlangen,https://krebs-scan.jetzt,0,0,0,success
+Abnahmestelle für medizinische Tests AT GmbH,Berlin,https://www.abstinenz-at.de,0,0,0,success
+Namotto.lab,Berlin,https://www.google.com/maps/search/?api=1&query=Namotto.lab&query_place_id=ChIJj7ckpvBQqEcRDsxA53g2sL4,0,0,0,success
+Frau Dr. med. Ingrid Lätzsch,Berlin,https://www.iflb.de/service/ansprechpartner,0,0,0,success
+IMD Labor Frankfurt,Frankfurt am Main,http://www.labffm.de,0,0,0,success
+MVZ Labor Limbach München GmbH,München,http://www.labor-limbach-muenchen.de,0,0,0,success
+MVZ Labor Essen Nienkampstraße GmbH,Essen,http://www.labor-eveld.de,0,0,0,success
+D-testet,Oberhausen,https://www.google.com/maps/search/?api=1&query=D-testet&query_place_id=ChIJwfpu1dPBuEcRxErtH0k9iiQ,0,0,0,success
+"proMotion Lab – Labor für Bewegungsanalysen und Muskelfunktionsdiagnostik, Privatpatienten und GKV als Selbstzahler",Köln,https://pro-motionlab.com,0,0,0,success
+Mikrobiologie des MVZ Dr. Eberhard & Partner Dortmund (ÜBAG),Dortmund,http://www.mikrobiologie-dortmund.de,0,0,0,success
+Labordiagnostik am Seestern,Düsseldorf,http://www.labordiagnostik-seestern.com,0,0,0,success
+MVZ Bioscientia Labor Duisburg GmbH,Duisburg,http://www.gerinnungsambulanz-duisburg.de,0,0,0,success
+MVZ Dr. Eberhard & Partner Dortmund (ÜBAG),Dortmund,http://www.medizin-zentrum-dortmund.de/de,0,0,0,success
+Tolab Labor Für Medizinische Diagnostik,Düsseldorf,http://www.tolab.de,0,0,0,success
+Humangenetik des MVZ Dr. Eberhard & Partner Dortmund (ÜBAG),Dortmund,http://www.humangenetik-dortmund.de,0,0,0,success
+"Bioscientia Institut Medizinische Diagnostik GmbH, Labor Moers",Moers,https://www.bioscientia.de/de/standorte/moers,0,0,0,success
+Ärztliche Apparategemeinschaft Düsseldorf-Mitte GbR,Düsseldorf,https://www.apparategemeinschaft.de,0,0,0,success
+LADR Medizinisches Versorgungszentrum Neuruppin,Neuruppin,https://ladr.de/fachlabore/neuruppin/kontakt,0,0,3,success
+Kliniklab Laborarztpraxis,Neuruppin,https://kliniklab.com/framework.php,0,0,0,success
+ISD Labor,Bad Malente,https://isd-labor.de,0,0,0,success
+Landeslabor Schleswig-Holstein,Neumünster,http://www.landeslabor.schleswig-holstein.de,0,0,0,success
+Mvz Labor Bavariahaus,München,https://www.laborbavariahaus.de,0,0,0,success
+Labor-Praxisklinik Dr. Kübler,München,http://gesundheitspraxisdrkuebler.de,0,0,0,success
+Labor Becker (Blutabnahmestelle),München,https://www.labor-becker.de,0,0,0,success
+Labor Becker (Hauptstandort),München,http://www.labor-becker.de,0,0,0,success
+"MVZ Medizinische Labore Limbach München Rosenheim GmbH, Medizinisches Labor Rosenheim MVZ",Rosenheim,http://www.medlabor.de,0,0,0,success
+MVZ Ärztliche Laboratorien München-Land,Poing,http://www.labor-poing.de,0,0,0,success
+TOX-Labor,München,https://www.google.com/maps/search/?api=1&query=TOX-Labor&query_place_id=ChIJVVWlOL91nkcRkk6aj26Z6xY,0,0,0,success
+Labor Dr. Böhm,München,https://www.labor-dr-boehm.de,0,0,0,success
+BIOMED Labordiagnostik GmbH,Oberschleißheim,https://www.biomed.de,0,0,0,success
+Antech Lab Germany GmbH - Tierpathologie München,München,http://www.tierpathologie-muenchen.de,0,0,0,success
+amedes MVZ für Laboratoriumsdiagnostik und Mikrobiologie GmbH,Fürstenfeldbruck,https://www.amedes-muenchen.de,0,0,0,success
+Orga Labor München,München,http://www.orgalabor.de,0,0,0,success
+Medtrac Laborbetriebsgesellschaft mbH,Poing,https://www.google.com/maps/search/?api=1&query=Medtrac%20Laborbetriebsgesellschaft%20mbH&query_place_id=ChIJ_cZQID4JnkcRRbbiGJ91Mmg,0,0,0,success
+"LADR Laborzentrum Paderborn, Dr. med. Armin Kuhlencord - Krankenhaushygieniker (BÄMI) - Facharzt für Laboratoriumsmedizin",Paderborn,http://www.ladr.de/fachlabore/paderborn/kontakt,0,0,0,success
+MVZ Labor Krone GmbH,Bad Salzuflen,http://www.laborkrone.de,0,0,0,success
+Labor Hameln,Hameln,http://www.labor-hmhi.de,0,0,0,success
+B + V Laborzentrum GmbH,Paderborn,https://www.bk-paderborn.de/bkp/ueber-uns/standorte/labor.php,0,0,0,success
+MVZ Diamedis Diagnostische Medizin Sennestadt GmbH,Bielefeld,http://www.diamedis.eu,0,0,0,success
+Nordlab,Hameln,http://www.nordlab.de,0,0,0,success
+Klinikum Bielefeld Zentrallabor,Bielefeld,https://www.klinikumbielefeld.de/institut-fuer-medizinische-labordiagnostik-mikrobiologie-und-transfusionsmedizin.html,0,0,0,success
+"Institut für Laboratoriumsmedizin, Mikrobiologie und Hygiene im Evangelischen Klinikum Bethel (EvKB)",Bielefeld,https://evkb.de/labor,0,0,0,success
+"Institut für Laboratoriumsmedizin, Mikrobiologie und Hygiene im Evangelischen Klinikum Bethel (EvKB)",Bielefeld,https://evkb.de/labor,0,0,0,success
+MVZ Medizinisches Labor Hannover GmbH,Hannover,http://www.mlh.de,0,0,0,success
+Cito Labor Laborgemeinschaft Magdeburg,Magdeburg,https://www.google.com/maps/search/?api=1&query=Cito%20Labor%20Laborgemeinschaft%20Magdeburg&query_place_id=ChIJ_05OkmNfr0cRUgNS8dzl0QM,0,0,0,success
+LADR Laborzentrum Magdeburg,Magdeburg,https://labor-magdeburg.de,0,0,0,success
+MVZ Medizinische Labore Dessau Kassel GmbH,Dessau-Roßlau,https://www.labor-dessau-kassel.de,0,0,0,success
+Krankenhaus Martha-Maria Halle-Dölau Institut für Laboratoriumsmedizin,Halle (Saale),https://kh-halle-doelau.martha-maria.de/de/laboratoriumsmedizin,0,0,0,success
+Labor Halle/Saale Dr. med. Dipl.-Biol. Katharina Angermann,Halle (Saale),https://labor-halle-saale.de,0,0,0,success
+Medizinisches Labor Prof. Schenk / Dr. Ansorge und Kollegen,Magdeburg,http://www.schenk-ansorge.de,0,0,0,success
+amedes MVZ Laboratoriumsdiagnostik und Mikrobiologie Halle/Leipzig GmbH,Halle (Saale),http://www.amedes-halle-leipzig.de,0,0,2,success
+Ärztliche Laborgemeinschaft Wittenberg GbR,Wittenberg,https://www.google.com/maps/search/?api=1&query=%C3%84rztliche%20Laborgemeinschaft%20Wittenberg%20GbR&query_place_id=ChIJQd0vPcAvpkcREp5UHCkySxA,0,0,0,success
+Deutsches Chroniker Labor,Quedlinburg,http://deutsches-chroniker-labor.de,0,0,0,success
+UMG Labor,Göttingen,https://labor.umg.eu,0,0,2,success
+"MVZ Vital Halle - Praxis für Pneumologie, Allergologie & Schlafmedizin",Halle (Saale),http://www.mvz-vital.de,0,0,0,success
+alphaomega Labor,Leipzig,http://www.aolabor.de,0,0,1,success
+MVZ Labor Dr. Reising-Ackermann und Kollegen,Leipzig,http://www.labor-leipzig.de,0,0,0,success
+MEDIPLEX Kompetenz-Partner Labor Dr. Fenner & Kollegen,Hamburg,https://www.mediplex.de/de/home/praxen/laboratoriumsmedizin-und-mikrobiologie,0,0,0,failed
+Laborgemeinschaft Hamburg Betriebsgesellschaft mbH,Hamburg,https://www.google.com/maps/search/?api=1&query=Laborgemeinschaft%20Hamburg%20Betriebsgesellschaft%20mbH&query_place_id=ChIJd4fi6PCFsUcRwmtw0-2wNYQ,0,0,0,success
+DNA DIAGNOSTIK MVZ GbR Dr. med. Usha Peters · Dr. med. Saskia Kleier · Dr. med. Astrid Preuße,Hamburg,http://www.dna-diagnostik.hamburg,0,0,0,success
+Bioscientia Labor Mainz,Mainz,https://bioscientia.de,0,0,0,success
+Labor Mainz,Mainz,https://labor-augsburg-mvz.de/laborgruppe/labor-mainz-mvz,0,0,0,success
+Labormedizin Darmstadt,Darmstadt,http://www.labormedizin-darmstadt.de,0,0,0,success
+Labco Labor GmbH,Frankfurt am Main,http://www.labco.eu,0,0,0,success
+Labdiagnostik Services GmbH,Frankfurt am Main,http://www.labdiagnostik.de/cms/front_content.php?idcat=72&lang=1,0,0,0,failed
+Medizinisches Versorgungszentrum für Labordiagnostik und Mikrobiologie Rhein-Main,Raunheim,https://www.amedes-raunheim.de,0,0,2,success
+Institut für Labordiagnostik und Hygiene | Helios Dr. Horst Schmidt Kliniken,Wiesbaden,https://www.helios-gesundheit.de/standorte-angebote/kliniken/wiesbaden-hsk/leistungen/fachbereiche/labordiagnostik-hygiene,0,0,0,success
+MVZ Dr. med. Helge Riegel GmbH,Wiesbaden,https://www.labor-riegel.de,0,0,0,success
+ID-Labor GmbH,Wiesbaden,http://www.id-labor.de,0,0,0,success
+Laborgenossenschaft Darmstadt eG,Darmstadt,https://www.l-da.de,0,0,0,failed
+Laborgemeinschaft Odenwald,Darmstadt,https://www.google.com/maps/search/?api=1&query=Laborgemeinschaft%20Odenwald&query_place_id=ChIJ9wgDd2NwvUcRFYEk1HL9WXc,0,0,0,success
+Biocontrol Ihr Laborpartner in der Tiermedizin,Ingelheim am Rhein,https://www.biocontrol.de,0,0,0,success
+IMD Humangenetik Wiesbaden,Wiesbaden,https://humangenetik-wi.de,0,0,0,success
+MVZ Gerinnungszentrum Hochtaunus,Bad Homburg vor der Höhe,http://www.gerinnungszentrum-hochtaunus.de,0,0,0,success
+Dr.med. Ralf Kirkamm,Mainz,http://www.dr-kirkamm.de,0,0,0,success
+labopart - Medizinisches Labor Dresden,Dresden,https://labopart.de/unser-labor/standorte/#labordresden,0,0,0,success
+MVZ Labor Dr. Reising-Ackermann und Kollegen Dresden Medizinisches Versorgungszentrum,Dresden,https://www.labordresden.de/kontakt/unsere-standorte,0,0,0,success
+labopart - Labor Elsterwerda,Elsterwerda,https://labopart.de/unser-labor/standorte,0,0,0,success
+Labor Staber Klipphausen,Klipphausen,http://www.labor-staber.de,0,0,3,success
+diagnosticum,Dresden,https://www.diagnosticum.eu/labormedizin-ueberblick/standorte/dresden,0,0,0,success
+Labor für Mikrobiologie und Hygiene,Hoyerswerda,https://www.labor-hygiene.de,0,0,0,success
+"Labor für Mikrobiologie und Hygiene, Dr. Catrin Kuchler",Hoyerswerda,https://www.labor-hygiene.de,0,0,0,success
+Elblab GmbH,Riesa,https://www.elblandkliniken.de/labor,0,0,0,success
+Laborgemeinschaft Elsterwerdaer Ärzte,Elsterwerda,https://www.google.com/maps/search/?api=1&query=Laborgemeinschaft%20Elsterwerdaer%20%C3%84rzte&query_place_id=ChIJYe35ASKJp0cRanpwaKP9JTw,0,0,0,success
+MVZ Labor Dresden Bayreuther Straße GmbH,Dresden,https://www.google.com/maps/search/?api=1&query=MVZ%20Labor%20Dresden%20Bayreuther%20Stra%C3%9Fe%20GmbH&query_place_id=ChIJr9IKxJHFCUcRSqhb9Sw_B44,0,0,0,success
+Institut für Medizinische Mikrobiologie und Hygiene,Dresden,https://www.google.com/maps/search/?api=1&query=Institut%20f%C3%BCr%20Medizinische%20Mikrobiologie%20und%20Hygiene&query_place_id=ChIJ8ypS2cnICUcRPcVp7yS-TuQ,0,0,0,success
+Labor für Wasser und Umwelt GmbH,Bad Liebenwerda,http://www.lwu-lib.de,0,0,0,failed
+Medizinisches Labor Ostsachsen MVZ eGbR,Bautzen,https://www.labor-ostsachsen.de,0,0,0,success
+Krankenhaus St. Joseph-Stift Dresden,Dresden,https://www.josephstift-dresden.de,0,0,0,success
+labopart - Medizinisches Labor Chemnitz,Chemnitz,https://www.labopart.de/unser-labor/standorte/#laborchemnitz,0,0,0,success
+Klinikum Darmstadt Institut : Labormedizin,Darmstadt,https://klinikum-darmstadt.de/qualitaet-sicherheit/zentrum-fuer-labormedizin,0,0,0,success
+Bioscientia Labor Wermsdorf,Wermsdorf,https://www.bioscientia.de/standorte/wermsdorf,0,0,0,success
+MVZ Offenbach - Labordiagnostik,Offenbach am Main,https://www.sana.de/offenbach/medizin-pflege/standard-titel,0,0,0,success
+test.net GmbH - Testlabor,Offenbach am Main,https://www.google.com/maps/search/?api=1&query=test.net%20GmbH%20-%20Testlabor&query_place_id=ChIJe56OACF1vUcRxC4uB94ZeKc,0,0,0,success
+ON FILM LAB,Frankfurt am Main,https://onfilmlab.de,0,0,0,success
+MVZ Rhein-Main-Zentrum für Diagnostik GmbH,Weiterstadt,https://dieradiologen-da.de,0,0,0,success
+Centrum f. Hämatologie und Onkologie Bethanien,Frankfurt am Main,http://www.onkologie-bethanien.de,0,0,0,success
+Euro-labor GmbH,Freiburg im Breisgau,http://www.euro-labor-freiburg.de,0,0,0,success
+MVZ Laborverbund GmbH Zweigpraxis Rüdersdorf,Rüdersdorf bei Berlin,https://ladr.de/fachlabore/ruedersdorf/kontakt,0,0,0,success
+COAGUMED Gerinnungszentrum,Berlin,https://gerinnungszentrum-berlin.de,0,0,0,success
+Gerinnungssprechstunde Hausvogteiplatz,Berlin,https://www.medicover.de/de/facilities/medicover-berlin-mitte-mvz/behandlungsbereiche/haemostaseologie,0,0,0,success
+"MVZ AnthroNUK, Berliner Zentrum für Nuklearmedizin und Schilddrüsentherapie",Berlin,http://anthronuk.de,0,0,0,success
+Medicover Berlin-Mitte MVZ,Berlin,http://www.medicover.de/de/facilities/medicover-berlin-mitte-mvz,0,0,1,success
+MEDICOVER Berlin-Charlottenburg MVZ,Berlin,http://www.medicover.de/de/facilities/medicover-charlottenburg-mvz,0,0,0,success
+Pränatale Diagnostik Berlin-Lichtenberg,Berlin,http://www.pd-bl.de,0,0,0,success
+MVZ MED ON Schmerz-Centrum Berlin,Berlin,https://www.dr-immler.de,0,0,0,success
+MVZ BeRaNuk GmbH – Nuklearmedizin,Berlin,http://www.beranuk.de,0,0,0,success
+medienrettung,Berlin,https://www.medienrettung.de,0,0,0,success
+Überörtliche Berufsausübungsgmeinschaft MVZ DTZ am Frankfurter Tor/ MVZ DTZ am OZB Onkozentrum Berlin,Berlin,http://www.berlin-dtz.de,0,0,0,success
+endokrinologikum Berlin im Lindencorso,Berlin,https://www.endokrinologikum-berlin.de,0,0,0,success
+Medicover Uhlandstrasse,Berlin,https://www.medicover.de/de/facilities/medicover-berlin-uhlandstrasse-mvz/about,0,0,0,success
+Labor Becker (Landshut),Landshut,http://www.labor-becker.de,0,0,0,success
+Klinikum des Landkreises Deggendorf Institut für Laboratoriumsdiagnostik und Transfusionsmedizin,Deggendorf,https://www.donau-isar-klinikum.de/kliniken-institute/deggendorf/institut-fr-laboratoriumsdiagnostik-lmmunhmatologie-und-mikrobio/index.html,0,0,0,success
+Medizinisches Analysezentrum Labor,Parchim,https://www.ladr.de,0,2,0,success
+Laborgemeinschaft Niederbayerischer Ärzte,Straubing,https://www.google.com/maps/search/?api=1&query=Laborgemeinschaft%20Niederbayerischer%20%C3%84rzte&query_place_id=ChIJUWZjfaNldUcRSnx7yYYUwwE,0,0,0,success
+MVZ Labor Passau GmbH,Passau,http://www.labor-passau.de,0,0,0,success
+MVZ Schierling,Schierling,https://www.mvz-schierling.de,0,0,0,success
+MVZ Labordiagnostik Regensburg GmbH,Regensburg,http://www.mvz-r.de,0,0,2,success
+ICH Stendal - Medizinisches Labor,Stendal,http://www.ich-hamburg-stendal.de,0,0,0,success
+LADR Medizinisches Versorgungszentrum Braunschweig,Braunschweig,https://ladr.de/fachlabore/braunschweig/kontakt,0,0,0,success
+Labor MVZ Westmecklenburg,Schwerin,http://www.labor-schwerin.de,0,0,3,success
+Institut für Laboratoriumsmedizin | Helios Kliniken Schwerin,Schwerin,https://www.helios-gesundheit.de/kliniken/schwerin/unser-angebot/unsere-zentren-und-institute/laboratoriums-und-transfusionsmedizin,0,0,0,success
+Medizinisches Labor Rostock,Rostock,https://www.labormedicus.de,0,0,0,success
+Novum Analytik GmbH,Heilbronn,https://novum-analytik.de,0,0,0,success
+TOXILAB Ludwigsburg Labor Für Toxikologie Und Drogenuntersuchungen GmbH,Ludwigsburg,https://www.mvz-labor-lb.de/toxilab,0,0,2,success
+MVZ Labor Ludwigsburg,Ludwigsburg,https://www.mvz-labor-lb.de,0,2,0,success
+SRH Kurpfalzkrankenhaus Heidelberg GmbH,Heidelberg,http://www.kurpfalzkrankenhaus.de,0,0,0,success
+"Innere Medizin I - Endokrinologie, Stoffwechsel",Heidelberg,http://www.klinikum.uni-heidelberg.de,0,0,0,success
+"Zentrum für Diabetes, Nieren- und Hochdruckkrankheiten MVZ GmbH",Bielefeld,http://www.dialysezentrum-bielefeld.de,0,0,0,success
+MVZ Medicum Brake Hausärzte GbR,Bielefeld,http://www.medicum-brake.de,0,0,0,success
+"Städtisches Klinikum Karlsruhe gGmbH Zentrum für Labormedizin, Mikrobiologie und Transfusionsmedizin (ZLMT)",Karlsruhe,http://www.klinikum-karlsruhe.com,0,0,0,success
+Diagnosticum Bayern Mitte - Standort Ingolstadt,Ingolstadt,https://www.diagnosticum-ingolstadt.de,0,0,0,success
+profertilita - Kinderwunschklinik,Regensburg,http://www.profertilita.de,0,0,0,success
+Gemeinschaftspraxis Hainzinger Seefried Sieh Diabeteszentrum - Allgemeinmedizin,Ingolstadt,http://diabetologie-ingolstadt.de,0,0,0,success
+LADR Medizinisches Versorgungszentrum Bremen,Bremen,https://ladr.de/fachlabore/bremen/kontakt,0,0,0,success
+Frau Dr. med. Ruth Hiller,Bremen,https://ladr.de/fachlabore/bremen/ansprechpartner,0,0,0,success
+Dr. med. Andreas Gerritzen,Bremen,https://www.google.com/maps/search/?api=1&query=Dr.%20med.%20Andreas%20Gerritzen&query_place_id=ChIJ_6o7tU8msUcRZgUWMjDcbKU,0,0,0,success
+Medical Hygiene-Labor,Heilbronn,https://www.hygienelabor.de/de,0,0,0,success
+Zentrum für Humangenetik Mannheim - ZHMA,Mannheim,https://www.zhma.de,0,0,0,success
+Laborgemeinschaft Nord- Württemberg,Heilbronn,https://www.google.com/maps/search/?api=1&query=Laborgemeinschaft%20Nord-%20W%C3%BCrttemberg&query_place_id=ChIJKawZ2EMvmEcRrVWz3HFbQfA,0,0,0,success
+MEDIADIG GmbH,Ilsfeld,http://www.mediadig.de,0,0,0,success
+Krankenhaus Salem gGmbH,Heidelberg,http://www.krankenhaus-salem.de,0,0,0,success
+"Endokrinologische Gemeinschaftspraxis Dres. Enghofer, Fohr & Dornisch",Mannheim,http://www.endokrima.de,0,2,0,success
+"Institut für Labor-, Transfusionsmedizin und Mikrobiologie | Helios Klinikum Pforzheim",Pforzheim,https://www.helios-gesundheit.de/standorte-angebote/kliniken/pforzheim/fachbereiche/labor-transfusionsmedizin-mikrobiologie,0,0,0,success
+DMM Labor für Lebensmittel-Diagnostik GmbH,Birkenfeld,https://www.google.com/maps/search/?api=1&query=DMM%20Labor%20f%C3%BCr%20Lebensmittel-Diagnostik%20GmbH&query_place_id=ChIJHxod2n5tl0cR_KrOtgoPV1Q,0,0,0,success
+Frauenarztpraxis Mannheim-Seckenheim Dr. med. Corinna Labisch,Mannheim,https://www.frauenarztpraxis-labisch.de,0,0,0,success
+MVZ ZEMODI Bremen Mitte,Bremen,https://www.lifelink-medical.com/standorte/lifelink-radiologie-bremen-mitte,0,0,0,success
+Labor Hannover MVZ GmbH,Hannover,https://labor-augsburg-mvz.de/laborgruppe/labor-hannover-mvz,0,0,0,success
+Laborgemeinschaft Hannover City,Hannover,https://www.google.com/maps/search/?api=1&query=Laborgemeinschaft%20Hannover%20City&query_place_id=ChIJF1xTleQKsEcRIwIULqZodJM,0,0,0,success
+MAZ - Medizinisches Analyse-Zentrum,Hannover,https://ladr.de/basislabore/ansprechpartner,0,0,0,success
+BioDoc - Labor für biomedizinische Diagnostik,Hannover,http://www.biodoc-online.de,0,0,0,success
+Limbach Nord GmbH,Lehrte,http://www.labor-limbach-lehrte.de,0,0,0,success
+Partnerschaftspraxis für Laboratoriumsmedizin,Hildesheim,https://www.nordlab.de,0,0,0,success
+LADR Medizinisches Versorgungszentrum Hannover,Hannover,https://ladr.de/fachlabore/hannover/kontakt,0,0,0,success
+Labor für Hämatologie Mannheim,Mannheim,http://www.haematologie-labor.de,0,0,0,success
+Imd GmbH,Mannheim,https://gerinnungszentrum-mannheim.de,0,0,0,success
+DEKRA Labor für Technische Textilien und Folien,Stuttgart,https://www.dekra.de/de/schadstoffanalytik,0,0,0,success
+labopart - Medizinisches Labor Leipzig Mölbis,Rötha,https://www.labopart.de,0,0,0,success
+ZRN Leipzig – Zentrum für Radiologie und Nuklearmedizin am Johannisplatz,Leipzig,https://www.zrn-leipzig.de,0,0,0,success
+Medizinisches Labor Westsachsen (LG Sachsen-West),Zwickau,http://www.labor-westsachsen.de,0,0,3,success
+Medizinisches Versorgungszentrum Stoffwechselmedizin Leipzig,Leipzig,http://www.stoffwechselmedizin-leipzig.de,0,0,0,success
+Doceins Onkologie MVZ Mitte,Leipzig,https://doceins.de/leipzig-onkologie-johannisplatz,0,0,0,success
+MEDICLIN MVZ Leipzig,Leipzig,http://www.leipzig-mvz.de,0,0,0,success
+medipraxis - Hausarztpraxis Dr. Mertz,Leipzig,https://www.medipraxis.de,0,0,0,success
+Laborgemeinschaft Chemnitzer Ärzte,Chemnitz,http://www.labor-westsachsen.de,0,0,3,success
+Medizinisches Labor Nienburg - Dr. Bollig,Marklohe,http://www.labor-nienburg.de,0,0,0,success
+LaborZentrumWeser,Minden,http://www.laborzentrumweser.de,0,0,0,success
+Partnerschaftspraxis für Laboratoriumsmedizin,Hameln,http://www.nordlab.de,0,0,0,success
+LADR Medizinisches Versorgungszentrum Baden-Baden,Baden-Baden,https://ladr.de/fachlabore/baden-baden/kontakt,0,0,0,success
+MPU Labor,Baden-Baden,https://www.mpulabor.com,0,0,0,success
+"Bioscientia MVZ Saarbrücken GmbH, Labor Saarbrücken",Saarbrücken,https://www.bioscientia.de/de/standorte/saarbruecken,0,0,0,success
+Institut für Immunologie und Genetik,Kaiserslautern,http://www.immungenetik-kl.de,0,0,0,success
+Ärztliches Labor Dr. Buhlmann,St. Ingbert,http://www.labor-buhlmann.de,0,0,0,success
+"Diabetes- und Hausarztpraxis Düren - Dr. Marco Heck, Dr. Florian Küppers & Kollegen",Düren,http://www.diabetologie-dueren.de,0,0,0,success
+Mein Film Lab,Hürtgenwald,https://www.meinfilmlab.de,0,0,0,success
+"Gerinnungszentrum Köln I Rhein-Erft, Aachener Str. 313, 50931 Köln",Köln,http://www.transfusionsmedizin-koeln.de,0,0,2,success
+Laborpraxis am Katharinenhospital,Stuttgart,http://www.klinikum-stuttgart.de,0,0,2,success
+Praxis Dres. Levasseur,Aachen,http://www.praxis-levasseur.de,0,0,0,success
+Marienhospital Stuttgart Institut für Laboratoriumsmedizin,Stuttgart,https://www.marienhospital-stuttgart.de/medizin-pflege/institute/laboratoriumsmedizin,0,0,0,success
+Zentralinstitut für Klinische Chemie und Laboratoriumsmedizin | Klinikum Stuttgart,Stuttgart,https://www.klinikum-stuttgart.de/medizin-pflege/klinische-chemie-laboratoriumsmedizin,0,0,0,success
+Dr. Maximilian Kittel - inolab®,Pforzheim,https://i-nolab.de,0,0,0,success
+Mikrobiologisches Testlabor GmbH Bad Elster,Bad Elster,https://www.mtl-be.de,0,0,0,success
+diagnosticum,Neukirchen/Erzgebirge,https://www.google.com/maps/search/?api=1&query=diagnosticum&query_place_id=ChIJOzfVi51Jp0cR8LZdGUVzY50,0,0,0,success
+MZLA | Medizinisches Zentrallabor Altenburg,Altenburg,https://www.mzla.de,0,0,0,success
+MVZ Labor Münster Hafenweg GmbH,Münster,https://www.labor-muenster.de,0,0,0,success
+"LADR MVZ Dres. Bachg, Haselhorst & Kollegen Recklinghausen GbR",Recklinghausen,http://www.ladr.de/fachlabore/recklinghausen/kontakt,0,0,0,success
+Gflid GmbH,Lünen,https://gflid.de,0,0,0,success
+LADR Medizinisches Versorgungszentrum Nord-West Zweigpraxis Leer,Leer (Ostfriesland),https://ladr.de/fachlabore/leer/ansprechpartner,0,0,0,success
+Dr. Niederau und Kollegen,Dortmund,http://www.labor-dortmund.de/index.php?id=10,0,0,0,success
+BDL Labordiagnostik GmbH,Münster,http://www.bdl-muenster.de,0,0,0,success
+Norbert Dickgießer Facharzt f.Laboratoriumsmed.,Dortmund,https://www.google.com/maps/search/?api=1&query=Norbert%20Dickgie%C3%9Fer%20Facharzt%20f.Laboratoriumsmed.&query_place_id=ChIJoz8QRuMZuUcRKahq9pJ5WDU,0,0,0,success
+Zytolabor Hermeskeil,Hermeskeil,https://www.google.com/maps/search/?api=1&query=Zytolabor%20Hermeskeil&query_place_id=ChIJS-GXeC-FlUcRZVDeKfTFMXw,0,0,0,success
+Laborgemeinschaft der Ärzte Mecklenburg-Vorpommern,Stralsund,https://www.iflb.de/das-labor/laborgemeinschaften,0,0,0,success
+LADR MVZ Nord-West,Schüttorf,https://ladr.de/fachlabore/schuettorf/kontakt,0,0,0,success
+Bioscientia MVZ Labor Mittelhessen GmbH,Kassel,https://ldm-labor.de,0,0,9,success
+"Bioscientia Institut für Medizinische Diagnostik GmbH, Labor Fulda",Fulda,https://www.bioscientia.de/de/standorte/fulda,0,0,0,success
+MVZ Labor Limbach Nürnberg GmbH,Wendelstein,http://www.labor-limbach-nuernberg.de,0,0,2,success
+Bioscientia Institut für Medizinische Diagnostik GmbH,Duisburg,https://bioscientia.de,0,0,0,success
+Bio-Diagnostix Labor GmbH,Reken,http://www.bio-diagnostix.de,0,0,0,success
+Antech Lab Germany GmbH,Geesthacht,https://www.antechdiagnostics.de,0,0,0,failed
+Labor Dr. von Froreich GmbH,Hamburg,https://www.labor-froreich.de,0,0,0,success
+Dein Testzentrum Celle,Celle,https://deincoronatestzentrum.de,0,0,0,success
+Dr. med. Hanns Riediger Facharzt f. Laboratoriumsmed.,Celle,https://www.google.com/maps/search/?api=1&query=Dr.%20med.%20Hanns%20Riediger%20Facharzt%20f.%20Laboratoriumsmed.&query_place_id=ChIJc8RUha0isEcRknkkMsiL_OI,0,0,0,success
+"MVZ Clotten Labor Dr. Haas, Dr. Raif & Kollegen GbR",Freiburg im Breisgau,http://www.mvz-clotten.de,0,0,1,success
+Herr Dr. med. Thomas Wittgens,Freiburg im Breisgau,http://www.bioscientia.de,0,0,0,success
+Labor Aschaffenburg,Aschaffenburg,https://www.labor-ab.de/about,0,0,0,success
+SYNLAB Jena ONCOSCREEN,Jena,https://www.oncoscreen.com,0,0,0,success
+Laborgemeinschaft Thüringer Ärzte,Saalfeld/Saale,http://www.labor-thueringer-aerzte.de,0,0,0,success
+Medizinisches Labor Saalfeld,Saalfeld/Saale,http://www.labor-saalfeld.de,0,0,0,success
+Abteilung für Labor- und Hygienemedizin | Zentralklinik Bad Berka,Bad Berka,https://www.zentralklinik.de/unsere-medizin/unsere-fachbereiche/labor,0,0,0,success
+Analytiklabor Pfeiffer GmbH,Neuhaus am Rennweg,https://www.analytiklabor-pfeiffer.com,0,0,0,failed
+LifeLink Radiologie Simmerath,Simmerath,https://www.lifelink-medical.com/standorte/lifelink-radiologie-simmerath,0,0,0,success
+RADIOLOGIE MÜNCHEN in Großhadern,München,https://www.radiologie-muenchen.de/standorte/radiologie-am-max-lebsche-platz,0,0,0,success
+MRT Stuttgart | Radiologische Privatpraxis | ARISTRA,Stuttgart,https://aristra.de/standorte/mrt-stuttgart/?utm_source=google&utm_medium=gmb&utm_campaign=website_link,0,0,0,failed
+Beyond Imaging Diagnostikzentrum,Leipzig,https://beyond-imaging.com,0,0,0,success
+"Knochendichtemessung Köln, Fachärzte für Orthopädie",Köln,https://www.google.com/maps/search/?api=1&query=Knochendichtemessung%20K%C3%B6ln%2C%20Fach%C3%A4rzte%20f%C3%BCr%20Orthop%C3%A4die&query_place_id=ChIJc6VuIq8lv0cRpMle10QOmw4,0,0,0,success
+Radiologie Zentrum Stuttgart,Stuttgart,http://www.radiologiezentrum-stuttgart.de,0,0,0,success
+Radiologie Zentrum Neu-Ulm,Neu-Ulm,http://www.radiologie-nu.de,0,0,0,success
+RNZ Radiologie & Nuklearmedizin (St. Theresien-Krankenhaus),Nürnberg,https://www.rnz-radiologie.de,0,0,0,success
+RADTOP Radiologie Bochum Dr. Topcu & Kollegen,Bochum,https://www.radtop.de/bochum,0,0,0,success
+RNZ Radiologie & Nuklearmedizin (Martin-Richter-Strasse),Nürnberg,https://www.rnz-radiologie.de,0,0,0,success
+"Röntgeninstitut Düsseldorf | Radiologie, MRT, CT & mehr",Düsseldorf,http://www.roentgeninstitut.de,0,0,0,success
+Beyond Imaging Diagnostikzentrum,Berlin,https://beyond-imaging.com,0,0,0,success
+Beyond Imaging Diagnostikzentrum,Frankfurt am Main,https://beyond-imaging.com,0,0,0,success
+MVZ Prof. Dr. Uhlenbrock und Partner (ehem. Praxis Balhorn),Warendorf,http://www.mvz-uhlenbrock.de,0,0,0,success
+Radiologie Ottobrunn MVZ GmbH,Ottobrunn,http://www.radiologie-ottobrunn.de,0,0,0,success
+DIE RADIOLOGIE - München Zentrum,München,http://www.die-radiologie.de/standorte/muenchen-zentrum.html,0,0,0,success
+RADIOLOGIE MÜNCHEN im Alten Hof,München,https://www.radiologie-muenchen.de/standorte/radiologie-alter-hof,0,0,0,success
+RADIOLOGIE MÜNCHEN am Marienplatz,München,https://www.radiologie-muenchen.de,0,0,0,success
+Radiologie Dr. Göller & Kollegen,Nürnberg,https://www.radiologie-mmc.de,0,0,0,success
+Radiologie 360° in Köln am Neumarkt,Köln,https://www.med360grad.de/radiologie-koeln-neumarkt/?utm_campaign=googlemybusiness-organic-radiologie_koeln_neumarkt,0,0,0,success
+"Röntgeninstitut am Hofgarten | MRT, Mammografie & mehr",Düsseldorf,https://roentgeninstitut-am-hofgarten.de,0,0,0,success
+RH Diagnostik und Therapie GmbH,Dortmund,https://rh-dt.de/praxen-und-kliniken,0,0,0,success
+Praxis Schiffer/Radiologie 360° in Neuruppin,Neuruppin,https://www.med360grad.de/radiologie-neuruppin,0,0,0,success
+Radiologische Praxis Neuruppin GbR (BAG) Dr. Reimund Parsche,Neuruppin,http://www.neuruppin-radiologie.de,0,0,0,failed
+Abdomensonografie Berlin,Berlin,https://praxis-auskunft.de/abdomensonografie-berlin,0,2,0,success
+MAMMADIAGNOSTIK Prof. Dr. Brossmann Mammographie 3D-Tomosynthese KI Analyse Ultraschall Termine online,Altenholz,http://www.mammadiagnostik-kiel.de,0,0,0,success
+Radiologie Rendsburg,Rendsburg,https://www.radiologie-rendsburg.de,0,0,0,success
+Radiologische Gemeinschaftspraxis Schleswig Dres. Kietzmann und Trojan,Schleswig,http://www.radiologische-gemeinschaftspraxis-schleswig.de,0,0,0,success
+Institut für Röntgendiagnostik - Asklepios Klinik Pasewalk,Pasewalk,https://www.asklepios.com/presse/presse-mitteilungen/pasewalk/radiologie~ref=925b29b7-8b44-4b99-bcd0-df0af3ccb6a9~,0,0,0,success
+Gemeinschaftspraxis für Radiologische Diagnostik Demmin,Demmin,http://www.radiologie-demmin.de,0,0,0,failed
+Baltic Imaging Center,Greifswald,https://www.baltic-imaging-center.de/kontakt/index.htm,0,0,0,success
+Radiologische Praxis - Dr. med. Lothar Sommer / Dr. med. Holger Resech,Greifswald,http://www.radiologie-hgw.de,0,0,0,success
+DIE RADIOLOGIE Giesing,München,https://www.die-radiologie.de/radiologie-giesing,0,0,0,success
+RIZ - Augsburg Innenstadt,Augsburg,http://www.riz-augsburg.de,0,0,0,success
+Zentrum für Radiologische Diagnostik Ludwigshafen - ZRD,Ludwigshafen am Rhein,https://www.zrd.de/?site=start,0,0,0,success
+Medic-Center Schwabach - Radiologie,Schwabach,https://www.medic-center-nuernberg.de/Praxen/Medic-Center-Schwabach-RadiologieHembacher-Weg-22-91126-Schwabach.html,0,0,0,success
+LifeLink Radiologie Darmstadt am Fachärztezentrum Klinikum Darmstadt,Darmstadt,https://www.lifelink-medical.com/standorte/lifelink-radiologie-darmstadt-am-fachaerztezentrumam-klinikum-darmstadt,0,0,0,success
+Radiologen in der Helix,Mainz,http://www.radiologie-mainz.de,0,0,0,success
+Radiologie Im City Plaza,Stuttgart,https://radiologie-city-plaza.de,0,0,0,success
+Prof. Dr. med. Jürgen Mäurer - Radiologie Berlin-Mitte,Berlin,https://radiologie-mitte-berlin.de,0,0,0,success
+Radiologisches Zentrum am Kaufhof,Lübeck,http://www.radiologen-luebeck.de,0,0,0,success
+Radiologie in der Spinnerei Bayreuth | Dr. med. Almut Einert,Bayreuth,http://www.radiologie-spinnerei.de,0,0,0,success
+RNZ Radiologie & Nuklearmedizin (Lauf),Lauf an der Pegnitz,https://www.rnz-radiologie.de,0,0,0,success
+SpOrt Medizin Stuttgart,Stuttgart,http://www.sport-medizin.eu,0,0,0,success
+DIE RADIOLOGIE Schwabing,München,https://www.die-radiologie.de/radiologie-schwabing,0,0,0,success
+Zentrum / Innere Medizin / Fünf Höfe,München,http://www.zim-fuenf-hoefe.de,0,0,0,success
+RNZ Radiologie (Rummelsberg),Schwarzenbruck,https://www.rnz-radiologie.de,0,0,0,success
+Orthopädiezentrum Kurfürstendamm,Berlin,https://www.ok-kudamm.de,0,0,0,success
+Charité Campus Benjamin Franklin,Berlin,https://www.charite.de/die_charite/campi/campus_benjamin_franklin,0,0,0,success
+RADIOLOGIE MÜNCHEN Unterschleißheim,Unterschleißheim,http://www.diagnosticum-muenchen.de,0,0,0,success
+MVZ-Radiologie Elisenhof,München,http://www.radiologie-elisenhof.de,0,0,0,success
+OsteoPro – Ihre Osteoporosespezialpraxis in München,München,https://www.google.com/maps/search/?api=1&query=OsteoPro%20%E2%80%93%20Ihre%20Osteoporosespezialpraxis%20in%20M%C3%BCnchen&query_place_id=ChIJ_2_IxZvfnUcR5MOLPC1wqFU,0,0,0,success
+Conradia Radiologie - PET-CT im Krankenhaus Neuwittelsbach,München,https://www.conradia.de/standort-radiologie/conradia-radiologie-muenchen-pet-ct-im-krankenhaus-neuwittelsbach,0,0,0,success
+RADIOLOGIE MÜNCHEN im Krankenhaus Martha Maria,München,https://www.radiologie-muenchen.de/standorte/martha-maria,0,0,0,success
+Dr. med. Ernst Heinrich Habersbrunner,München,https://www.google.com/maps/search/?api=1&query=Dr.%20med.%20Ernst%20Heinrich%20Habersbrunner&query_place_id=ChIJQRrcwvEBCUERc8bzre-KyKo,0,0,0,success
+Radiologie - DiVoCare - München,München,https://www.divocare.de/?utm_source=GBP&utm_medium=Websiten-Click&utm_campaign=GoogleBusinessProfile,0,0,0,success
+"Privatpraxis für Upright-Kernspintomographie, Dr. med. Andreas Förg",Aschheim,https://www.mrtmuenchen.de,0,0,0,success
+DIE RADIOLOGIE - Privatpraxis für Mammadiagnostik,München,https://www.die-radiologie.de/brustdiagnostik,0,0,0,success
+Endokrinologie und Diabetologie Dr. Stengel,München,http://www.privatpraxis-kosttor.de,0,0,2,success
+Privat-Praxis für Orthopädie Berlin Prenzlauer Berg | Dr. med. Oleg Surminski,,https://www.orthopaedie-prenzlauerberg.de,0,0,0,success
+MVZ Prof. Dr. Uhlenbrock und Partner - Standort Dortmund-Klinikviertel - Strahlentherapie (ehem. Praxis Dres. Luks/Stillger),Dortmund,https://www.mvz-uhlenbrock.de/standorte/dortmund-klinikviertel,0,0,0,success
+MVZ Prof. Dr. Uhlenbrock und Partner - Standort Dortmund-Brackel - Radiologie und Strahlentherapie,Dortmund,https://www.mvz-uhlenbrock.de,0,0,0,success
+Mammographie Screening Dortmund/Hagen - Standort Dortmund-Hörde,Dortmund,http://www.mammo-doha.de,0,0,0,success
+Gesundheitszentrum Walheim,Aachen,http://www.gesundheitszentrum-walheim.de,0,0,0,success
+Radiologie Hegau Bodensee - Hegau-Bodensee-Klinik,Singen (Hohentwiel),http://radiologie-hegau-bodensee.de,0,0,0,success
+Radiologie Hegau Bodensee - Ärztehaus Singen,Singen (Hohentwiel),http://www.radiologie-hegau-bodensee.de,0,0,0,success
+Herr Priv.-Doz. Dr. med. Christian Zwicker,Singen (Hohentwiel),https://www.radiologie-hegau-bodensee.de/unser_team/priv-doz-dr-med-christian-zwicker,0,0,0,success
+"Privatpraxis für Upright-Kernspintomographie, Maja Borkowski",Hamburg,https://www.mrthamburg.de,0,0,0,success
+Osteoporosezentrum Hamburg-Süd,Hamburg,http://www.osteoporose.hamburg,0,2,0,success
+Conradia Medical Prevention Hamburg | ehem. Medizinisches PräventionsCentrum Hamburg (MPCH),Hamburg,https://www.conradia.de/radiologie-hamburg-eppendorf,0,0,0,success
+"Radiologie am Rathausmarkt, Eine Privatpraxis der Radiologischen Allianz",Hamburg,http://www.radiologische-allianz.de/praxen/radiologie-am-rathausmarkt-privatpraxis,0,0,0,success
+Prof. Dr. Christoph M. Bamberger | Facharzt für Innere Medizin,Hamburg,https://conradia-checkup.de/expert/prof-dr-christoph-bamberger,0,0,0,success
+Radiologie Freiburg,Freiburg im Breisgau,http://www.radiologie-freiburg.de,0,0,0,success
+Apparategemeinschaft Röntgen GbR,Ludwigslust,https://www.google.com/maps/search/?api=1&query=Apparategemeinschaft%20R%C3%B6ntgen%20GbR&query_place_id=ChIJpVDp4eFirkcRA43QknyXc7I,0,0,0,success
+Radiologische Gemeinschaftspraxis Schwerin,Schwerin,https://www.roentgenpraxis-schwerin.de,0,0,0,success
+Radiologische Praxis Frau Dr. med. Beate Lautenbach,Dresden,https://radiologie-dresden-gorbitz.de,0,0,0,success
+Osteoporose-Diagnostik Berlin | MVZ AnthroNUK,Berlin,https://praxis-auskunft.de/osteoporose-diagnostik-berlin,0,2,0,success
+OsteoPro – Ihre Osteoporose-Spezialpraxis in Halle,Halle (Saale),https://osteopro.de/halle,0,2,1,success
+MEDICOVER Berlin-Charlottenburg MVZ,Berlin,http://www.medicover.de/de/facilities/medicover-charlottenburg-mvz,0,0,0,success
+Retzlaff Sebastian Dr.med.,Schwerin,http://www.mrt-schwerin.de,0,0,0,failed
+Frau Dr. med. Angelika Menzel,Schwerin,https://www.google.com/maps/search/?api=1&query=Frau%20Dr.%20med.%20Angelika%20Menzel&query_place_id=ChIJO4L5wRvarUcRY4jp-KgXV78,0,0,0,success
+Dr. med. Torsten Dahlmann,Schwerin,https://www.google.com/maps/search/?api=1&query=Dr.%20med.%20Torsten%20Dahlmann&query_place_id=ChIJO4L5wRvarUcRNdlc0eblp8Y,0,0,0,success
+MRT Buchen (Odenwald),Neckarsulm,https://radiologie-franken-hohenlohe.de/mrt-zentrum/mrt-buchen,0,0,0,success
+Sonographie (Ultraschall) Stuttgart | jetzt online Ihren Termin vereinbaren | Radiologische Praxis am Diakonie-Klinikum,Stuttgart,https://radiologie-stuttgart-am-diak.de/modernste-diagnostik/sonographie-ultraschall,0,0,0,success
+andromed Diagnostikzentrum | MRT & CT Bielefeld,Bielefeld,https://www.andromed-mrt.de,0,0,0,success
+3D Bodyanalytics,Bremen,https://www.google.com/maps/search/?api=1&query=3D%20Bodyanalytics&query_place_id=ChIJeTrJyYQpsUcRU9B9zap831Q,0,0,0,success
+RHIO Düsseldorf Rheumatologische Gemeinschaftspraxis am K21,Düsseldorf,https://rhio.de,0,0,0,success
+Orthopädische Facharztpraxis Dr. med Thomas Kramm,Mönchengladbach,http://www.dr-kramm.de,0,2,0,success
+Herr Dr. med. Gerrit Arlt,Düsseldorf,http://www.one-duesseldorf.de/aerzte/dr-med-gerrit-arlt.php,0,2,0,success
+Z.O.R. - Praxis für Orthopädie und Sportmedizin Dr. Ulrich Frohberger,Münster,https://frohberger.de,0,2,0,success
+Centrum für Reproduktionsmedizin und Andrologie,Münster,https://www.medizin.uni-muenster.de/cera,0,0,0,success
+DEXA-IT GmbH,Erfurt,https://www.dexa-it.de,0,0,0,success
+doctorfrost Kältekammer Frankfurt,Frankfurt am Main,https://doctorfrost.de,0,0,0,success
+Herr Dr. med. Ahmad Ali Issavand,Berlin,http://www.issavand.de,0,0,0,success
+Charité – Universitätsmedizin Berlin,Berlin,https://www.charite.de,0,0,0,success
+"Unfallpraxis Savignyplatz | D-Arzt, Orthopädie & Chirurgie in Berlin-Charlottenburg",Berlin,https://die-unfallpraxis.de,0,0,0,success
+Frau Prof. Dr. Dr. med. Dagmar Führer-Sakel,Essen,http://endokrinologie.de,0,0,0,success
+"Orthopädiezentrum Theresie München, Dres. Schneider, Obersteiner & Kollegen",München,http://www.oz-theresie.de,0,0,0,success
+"ROC Vital – Praxis für Regeneration, Prävention & Ästhetik",Aschheim,https://roc-aschheim.de/vital,0,0,0,success
+Balance Rückenzentrum Chiropraktiker Hamburg,Hamburg,http://www.balance-rzm.de,0,0,0,success
+Ortho-Group Eidelstedt,Hamburg,https://www.ortho-group.de,0,2,0,success
+"Diakonie-Klinikum Stuttgart, Wirbelsäulenzentrum",Stuttgart,https://www.diakonie-klinikum.de/leistungsspektrum/kliniken-im-ueberblick/orthopaedie/wirbelsaeule/uebersicht-und-kontakt.html,0,0,0,success
+Dr. Gerhard Hammer,Stuttgart,http://www.drhammer.info,0,0,0,success
+Kai Stefan Haschke | Heilpraktiker,Hamburg,https://derheilpraktiker.de,0,0,0,success
+gesund abnehmen in hamburg | kai stefan haschke,Hamburg,http://gesund-abnehmen-hamburg.de,0,0,0,success
+Physiotherapie und Osteopathie an der Kampnagelfabrik – Winterhude,Hamburg,https://www.facharztzentrum-kampnagel.de/praxen/physiotherapie-und-osteopathie,0,0,0,success
+Orthopädie Schlossstraße,Hamburg,https://orthopaedie-schlossstrasse.de,0,0,0,success
+MVZ Diagnostikzentrum Esslingen GmbH,Esslingen am Neckar,https://www.dzek.de,0,0,0,success
+CARAD Private Radiologiepraxis Feuerbach,Stuttgart,https://carad-stuttgart.de,0,0,0,success
+Dr. med. Dorothee Gahlen,Düsseldorf,http://www.roentgeninstitut.de,0,0,0,success
+Schwerpunkt Hämatologie Onkologie und Palliativmedizin,Hamburg,https://onkologie-partner.de,0,0,0,success
+MVZ Sporthomedic Zweigpraxis Köln Rodenkirchen Dr. med. Ingolf Säckler,Köln,https://www.dr-saeckler.de,0,0,0,success
+Radiologie Uniklinik Köln,Köln,https://radiologie.uk-koeln.de,0,0,0,success
+Dysplasie MVZ am Chlodwigplatz,Köln,https://www.amedes-chlodwigplatz.de,0,0,0,success
+denecke zahnmedizin | Zahnarzt Hilden,Hilden,https://www.denecke-zahnmedizin.de,0,0,0,success
+Überörtliche Gemeinschaftspraxis für Radiologie Duisburg - Dinslaken,Dinslaken,https://dinslaken-radiologie.de,0,0,0,success
+Herr Dr. med. Farhad Mansouri,Hannover,https://www.xn--hannover-orthopde-4qb.de/home.html,0,0,0,success
+Herr Dr. med. Helmut Trübenbach,Hannover,https://www.orthopaedie-galerie-luise.de,0,0,0,failed
+EMS Training Körperformen Hannover-Kirchrode,Hannover,http://www.koerperformen-ems-training.de,0,0,0,success
+EMS Training,Hannover,https://www.google.com/maps/search/?api=1&query=EMS%20Training&query_place_id=ChIJV5Xx_LMMsEcR4OOZ2HFC3Gk,0,0,0,success
+Beyond Imaging Diagnostikzentrum,Hannover,https://beyond-imaging.com,0,0,0,success
+Dr. med. Wido Hartmann,Osterholz-Scharmbeck,https://www.google.com/maps/search/?api=1&query=Dr.%20med.%20Wido%20Hartmann&query_place_id=ChIJP47l-BkusUcRNqAovf7Cd5s,0,0,0,success
+Kernspintomographie im Podbi-Park - Radiologie Nuklearmedizin Langenhagen,Hannover,https://mrt-hannover-list.de,0,0,0,success
+Beyond Imaging Diagnostikzentrum,Dortmund,https://beyond-imaging.com,0,0,0,success
+MRT-Termine im MRT-Zentrum Recklinghausen,Castrop-Rauxel,https://radiologie-castrop.de/leistungen/magnetresonanztomographie-mrt,0,0,0,success
+"Gemeinschaftspraxis Dr. Schwertner, Dr. Woitsch; Kinder- und Jugendmedizin; Kinder-Lungenfacharzt",Germering,http://www.kinder-jugend.de,0,0,0,success
+Orthopädiehoch4,Augsburg,https://www.orthopaediehoch4.de,0,0,0,success
+Radiologie Ettlingen - Ihr radiologisches Kompetenzzentrum im Raum Karlsruhe,Ettlingen,http://www.radiologie-ettlingen.de,0,0,0,success
+MVZ Dr. med. Helge Riegel GmbH,Wiesbaden,https://www.labor-riegel.de,0,0,0,success
+Beyond Imaging Diagnostikzentrum,Mainz,https://beyond-imaging.com,0,0,0,success
+LifeLink Radiologie & Nuklearmedizin Bielefeld Zentrum,Bielefeld,https://www.lifelink-medical.com/standorte/lifelink-radiologie-nuklearmedizin-bielefeld-zentrum,0,0,0,success
+LifeLink Radiologie Bielefeld Süd,Bielefeld,https://www.lifelink-medical.com/standorte/lifelink-radiologie-bielefeld-sued,0,0,0,success
+MRT-Termine für Patienten aus Karlsruhe-Land und Umgebung,Ettlingen,https://online-termin.de/mrt-karlsruhe,0,0,0,success
+"Rückenschmerz-Sprechstunde in der Radiologie Ettlingen | CT-gesteuerte Schmerztherapie | FGI, PRT, PDT, ISG-Blockade",Ettlingen,https://radiologie-ettlingen.de/leistungen/ct-gesteuerte-schmerztherapie,0,0,0,success
+Dr. Walter Grünzinger,Wuppertal,http://www.docgruenzinger.de,0,0,0,success
+"ortho neo Bonn Praxis Südstadt – Dr. Linzbach, Dr. John + Kollegen",Bonn,http://www.orthoneo.de,0,0,0,success
+Dr. Lunow & Patrner - CHECK✓UP Zentrum,Bornheim,https://www.google.com/maps/search/?api=1&query=Dr.%20Lunow%20%26%20Patrner%20-%20CHECK%E2%9C%93UP%20Zentrum&query_place_id=ChIJZwVQWh0fv0cRhV4Z1yXEFqc,0,0,0,success
+Dr. med. Oliver Schröder - Chiropraktik in Wuppertal,Wuppertal,https://chiropraktik-in-wuppertal.de,0,0,0,success
+Radiologikum Heidelberg in der Atos Klinik,Heidelberg,http://www.radiologie-heidelberg.de,0,0,0,success
+𝗗𝗶𝗮𝗴𝗻𝗼𝘀𝘁𝗶𝗸𝘇𝗲𝗻𝘁𝗿𝘂𝗺 𝗥𝗮𝗱𝗶𝗼𝗹𝗼𝗴𝗶𝗲 𝗪𝗼𝗹𝗳𝘀𝗯𝘂𝗿𝗴 - 𝗗𝗿. 𝗺𝗲𝗱. 𝗠𝗶𝗰𝗵𝗮𝗲𝗹 𝗔𝘂,Wolfsburg,https://diagnostikzentrum-wolfsburg.de,0,0,0,success
+RADIOLOGIKUM am Alexianer Krankenhaus,Krefeld,http://www.radiologiekrefeld.de,0,0,0,success
+Diagnostisches Zentrum am Vincentinum Augsburg (DZVA) GmbH,Augsburg,http://www.vincentinum-diagnostik.de,0,0,0,success
+Radiologie im Altstadtquartier,Magdeburg,http://www.radiologie-altstadtquartier.de,0,0,0,success
+Evidia MVZ Mammographie Halle,Halle (Saale),https://www.mammascreening-halle.de,0,0,0,success
+MEDPOL Erfurt,Erfurt,http://www.medpol.de,0,0,0,success
+CrossFit Schmiede,Kassel,http://www.crossfitschmiede.de,0,0,0,success
+"Privatpraxis am Studio - CT, MRT, Röntgen, Ultraschall",Berlin,https://privatpraxis-amstudio.de,0,0,0,success
+Bodymed Center Dudweiler - Herrensohr,Saarbrücken,http://www.bodymed.com/center/dudweiler-herrensohr,0,0,0,success
+Privatärztliche radiologische Praxis Prof. Dr. med. L. Jäger,Saarbrücken,http://www.radiologie-saar.net,0,0,0,success
+Open MRT ATOS Klinik,Heidelberg,https://www.radiologie-heidelberg.de,0,0,0,success
+FOKUS Radiologie & Nuklearmedizin Göttingen,Göttingen,http://www.fokus-radiologie.de,0,0,0,success
+MRT Stuttgart,Neckarsulm,https://radiologie-franken-hohenlohe.de/mrt-zentrum/mrt-stuttgart,0,0,0,success
+"Radiologie Neckarsulm | MRT, CT, Röntgen, Nuklearmedizin, Brustdiagnostik, Prostata-MRT",Neckarsulm,https://radiologie-franken-hohenlohe.de/radiologie-neckarsulm,0,2,0,success
+Dr. med. Gerd Wieja,Ulm,http://drwieja.de,0,0,0,success
+Radiologisches Zentrum Ingolstadt,Ingolstadt,https://www.radiologisches-zentrum-ingolstadt.de,0,0,0,success
+Diagnosticum Bayern Mitte - Standort Ingolstadt,Ingolstadt,https://www.diagnosticum-ingolstadt.de,0,0,0,success
+Diagnosticum Bayern Mitte - Standort Manching,Manching,https://www.diagnosticum-paf.de,0,0,0,success
+Orthopädische Praxis - Dr. Stork / Dr. Pilhofer,Regensburg,https://www.orthopaede-regensburg.de,0,0,0,success
+Radiologisches Centrum Pforzheim,Pforzheim,http://www.radiologie-pforzheim.de,0,0,0,success
+AMZ-Jena Radiologie und Nuklearmedizin,Jena,http://www.amz-jena.eu,0,0,0,success
+Kardiodiagnostik,Jena,http://www.kardiodiagnostik.de/kontakt,0,0,0,success
+MEDPOL Jena,Jena,http://www.medpol.de,0,0,0,success
+Radiologie GGE,Gera,http://www.radiologie-gge.de,0,0,0,success
+Mammographie Screening Kreis Kleve/Wesel Standort Moers,Moers,http://mammatest.de,0,0,0,success
+Radiologie Zentrum Salzgitter,Salzgitter,http://www.radiologie-sz.de,0,0,0,success
+Radiologische Gemeinschaftspraxis,Zwickau,https://radiologie-zwickau.de,0,0,0,success
+Radiologie im Zentrum Dr.Theißinger,Kaiserslautern,https://www.westpfalz-klinikum.de/praxisradiologie,0,0,0,success
+RTS Radiologie Trier | Saarburg,Trier,https://www.rts-radiologie.de,0,0,0,success
+Radiologiezentrum Trier,Trier,https://www.radiologiezentrum-trier.de,0,0,0,success
+"Radiologische Gemeinschaftspraxis Dr. Amberger, Lieser, Jeibmann, Müller, Sauter",Trier,http://roentgenpraxis-trier.de,0,0,0,success
+Diagnostikzentrum Esslingen | Kirchheim,Esslingen am Neckar,http://dzek.de,0,0,0,success
+LifeLink Radiologie Düren,Düren,https://www.lifelink-medical.com/standorte/lifelink-radiologie-dueren,0,0,0,success
+Radiologisches Zentrum Schwarzwald-Baar Dr. Rahn u. Koll. Radiologische Praxen Villingen und Donaueschingen,Donaueschingen,https://www.google.com/maps/search/?api=1&query=Radiologisches%20Zentrum%20Schwarzwald-Baar%20Dr.%20Rahn%20u.%20Koll.%20Radiologische%20Praxen%20Villingen%20und%20Donaueschingen&query_place_id=ChIJFf5RG0OQkEcRJWO8_LNrHyE,0,0,0,success
+Radiologisches Zentrum Schwarzwald-Baar Dr. Rahn und Kollegen,Villingen-Schwenningen,"https://www.gesundheitsnetzwerk-sbk.de/?ModID=9&object=tx,3137.1500&FID=3137.441.1",0,0,0,failed
+ProOs GbR,Wilhelmshaven,http://proos-whv.de/index.php?article_id=4,0,2,0,success
+Laktatleistungsdiagnostik - Dr Dietze,Überlingen,http://www.laktatleistungsdiagnostik.de,0,0,0,success
+Dr. med. F. Schmähling,Siegburg,http://www.orthopaeden-siegburg.de,0,0,0,success
+Radiologische Privatpraxis Dürerhof,Bayreuth,https://www.mrt-bayreuth.de,0,0,0,success
+Dexa Consult GmbH,Möhnesee,https://dexa.gmbh,0,0,0,success
+diagnostikzentrum Radiologie & Neurologie,Gießen,http://www.diagnostikzentrum-giessen.de,0,0,0,success
+"Radiologie im Roten Feld, Dres. Struckmann, Ettehad, Fenske, Pavlicek, Ritter",Lüneburg,https://www.radiologie-lueneburg.de,0,0,0,success
+Enradia MVZ Radiologie | Nuklearmedizin | Endokrinologie,Neubrandenburg,http://www.radiologen-neubrandenburg.de,0,0,0,success
+"Dipl. Med. Otfried Ziesler - Facharzt für MRT, CT & Röntgen‎",Neubrandenburg,http://www.radiologie-ziesler.de,0,0,0,success
+Radiopaedicum,Aschaffenburg,https://www.radiopaedicum.com,0,0,0,success
+Radiologisch-Nuklearmedizinische Gemeinschaftspraxis Celle,Celle,https://www.radiologie-celle.de,0,0,0,success
+Radiologische Gemeinschaftspraxis Neuwied,Neuwied,http://www.radiologie-neuwied.de,0,0,0,success
+ZRN - Zentrum für Radiologie und Nuklearmedizin,Grevenbroich,https://www.zrn-info.de,0,0,0,success
+f+p | GESUND BEWEGEN - Diagnostik Kempten,Kempten (Allgäu),https://fp-gesundbewegen.de/standort/kempten/diagnostik,0,0,0,success
+Institut für Bildgebende Diagnostik Fulda MVZ GmbH,Fulda,https://www.radiologe-fulda.de,0,0,2,success
+Radiologie und Nuklearmedizin im Zentrum Vital Fulda,Fulda,https://www.radiologie-fulda.de,0,0,0,success
+Radiologische Gemeinschaftspraxis,Lippstadt,http://www.radiologie-lippstadt.de,0,0,0,success
+Diagnosticum Bayern Mitte - Standort Eichstätt,Eichstätt,https://www.diagnosticum-ei.de,0,0,0,success
+DIE RADIOLOGIE Rosenheim,Rosenheim,https://rosenheim.die-radiologie.de,0,0,0,success
+Das Radiologie Team | Mammographie-Zentrum am Ebertplatz Offenburg,Offenburg,https://das-radiologie-team.de/mammadiagnostik,0,0,0,success
+MRT Offenburg (Magnet-Resonanz-Tomographie) | Radiologie Team Offenburg,Offenburg,https://das-radiologie-team.de/magnetresonanztomographie/mrt-offenburg,0,0,0,success
+Körperformen Hameln - EMS Training Deisterstraße 82,Hameln,https://www.xn--krperformen-rfb.com/studios/ems-training-hameln-deisterstrasse,0,0,0,success
+Radiologie Zentrum Hameln - Vassilios Karakidis,Hameln,http://www.radiologie-zentrum-hameln.de,0,0,0,success
+Mammographiezentrum Stralsund,Stralsund,https://www.brustkrebsvorsorge-mv.de/standorte,0,0,0,success
+Radiologie Stralsund im Ärztehaus am Frankenwall,Stralsund,https://www.med-mv.de,0,0,0,success
+Endosono.net,Langenfeld (Rheinland),https://www.endosono.org,0,0,0,success
+Lusatia Radiologie Görlitz,Görlitz,http://www.goerlitz-radiologie.de,0,0,0,success
+evidia MVZ Radiologie Görlitz GmbH,Görlitz,http://www.radiologiepraxis-gr.de,0,0,0,success
+Mammographie Screeningeinheit Alb-Bodensee,Ravensburg,http://mammographiescreening.info,0,0,0,success
+Radiologische Gemeinschaftspraxis Friedrichshafen,Friedrichshafen,http://www.radiologie-friedrichshafen.de,0,0,0,success
+Praxis für Radiologie und Nuklearmedizin,Euskirchen,https://radiologie-euskirchen.de,0,0,0,success
+Röntgeninstitut Alte Seidenweberei / Willich | Offenes MRT,Willich,http://www.roentgeninstitut.de,0,0,0,success
+Radiologie Baden-Baden,Baden-Baden,https://www.radiologie-baden-baden.de,0,0,0,success
+Radiologie 360° - Praxis in der Kaiserstraße in Gummersbach,Gummersbach,https://www.med360grad.de/radiologie-gummersbach/?utm_campaign=googlemybusiness-organic-radiologie_gummersbach_kaiserstr,0,0,0,success
+Radiologie Waiblingen Radiologie und Nuklearmedizin,Waiblingen,http://www.radiologie-waiblingen.de,0,0,0,success
+MRT Waiblingen | MRT-Termine für Patienten aus Waiblingen und Umgebung,Neckarsulm,https://radiologie-franken-hohenlohe.de/mrt-zentrum/mrt-waiblingen,0,0,0,success
+Radiologie Nuklearmedizin Winnenden,Winnenden,http://www.radiologie-winnenden.de,0,0,0,success
+Center für Leistungsdiagnostik,Schweinfurt,https://ihr-nextlevel.de/leistungssport/leistungsdiagnostik,0,0,0,success
+Radiologisches Zentrum Bad Homburg,Bad Homburg vor der Höhe,https://www.radiologie-bad-homburg.de,0,0,0,success
+Dr. med. Schmidt Constanze GeRN Gesellschaft für Radiologie und Nuklearmedizin GbR,Emden,http://www.radiologie-emden.de,0,0,0,success
+LifeLink Radiologie Ulm Praxiszentrum,Ulm,https://www.lifelink-medical.com/standorte/lifelink-radiologie-ulm-praxiszentrum,0,0,0,success
+Klinik Dr. Hancken GmbH / MVZ Radiolgie und Nuklearmedizin,Cuxhaven,https://www.hancken.de/klinik/radiologische-abteilung-cuxhaven,0,0,0,success
+Radiologische Gemeinschaftspraxis Ibbenbüren / Lengerich,Ibbenbüren,http://www.radiologie-ibbenbueren.de,0,0,0,success
+radiox Radiologie-Nuklearmedizin-Strahlentherapie Soest,Soest,https://www.radiox-med.de,0,0,0,success
+MVZ Radiologie Dreiländereck | Lörrach,Lörrach,https://www.zr3.de,0,0,0,success
+Radiologe Balingen - Dr. med. Claußen,Balingen,https://www.radiologe-balingen.de,0,0,0,success
+OSD Osteoporose Selbsthilfegruppen Dachverband e.V.,Gotha,https://www.osd-ev.org,0,2,0,success
+Radiologie 360° - Praxis am Sana HANSE-Klinikum Wismar,Wismar,https://www.med360grad.de/radiologie-wismar/?utm_campaign=googlemybusiness-organic-radiologie_wismar,0,0,0,success
+Radiologie Nordhausen MVZ Bildgebende Diagnostik GmbH,Nordhausen,http://www.radiologie-nordhausen.de,0,0,0,success
+RADIO-LOG Straubing,Straubing,https://www.radio-log.de/standorte-fachrichtungen/radiologie/radio-log-straubing.php,0,0,0,success
+RADIO-LOG Radiologie Zweigpraxis Straubing,Straubing,https://www.radio-log.de/straubing-zweigpraxis-radiologie,0,0,0,failed
+Gemeinschaftspraxis für Radiologie und Nuklearmedizin,Bad Kreuznach,https://radiologie-praxis.com/standorte/bad-kreuznach,0,0,0,success
+Radiologie Kaufbeuren,Kaufbeuren,https://www.radiologie-kaufbeuren.de,0,0,0,success
+DeGIR Zentrum - Klinikum Kaufbeuren | Kliniken Ostallgäu-Kaufbeuren,Kaufbeuren,https://www.kliniken-oal-kf.de/medizin/zentren/degir-zentrum,0,0,0,success
+LifeLink Radiologie Geilenkirchen,Geilenkirchen,https://www.lifelink-medical.com/standorte/lifelink-radiologie-geilenkirchen,0,0,0,success
+Radiologie Heinsberg,Heinsberg,http://www.radiologie-heinsberg.de,0,0,0,success
+Mein Labor Berlin,Berlin,https://mein.laborberlin.com,0,0,2,success
+Longevity Center Switzerland,Zürich,https://longevity-center.eu/longevity-center-switzerland,0,0,0,success
+Ayun,Zürich,https://www.ayun.ch,0,0,0,success
+DEXA Zentrum München,München,https://www.dexa-zentrum-muenchen.de,0,0,0,failed
+Mein Direktlabor Hamburg,Hamburg,https://www.meindirektlabor.de/hamburg,0,0,0,failed
+BodyScan Berlin,Berlin,https://www.bodyscan-berlin.de,0,0,0,failed
+Labor Hannover Nord,Hannover,https://www.labor-hannover-nord.de,0,0,0,failed
+Diagnostikum Wien,Wien,https://www.diagnostikum-wien.at,0,0,0,failed
+Diagnosezentrum Meidling (Diagnostikum),Wien,https://diagnostikum.at/de/locations/diagnosezentrum-meidling,0,0,0,success
+DZ10 Diagnosezentrum Favoriten,Wien,https://www.dz10.at,0,2,0,success
+Radiologicum Margareten,Wien,https://www.radiologicum.wien,0,0,0,success
+Radiologicum Penzing,Wien,https://www.radiologicum.wien,0,0,0,success
+Diagnosehaus 3,Wien,https://www.diagnosehaus3.at/knochendichte,0,0,0,failed
+Diagnosehaus 11,Wien,https://www.diagnosehaus3.at/knochendichte,0,2,0,success
+Diagnosehaus 18,Wien,https://www.diagnosehaus3.at/knochendichte,0,2,0,success

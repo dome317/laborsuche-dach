@@ -215,7 +215,7 @@ def _match_price_to_service(
     return None
 
 
-OFFICIAL_SOURCES = ("meindirektlabor", "medkompass", "labor-berlin", "synlab")
+OFFICIAL_SOURCES = ("meindirektlabor", "medkompass", "labor-berlin", "synlab", "llm_recherche")
 
 
 def _has_official_source(candidate: dict) -> bool:
@@ -234,11 +234,15 @@ def _compute_service_verification(candidate: dict, svc_type: str) -> dict:
     is_official = _has_official_source(candidate)
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
+    # LLM-recherche entries are manually verified — always high confidence
+    if source_type == "llm_recherche" or "llm_recherche" in candidate.get("all_source_types", []):
+        return {"status": "verified", "confidence": 0.95, "date": today, "method": "llm_recherche_manual", "notes": None}
+
     if svc_type in ("dexa_body_composition", "dexa_bone_density"):
         score = body_comp_score
-        if score >= 3 and service_page:
+        if score >= 5 and service_page:
             return {"status": "verified", "confidence": 0.9, "date": today, "method": "website_service_page", "notes": None}
-        if score >= 3:
+        if score >= 5:
             return {"status": "verified", "confidence": 0.7, "date": today, "method": "website_homepage", "notes": None}
     elif svc_type in ("blood_test_self_pay", "blood_test_referral"):
         score = blut_score
@@ -400,7 +404,7 @@ def candidate_to_provider(candidate: dict, index: int) -> dict | None:
         "verified": is_verified,
         "source": {
             "origin": candidate.get("source_type", "unknown"),
-            "primaryUrl": website,
+            "primaryUrl": candidate.get("source_url") or website,
             "collectedAt": now_iso,
         },
         "tags": build_tags(candidate),

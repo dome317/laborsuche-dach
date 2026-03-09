@@ -46,7 +46,7 @@ export function MapTileSwitcher({
 
   return (
     <div
-      className="absolute bottom-24 sm:bottom-8 left-4 flex flex-col sm:flex-row items-start sm:items-center gap-2 z-[1000]"
+      className="hidden md:flex absolute bottom-8 left-4 flex-col sm:flex-row items-start sm:items-center gap-2 z-[1000]"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

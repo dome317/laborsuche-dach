@@ -65,7 +65,7 @@ def extract_plz(address: str | None) -> str | None:
 
 
 # Source types that are more authoritative than generic scrapers
-AUTHORITATIVE_SOURCES = ("meindirektlabor", "medkompass", "labor-berlin", "synlab")
+AUTHORITATIVE_SOURCES = ("meindirektlabor", "medkompass", "labor-berlin", "synlab", "llm_recherche")
 
 
 def merge_entries(primary: dict, duplicate: dict) -> dict:
@@ -118,21 +118,33 @@ def main() -> None:
         candidates = json.load(f)
 
     # Index for dedup
-    domain_index: dict[str, int] = {}
+    domain_index: dict[str, int] = {}  # domain -> first index
+    domain_city_index: dict[str, int] = {}  # domain|city -> first index
     phone_index: dict[str, int] = {}
     to_remove: set[int] = set()
 
     for i, c in enumerate(candidates):
         domain = normalize_url_key(c.get("raw_website"))
         phone = normalize_phone_for_dedup(c.get("raw_phone"))
+        city_i = (c.get("raw_city") or "").lower().strip()
 
-        # Hard match: same domain
-        if domain and domain in domain_index:
-            j = domain_index[domain]
-            if j not in to_remove:
-                candidates[j] = merge_entries(candidates[j], c)
-                to_remove.add(i)
-                continue
+        # Hard match: same domain + same city (multi-location businesses share domains)
+        if domain:
+            domain_city_key = f"{domain}|{city_i}"
+            if domain_city_key in domain_city_index:
+                j = domain_city_index[domain_city_key]
+                if j not in to_remove:
+                    candidates[j] = merge_entries(candidates[j], c)
+                    to_remove.add(i)
+                    continue
+            # Also merge if same domain AND same city as existing domain entry
+            elif domain in domain_index:
+                j = domain_index[domain]
+                city_j = (candidates[j].get("raw_city") or "").lower().strip()
+                if j not in to_remove and city_i == city_j:
+                    candidates[j] = merge_entries(candidates[j], c)
+                    to_remove.add(i)
+                    continue
 
         # Hard match: same phone
         if phone and phone in phone_index:
@@ -177,6 +189,7 @@ def main() -> None:
         if i not in to_remove:
             if domain:
                 domain_index[domain] = i
+                domain_city_index[f"{domain}|{city_i}"] = i
             if phone:
                 phone_index[phone] = i
 

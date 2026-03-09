@@ -10,9 +10,9 @@ import type { Marker, MarkerClusterGroup } from "leaflet";
 export type MarkerCategory = "dexa_body_composition" | "blutlabor" | "both";
 
 export const CATEGORY_COLORS: Record<MarkerCategory, string> = {
-  dexa_body_composition: "#2563EB",
-  blutlabor: "#10B981",
-  both: "#8B5CF6",
+  dexa_body_composition: "#7C3AED", // Violet
+  blutlabor: "#DC2626", // Warm-Red
+  both: "#7C3AED",
 };
 
 export const CATEGORY_LABELS: Record<MarkerCategory, string> = {
@@ -29,38 +29,31 @@ const CATEGORY_LABELS_SHORT: Record<MarkerCategory, string> = {
 
 function createMarkerIcon(category: MarkerCategory, selected: boolean): string {
   const color = CATEGORY_COLORS[category];
-  const label = CATEGORY_LABELS_SHORT[category];
   const isDEXA = category === "dexa_body_composition" || category === "both";
-  const isBlut = category === "blutlabor" || category === "both";
+  const isBlut = category === "blutlabor";
 
+  // Body scan icon for DEXA, droplet for Blutlabor
   let iconSvg = "";
-  if (isDEXA && !isBlut) {
-    iconSvg = `<path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>`;
-  } else if (isBlut && !isDEXA) {
-    iconSvg = `<path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z" fill="white"/><path d="M12.56 14.69c1.34 0 2.44-1.12 2.44-2.48 0-.71-.35-1.38-1.05-1.95S12.78 9.06 12.56 8.3c-.18.89-.7 1.74-1.4 2.3s-1.04 1.24-1.04 1.96c0 1.36 1.1 2.13 2.44 2.13z" fill="white"/>`;
-  } else {
-    iconSvg = `<path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>`;
+  if (isDEXA) {
+    // Simplified body silhouette
+    iconSvg = `<circle cx="12" cy="4" r="2" fill="white"/><line x1="12" y1="6" x2="12" y2="15" stroke="white" stroke-width="2" stroke-linecap="round"/><line x1="8" y1="9" x2="16" y2="9" stroke="white" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="15" x2="9" y2="20" stroke="white" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="15" x2="15" y2="20" stroke="white" stroke-width="2" stroke-linecap="round"/>`;
+  } else if (isBlut) {
+    // Droplet
+    iconSvg = `<path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" fill="white"/>`;
   }
 
-  const size = selected ? 44 : 36;
-  const height = selected ? 58 : 48;
+  const size = selected ? 40 : 32;
   const cx = size / 2;
-  const shadowOpacity = selected ? "0.5" : "0.3";
-  const strokeWidth = selected ? "3" : "2";
 
   return `
-    <svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${height}" viewBox="0 0 ${size} ${height}">
-      <filter id="shadow" x="-20%" y="-10%" width="140%" height="130%">
-        <feDropShadow dx="0" dy="1" stdDeviation="${selected ? "2.5" : "1.5"}" flood-opacity="${shadowOpacity}"/>
-      </filter>
-      <path d="M${cx} 0C${cx * 0.447} 0 0 ${cx * 0.447} 0 ${cx}c0 ${cx * 0.75} ${cx} ${height - cx} ${cx} ${height - cx}s${cx}-${height - cx * 1.75} ${cx}-${height - cx}C${size} ${cx * 0.447} ${size - cx * 0.447} 0 ${cx} 0z" fill="${color}" filter="url(#shadow)"/>
-      <circle cx="${cx}" cy="${cx}" r="${cx * 0.667}" fill="${color}" stroke="white" stroke-width="${strokeWidth}"/>
+    <svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 ${size} ${size}">
+      <circle cx="${cx}" cy="${cx}" r="${cx}" fill="white" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.25))"/>
+      <circle cx="${cx}" cy="${cx}" r="${cx - 3}" fill="${color}"/>
       <g transform="translate(${cx - 12},${cx - 12})">
         <svg viewBox="0 0 24 24" width="24" height="24">
           ${iconSvg}
         </svg>
       </g>
-      <text x="${cx}" y="${height - 2}" text-anchor="middle" font-size="${selected ? "9" : "8"}" font-weight="bold" fill="${color}" font-family="sans-serif">${label}</text>
     </svg>
   `;
 }
@@ -112,11 +105,11 @@ export function useProviderMarkers() {
   const markersRef = useRef<Map<string, Marker>>(new Map());
   const clusterGroupRef = useRef<MarkerClusterGroup | null>(null);
   const leafletRef = useRef<typeof import("leaflet") | null>(null);
+  const initialFitDoneRef = useRef(false);
 
-  // Load leaflet + markercluster once (markercluster expects mutable global L)
+  // Load leaflet + markercluster once
   useEffect(() => {
     import("leaflet").then(async (L) => {
-      // ES module namespace is frozen; markercluster needs a mutable L on window
       const mutableL = Object.create(L) as typeof L;
       (window as unknown as Record<string, unknown>).L = mutableL;
       await import("leaflet.markercluster");
@@ -140,7 +133,6 @@ export function useProviderMarkers() {
           const count = cluster.getChildCount();
           const color = getClusterColor(childMarkers);
 
-          // Size based on count
           const size = count < 10 ? 36 : count < 50 ? 44 : 52;
 
           return L.divIcon({
@@ -189,17 +181,14 @@ export function useProviderMarkers() {
 
       const existing = markersRef.current.get(provider.id);
       if (existing) {
-        // Update icon for selection/hover state
         const iconSvg = createMarkerIcon(category, highlighted);
-        const size = highlighted ? 44 : 36;
-        const height = highlighted ? 58 : 48;
+        const size = highlighted ? 40 : 32;
         existing.setIcon(
           L.divIcon({
             html: iconSvg,
             className: `provider-marker${highlighted ? " provider-marker-active" : ""}`,
-            iconSize: [size, height],
-            iconAnchor: [size / 2, height],
-            popupAnchor: [0, -height],
+            iconSize: [size, size],
+            iconAnchor: [size / 2, size / 2],
           })
         );
         existing.setZIndexOffset(isSelected ? 1000 : isHovered ? 500 : 0);
@@ -208,24 +197,21 @@ export function useProviderMarkers() {
 
       // Create new marker
       const iconSvg = createMarkerIcon(category, highlighted);
-      const size = highlighted ? 44 : 36;
-      const height = highlighted ? 58 : 48;
+      const size = highlighted ? 40 : 32;
       const icon = L.divIcon({
         html: iconSvg,
         className: `provider-marker${highlighted ? " provider-marker-active" : ""}`,
-        iconSize: [size, height],
-        iconAnchor: [size / 2, height],
-        popupAnchor: [0, -height],
+        iconSize: [size, size],
+        iconAnchor: [size / 2, size / 2],
       });
 
       const marker = L.marker([lat, lng], {
         icon,
-        category, // Store category for cluster color calculation
+        category,
       } as L.MarkerOptions & { category: MarkerCategory });
       marker.on("click", () => {
         setSelectedProviderId(provider.id);
       });
-      // Bidirectional hover: marker → sidebar
       marker.on("mouseover", () => {
         setHoveredProviderId(provider.id);
       });
@@ -242,9 +228,9 @@ export function useProviderMarkers() {
     });
   }, [map, filteredProviders, selectedProviderId, setSelectedProviderId, hoveredProviderId, setHoveredProviderId]);
 
-  // Fit bounds when filtered providers change
+  // Fit bounds ONLY on initial load
   useEffect(() => {
-    if (!map || filteredProviders.length === 0) return;
+    if (!map || filteredProviders.length === 0 || initialFitDoneRef.current) return;
 
     const bounds: [number, number][] = filteredProviders.map((p) => {
       const [lng, lat] = p.location.coordinates;
@@ -256,6 +242,7 @@ export function useProviderMarkers() {
         padding: [50, 50],
         maxZoom: 12,
       });
+      initialFitDoneRef.current = true;
     }
   }, [map, filteredProviders]);
 
@@ -285,7 +272,6 @@ export function useProviderMarkers() {
       });
     };
 
-    // Initial bounds
     updateBounds();
 
     map.on("moveend", updateBounds);

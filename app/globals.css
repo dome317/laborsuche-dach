@@ -242,6 +242,11 @@
   }
 }
 
+/* Safe area for mobile notch */
+.safe-area-top {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
 /* Provider marker: remove default Leaflet divIcon styling */
 .provider-marker {
   background: none !important;

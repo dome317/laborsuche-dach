@@ -130,7 +130,7 @@ export function useGeolocation() {
       setIsLocating(false);
       cleanupEventHandlers();
       console.warn('Location unavailable:', e.message);
-      toast.error('Standort nicht verfügbar. Bitte HTTPS verwenden oder Standortzugriff erlauben.');
+      toast.error('Standort konnte nicht ermittelt werden. Du kannst trotzdem nach Ort suchen.');
     };
 
     // Store handler references

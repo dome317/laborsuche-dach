@@ -119,11 +119,35 @@ def parse_manual_entry(entry: dict, source_file: str) -> dict:
     }
 
 
+def parse_llm_recherche_entry(entry: dict, source_file: str) -> dict:
+    """Parse llm_recherche format (manually verified entries)."""
+    country = entry.get("country", "DE")
+    return {
+        "raw_name": entry.get("name", ""),
+        "raw_address": entry.get("address"),
+        "raw_postal_code": None,
+        "raw_city": entry.get("city", ""),
+        "raw_country": country,
+        "raw_phone": normalize_phone(entry.get("phone"), country),
+        "raw_website": normalize_website(entry.get("website")),
+        "raw_lat": None,
+        "raw_lng": None,
+        "raw_category": entry.get("category", ""),
+        "raw_services": entry.get("services_mentioned", ""),
+        "raw_price": entry.get("price"),
+        "source_file": source_file,
+        "source_type": "llm_recherche",
+        "source_url": entry.get("source_url", ""),
+    }
+
+
 def detect_format(data: list[dict]) -> str:
     """Detect data format based on field names."""
     if not data:
         return "manual"
     sample = data[0]
+    if sample.get("source_type") == "llm_recherche":
+        return "llm_recherche"
     if "title" in sample or "placeId" in sample or "searchString" in sample:
         return "apify"
     return "manual"
@@ -153,7 +177,12 @@ def main() -> None:
             data = [data]
 
         fmt = detect_format(data)
-        parser = parse_apify_entry if fmt == "apify" else parse_manual_entry
+        if fmt == "apify":
+            parser = parse_apify_entry
+        elif fmt == "llm_recherche":
+            parser = parse_llm_recherche_entry
+        else:
+            parser = parse_manual_entry
 
         for entry in data:
             candidate = parser(entry, raw_file.name)
@@ -166,6 +195,50 @@ def main() -> None:
 
     print(f"{len(candidates)} Kandidaten aus {source_count} Quellen zusammengeführt")
     print(f"Output: {out_path}")
+
+    # Merge llm_recherche entries into enriched.json
+    # Existing enriched.json has website_text from scraping; llm_recherche entries
+    # use services_mentioned as website_text (no scraping needed).
+    enriched_path = OUT_DIR / "enriched.json"
+    if enriched_path.exists():
+        with open(enriched_path, "r", encoding="utf-8") as f:
+            enriched = json.load(f)
+    else:
+        enriched = []
+
+    # Build a set of existing (website, city) pairs to avoid duplicating llm_recherche entries
+    # Use website+city composite key because different locations can share the same website
+    existing_keys = set()
+    for e in enriched:
+        w = (e.get("raw_website") or "").lower().rstrip("/")
+        city = (e.get("raw_city") or "").lower()
+        if w:
+            existing_keys.add(f"{w}|{city}")
+
+    llm_added = 0
+    for c in candidates:
+        if c.get("source_type") != "llm_recherche":
+            continue
+        website = (c.get("raw_website") or "").lower().rstrip("/")
+        city = (c.get("raw_city") or "").lower()
+        key = f"{website}|{city}"
+        if key in existing_keys:
+            continue
+        # Use services_mentioned + price as website_text for classification
+        text_parts = [c.get("raw_services", "")]
+        if c.get("raw_price"):
+            text_parts.append(c["raw_price"])
+        c["website_text"] = " ".join(text_parts)
+        c["enrichment_status"] = "llm_recherche"
+        enriched.append(c)
+        existing_keys.add(key)
+        llm_added += 1
+
+    with open(enriched_path, "w", encoding="utf-8") as f:
+        json.dump(enriched, f, ensure_ascii=False, indent=2)
+
+    print(f"{llm_added} llm_recherche Einträge in enriched.json gemergt")
+    print(f"Enriched total: {len(enriched)}")
 
 
 if __name__ == "__main__":

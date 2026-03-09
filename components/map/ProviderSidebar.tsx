@@ -5,14 +5,16 @@ import {
   Search,
   ArrowLeft,
   Phone,
-  Globe,
   MapPin,
-  Calendar,
   Navigation,
   Share2,
   CheckCircle,
   AlertTriangle,
   X,
+  ExternalLink,
+  Shield,
+  Calendar,
+  Droplet,
 } from "lucide-react";
 import { Drawer } from "vaul";
 import { useProviders, haversineKm } from "@/contexts/ProviderContext";
@@ -23,12 +25,21 @@ import {
 } from "@/hooks/useProviderMarkers";
 import type { CategoryFilter } from "@/contexts/ProviderContext";
 import type { Provider } from "@/types/provider";
+import { BodyScanIcon } from "@/components/icons/BodyScanIcon";
 
 const FILTER_OPTIONS: { key: CategoryFilter; label: string }[] = [
   { key: "all", label: "Alle" },
   { key: "dexa_body_composition", label: "DEXA Body Scan" },
   { key: "blutlabor", label: "Blutlabor" },
 ];
+
+// Category icon helper
+function CategoryIcon({ category, size = 14 }: { category: string; size?: number }) {
+  if (category === "blutlabor") {
+    return <Droplet className="flex-shrink-0" style={{ width: size, height: size }} />;
+  }
+  return <BodyScanIcon className="flex-shrink-0" size={size} />;
+}
 
 // --- Filter Chips ---
 function FilterChips({ compact = false }: { compact?: boolean }) {
@@ -47,12 +58,10 @@ function FilterChips({ compact = false }: { compact?: boolean }) {
           <button
             key={key}
             onClick={() => setSelectedCategory(key)}
-            className={`flex-shrink-0 px-3 py-1.5 rounded-full text-xs font-medium transition-all border ${
+            className={`flex-shrink-0 px-3 min-h-[44px] rounded-full text-xs font-medium transition-all border ${
               isActive
                 ? "text-white shadow-sm"
-                : compact
-                  ? "bg-white/90 dark:bg-gray-800/90 text-gray-700 dark:text-gray-300 border-gray-200/80 dark:border-gray-700/80 hover:border-gray-300 dark:hover:border-gray-600"
-                  : "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600"
+                : "bg-slate-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600"
             }`}
             style={
               isActive
@@ -60,7 +69,7 @@ function FilterChips({ compact = false }: { compact?: boolean }) {
                 : undefined
             }
           >
-            {compact ? `${label} (${count})` : `${label} (${count})`}
+            {`${label} (${count})`}
           </button>
         );
       })}
@@ -89,19 +98,19 @@ function MobileFilterBar() {
             <input
               ref={inputRef}
               type="text"
-              placeholder="Suche..."
+              placeholder="Ort, Anbieter oder PLZ suchen"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-9 pr-8 py-1.5 text-sm bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-gray-100 placeholder:text-gray-400"
+              className="w-full pl-9 pr-8 min-h-[44px] text-sm bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-gray-100 placeholder:text-gray-400"
             />
             <button
               onClick={() => {
                 setSearchOpen(false);
                 if (!searchQuery) setSearchQuery("");
               }}
-              className="absolute right-2 top-1/2 -translate-y-1/2 p-0.5 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700"
+              className="absolute right-2 top-1/2 -translate-y-1/2 p-1 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700"
             >
-              <X className="h-3.5 w-3.5 text-gray-400" />
+              <X className="h-4 w-4 text-gray-400" />
             </button>
           </div>
         ) : (
@@ -111,9 +120,9 @@ function MobileFilterBar() {
             </div>
             <button
               onClick={() => setSearchOpen(true)}
-              className="flex-shrink-0 h-8 w-8 flex items-center justify-center rounded-full bg-white/90 dark:bg-gray-800/90 border border-gray-200/80 dark:border-gray-700/80 shadow-sm"
+              className="flex-shrink-0 min-h-[44px] min-w-[44px] flex items-center justify-center rounded-xl bg-white/90 dark:bg-gray-800/90 border border-gray-200/80 dark:border-gray-700/80 shadow-sm"
             >
-              <Search className="h-4 w-4 text-gray-600 dark:text-gray-300" />
+              <Search className="h-5 w-5 text-gray-600 dark:text-gray-300" />
             </button>
           </>
         )}
@@ -131,10 +140,10 @@ function SearchInput() {
       <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
       <input
         type="text"
-        placeholder="Suche nach Name, Stadt, PLZ..."
+        placeholder="Ort, Anbieter oder PLZ suchen"
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
-        className="w-full pl-9 pr-8 py-2 text-sm bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-gray-100 placeholder:text-gray-400"
+        className="w-full pl-9 pr-8 py-2 min-h-[44px] text-sm bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-gray-100 placeholder:text-gray-400"
       />
       {searchQuery && (
         <button
@@ -144,6 +153,17 @@ function SearchInput() {
           <X className="h-3.5 w-3.5 text-gray-400" />
         </button>
       )}
+    </div>
+  );
+}
+
+// --- Loading Skeletons ---
+function LoadingSkeletons() {
+  return (
+    <div className="px-4 py-3 space-y-2">
+      {[1, 2, 3].map((i) => (
+        <div key={i} className="bg-slate-100 dark:bg-gray-800 animate-pulse rounded-xl h-24" />
+      ))}
     </div>
   );
 }
@@ -170,7 +190,6 @@ function ProviderCard({
     return min;
   }, null);
 
-  // Distance from user
   const distance = userPosition
     ? haversineKm(
         userPosition.lat,
@@ -191,35 +210,47 @@ function ProviderCard({
           : "hover:bg-gray-50 dark:hover:bg-gray-800/50"
       }`}
     >
-      <div className="flex items-start justify-between gap-2">
-        <div className="min-w-0 flex-1">
-          <h3 className="text-sm font-semibold text-gray-900 dark:text-white truncate">
-            {provider.name}
-          </h3>
-          <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
-            {provider.address.city}
-            {distance !== null && (
-              <span className="ml-1.5 text-blue-600 dark:text-blue-400">
-                · {distance < 1 ? `${Math.round(distance * 1000)} m` : `${distance.toFixed(1).replace(".", ",")} km`} entfernt
-              </span>
-            )}
-          </p>
-        </div>
-        {cheapest !== null && (
-          <span className="text-sm font-semibold text-gray-700 dark:text-gray-300 flex-shrink-0">
-            ab {cheapest.amount} {cheapest.currency === "CHF" ? "CHF" : "€"}
-          </span>
-        )}
-      </div>
-      <div className="mt-1.5">
+      {/* Row 1: Category badge + Name */}
+      <div className="flex items-center gap-2">
         <span
-          className="inline-block px-2 py-0.5 rounded-full text-[10px] font-medium text-white"
+          className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium text-white flex-shrink-0"
           style={{ backgroundColor: color }}
         >
+          <CategoryIcon category={category} size={10} />
           {label}
         </span>
+        <h3 className="text-sm font-medium text-slate-700 dark:text-white truncate">
+          {provider.name}
+        </h3>
       </div>
+      {/* Row 2: City + Distance */}
+      <p className="text-sm text-slate-500 dark:text-gray-400 mt-1">
+        {provider.address.city}
+        {distance !== null && (
+          <span className="ml-1.5 text-blue-600 dark:text-blue-400">
+            · {distance < 1 ? `${Math.round(distance * 1000)} m` : `${distance.toFixed(1).replace(".", ",")} km`} entfernt
+          </span>
+        )}
+      </p>
+      {/* Row 3: Price */}
+      {cheapest !== null ? (
+        <p className="text-sm font-semibold text-amber-600 mt-0.5">
+          ab {cheapest.amount} {cheapest.currency === "CHF" ? "CHF" : "€"}
+        </p>
+      ) : (
+        <p className="text-sm text-slate-400 mt-0.5">Preis auf Anfrage</p>
+      )}
     </button>
+  );
+}
+
+// --- Result Count ---
+function ResultCount() {
+  const { viewportProviders } = useProviders();
+  return (
+    <p className="px-4 py-1.5 text-xs text-slate-500 dark:text-gray-400 border-b border-gray-100 dark:border-gray-800">
+      {viewportProviders.length} Anbieter im Kartenausschnitt
+    </p>
   );
 }
 
@@ -231,7 +262,12 @@ function ProviderList() {
     selectedCategory,
     setSelectedProviderId,
     setSelectedCategory,
+    isLoading,
   } = useProviders();
+
+  if (isLoading) {
+    return <LoadingSkeletons />;
+  }
 
   if (filteredProviders.length === 0) {
     return (
@@ -271,6 +307,7 @@ function ProviderList() {
 
   return (
     <div>
+      <ResultCount />
       {visibleProviders.map((provider) => (
         <ProviderCard
           key={provider.id}
@@ -284,7 +321,7 @@ function ProviderList() {
 
 // --- Provider Detail ---
 function ProviderDetail() {
-  const { selectedProvider, setSelectedProviderId } = useProviders();
+  const { selectedProvider, setSelectedProviderId, userPosition } = useProviders();
   if (!selectedProvider) return null;
 
   const provider = selectedProvider;
@@ -295,10 +332,32 @@ function ProviderDetail() {
 
   const isVerified = provider.verified;
   const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`;
-  const shareText = encodeURIComponent(
-    `Schau mal: ${provider.name} – ${provider.contact.website}`
-  );
-  const whatsappUrl = `https://wa.me/?text=${shareText}`;
+
+  // Distance
+  const distance = userPosition
+    ? haversineKm(userPosition.lat, userPosition.lng, lat, lng)
+    : null;
+
+  // Cheapest price
+  const cheapest = provider.services.reduce<{ amount: number; currency: string } | null>((min, s) => {
+    if (!s.price?.amount) return min;
+    if (min === null || s.price.amount < min.amount) {
+      return { amount: s.price.amount, currency: s.price.currency };
+    }
+    return min;
+  }, null);
+
+  // WhatsApp share
+  const shareLines = [
+    provider.name,
+    `📍 ${provider.address.city}${distance ? ` (${distance.toFixed(1)} km entfernt)` : ""}`,
+    cheapest ? `💰 ab ${cheapest.amount} ${cheapest.currency === "CHF" ? "CHF" : "€"}` : "",
+    `🔗 ${provider.contact.website || provider.contact.bookingUrl || ""}`,
+  ].filter(Boolean);
+  const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(shareLines.join("\n"))}`;
+
+  // Verification info
+  const verifiedService = provider.services.find((s) => s.verification.status === "verified");
 
   return (
     <div className="flex flex-col h-full">
@@ -315,22 +374,50 @@ function ProviderDetail() {
       </button>
 
       <div className="flex-1 overflow-y-auto scrollbar-thin">
-        {/* Header */}
+        {/* Header: Above the fold */}
         <div className="px-4 pt-4 pb-3">
-          <h2 className="text-lg font-bold text-gray-900 dark:text-white">
-            {provider.name}
-          </h2>
-          <div className="flex items-center gap-2 mt-2">
+          {/* 1. Category Badge + Name */}
+          <div className="flex items-center gap-2 mb-1">
             <span
-              className="inline-block px-2.5 py-0.5 rounded-full text-xs font-medium text-white"
+              className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium text-white"
               style={{ backgroundColor: color }}
             >
+              <CategoryIcon category={category} size={12} />
               {label}
             </span>
+          </div>
+          <h2 className="text-lg font-semibold text-slate-700 dark:text-white">
+            {provider.name}
+          </h2>
+
+          {/* 2. Distance + City */}
+          <div className="flex items-center gap-1 mt-1 text-sm text-slate-500 dark:text-gray-400">
+            <MapPin className="h-3.5 w-3.5 flex-shrink-0" />
+            <span>{provider.address.city}</span>
+            {distance !== null && (
+              <span className="text-blue-600 dark:text-blue-400">
+                · {distance < 1 ? `${Math.round(distance * 1000)} m` : `${distance.toFixed(1).replace(".", ",")} km`}
+              </span>
+            )}
+          </div>
+
+          {/* 3. Price */}
+          <div className="mt-2">
+            {cheapest ? (
+              <span className="text-xl font-semibold text-amber-600">
+                ab {cheapest.amount} {cheapest.currency === "CHF" ? "CHF" : "€"}
+              </span>
+            ) : (
+              <span className="text-base text-slate-400">Preis auf Anfrage</span>
+            )}
+          </div>
+
+          {/* 4. Verified Badge */}
+          <div className="mt-2">
             <span
               className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium ${
                 isVerified
-                  ? "bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-400"
+                  ? "bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400"
                   : "bg-yellow-50 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400"
               }`}
             >
@@ -340,6 +427,11 @@ function ProviderDetail() {
                 <AlertTriangle className="h-3 w-3" />
               )}
               {isVerified ? "Verifiziert" : "Nicht verifiziert"}
+              {isVerified && verifiedService?.verification.date && (
+                <span className="text-[10px] ml-1 opacity-75">
+                  ({verifiedService.verification.date})
+                </span>
+              )}
             </span>
           </div>
         </div>
@@ -358,110 +450,99 @@ function ProviderDetail() {
           </div>
         </div>
 
-        {/* Services */}
+        {/* Services as Tags/Pills */}
         <div className="px-4 py-3 border-t border-gray-100 dark:border-gray-800">
-          <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">
+          <h3 className="text-sm font-semibold text-slate-700 dark:text-white mb-2">
             Leistungen
           </h3>
-          <div className="space-y-2">
+          <div className="flex flex-wrap gap-2">
             {provider.services.map((service, i) => {
               const svcVerified = service.verification.status === "verified";
               return (
-                <div
-                  key={i}
-                  className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-3"
-                >
-                  <div className="flex justify-between items-start gap-2">
-                    <div className="min-w-0 flex-1">
-                      <span className="text-sm font-medium text-gray-900 dark:text-white">
-                        {service.name}
+                <div key={i} className="flex items-center gap-1.5">
+                  <span className="inline-flex items-center gap-1 rounded-full bg-slate-100 dark:bg-gray-800 text-xs px-3 py-1 text-slate-700 dark:text-gray-300">
+                    {service.name}
+                    {service.price?.amount && (
+                      <span className="font-semibold text-amber-600 ml-1">
+                        {service.price.amount} {service.price.currency === "CHF" ? "CHF" : "€"}
                       </span>
-                      <span
-                        className={`inline-flex items-center gap-0.5 ml-2 text-[10px] font-medium ${
-                          svcVerified
-                            ? "text-green-600 dark:text-green-400"
-                            : "text-yellow-600 dark:text-yellow-400"
-                        }`}
-                      >
-                        {svcVerified ? (
-                          <><CheckCircle className="h-3 w-3" /> Verifiziert</>
-                        ) : (
-                          <><AlertTriangle className="h-3 w-3" /> Nicht best&auml;tigt</>
-                        )}
-                      </span>
-                    </div>
-                    <span className="text-sm font-semibold text-gray-700 dark:text-gray-300 flex-shrink-0">
-                      {service.price?.amount
-                        ? `${service.price.amount} ${service.price.currency === "CHF" ? "CHF" : "€"}`
-                        : "Auf Anfrage"}
-                    </span>
-                  </div>
-                  {service.description && (
-                    <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                      {service.description}
-                    </p>
-                  )}
-                  {service.price?.note && (
-                    <p className="text-xs text-gray-400 dark:text-gray-500 mt-1 italic">
-                      {service.price.note}
-                    </p>
-                  )}
+                    )}
+                    {svcVerified && (
+                      <CheckCircle className="h-3 w-3 text-emerald-500 ml-0.5" />
+                    )}
+                  </span>
                 </div>
               );
             })}
           </div>
         </div>
 
-        {/* Contact */}
-        <div className="px-4 py-3 border-t border-gray-100 dark:border-gray-800 space-y-2">
-          {provider.contact.phone && (
-            <a
-              href={`tel:${provider.contact.phone}`}
-              className="flex items-center gap-3 text-sm text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-            >
-              <Phone className="h-4 w-4 text-gray-400 flex-shrink-0" />
-              {provider.contact.phone}
-            </a>
+        {/* Sticky CTA Footer */}
+        <div className="px-4 py-3 border-t border-gray-100 dark:border-gray-800 space-y-3">
+          {/* Verification trust box */}
+          {isVerified && (
+            <div className="bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-300 rounded-xl px-3 py-2 text-xs flex items-center gap-2">
+              <Shield className="h-4 w-4 flex-shrink-0" />
+              <span>
+                Daten verifiziert
+                {verifiedService?.verification.method && (
+                  <> via {verifiedService.verification.method}</>
+                )}
+              </span>
+            </div>
           )}
-          <a
-            href={provider.contact.website}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-3 text-sm text-blue-600 dark:text-blue-400 hover:underline"
-          >
-            <Globe className="h-4 w-4 flex-shrink-0" />
-            Website
-          </a>
-        </div>
 
-        {/* Action Buttons */}
-        <div className="px-4 py-3 border-t border-gray-100 dark:border-gray-800 space-y-2">
-          {provider.contact.bookingUrl && (
+          {/* Button Grid */}
+          <div className="grid grid-cols-2 gap-2">
             <a
-              href={provider.contact.bookingUrl}
+              href={directionsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg text-sm font-medium text-white transition-colors"
-              style={{ backgroundColor: color }}
+              className="flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-medium bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
             >
-              <Calendar className="h-4 w-4" />
-              Termin buchen
+              <Navigation className="h-4 w-4" />
+              Route planen
+            </a>
+            {provider.contact.bookingUrl ? (
+              <a
+                href={provider.contact.bookingUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-medium bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+              >
+                <Calendar className="h-4 w-4" />
+                Termin buchen
+              </a>
+            ) : provider.contact.phone ? (
+              <a
+                href={`tel:${provider.contact.phone}`}
+                className="flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-medium bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+              >
+                <Phone className="h-4 w-4" />
+                Anrufen
+              </a>
+            ) : null}
+          </div>
+
+          {/* Website button */}
+          {provider.contact.website && (
+            <a
+              href={provider.contact.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg text-sm font-medium bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+            >
+              <ExternalLink className="h-4 w-4" />
+              Website öffnen
             </a>
           )}
-          <a
-            href={directionsUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg text-sm font-medium bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-          >
-            <Navigation className="h-4 w-4" />
-            Route planen
-          </a>
+
+          {/* WhatsApp share */}
           <a
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg text-sm font-medium bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 hover:bg-green-100 dark:hover:bg-green-900/30 transition-colors"
+            className="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg text-sm font-medium bg-green-500 text-white hover:bg-green-600 transition-colors"
           >
             <Share2 className="h-4 w-4" />
             Per WhatsApp teilen
@@ -476,7 +557,7 @@ function ProviderDetail() {
 export function ProviderSidebar() {
   const { selectedProvider, setSelectedProviderId } = useProviders();
   const [isMobile, setIsMobile] = useState(false);
-  const snapPoints = [0.35, 0.65, 1];
+  const snapPoints = [0.5, 0.65, 1];
   const [snap, setSnap] = useState<number | string | null>(snapPoints[0]);
 
   useEffect(() => {
@@ -486,7 +567,6 @@ export function ProviderSidebar() {
     return () => window.removeEventListener("resize", check);
   }, []);
 
-  // Desktop list view: includes search + filters
   const desktopListView = (
     <div className="flex flex-col h-full">
       <div className="px-4 pt-4 pb-2 space-y-3 border-b border-gray-100 dark:border-gray-800">
@@ -499,7 +579,6 @@ export function ProviderSidebar() {
     </div>
   );
 
-  // Mobile list view: no search/filters (they're in MobileFilterBar above the map)
   const mobileListView = (
     <div className="flex flex-col h-full">
       <div className="flex-1 overflow-y-auto scrollbar-thin">
@@ -513,7 +592,6 @@ export function ProviderSidebar() {
 
     return (
       <>
-        {/* Filter bar above the map */}
         <MobileFilterBar />
 
         <Drawer.Root
@@ -530,7 +608,10 @@ export function ProviderSidebar() {
               className="fixed flex flex-col bg-white dark:bg-gray-900 rounded-t-[10px] bottom-0 left-0 right-0 h-full max-h-[97%] !z-[1100] shadow-[0_-10px_40px_rgba(0,0,0,0.2)]"
               aria-describedby={undefined}
             >
-              <div className="mx-auto mt-4 h-2 w-[100px] rounded-full bg-gray-300 dark:bg-gray-600 flex-shrink-0" />
+              {/* Bigger drag handle */}
+              <div className="flex justify-center pt-3 pb-1">
+                <div className="h-1 w-10 rounded-full bg-slate-300 dark:bg-gray-600" />
+              </div>
               <Drawer.Title className="sr-only">Anbieter</Drawer.Title>
               <div className="flex-1 overflow-hidden">{mobileContent}</div>
             </Drawer.Content>
@@ -540,7 +621,6 @@ export function ProviderSidebar() {
     );
   }
 
-  // Desktop sidebar
   const content = selectedProvider ? <ProviderDetail /> : desktopListView;
   return (
     <div className="absolute top-0 left-0 h-full w-96 bg-white dark:bg-gray-900 shadow-2xl z-[1000] flex flex-col">

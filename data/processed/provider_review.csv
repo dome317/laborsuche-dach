@@ -1,0 +1,79 @@
+﻿Nr;Name;Kat;Stadt;Land;Preis;Verified;Phone;Website;Fehlend
+1;DZAM Diagnosezentrum Amstetten;DEXA;Amstetten;AT;75 EUR;Y;+43747264491;https://dzam.at/koerperfettmessung-mittels-dexa-methode;bookingUrl
+2;Radiologie Baden;DEXA;Baden bei Wien;AT;;Y;+43225248149;https://www.dzbaden.at/untersuchungen/ganzkoerperfettmessung;price, bookingUrl
+3;Diagnostikum Deutschlandsberg;DEXA;Deutschlandsberg;AT;80 EUR;Y;+4334622613;https://diagnostikum.at/en/service/bone-density-body-fat-measurement-dexa;bookingUrl
+4;Diagnostikum Graz;DEXA;Graz;AT;80 EUR;Y;+433162477;https://diagnostikum.at/en/service/bone-density-body-fat-measurement-dexa;bookingUrl
+5;Dr. Max Chaimowicz;DEXA;Kössen;AT;89 EUR;Y;+43537520004;https://www.chaimowicz.at/dxa-bodyscan;bookingUrl
+6;Diagnostikum Linz;DEXA;Linz;AT;80 EUR;Y;+43732313480;https://diagnostikum.at/en/service/bone-density-body-fat-measurement-dexa;bookingUrl
+7;Diagnostikum Schladming;DEXA;Schladming;AT;80 EUR;Y;+43368723561;https://diagnostikum.at/en/service/bone-density-body-fat-measurement-dexa;bookingUrl
+8;Diagnosezentrum Meidling (Diagnostikum);DEXA;Wien;AT;80 EUR;Y;+4318133381;https://diagnostikum.at/de/locations/diagnosezentrum-meidling;bookingUrl
+9;Radiologie Währing;DEXA;Wien;AT;;Y;+4314706862;https://www.radiologiewaehring.at/unsere-leistungen;price, bookingUrl
+10;Longevity Center / Seegarten Klinik;DEXA;Zürich;CH;290 CHF;Y;+41432430459;https://longevity-center.eu;bookingUrl
+11;Training & Diagnostics Zürich;DEXA;Zürich;CH;189 CHF;Y;+41444404040;https://www.training-and-diagnostics.ch/angebote/tests-diagnostik.html;bookingUrl
+12;VAULT Training;DEXA;Zürich;CH;;Y;+41783377377;https://vaulttraining.ch/science-based-body-composition-scan;price, bookingUrl
+13;Orthopäde Düsseldorf | Privatpraxis MVZ OU Golzheim;DEXA;Düsseldorf;DE;;Y;+492114576995;http://ou-golzheim.de/?utm_source=google&utm_medium=gmb&utm_campaign=profil-praxis;price, bookingUrl
+14;Orthopädie em Veedel;DEXA;Köln;DE;;Y;+4922195587654;https://orthopaedie-em-veedel.de/koerperzusammensetzungsanalyse;price, bookingUrl
+15;Orthopädie Köln Widdersdorf;DEXA;Köln;DE;;Y;+4922196025888;https://orthopaedie-koeln-widdersdorf.de/knochendichtemessung;price, bookingUrl
+16;Praxis für Endokrinologie Nürnberg;DEXA;Nürnberg;DE;;Y;+49911236050;https://hormone-nbg.de/body-composition;price, bookingUrl
+17;Labor Vidotto;BLUT;Wien;AT;16 EUR;Y;+4318691376;https://www.labor-vidotto.at;bookingUrl
+18;labors.at Wien (9 Standorte);BLUT;Wien;AT;;Y;;https://www.labors.at;address, phone, price, bookingUrl
+19;A-Labs Switzerland;BLUT;Adliswil;CH;;Y;;https://a-labs-switzerland.ch/walk-in;address, phone, price, bookingUrl
+20;Viollier AG;BLUT;Basel;CH;;Y;;https://www.viollier.ch;address, phone, price, bookingUrl
+21;LAB TO GO;BLUT;Zürich;CH;;Y;+41442505000;https://labtogo.ch;price, bookingUrl
+22;Labor MEDICA Zürich;BLUT;Zürich;CH;35 CHF;Y;+41442699999;https://medica.ch;bookingUrl
+23;Walk-in Labor Zürich;BLUT;Zürich;CH;27 CHF;Y;+41445152808;https://walkin-labor.ch;bookingUrl
+24;Z-Point (ZetLab);BLUT;Zürich;CH;118 CHF;Y;+41438886292;https://z-point.ch;bookingUrl
+25;Labor Augsburg;BLUT;Augsburg;DE;;Y;;https://www.meindirektlabor.de/standorte/standort/labor-augsburg;address, phone, price, bookingUrl
+26;Mein Direktlabor - Labor Bayreuth;BLUT;Bayreuth;DE;18 EUR;Y;+49921507204566;https://www.meindirektlabor.de/standorte/standort/labor-staber-bayreuth;bookingUrl
+27;Bioscientia Berlin-Tiergarten;BLUT;Berlin;DE;12 EUR;Y;;https://www.meindirektlabor.de/standorte/standort/bioscientia-berlin-tiergarten;address, phone, bookingUrl
+28;Labor 28;BLUT;Berlin;DE;;Y;;https://www.meindirektlabor.de/standorte/standort/labor-28;address, phone, price, bookingUrl
+29;Labor Berlin - Charité Vivantes GmbH;BLUT;Berlin;DE;;N;+49304050260;http://www.laborberlin.com;price, bookingUrl
+30;MDI Limbach Berlin GmbH;BLUT;Berlin;DE;;Y;+49304433640;https://www.mdi-limbach-berlin.de;price, bookingUrl
+31;Mein Direktlabor - Labor Berlin-Marzahn;BLUT;Berlin;DE;12 EUR;Y;+493048526128;https://www.meindirektlabor.de/standorte/standort/bioscientia-berlin-marzahn;bookingUrl
+32;Labor Bremen;BLUT;Bremen;DE;11 EUR;Y;;https://www.meindirektlabor.de/standorte/standort/labor-bremen;address, phone, bookingUrl
+33;Labor Celle;BLUT;Celle;DE;11 EUR;Y;;https://www.meindirektlabor.de/standorte/standort/labor-celle;address, phone, bookingUrl
+34;Medizinische Laboratorien Düsseldorf;BLUT;Düsseldorf;DE;;Y;;https://www.meindirektlabor.de/standorte/standort/medizinische-laboratorien-duesseldorf;address, phone, price, bookingUrl
+35;IMD Labor Frankfurt;BLUT;Frankfurt am Main;DE;;Y;+496924404360;http://www.labffm.de;price, bookingUrl
+36;Zentrallabor Unimedizin Frankfurt;BLUT;Frankfurt am Main;DE;;Y;+496963017376;https://www.unimedizin-ffm.de;price, bookingUrl
+37;Bioscientia Labor Freiburg;BLUT;Freiburg;DE;18 EUR;Y;;https://www.meindirektlabor.de/standorte/standort/bioscientia-labor-freiburg;address, phone, bookingUrl
+38;Mein Direktlabor - Labor Freiburg;BLUT;Freiburg im Breisgau;DE;18 EUR;N;+4976140006580;https://www.meindirektlabor.de/standorte/standort/bioscientia-labor-freiburg;bookingUrl
+39;Mein Direktlabor - Labor Fulda;BLUT;Fulda;DE;18 EUR;Y;+4966195272922;https://www.meindirektlabor.de/standorte/standort/bioscientia-labor-fulda;bookingUrl
+40;Bioscientia Labor Mittelhessen;BLUT;Gießen;DE;12 EUR;Y;;https://www.meindirektlabor.de/standorte/standort/labor-giessen;address, phone, bookingUrl
+41;Bioscientia Labor Gotha;BLUT;Gotha;DE;16 EUR;Y;;https://www.meindirektlabor.de/standorte/standort/labor-gotha;address, phone, bookingUrl
+42;Mein Direktlabor - Labor Gotha;BLUT;Gotha;DE;;N;+493641401412;https://www.meindirektlabor.de;price, bookingUrl
+43;Labor Dr. Heidrich & Kollegen MVZ GmbH;BLUT;Hamburg;DE;;Y;+494097079990;http://www.labor-heidrich.de;price, bookingUrl
+44;Lademannbogen (Sonic Healthcare);BLUT;Hamburg;DE;;Y;;https://www.labor-lademannbogen.de;phone, price, bookingUrl
+45;Medilys Hamburg;BLUT;Hamburg;DE;;Y;;https://medilys.de/fuer-privatpersonen;address, phone, price, bookingUrl
+46;Mein Direktlabor - Labor Hamburg-Nord;BLUT;Hamburg;DE;;Y;+494053805888;https://www.meindirektlabor.de/standorte/standort/mein-direktlabor-hamburg-nord;price, bookingUrl
+47;Mein Direktlabor - Labor Stephansplatz;BLUT;Hamburg;DE;16 EUR;Y;+494076696700;https://www.meindirektlabor.de/standorte/standort/labor-stephansplatz;bookingUrl
+48;amedes Hannover (MVZ wagnerstibbe);BLUT;Hannover;DE;;Y;+495113017950;https://www.amedes-group.com;price, bookingUrl
+49;MVZ Medizinisches Labor Hannover GmbH;BLUT;Hannover;DE;;Y;+49511856220;http://www.mlh.de;price, bookingUrl
+50;Praxis Dr. Kirkamm;BLUT;Hannover;DE;50 EUR;Y;+49511662933;https://www.dr-kirkamm.de;bookingUrl
+51;Mein Direktlabor - Labor Kiel;BLUT;Heikendorf;DE;;Y;+494312183866;https://www.meindirektlabor.de/standorte/standort/labor-kiel;price, bookingUrl
+52;Labor Blackholm MVZ;BLUT;Heilbronn;DE;;N;+49713178760;https://www.blackholm.com;price, bookingUrl
+53;Mein Direktlabor - Labor Ingelheim;BLUT;Ingelheim am Rhein;DE;;Y;+4961327817400;https://www.meindirektlabor.de/standorte/standort/labor-ingelheim;price, bookingUrl
+54;Bioscientia Labor Jena;BLUT;Jena;DE;16 EUR;Y;;https://www.meindirektlabor.de/standorte/standort/bioscientia-labor-jena;address, phone, bookingUrl
+55;Mein Direktlabor - Labor Jena;BLUT;Jena;DE;;N;+493641401320;https://www.meindirektlabor.de;price, bookingUrl
+56;Mein Direktlabor - Labor Karlsruhe;BLUT;Karlsruhe;DE;18 EUR;Y;+497216277550;https://www.meindirektlabor.de/standorte/standort/bioscientia-labor-karlsruhe;bookingUrl
+57;KiELab | Dr. med. Harald Erichsen;BLUT;Kiel;DE;;N;+494316673300;https://www.kielab.de;price, bookingUrl
+58;Mein Direktlabor - Labor Klipphausen;BLUT;Klipphausen;DE;;Y;+49352046350;https://www.meindirektlabor.de;price, bookingUrl
+59;Labor Dr. Quade & Kollegen;BLUT;Köln;DE;;Y;+4922194056427;https://lab-quade.de/fuer_patienten_main.php;address, price, bookingUrl
+60;Labor Dr. Wisplinghoff;BLUT;Köln;DE;;Y;+49221940505940;https://wisplinghoff.de/fuer-patienten/ueberblick;price, bookingUrl
+61;Mein Direktlabor - Labor Köln;BLUT;Köln;DE;;N;+492219355560;https://www.meindirektlabor.de;price, bookingUrl
+62;Mein Direktlabor auf der FIBO;BLUT;Köln;DE;;Y;;https://www.meindirektlabor.de/standorte/standort/fibo-2026;address, phone, price, bookingUrl
+63;Bioscientia Labor Stuttgart;BLUT;Leinfelden-Echterdingen;DE;18 EUR;Y;;https://www.meindirektlabor.de/standorte/standort/bioscientia-labor-stuttgart;address, phone, bookingUrl
+64;Mein Direktlabor - Labor Stuttgart;BLUT;Leinfelden-Echterdingen;DE;;N;+497116522430;https://www.meindirektlabor.de;price, bookingUrl
+65;Mein Direktlabor - Labor Mainz;BLUT;Mainz;DE;15 EUR;Y;+494961315760860;https://www.meindirektlabor.de/standorte/standort/labor-mainz;bookingUrl
+66;MVZ GANZIMMUN GmbH - Arztpraxis;BLUT;Mainz;DE;;N;+4961317205220;https://www.mvz-ganzimmun.de;price, bookingUrl
+67;Labor Becker München;BLUT;München;DE;30 EUR;Y;+49894509170;https://www.labor-becker.de/service/patienten;bookingUrl
+68;Labor Staber München;BLUT;München;DE;18 EUR;Y;;https://www.meindirektlabor.de/standorte/standort/labor-staber-muenchen;address, phone, bookingUrl
+69;Medicover Diagnostics München;BLUT;München;DE;;Y;+49898955780;https://www.medicover-diagnostics.de;price, bookingUrl
+70;Mein Direktlabor - Labor München;BLUT;München;DE;;N;+4989630238980;http://www.meindirektlabor.de;price, bookingUrl
+71;Synlab München;BLUT;München;DE;;Y;;https://www.synlab.de;phone, price, bookingUrl
+72;Labor Staber Nürnberg;BLUT;Nürnberg;DE;18 EUR;Y;;https://www.meindirektlabor.de/standorte/standort/labor-staber-nuernberg;address, phone, bookingUrl
+73;Mein Direktlabor - Labor Nürnberg;BLUT;Nürnberg;DE;;N;+499119447076;https://www.meindirektlabor.de;price, bookingUrl
+74;Mein Direktlabor - Labor Oldenburg;BLUT;Oldenburg;DE;;Y;+4944136140833;https://www.meindirektlabor.de/standorte/standort/labor-oldenburg;price, bookingUrl
+75;Mein Direktlabor Scheeßel;BLUT;Scheeßel;DE;;Y;;https://www.meindirektlabor.de/standorte/standort/mein-direktlabor-scheessel;address, phone, price, bookingUrl
+76;Mein Direktlabor - Labor Saar;BLUT;St. Ingbert;DE;11 EUR;Y;+49689495500;https://www.meindirektlabor.de/standorte/standort/labor-saar;bookingUrl
+77;Mein Direktlabor Sylt;BLUT;Westerland;DE;;Y;;https://www.meindirektlabor.de/standorte/standort/mein-direktlabor-sylt;address, phone, price, bookingUrl
+78;Mein Direktlabor bei der WoGe;BLUT;Worms;DE;12 EUR;Y;;https://www.meindirektlabor.de/standorte/standort/mein-direktlabor-bei-der-woge;address, phone, bookingUrl

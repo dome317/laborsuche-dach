@@ -46,7 +46,7 @@ keywords:
     - { term: "blutabnahme", weight: 1 }
 
 classification:
-  body_comp_confirmed_threshold: 3
+  body_comp_confirmed_threshold: 5
   body_comp_review_threshold: 0
   bone_only_threshold: 3  # bone >= 3 AND body_comp < 1 -> bone only
 

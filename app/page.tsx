@@ -33,7 +33,7 @@ export default function Home() {
         <div className="flex items-center gap-1 px-3 py-2 bg-black/50 backdrop-blur-sm rounded-lg">
           <span>Photo by</span>
           <a
-            href="https://unsplash.com/@vimal_s?utm_source=nextjs-leaflet&utm_medium=referral"
+            href="https://unsplash.com/@vimal_s?utm_source=laborsuche-dach&utm_medium=referral"
             target="_blank"
             rel="noopener noreferrer"
             className="underline hover:text-white transition-colors"
@@ -42,7 +42,7 @@ export default function Home() {
           </a>
           <span>on</span>
           <a
-            href="https://unsplash.com?utm_source=nextjs-leaflet&utm_medium=referral"
+            href="https://unsplash.com?utm_source=laborsuche-dach&utm_medium=referral"
             target="_blank"
             rel="noopener noreferrer"
             className="underline hover:text-white transition-colors"

@@ -24,7 +24,7 @@ export function NavigationButtons() {
             clipRule="evenodd"
           />
         </svg>
-        <span className="text-white">Go to Map</span>
+        <span className="text-white">Zur Karte</span>
         <div className="flex h-9 w-9 items-center justify-center rounded-full bg-zinc-900">
           <div>
             <MoveUpRight className="h-4 w-4 text-white" />
@@ -34,7 +34,7 @@ export function NavigationButtons() {
 
       {/* GitHub button */}
       <a
-        href="https://github.com/wellywahyudi/nextjs-leaflet-starter"
+        href="https://github.com/dome317/laborsuche-dach"
         target="_blank"
         rel="noopener noreferrer"
         className="group flex w-64 items-center justify-between rounded-full bg-white/70 pl-6 pr-2 py-2 text-sm font-semibold text-zinc-900 transition-colors hover:bg-white"

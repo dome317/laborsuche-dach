@@ -11,7 +11,7 @@ export function Hero() {
         </h1>
 
         <p className="text-lg sm:text-xl md:text-2xl text-white/80 max-w-2xl mx-auto">
-          DEXA Body Composition Scans und Blutlabore im DACH-Raum
+          Finde DEXA Body Composition Scans und Selbstzahler-Blutlabore in Deutschland, Österreich und der Schweiz.
         </p>
       </div>
     </div>
