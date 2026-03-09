@@ -96,7 +96,7 @@ function MobileFilterBar() {
   }, [searchOpen]);
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-[1050] pt-3 px-4 pb-2 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm safe-area-top">
+    <div className="fixed top-0 left-0 right-0 z-[1050] pt-[max(1.5rem,env(safe-area-inset-top))] px-4 pb-2 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm">
       <div className="flex items-center gap-2">
         {searchOpen ? (
           <div className="relative flex-1">
@@ -121,7 +121,7 @@ function MobileFilterBar() {
           </div>
         ) : (
           <>
-            <div className="flex-1 overflow-x-auto">
+            <div className="flex-1 overflow-x-auto pr-2">
               <FilterChips compact />
             </div>
             <button
