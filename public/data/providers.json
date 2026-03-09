@@ -1,8 +1,8 @@
 {
   "meta": {
     "version": "2.0.0",
-    "generatedAt": "2026-03-09T01:36:56.125Z",
-    "totalCount": 76,
+    "generatedAt": "2026-03-09T02:25:54.711Z",
+    "totalCount": 89,
     "regions": [
       "AT",
       "CH",
@@ -4677,6 +4677,758 @@
         "selbstzahler",
         "worms",
         "direktlabor"
+      ]
+    },
+    {
+      "id": "knochen-de-008",
+      "name": "Radiologie Heinrichsallee Aachen",
+      "slug": "radiologie-heinrichsallee-aachen",
+      "categories": [
+        "knochendichte"
+      ],
+      "address": {
+        "street": "Heinrichsallee 50-54",
+        "postalCode": "52062",
+        "city": "Aachen",
+        "state": "Nordrhein-Westfalen",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          6.095833,
+          50.7770693
+        ]
+      },
+      "contact": {
+        "phone": "+49 241 946950",
+        "website": "https://www.radiologie-ac.de/vorsorge/osteoporose-diagnostik-dxa-messung-aachen/",
+        "email": null,
+        "bookingUrl": "https://www.doctolib.de/gemeinschaftspraxis/aachen/radiologie-heinrichsallee"
+      },
+      "services": [
+        {
+          "type": "dexa_bone_density",
+          "name": "Knochendichtemessung (DEXA)",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.9,
+            "date": "2026-03-09",
+            "method": "candidate_review",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "candidate_review",
+        "primaryUrl": "https://www.radiologie-ac.de/vorsorge/osteoporose-diagnostik-dxa-messung-aachen/",
+        "collectedAt": "2026-03-09T02:25:54.711Z"
+      },
+      "tags": [
+        "knochendichte",
+        "dexa",
+        "selbstzahler",
+        "aachen",
+        "deutschland"
+      ]
+    },
+    {
+      "id": "knochen-de-009",
+      "name": "MVZ Orthopädie & Unfallchirurgie Golzheim",
+      "slug": "mvz-orthopaedie-unfallchirurgie-golzheim",
+      "categories": [
+        "knochendichte"
+      ],
+      "address": {
+        "street": "Kaiserswerther Straße 253",
+        "postalCode": "40474",
+        "city": "Düsseldorf",
+        "state": "Nordrhein-Westfalen",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          6.7640806,
+          51.2509518
+        ]
+      },
+      "contact": {
+        "phone": "+49 211 4576995",
+        "website": "https://www.ou-golzheim.com/dexa-scan/",
+        "email": null,
+        "bookingUrl": "https://www.doctolib.de/privatpraxis/duesseldorf/orthopaedie-unfallchirurgie-golzheim"
+      },
+      "services": [
+        {
+          "type": "dexa_bone_density",
+          "name": "Knochendichtemessung (DEXA)",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.9,
+            "date": "2026-03-09",
+            "method": "candidate_review",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "candidate_review",
+        "primaryUrl": "https://www.ou-golzheim.com/dexa-scan/",
+        "collectedAt": "2026-03-09T02:25:54.711Z"
+      },
+      "tags": [
+        "knochendichte",
+        "dexa",
+        "selbstzahler",
+        "duesseldorf",
+        "deutschland"
+      ]
+    },
+    {
+      "id": "knochen-de-010",
+      "name": "Osteoporosezentrum Prof. Bartl",
+      "slug": "osteoporosezentrum-prof-bartl",
+      "categories": [
+        "knochendichte"
+      ],
+      "address": {
+        "street": "Kaufingerstraße 15, 5. OG",
+        "postalCode": "80331",
+        "city": "München",
+        "state": "Bayern",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          11.571779,
+          48.1377886
+        ]
+      },
+      "contact": {
+        "phone": "+49 89 200014363",
+        "website": "https://www.osteoporose-bartl.de",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "dexa_bone_density",
+          "name": "Knochendichtemessung (DEXA)",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.9,
+            "date": "2026-03-09",
+            "method": "candidate_review",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "candidate_review",
+        "primaryUrl": "https://www.osteoporose-bartl.de",
+        "collectedAt": "2026-03-09T02:25:54.711Z"
+      },
+      "tags": [
+        "knochendichte",
+        "dexa",
+        "selbstzahler",
+        "muenchen",
+        "deutschland"
+      ]
+    },
+    {
+      "id": "knochen-de-011",
+      "name": "Praxiszentrum Rödertal",
+      "slug": "praxiszentrum-roedertal",
+      "categories": [
+        "knochendichte"
+      ],
+      "address": {
+        "street": "Großmannstraße 5",
+        "postalCode": "01900",
+        "city": "Großröhrsdorf",
+        "state": "Sachsen",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          14.0196123,
+          51.1464053
+        ]
+      },
+      "contact": {
+        "phone": "+49 35952 44796",
+        "website": "https://www.boden-praxis.de/praxiszentrum-roedertal/knochendichtemessung/",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "dexa_bone_density",
+          "name": "Knochendichtemessung (DEXA)",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.9,
+            "date": "2026-03-09",
+            "method": "candidate_review",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "candidate_review",
+        "primaryUrl": "https://www.boden-praxis.de/praxiszentrum-roedertal/knochendichtemessung/",
+        "collectedAt": "2026-03-09T02:25:54.711Z"
+      },
+      "tags": [
+        "knochendichte",
+        "dexa",
+        "selbstzahler",
+        "grossroehrsdorf",
+        "deutschland"
+      ]
+    },
+    {
+      "id": "knochen-de-012",
+      "name": "Radiologie Gladbeck",
+      "slug": "radiologie-gladbeck",
+      "categories": [
+        "knochendichte"
+      ],
+      "address": {
+        "street": "Barbarastraße 1",
+        "postalCode": "45964",
+        "city": "Gladbeck",
+        "state": "Nordrhein-Westfalen",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          6.9873017,
+          51.5747767
+        ]
+      },
+      "contact": {
+        "phone": "+49 2043 946320",
+        "website": "https://www.radgla.de/knochendichtemessung-dxa",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "dexa_bone_density",
+          "name": "Knochendichtemessung (DEXA)",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.9,
+            "date": "2026-03-09",
+            "method": "candidate_review",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "candidate_review",
+        "primaryUrl": "https://www.radgla.de/knochendichtemessung-dxa",
+        "collectedAt": "2026-03-09T02:25:54.711Z"
+      },
+      "tags": [
+        "knochendichte",
+        "dexa",
+        "selbstzahler",
+        "gladbeck",
+        "deutschland"
+      ]
+    },
+    {
+      "id": "knochen-de-013",
+      "name": "Radiologie Betzdorf",
+      "slug": "radiologie-betzdorf",
+      "categories": [
+        "knochendichte"
+      ],
+      "address": {
+        "street": "Im Höfergarten 1",
+        "postalCode": "57518",
+        "city": "Betzdorf",
+        "state": "Rheinland-Pfalz",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          7.8706246,
+          50.7881428
+        ]
+      },
+      "contact": {
+        "phone": "+49 2741 97450",
+        "website": "https://www.radiologie-betzdorf.de",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "dexa_bone_density",
+          "name": "Knochendichtemessung (DEXA)",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.9,
+            "date": "2026-03-09",
+            "method": "candidate_review",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "candidate_review",
+        "primaryUrl": "https://www.radiologie-betzdorf.de",
+        "collectedAt": "2026-03-09T02:25:54.711Z"
+      },
+      "tags": [
+        "knochendichte",
+        "dexa",
+        "selbstzahler",
+        "betzdorf",
+        "deutschland"
+      ]
+    },
+    {
+      "id": "knochen-de-014",
+      "name": "Osteoporosezentrum Hamburg",
+      "slug": "osteoporosezentrum-hamburg",
+      "categories": [
+        "knochendichte"
+      ],
+      "address": {
+        "street": "Neuer Wall 32",
+        "postalCode": "20354",
+        "city": "Hamburg",
+        "state": "Hamburg",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          9.9905286,
+          53.5519111
+        ]
+      },
+      "contact": {
+        "phone": "+49 40 36099800",
+        "website": "https://www.osteoporosezentrum-hamburg.de",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "dexa_bone_density",
+          "name": "Knochendichtemessung (DEXA)",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.9,
+            "date": "2026-03-09",
+            "method": "candidate_review",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "candidate_review",
+        "primaryUrl": "https://www.osteoporosezentrum-hamburg.de",
+        "collectedAt": "2026-03-09T02:25:54.711Z"
+      },
+      "tags": [
+        "knochendichte",
+        "dexa",
+        "selbstzahler",
+        "hamburg",
+        "deutschland"
+      ]
+    },
+    {
+      "id": "knochen-de-015",
+      "name": "Radiologische Praxis Dortmund",
+      "slug": "radiologische-praxis-dortmund",
+      "categories": [
+        "knochendichte"
+      ],
+      "address": {
+        "street": "Europaplatz 7",
+        "postalCode": "44269",
+        "city": "Dortmund",
+        "state": "Nordrhein-Westfalen",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          7.5251927,
+          51.5015209
+        ]
+      },
+      "contact": {
+        "phone": "+49 231 7250500",
+        "website": "https://www.die-radiologen.de/de/leistungen/knochendichtemessung.php",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "dexa_bone_density",
+          "name": "Knochendichtemessung (DEXA)",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.9,
+            "date": "2026-03-09",
+            "method": "candidate_review",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "candidate_review",
+        "primaryUrl": "https://www.die-radiologen.de/de/leistungen/knochendichtemessung.php",
+        "collectedAt": "2026-03-09T02:25:54.711Z"
+      },
+      "tags": [
+        "knochendichte",
+        "dexa",
+        "selbstzahler",
+        "dortmund",
+        "deutschland"
+      ]
+    },
+    {
+      "id": "knochen-de-016",
+      "name": "Lumedis Frankfurt",
+      "slug": "lumedis-frankfurt",
+      "categories": [
+        "knochendichte"
+      ],
+      "address": {
+        "street": "Kaiserstraße 14",
+        "postalCode": "60311",
+        "city": "Frankfurt am Main",
+        "state": "Hessen",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          8.6754303,
+          50.1109843
+        ]
+      },
+      "contact": {
+        "phone": "+49 69 24753120",
+        "website": "https://www.lumedis.de/dxa.html",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "dexa_bone_density",
+          "name": "Knochendichtemessung (DEXA)",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.9,
+            "date": "2026-03-09",
+            "method": "candidate_review",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "candidate_review",
+        "primaryUrl": "https://www.lumedis.de/dxa.html",
+        "collectedAt": "2026-03-09T02:25:54.711Z"
+      },
+      "tags": [
+        "knochendichte",
+        "dexa",
+        "selbstzahler",
+        "frankfurt",
+        "deutschland"
+      ]
+    },
+    {
+      "id": "knochen-de-017",
+      "name": "Orthopädisch Chirurgisches Centrum Wuppertal",
+      "slug": "orthopaedisch-chirurgisches-centrum-wuppertal",
+      "categories": [
+        "knochendichte"
+      ],
+      "address": {
+        "street": "Zwinglistraße 4-6",
+        "postalCode": "42275",
+        "city": "Wuppertal",
+        "state": "Nordrhein-Westfalen",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          7.197608,
+          51.2709313
+        ]
+      },
+      "contact": {
+        "phone": "+49 202 5155140",
+        "website": "https://www.xn--orthopdisch-chirurgisches-centrum-wuppertal-5ud.de/leistung/",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "dexa_bone_density",
+          "name": "Knochendichtemessung (DEXA)",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.9,
+            "date": "2026-03-09",
+            "method": "candidate_review",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "candidate_review",
+        "primaryUrl": "https://www.xn--orthopdisch-chirurgisches-centrum-wuppertal-5ud.de/leistung/",
+        "collectedAt": "2026-03-09T02:25:54.711Z"
+      },
+      "tags": [
+        "knochendichte",
+        "dexa",
+        "selbstzahler",
+        "wuppertal",
+        "deutschland"
+      ]
+    },
+    {
+      "id": "knochen-at-001",
+      "name": "Röntgen Wien Nord",
+      "slug": "roentgen-wien-nord",
+      "categories": [
+        "knochendichte"
+      ],
+      "address": {
+        "street": "Pastorstraße 2a",
+        "postalCode": "1210",
+        "city": "Wien",
+        "state": "Wien",
+        "country": "AT"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          16.4465115,
+          48.2685478
+        ]
+      },
+      "contact": {
+        "phone": "+43 1 25841750",
+        "website": "https://www.roentgen-wien-nord.at/knochendichtemessung/",
+        "email": null,
+        "bookingUrl": "https://termin.roentgen-wien-nord.at"
+      },
+      "services": [
+        {
+          "type": "dexa_bone_density",
+          "name": "Knochendichtemessung (DEXA)",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.9,
+            "date": "2026-03-09",
+            "method": "candidate_review",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "candidate_review",
+        "primaryUrl": "https://www.roentgen-wien-nord.at/knochendichtemessung/",
+        "collectedAt": "2026-03-09T02:25:54.711Z"
+      },
+      "tags": [
+        "knochendichte",
+        "dexa",
+        "selbstzahler",
+        "wien",
+        "oesterreich"
+      ]
+    },
+    {
+      "id": "blut-de-041",
+      "name": "Medicover Diagnostics Martinsried",
+      "slug": "medicover-diagnostics-martinsried",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Lochhamer Str. 29",
+        "postalCode": "82152",
+        "city": "Martinsried",
+        "state": "Bayern",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          11.4516701,
+          48.1123845
+        ]
+      },
+      "contact": {
+        "phone": "+49 89 8955780",
+        "website": "https://www.medicover-diagnostics.de/service/blutentnahme-in-martinsried-bei-muenchen-medicover-diagnostics",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.9,
+            "date": "2026-03-09",
+            "method": "candidate_review",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "candidate_review",
+        "primaryUrl": "https://www.medicover-diagnostics.de/service/blutentnahme-in-martinsried-bei-muenchen-medicover-diagnostics",
+        "collectedAt": "2026-03-09T02:25:54.711Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "martinsried",
+        "deutschland"
+      ]
+    },
+    {
+      "id": "blut-de-042",
+      "name": "Labor Blackholm MVZ Heilbronn",
+      "slug": "labor-blackholm-mvz-heilbronn",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Bahnhofstraße 14",
+        "postalCode": "74072",
+        "city": "Heilbronn",
+        "state": "Baden-Württemberg",
+        "country": "DE"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          9.2113994,
+          49.143281
+        ]
+      },
+      "contact": {
+        "phone": "+49 7131 78760",
+        "website": "https://www.blackholm.com",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.9,
+            "date": "2026-03-09",
+            "method": "candidate_review",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "candidate_review",
+        "primaryUrl": "https://www.blackholm.com",
+        "collectedAt": "2026-03-09T02:25:54.711Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "heilbronn",
+        "deutschland"
       ]
     }
   ]
