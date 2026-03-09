@@ -442,11 +442,16 @@ function ProviderDetail() {
           <div className="flex items-start gap-3">
             <MapPin className="h-4 w-4 text-gray-400 mt-0.5 flex-shrink-0" />
             <div className="text-sm text-gray-700 dark:text-gray-300">
-              <p>{provider.address.street}</p>
+              {provider.address.street && <p>{provider.address.street}</p>}
               <p>
                 {provider.address.postalCode} {provider.address.city}
               </p>
-              <p>{provider.address.state}, {provider.address.country}</p>
+              {provider.address.state && provider.address.state !== provider.address.city && (
+                <p>{provider.address.state}</p>
+              )}
+              <p className="text-slate-400">
+                {{ AT: "Österreich", CH: "Schweiz", DE: "Deutschland" }[provider.address.country] ?? provider.address.country}
+              </p>
             </div>
           </div>
         </div>

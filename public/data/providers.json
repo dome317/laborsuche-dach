@@ -21,7 +21,7 @@
         "street": "Agathastraße 15",
         "postalCode": "3300",
         "city": "Amstetten",
-        "state": "Amstetten",
+        "state": "Niederösterreich",
         "country": "AT"
       },
       "location": {
@@ -83,7 +83,7 @@
         "street": "Elisabethstraße 3",
         "postalCode": "2500",
         "city": "Baden bei Wien",
-        "state": "Baden bei Wien",
+        "state": "Niederösterreich",
         "country": "AT"
       },
       "location": {
@@ -145,7 +145,7 @@
         "street": "Frauentaler Straße 44",
         "postalCode": "8530",
         "city": "Deutschlandsberg",
-        "state": "Deutschlandsberg",
+        "state": "Steiermark",
         "country": "AT"
       },
       "location": {
@@ -207,7 +207,7 @@
         "street": "Weblinger Gürtel 25",
         "postalCode": "8054",
         "city": "Graz",
-        "state": "Graz",
+        "state": "Steiermark",
         "country": "AT"
       },
       "location": {
@@ -269,7 +269,7 @@
         "street": "Alleestraße 32",
         "postalCode": "6345",
         "city": "Kössen",
-        "state": "Kössen",
+        "state": "Tirol",
         "country": "AT"
       },
       "location": {
@@ -331,7 +331,7 @@
         "street": "Saporoshjestraße 3",
         "postalCode": "4030",
         "city": "Linz",
-        "state": "Linz",
+        "state": "Oberösterreich",
         "country": "AT"
       },
       "location": {
@@ -393,7 +393,7 @@
         "street": "Salzburger Straße 777",
         "postalCode": "8970",
         "city": "Schladming",
-        "state": "Schladming",
+        "state": "Steiermark",
         "country": "AT"
       },
       "location": {
@@ -1502,7 +1502,7 @@
         "street": "Kilchbergstrasse 6",
         "postalCode": "8134",
         "city": "Adliswil",
-        "state": "Adliswil",
+        "state": "Zürich",
         "country": "CH"
       },
       "location": {
@@ -1854,9 +1854,9 @@
       ],
       "address": {
         "street": "Karl-Marx-Straße 7A",
-        "postalCode": "",
+        "postalCode": "95444",
         "city": "Bayreuth",
-        "state": "Bayreuth",
+        "state": "Bayern",
         "country": "DE"
       },
       "location": {
@@ -2033,7 +2033,7 @@
       ],
       "address": {
         "street": "Sylter Str. 2",
-        "postalCode": "",
+        "postalCode": "13353",
         "city": "Berlin",
         "state": "Berlin",
         "country": "DE"
@@ -2089,7 +2089,7 @@
       ],
       "address": {
         "street": "Aroser Allee 68",
-        "postalCode": "",
+        "postalCode": "13086",
         "city": "Berlin",
         "state": "Berlin",
         "country": "DE"
@@ -2269,7 +2269,7 @@
         "street": "Neumarkt 1",
         "postalCode": "29221",
         "city": "Celle",
-        "state": "Celle",
+        "state": "Niedersachsen",
         "country": "DE"
       },
       "location": {
@@ -2448,7 +2448,7 @@
         "street": "Gerloser Weg 20",
         "postalCode": "36039",
         "city": "Fulda",
-        "state": "Fulda",
+        "state": "Hessen",
         "country": "DE"
       },
       "location": {
@@ -2509,7 +2509,7 @@
         "street": "Rudolf-Diesel-Str. 4",
         "postalCode": "35394",
         "city": "Gießen",
-        "state": "Gießen",
+        "state": "Hessen",
         "country": "DE"
       },
       "location": {
@@ -2570,7 +2570,7 @@
         "street": "Huttenstraße 7",
         "postalCode": "99867",
         "city": "Gotha",
-        "state": "Gotha",
+        "state": "Thüringen",
         "country": "DE"
       },
       "location": {
@@ -2629,7 +2629,7 @@
       ],
       "address": {
         "street": "Klinikweg 23",
-        "postalCode": "",
+        "postalCode": "22767",
         "city": "Hamburg",
         "state": "Hamburg",
         "country": "DE"
@@ -2859,7 +2859,7 @@
       ],
       "address": {
         "street": "Am Tüv 6",
-        "postalCode": "",
+        "postalCode": "30169",
         "city": "Hannover",
         "state": "Niedersachsen",
         "country": "DE"
@@ -2975,9 +2975,9 @@
       ],
       "address": {
         "street": "Laboer Weg 20A",
-        "postalCode": "",
+        "postalCode": "24226",
         "city": "Heikendorf",
-        "state": "Heikendorf",
+        "state": "Schleswig-Holstein",
         "country": "DE"
       },
       "location": {
@@ -3034,7 +3034,7 @@
         "street": "Konrad-Adenauer-Str. 17",
         "postalCode": "55218",
         "city": "Ingelheim am Rhein",
-        "state": "Ingelheim am Rhein",
+        "state": "Rheinland-Pfalz",
         "country": "DE"
       },
       "location": {
@@ -3091,7 +3091,7 @@
         "street": "Löbstedter Str. 93",
         "postalCode": "07749",
         "city": "Jena",
-        "state": "Jena",
+        "state": "Thüringen",
         "country": "DE"
       },
       "location": {
@@ -3152,7 +3152,7 @@
         "street": "Am Rüppurrer Schloß 1",
         "postalCode": "76199",
         "city": "Karlsruhe",
-        "state": "Karlsruhe",
+        "state": "Baden-Württemberg",
         "country": "DE"
       },
       "location": {
@@ -3213,7 +3213,7 @@
         "street": "Dreiecksplatz 11",
         "postalCode": "24103",
         "city": "Kiel",
-        "state": "Kiel",
+        "state": "Schleswig-Holstein",
         "country": "DE"
       },
       "location": {
@@ -3267,9 +3267,9 @@
       ],
       "address": {
         "street": "Bremer Str. 9/im EG",
-        "postalCode": "",
+        "postalCode": "01665",
         "city": "Klipphausen",
-        "state": "Klipphausen",
+        "state": "Sachsen",
         "country": "DE"
       },
       "location": {
@@ -3323,8 +3323,8 @@
         "blutlabor"
       ],
       "address": {
-        "street": "",
-        "postalCode": "",
+        "street": "Militärringstraße 61",
+        "postalCode": "50937",
         "city": "Köln",
         "state": "Nordrhein-Westfalen",
         "country": "DE"
@@ -3436,7 +3436,7 @@
       ],
       "address": {
         "street": "Hauptstraße 71-73",
-        "postalCode": "",
+        "postalCode": "50670",
         "city": "Köln",
         "state": "Nordrhein-Westfalen",
         "country": "DE"
@@ -3494,7 +3494,7 @@
         "street": "Leinfelder Str. 60",
         "postalCode": "70771",
         "city": "Leinfelden-Echterdingen",
-        "state": "Leinfelden-Echterdingen",
+        "state": "Baden-Württemberg",
         "country": "DE"
       },
       "location": {
@@ -3555,7 +3555,7 @@
         "street": "Wallstraße 3-5",
         "postalCode": "55122",
         "city": "Mainz",
-        "state": "Mainz",
+        "state": "Rheinland-Pfalz",
         "country": "DE"
       },
       "location": {
@@ -3614,9 +3614,9 @@
       ],
       "address": {
         "street": "Erich-Dombrowski-Straße 3",
-        "postalCode": "",
+        "postalCode": "55116",
         "city": "Mainz",
-        "state": "Mainz",
+        "state": "Rheinland-Pfalz",
         "country": "DE"
       },
       "location": {
@@ -3854,7 +3854,7 @@
         "street": "Koppelstraße 1",
         "postalCode": "26135",
         "city": "Oldenburg",
-        "state": "Oldenburg",
+        "state": "Niedersachsen",
         "country": "DE"
       },
       "location": {
@@ -3911,7 +3911,7 @@
         "street": "Am Meyerhof 7",
         "postalCode": "27383",
         "city": "Scheeßel",
-        "state": "Scheeßel",
+        "state": "Niedersachsen",
         "country": "DE"
       },
       "location": {
@@ -3968,7 +3968,7 @@
         "street": "Otto-Kaiser-Str. 8a",
         "postalCode": "66386",
         "city": "St. Ingbert",
-        "state": "St. Ingbert",
+        "state": "Saarland",
         "country": "DE"
       },
       "location": {
@@ -4029,7 +4029,7 @@
         "street": "Dr.-Nicolas-Straße 3",
         "postalCode": "25980",
         "city": "Westerland",
-        "state": "Westerland",
+        "state": "Schleswig-Holstein",
         "country": "DE"
       },
       "location": {
@@ -4086,7 +4086,7 @@
         "street": "Von-Steuben-Str. 17",
         "postalCode": "67549",
         "city": "Worms",
-        "state": "Worms",
+        "state": "Rheinland-Pfalz",
         "country": "DE"
       },
       "location": {
