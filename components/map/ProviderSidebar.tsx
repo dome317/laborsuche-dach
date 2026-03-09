@@ -15,6 +15,7 @@ import {
   Shield,
   Calendar,
   Droplet,
+  Copy,
 } from "lucide-react";
 import { Drawer } from "vaul";
 import { useProviders, haversineKm } from "@/contexts/ProviderContext";
@@ -90,7 +91,7 @@ function MobileFilterBar() {
   }, [searchOpen]);
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-[1050] p-2 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm safe-area-top">
+    <div className="fixed top-0 left-0 right-0 z-[1050] pt-3 px-4 pb-2 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm safe-area-top">
       <div className="flex items-center gap-2">
         {searchOpen ? (
           <div className="relative flex-1">
@@ -483,12 +484,7 @@ function ProviderDetail() {
           {isVerified && (
             <div className="bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-300 rounded-xl px-3 py-2 text-xs flex items-center gap-2">
               <Shield className="h-4 w-4 flex-shrink-0" />
-              <span>
-                Daten verifiziert
-                {verifiedService?.verification.method && (
-                  <> via {verifiedService.verification.method}</>
-                )}
-              </span>
+              <span>Daten verifiziert</span>
             </div>
           )}
 
@@ -514,13 +510,26 @@ function ProviderDetail() {
                 Termin buchen
               </a>
             ) : provider.contact.phone ? (
-              <a
-                href={`tel:${provider.contact.phone}`}
-                className="flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-medium bg-blue-600 text-white hover:bg-blue-700 transition-colors"
-              >
-                <Phone className="h-4 w-4" />
-                Anrufen
-              </a>
+              <>
+                {/* Mobile: tel: link button */}
+                <a
+                  href={`tel:${provider.contact.phone}`}
+                  className="md:hidden flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-medium bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+                >
+                  <Phone className="h-4 w-4" />
+                  Anrufen
+                </a>
+                {/* Desktop: readable phone number with copy */}
+                <button
+                  onClick={() => navigator.clipboard.writeText(provider.contact.phone!)}
+                  className="hidden md:flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-medium bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+                  title="Telefonnummer kopieren"
+                >
+                  <Phone className="h-4 w-4" />
+                  <span className="truncate">{provider.contact.phone}</span>
+                  <Copy className="h-3.5 w-3.5 flex-shrink-0 opacity-70" />
+                </button>
+              </>
             ) : null}
           </div>
 

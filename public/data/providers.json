@@ -1,8 +1,8 @@
 {
   "meta": {
     "version": "2.0.0",
-    "generatedAt": "2026-03-09T00:42:57Z",
-    "totalCount": 78,
+    "generatedAt": "2026-03-09T01:13:09.649Z",
+    "totalCount": 70,
     "regions": [
       "AT",
       "CH",
@@ -11,7 +11,7 @@
   },
   "providers": [
     {
-      "id": "dexa-ams-659",
+      "id": "dexa-at-001",
       "name": "DZAM Diagnosezentrum Amstetten",
       "slug": "dzam-diagnosezentrum-amstetten",
       "categories": [
@@ -44,7 +44,7 @@
           "description": null,
           "selfPay": true,
           "price": {
-            "amount": 75.0,
+            "amount": 75,
             "currency": "EUR",
             "note": "€75"
           },
@@ -73,7 +73,7 @@
       ]
     },
     {
-      "id": "dexa-bad-660",
+      "id": "dexa-at-002",
       "name": "Radiologie Baden",
       "slug": "radiologie-baden",
       "categories": [
@@ -97,7 +97,7 @@
         "phone": "+43225248149",
         "website": "https://www.dzbaden.at/untersuchungen/ganzkoerperfettmessung",
         "email": null,
-        "bookingUrl": null
+        "bookingUrl": "https://www.dzbaden.at/termine-befundabfrage/login-patienten/"
       },
       "services": [
         {
@@ -105,7 +105,11 @@
           "name": "DEXA Body Composition Scan",
           "description": null,
           "selfPay": true,
-          "price": null,
+          "price": {
+            "amount": 70,
+            "currency": "EUR",
+            "note": "€70"
+          },
           "verification": {
             "status": "verified",
             "confidence": 0.95,
@@ -131,7 +135,7 @@
       ]
     },
     {
-      "id": "dexa-deu-658",
+      "id": "dexa-at-003",
       "name": "Diagnostikum Deutschlandsberg",
       "slug": "diagnostikum-deutschlandsberg",
       "categories": [
@@ -164,7 +168,7 @@
           "description": null,
           "selfPay": true,
           "price": {
-            "amount": 80.0,
+            "amount": 80,
             "currency": "EUR",
             "note": "€80"
           },
@@ -193,7 +197,7 @@
       ]
     },
     {
-      "id": "dexa-graz-655",
+      "id": "dexa-at-004",
       "name": "Diagnostikum Graz",
       "slug": "diagnostikum-graz",
       "categories": [
@@ -226,7 +230,7 @@
           "description": null,
           "selfPay": true,
           "price": {
-            "amount": 80.0,
+            "amount": 80,
             "currency": "EUR",
             "note": "€80"
           },
@@ -255,7 +259,7 @@
       ]
     },
     {
-      "id": "dexa-kös-661",
+      "id": "dexa-at-005",
       "name": "Dr. Max Chaimowicz",
       "slug": "dr-max-chaimowicz",
       "categories": [
@@ -279,7 +283,7 @@
         "phone": "+43537520004",
         "website": "https://www.chaimowicz.at/dxa-bodyscan",
         "email": null,
-        "bookingUrl": null
+        "bookingUrl": "https://www.chaimowicz.at/kontakt-ordinationen-termine/"
       },
       "services": [
         {
@@ -288,7 +292,7 @@
           "description": null,
           "selfPay": true,
           "price": {
-            "amount": 89.0,
+            "amount": 89,
             "currency": "EUR",
             "note": "€89"
           },
@@ -317,7 +321,7 @@
       ]
     },
     {
-      "id": "dexa-lin-656",
+      "id": "dexa-at-006",
       "name": "Diagnostikum Linz",
       "slug": "diagnostikum-linz",
       "categories": [
@@ -350,7 +354,7 @@
           "description": null,
           "selfPay": true,
           "price": {
-            "amount": 80.0,
+            "amount": 80,
             "currency": "EUR",
             "note": "€80"
           },
@@ -379,7 +383,7 @@
       ]
     },
     {
-      "id": "dexa-sch-657",
+      "id": "dexa-at-007",
       "name": "Diagnostikum Schladming",
       "slug": "diagnostikum-schladming",
       "categories": [
@@ -412,7 +416,7 @@
           "description": null,
           "selfPay": true,
           "price": {
-            "amount": 80.0,
+            "amount": 80,
             "currency": "EUR",
             "note": "€80"
           },
@@ -441,7 +445,7 @@
       ]
     },
     {
-      "id": "dexa-wien-649",
+      "id": "dexa-at-008",
       "name": "Diagnosezentrum Meidling (Diagnostikum)",
       "slug": "diagnosezentrum-meidling-diagnostikum",
       "categories": [
@@ -474,7 +478,7 @@
           "description": null,
           "selfPay": true,
           "price": {
-            "amount": 80.0,
+            "amount": 80,
             "currency": "EUR",
             "note": "€80"
           },
@@ -503,7 +507,7 @@
       ]
     },
     {
-      "id": "dexa-wien-650",
+      "id": "dexa-at-009",
       "name": "Radiologie Währing",
       "slug": "radiologie-waehring",
       "categories": [
@@ -527,7 +531,7 @@
         "phone": "+4314706862",
         "website": "https://www.radiologiewaehring.at/unsere-leistungen",
         "email": null,
-        "bookingUrl": null
+        "bookingUrl": "https://www.radiologiewaehring.at/termin-vereinbaren/"
       },
       "services": [
         {
@@ -561,7 +565,7 @@
       ]
     },
     {
-      "id": "dexa-zrh-new1",
+      "id": "dexa-ch-001",
       "name": "Longevity Center / Seegarten Klinik",
       "slug": "longevity-center-seegarten-klinik",
       "categories": [
@@ -594,7 +598,7 @@
           "description": null,
           "selfPay": true,
           "price": {
-            "amount": 290.0,
+            "amount": 290,
             "currency": "CHF",
             "note": "CHF 290"
           },
@@ -623,7 +627,7 @@
       ]
     },
     {
-      "id": "dexa-zrh-662",
+      "id": "dexa-ch-002",
       "name": "Training & Diagnostics Zürich",
       "slug": "training-diagnostics-zuerich",
       "categories": [
@@ -656,7 +660,7 @@
           "description": null,
           "selfPay": true,
           "price": {
-            "amount": 189.0,
+            "amount": 189,
             "currency": "CHF",
             "note": "CHF 189"
           },
@@ -685,7 +689,7 @@
       ]
     },
     {
-      "id": "dexa-zrh-663",
+      "id": "dexa-ch-003",
       "name": "VAULT Training",
       "slug": "vault-training",
       "categories": [
@@ -743,79 +747,7 @@
       ]
     },
     {
-      "id": "dexa-düs-440",
-      "name": "Orthopäde Düsseldorf | Privatpraxis MVZ OU Golzheim",
-      "slug": "orthopaede-duesseldorf-privatpraxis-mvz-ou-golzheim",
-      "categories": [
-        "dexa_body_composition"
-      ],
-      "address": {
-        "street": "Kaiserswerther Str. 253",
-        "postalCode": "",
-        "city": "Düsseldorf",
-        "state": "Nordrhein-Westfalen",
-        "country": "DE"
-      },
-      "location": {
-        "type": "Point",
-        "coordinates": [
-          6.7640806,
-          51.2509518
-        ]
-      },
-      "contact": {
-        "phone": "+492114576995",
-        "website": "http://ou-golzheim.de/?utm_source=google&utm_medium=gmb&utm_campaign=profil-praxis",
-        "email": null,
-        "bookingUrl": null
-      },
-      "services": [
-        {
-          "type": "dexa_body_composition",
-          "name": "DEXA Body Composition Scan",
-          "description": null,
-          "selfPay": true,
-          "price": null,
-          "verification": {
-            "status": "verified",
-            "confidence": 0.9,
-            "date": "2026-03-09",
-            "method": "website_service_page",
-            "notes": null
-          }
-        },
-        {
-          "type": "dexa_bone_density",
-          "name": "DEXA Knochendichtemessung",
-          "description": null,
-          "selfPay": true,
-          "price": null,
-          "verification": {
-            "status": "verified",
-            "confidence": 0.9,
-            "date": "2026-03-09",
-            "method": "website_service_page",
-            "notes": null
-          }
-        }
-      ],
-      "selfPay": true,
-      "verified": true,
-      "source": {
-        "origin": "apify",
-        "primaryUrl": "http://ou-golzheim.de/?utm_source=google&utm_medium=gmb&utm_campaign=profil-praxis",
-        "collectedAt": "2026-03-09T00:37:38Z"
-      },
-      "tags": [
-        "dexa",
-        "body-composition",
-        "knochendichte",
-        "selbstzahler",
-        "düsseldorf"
-      ]
-    },
-    {
-      "id": "dexa-cgn-new1",
+      "id": "dexa-de-001",
       "name": "Orthopädie em Veedel",
       "slug": "orthopaedie-em-veedel",
       "categories": [
@@ -839,7 +771,7 @@
         "phone": "+4922195587654",
         "website": "https://orthopaedie-em-veedel.de/koerperzusammensetzungsanalyse",
         "email": null,
-        "bookingUrl": null
+        "bookingUrl": "https://www.doctolib.de/einzelpraxis/koeln/orthopaedie-em-veedel"
       },
       "services": [
         {
@@ -872,7 +804,7 @@
       ]
     },
     {
-      "id": "dexa-cgn-664",
+      "id": "dexa-de-002",
       "name": "Orthopädie Köln Widdersdorf",
       "slug": "orthopaedie-koeln-widdersdorf",
       "categories": [
@@ -896,7 +828,7 @@
         "phone": "+4922196025888",
         "website": "https://orthopaedie-koeln-widdersdorf.de/knochendichtemessung",
         "email": null,
-        "bookingUrl": null
+        "bookingUrl": "https://orthopaedie-koeln-widdersdorf.de/wordpress_P/index.php/terminanfrage/"
       },
       "services": [
         {
@@ -929,7 +861,7 @@
       ]
     },
     {
-      "id": "dexa-nue-665",
+      "id": "dexa-de-003",
       "name": "Praxis für Endokrinologie Nürnberg",
       "slug": "praxis-fuer-endokrinologie-nuernberg",
       "categories": [
@@ -986,7 +918,7 @@
       ]
     },
     {
-      "id": "blut-wien-667",
+      "id": "blut-at-001",
       "name": "Labor Vidotto",
       "slug": "labor-vidotto",
       "categories": [
@@ -1010,7 +942,7 @@
         "phone": "+4318691376",
         "website": "https://www.labor-vidotto.at",
         "email": null,
-        "bookingUrl": null
+        "bookingUrl": "https://www.labor-vidotto.at/termine/"
       },
       "services": [
         {
@@ -1019,7 +951,7 @@
           "description": null,
           "selfPay": true,
           "price": {
-            "amount": 16.0,
+            "amount": 16,
             "currency": "EUR",
             "note": "€16"
           },
@@ -1047,15 +979,15 @@
       ]
     },
     {
-      "id": "blut-wien-666",
-      "name": "labors.at Wien (9 Standorte)",
-      "slug": "labors-at-wien-9-standorte",
+      "id": "blut-at-002",
+      "name": "labors.at Wien 2",
+      "slug": "labors-at-wien-2",
       "categories": [
         "blutlabor"
       ],
       "address": {
-        "street": "",
-        "postalCode": "",
+        "street": "Praterstraße 22",
+        "postalCode": "1020",
         "city": "Wien",
         "state": "Wien",
         "country": "AT"
@@ -1063,13 +995,13 @@
       "location": {
         "type": "Point",
         "coordinates": [
-          16.3725042,
-          48.2083537
+          16.3908,
+          48.2167
         ]
       },
       "contact": {
-        "phone": null,
-        "website": "https://www.labors.at",
+        "phone": "+43 1 260530",
+        "website": "https://www.labors.at/standorte/",
         "email": null,
         "bookingUrl": null
       },
@@ -1084,7 +1016,7 @@
             "status": "verified",
             "confidence": 0.95,
             "date": "2026-03-09",
-            "method": "llm_recherche_manual",
+            "method": "llm_recherche",
             "notes": null
           }
         }
@@ -1093,8 +1025,8 @@
       "verified": true,
       "source": {
         "origin": "llm_recherche",
-        "primaryUrl": "https://www.labors.at/faq/",
-        "collectedAt": "2026-03-09T00:37:38Z"
+        "primaryUrl": "https://www.labors.at/standorte/",
+        "collectedAt": "2026-03-09T01:13:09.639Z"
       },
       "tags": [
         "blutlabor",
@@ -1104,15 +1036,471 @@
       ]
     },
     {
-      "id": "blut-adl-672",
+      "id": "blut-at-003",
+      "name": "labors.at Wien 10",
+      "slug": "labors-at-wien-10",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Favoritenstraße 80",
+        "postalCode": "1100",
+        "city": "Wien",
+        "state": "Wien",
+        "country": "AT"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          16.3737,
+          48.17
+        ]
+      },
+      "contact": {
+        "phone": "+43 1 260530",
+        "website": "https://www.labors.at/standorte/",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.95,
+            "date": "2026-03-09",
+            "method": "llm_recherche",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "llm_recherche",
+        "primaryUrl": "https://www.labors.at/standorte/",
+        "collectedAt": "2026-03-09T01:13:09.640Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "wien",
+        "österreich"
+      ]
+    },
+    {
+      "id": "blut-at-004",
+      "name": "labors.at Wien 11",
+      "slug": "labors-at-wien-11",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Simmeringer Hauptstraße 147",
+        "postalCode": "1110",
+        "city": "Wien",
+        "state": "Wien",
+        "country": "AT"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          16.4175,
+          48.1715
+        ]
+      },
+      "contact": {
+        "phone": "+43 1 260530",
+        "website": "https://www.labors.at/standorte/",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.95,
+            "date": "2026-03-09",
+            "method": "llm_recherche",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "llm_recherche",
+        "primaryUrl": "https://www.labors.at/standorte/",
+        "collectedAt": "2026-03-09T01:13:09.640Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "wien",
+        "österreich"
+      ]
+    },
+    {
+      "id": "blut-at-005",
+      "name": "labors.at Wien 12",
+      "slug": "labors-at-wien-12",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Meidlinger Hauptstraße 7-9",
+        "postalCode": "1120",
+        "city": "Wien",
+        "state": "Wien",
+        "country": "AT"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          16.33,
+          48.175
+        ]
+      },
+      "contact": {
+        "phone": "+43 1 260530",
+        "website": "https://www.labors.at/standorte/",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.95,
+            "date": "2026-03-09",
+            "method": "llm_recherche",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "llm_recherche",
+        "primaryUrl": "https://www.labors.at/standorte/",
+        "collectedAt": "2026-03-09T01:13:09.640Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "wien",
+        "österreich"
+      ]
+    },
+    {
+      "id": "blut-at-006",
+      "name": "labors.at Wien 13",
+      "slug": "labors-at-wien-13",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Hietzinger Kai 131/1.1",
+        "postalCode": "1130",
+        "city": "Wien",
+        "state": "Wien",
+        "country": "AT"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          16.2926,
+          48.1875
+        ]
+      },
+      "contact": {
+        "phone": "+43 1 260530",
+        "website": "https://www.labors.at/standorte/",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.95,
+            "date": "2026-03-09",
+            "method": "llm_recherche",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "llm_recherche",
+        "primaryUrl": "https://www.labors.at/standorte/",
+        "collectedAt": "2026-03-09T01:13:09.640Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "wien",
+        "österreich"
+      ]
+    },
+    {
+      "id": "blut-at-007",
+      "name": "labors.at Wien 15",
+      "slug": "labors-at-wien-15",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Meiselstraße 8",
+        "postalCode": "1150",
+        "city": "Wien",
+        "state": "Wien",
+        "country": "AT"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          16.335,
+          48.195
+        ]
+      },
+      "contact": {
+        "phone": "+43 1 260530",
+        "website": "https://www.labors.at/standorte/",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.95,
+            "date": "2026-03-09",
+            "method": "llm_recherche",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "llm_recherche",
+        "primaryUrl": "https://www.labors.at/standorte/",
+        "collectedAt": "2026-03-09T01:13:09.640Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "wien",
+        "österreich"
+      ]
+    },
+    {
+      "id": "blut-at-008",
+      "name": "labors.at Wien 20",
+      "slug": "labors-at-wien-20",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Leithastraße 19-23",
+        "postalCode": "1200",
+        "city": "Wien",
+        "state": "Wien",
+        "country": "AT"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          16.375,
+          48.235
+        ]
+      },
+      "contact": {
+        "phone": "+43 1 260530",
+        "website": "https://www.labors.at/standorte/",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.95,
+            "date": "2026-03-09",
+            "method": "llm_recherche",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "llm_recherche",
+        "primaryUrl": "https://www.labors.at/standorte/",
+        "collectedAt": "2026-03-09T01:13:09.640Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "wien",
+        "österreich"
+      ]
+    },
+    {
+      "id": "blut-at-009",
+      "name": "labors.at Wien 21",
+      "slug": "labors-at-wien-21",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Kürschnergasse 6B",
+        "postalCode": "1210",
+        "city": "Wien",
+        "state": "Wien",
+        "country": "AT"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          16.3995,
+          48.27
+        ]
+      },
+      "contact": {
+        "phone": "+43 1 260535121",
+        "website": "https://www.labors.at/standorte/",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.95,
+            "date": "2026-03-09",
+            "method": "llm_recherche",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "llm_recherche",
+        "primaryUrl": "https://www.labors.at/standorte/",
+        "collectedAt": "2026-03-09T01:13:09.640Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "wien",
+        "österreich"
+      ]
+    },
+    {
+      "id": "blut-at-010",
+      "name": "labors.at Wien 22",
+      "slug": "labors-at-wien-22",
+      "categories": [
+        "blutlabor"
+      ],
+      "address": {
+        "street": "Langobardenstraße 103B",
+        "postalCode": "1220",
+        "city": "Wien",
+        "state": "Wien",
+        "country": "AT"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          16.47,
+          48.225
+        ]
+      },
+      "contact": {
+        "phone": "+43 1 260530",
+        "website": "https://www.labors.at/standorte/",
+        "email": null,
+        "bookingUrl": null
+      },
+      "services": [
+        {
+          "type": "blood_test_self_pay",
+          "name": "Blutuntersuchung Selbstzahler",
+          "description": null,
+          "selfPay": true,
+          "price": null,
+          "verification": {
+            "status": "verified",
+            "confidence": 0.95,
+            "date": "2026-03-09",
+            "method": "llm_recherche",
+            "notes": null
+          }
+        }
+      ],
+      "selfPay": true,
+      "verified": true,
+      "source": {
+        "origin": "llm_recherche",
+        "primaryUrl": "https://www.labors.at/standorte/",
+        "collectedAt": "2026-03-09T01:13:09.640Z"
+      },
+      "tags": [
+        "blutlabor",
+        "selbstzahler",
+        "wien",
+        "österreich"
+      ]
+    },
+    {
+      "id": "blut-ch-001",
       "name": "A-Labs Switzerland",
       "slug": "a-labs-switzerland",
       "categories": [
         "blutlabor"
       ],
       "address": {
-        "street": "",
-        "postalCode": "",
+        "street": "Kilchbergstrasse 6",
+        "postalCode": "8134",
         "city": "Adliswil",
         "state": "Adliswil",
         "country": "CH"
@@ -1125,7 +1513,7 @@
         ]
       },
       "contact": {
-        "phone": null,
+        "phone": "+41 44 442 00 09",
         "website": "https://a-labs-switzerland.ch/walk-in",
         "email": null,
         "bookingUrl": null
@@ -1161,64 +1549,7 @@
       ]
     },
     {
-      "id": "blut-bsl-683",
-      "name": "Viollier AG",
-      "slug": "viollier-ag",
-      "categories": [
-        "blutlabor"
-      ],
-      "address": {
-        "street": "",
-        "postalCode": "",
-        "city": "Basel",
-        "state": "Basel",
-        "country": "CH"
-      },
-      "location": {
-        "type": "Point",
-        "coordinates": [
-          7.5878261,
-          47.5581077
-        ]
-      },
-      "contact": {
-        "phone": null,
-        "website": "https://www.viollier.ch",
-        "email": null,
-        "bookingUrl": null
-      },
-      "services": [
-        {
-          "type": "blood_test_self_pay",
-          "name": "Blutuntersuchung Selbstzahler",
-          "description": null,
-          "selfPay": true,
-          "price": null,
-          "verification": {
-            "status": "verified",
-            "confidence": 0.95,
-            "date": "2026-03-09",
-            "method": "llm_recherche_manual",
-            "notes": null
-          }
-        }
-      ],
-      "selfPay": true,
-      "verified": true,
-      "source": {
-        "origin": "llm_recherche",
-        "primaryUrl": "https://www.viollier.ch",
-        "collectedAt": "2026-03-09T00:37:38Z"
-      },
-      "tags": [
-        "blutlabor",
-        "selbstzahler",
-        "basel",
-        "schweiz"
-      ]
-    },
-    {
-      "id": "blut-zrh-668",
+      "id": "blut-ch-002",
       "name": "LAB TO GO",
       "slug": "lab-to-go",
       "categories": [
@@ -1242,7 +1573,7 @@
         "phone": "+41442505000",
         "website": "https://labtogo.ch",
         "email": null,
-        "bookingUrl": null
+        "bookingUrl": "https://labtogo.ch/termin-buchen-laboranalyse/"
       },
       "services": [
         {
@@ -1275,7 +1606,7 @@
       ]
     },
     {
-      "id": "blut-zrh-671",
+      "id": "blut-ch-003",
       "name": "Labor MEDICA Zürich",
       "slug": "labor-medica-zuerich",
       "categories": [
@@ -1336,7 +1667,7 @@
       ]
     },
     {
-      "id": "blut-zrh-669",
+      "id": "blut-ch-004",
       "name": "Walk-in Labor Zürich",
       "slug": "walk-in-labor-zuerich",
       "categories": [
@@ -1369,7 +1700,7 @@
           "description": null,
           "selfPay": true,
           "price": {
-            "amount": 27.0,
+            "amount": 27,
             "currency": "CHF",
             "note": "CHF 27"
           },
@@ -1397,7 +1728,7 @@
       ]
     },
     {
-      "id": "blut-zrh-670",
+      "id": "blut-ch-005",
       "name": "Z-Point (ZetLab)",
       "slug": "z-point-zetlab",
       "categories": [
@@ -1430,7 +1761,7 @@
           "description": null,
           "selfPay": true,
           "price": {
-            "amount": 118.0,
+            "amount": 118,
             "currency": "CHF",
             "note": "CHF 118"
           },
@@ -1458,15 +1789,15 @@
       ]
     },
     {
-      "id": "blut-aug-640",
+      "id": "blut-de-001",
       "name": "Labor Augsburg",
       "slug": "labor-augsburg",
       "categories": [
         "blutlabor"
       ],
       "address": {
-        "street": "",
-        "postalCode": "",
+        "street": "August-Wessels-Str. 5",
+        "postalCode": "86154",
         "city": "Augsburg",
         "state": "Bayern",
         "country": "DE"
@@ -1479,7 +1810,7 @@
         ]
       },
       "contact": {
-        "phone": null,
+        "phone": "+49 821 42010",
         "website": "https://www.meindirektlabor.de/standorte/standort/labor-augsburg",
         "email": null,
         "bookingUrl": null
@@ -1515,7 +1846,7 @@
       ]
     },
     {
-      "id": "blut-bay-031",
+      "id": "blut-de-002",
       "name": "Mein Direktlabor - Labor Bayreuth",
       "slug": "mein-direktlabor-labor-bayreuth",
       "categories": [
@@ -1539,7 +1870,7 @@
         "phone": "+49921507204566",
         "website": "https://www.meindirektlabor.de/standorte/standort/labor-staber-bayreuth",
         "email": null,
-        "bookingUrl": null
+        "bookingUrl": "https://www.meindirektlabor.de/termine/"
       },
       "services": [
         {
@@ -1548,7 +1879,7 @@
           "description": null,
           "selfPay": true,
           "price": {
-            "amount": 18.0,
+            "amount": 18,
             "currency": "EUR",
             "note": "ab 18 "
           },
@@ -1576,15 +1907,15 @@
       ]
     },
     {
-      "id": "blut-ber-631",
+      "id": "blut-de-003",
       "name": "Bioscientia Berlin-Tiergarten",
       "slug": "bioscientia-berlin-tiergarten",
       "categories": [
         "blutlabor"
       ],
       "address": {
-        "street": "",
-        "postalCode": "",
+        "street": "Lützowstr. 24-26",
+        "postalCode": "10785",
         "city": "Berlin",
         "state": "Berlin",
         "country": "DE"
@@ -1597,10 +1928,10 @@
         ]
       },
       "contact": {
-        "phone": null,
+        "phone": "+49 30 48526136",
         "website": "https://www.meindirektlabor.de/standorte/standort/bioscientia-berlin-tiergarten",
         "email": null,
-        "bookingUrl": null
+        "bookingUrl": "https://www.meindirektlabor.de/termine/"
       },
       "services": [
         {
@@ -1609,7 +1940,7 @@
           "description": null,
           "selfPay": true,
           "price": {
-            "amount": 12.0,
+            "amount": 12,
             "currency": "EUR",
             "note": "ab 12 "
           },
@@ -1637,15 +1968,15 @@
       ]
     },
     {
-      "id": "blut-ber-632",
+      "id": "blut-de-004",
       "name": "Labor 28",
       "slug": "labor-28",
       "categories": [
         "blutlabor"
       ],
       "address": {
-        "street": "",
-        "postalCode": "",
+        "street": "Mecklenburgische Str. 28",
+        "postalCode": "14197",
         "city": "Berlin",
         "state": "Berlin",
         "country": "DE"
@@ -1658,10 +1989,10 @@
         ]
       },
       "contact": {
-        "phone": null,
+        "phone": "+49 30 820930",
         "website": "https://www.meindirektlabor.de/standorte/standort/labor-28",
         "email": null,
-        "bookingUrl": null
+        "bookingUrl": "https://www.doctolib.de/labor/berlin/sonic-healthcare-medizinisches-versorgungszentrum-labor-28-gmbh"
       },
       "services": [
         {
@@ -1694,7 +2025,7 @@
       ]
     },
     {
-      "id": "blut-ber-054",
+      "id": "blut-de-005",
       "name": "Labor Berlin - Charité Vivantes GmbH",
       "slug": "labor-berlin-charit-vivantes-gmbh",
       "categories": [
@@ -1716,7 +2047,7 @@
       },
       "contact": {
         "phone": "+49304050260",
-        "website": "http://www.laborberlin.com",
+        "website": "https://mein.laborberlin.com",
         "email": null,
         "bookingUrl": null
       },
@@ -1750,7 +2081,7 @@
       ]
     },
     {
-      "id": "blut-ber-083",
+      "id": "blut-de-006",
       "name": "MDI Limbach Berlin GmbH",
       "slug": "mdi-limbach-berlin-gmbh",
       "categories": [
@@ -1806,7 +2137,7 @@
       ]
     },
     {
-      "id": "blut-ber-050",
+      "id": "blut-de-007",
       "name": "Mein Direktlabor - Labor Berlin-Marzahn",
       "slug": "mein-direktlabor-labor-berlin-marzahn",
       "categories": [
@@ -1814,7 +2145,7 @@
       ],
       "address": {
         "street": "Mehrower Allee 22",
-        "postalCode": "",
+        "postalCode": "12687",
         "city": "Berlin",
         "state": "Berlin",
         "country": "DE"
@@ -1827,10 +2158,10 @@
         ]
       },
       "contact": {
-        "phone": "+493048526128",
+        "phone": "+49 30 48526128",
         "website": "https://www.meindirektlabor.de/standorte/standort/bioscientia-berlin-marzahn",
         "email": null,
-        "bookingUrl": null
+        "bookingUrl": "https://www.meindirektlabor.de/termine/"
       },
       "services": [
         {
@@ -1839,7 +2170,7 @@
           "description": null,
           "selfPay": true,
           "price": {
-            "amount": 12.0,
+            "amount": 12,
             "currency": "EUR",
             "note": "ab 12 "
           },
@@ -1867,15 +2198,15 @@
       ]
     },
     {
-      "id": "blut-bre-629",
+      "id": "blut-de-008",
       "name": "Labor Bremen",
       "slug": "labor-bremen",
       "categories": [
         "blutlabor"
       ],
       "address": {
-        "street": "",
-        "postalCode": "",
+        "street": "Haferwende 12",
+        "postalCode": "28357",
         "city": "Bremen",
         "state": "Bremen",
         "country": "DE"
@@ -1888,7 +2219,7 @@
         ]
       },
       "contact": {
-        "phone": null,
+        "phone": "+49 421 20720",
         "website": "https://www.meindirektlabor.de/standorte/standort/labor-bremen",
         "email": null,
         "bookingUrl": null
@@ -1928,15 +2259,15 @@
       ]
     },
     {
-      "id": "blut-cel-630",
+      "id": "blut-de-009",
       "name": "Labor Celle",
       "slug": "labor-celle",
       "categories": [
         "blutlabor"
       ],
       "address": {
-        "street": "",
-        "postalCode": "",
+        "street": "Neumarkt 1",
+        "postalCode": "29221",
         "city": "Celle",
         "state": "Celle",
         "country": "DE"
@@ -1949,7 +2280,7 @@
         ]
       },
       "contact": {
-        "phone": null,
+        "phone": "+49 5141 92560",
         "website": "https://www.meindirektlabor.de/standorte/standort/labor-celle",
         "email": null,
         "bookingUrl": null
@@ -1989,15 +2320,15 @@
       ]
     },
     {
-      "id": "blut-düs-633",
+      "id": "blut-de-010",
       "name": "Medizinische Laboratorien Düsseldorf",
       "slug": "medizinische-laboratorien-duesseldorf",
       "categories": [
         "blutlabor"
       ],
       "address": {
-        "street": "",
-        "postalCode": "",
+        "street": "Nordstraße 44",
+        "postalCode": "40477",
         "city": "Düsseldorf",
         "state": "Nordrhein-Westfalen",
         "country": "DE"
@@ -2010,10 +2341,10 @@
         ]
       },
       "contact": {
-        "phone": null,
+        "phone": "+49 211 49780",
         "website": "https://www.meindirektlabor.de/standorte/standort/medizinische-laboratorien-duesseldorf",
         "email": null,
-        "bookingUrl": null
+        "bookingUrl": "https://www.doctolib.de/gemeinschaftspraxis/duesseldorf/medizinische-laboratorien-duesseldorf/"
       },
       "services": [
         {
@@ -2046,127 +2377,15 @@
       ]
     },
     {
-      "id": "blut-fra-144",
-      "name": "IMD Labor Frankfurt",
-      "slug": "imd-labor-frankfurt",
-      "categories": [
-        "blutlabor"
-      ],
-      "address": {
-        "street": "Heidelberger Str. 13",
-        "postalCode": "",
-        "city": "Frankfurt am Main",
-        "state": "Frankfurt am Main",
-        "country": "DE"
-      },
-      "location": {
-        "type": "Point",
-        "coordinates": [
-          8.6557912,
-          50.1010596
-        ]
-      },
-      "contact": {
-        "phone": "+496924404360",
-        "website": "http://www.labffm.de",
-        "email": null,
-        "bookingUrl": null
-      },
-      "services": [
-        {
-          "type": "blood_test_self_pay",
-          "name": "Blutuntersuchung Selbstzahler",
-          "description": null,
-          "selfPay": true,
-          "price": null,
-          "verification": {
-            "status": "verified",
-            "confidence": 0.95,
-            "date": "2026-03-09",
-            "method": "llm_recherche_manual",
-            "notes": null
-          }
-        }
-      ],
-      "selfPay": true,
-      "verified": true,
-      "source": {
-        "origin": "llm_recherche",
-        "primaryUrl": "https://labffm.de",
-        "collectedAt": "2026-03-09T00:37:38Z"
-      },
-      "tags": [
-        "blutlabor",
-        "selbstzahler",
-        "frankfurt am main"
-      ]
-    },
-    {
-      "id": "blut-fra-680",
-      "name": "Zentrallabor Unimedizin Frankfurt",
-      "slug": "zentrallabor-unimedizin-frankfurt",
-      "categories": [
-        "blutlabor"
-      ],
-      "address": {
-        "street": "Theodor-Stern-Kai 7, Haus 23A",
-        "postalCode": "60590",
-        "city": "Frankfurt am Main",
-        "state": "Frankfurt am Main",
-        "country": "DE"
-      },
-      "location": {
-        "type": "Point",
-        "coordinates": [
-          8.6820917,
-          50.1106444
-        ]
-      },
-      "contact": {
-        "phone": "+496963017376",
-        "website": "https://www.unimedizin-ffm.de",
-        "email": null,
-        "bookingUrl": null
-      },
-      "services": [
-        {
-          "type": "blood_test_self_pay",
-          "name": "Blutuntersuchung Selbstzahler",
-          "description": null,
-          "selfPay": true,
-          "price": null,
-          "verification": {
-            "status": "verified",
-            "confidence": 0.95,
-            "date": "2026-03-09",
-            "method": "llm_recherche_manual",
-            "notes": null
-          }
-        }
-      ],
-      "selfPay": true,
-      "verified": true,
-      "source": {
-        "origin": "llm_recherche",
-        "primaryUrl": "https://www.unimedizin-ffm.de/",
-        "collectedAt": "2026-03-09T00:37:38Z"
-      },
-      "tags": [
-        "blutlabor",
-        "selbstzahler",
-        "frankfurt am main"
-      ]
-    },
-    {
-      "id": "blut-fre-643",
+      "id": "blut-de-011",
       "name": "Bioscientia Labor Freiburg",
       "slug": "bioscientia-labor-freiburg",
       "categories": [
         "blutlabor"
       ],
       "address": {
-        "street": "",
-        "postalCode": "",
+        "street": "Berliner Allee 2",
+        "postalCode": "79110",
         "city": "Freiburg",
         "state": "Baden-Württemberg",
         "country": "DE"
@@ -2179,10 +2398,10 @@
         ]
       },
       "contact": {
-        "phone": null,
+        "phone": "+49 761 40006580",
         "website": "https://www.meindirektlabor.de/standorte/standort/bioscientia-labor-freiburg",
         "email": null,
-        "bookingUrl": null
+        "bookingUrl": "https://www.meindirektlabor.de/termine/"
       },
       "services": [
         {
@@ -2191,7 +2410,7 @@
           "description": null,
           "selfPay": true,
           "price": {
-            "amount": 18.0,
+            "amount": 18,
             "currency": "EUR",
             "note": "ab 18 "
           },
@@ -2219,67 +2438,7 @@
       ]
     },
     {
-      "id": "blut-fre-051",
-      "name": "Mein Direktlabor - Labor Freiburg",
-      "slug": "mein-direktlabor-labor-freiburg",
-      "categories": [
-        "blutlabor"
-      ],
-      "address": {
-        "street": "Berliner Allee 2",
-        "postalCode": "",
-        "city": "Freiburg im Breisgau",
-        "state": "Freiburg im Breisgau",
-        "country": "DE"
-      },
-      "location": {
-        "type": "Point",
-        "coordinates": [
-          7.829449,
-          48.0080463
-        ]
-      },
-      "contact": {
-        "phone": "+4976140006580",
-        "website": "https://www.meindirektlabor.de/standorte/standort/bioscientia-labor-freiburg",
-        "email": null,
-        "bookingUrl": null
-      },
-      "services": [
-        {
-          "type": "blood_test_self_pay",
-          "name": "Blutuntersuchung Selbstzahler",
-          "description": null,
-          "selfPay": true,
-          "price": {
-            "amount": 18.0,
-            "currency": "EUR",
-            "note": "ab 18 "
-          },
-          "verification": {
-            "status": "unverified",
-            "confidence": 0.6,
-            "date": "2026-03-09",
-            "method": "google_places",
-            "notes": null
-          }
-        }
-      ],
-      "selfPay": true,
-      "verified": false,
-      "source": {
-        "origin": "apify",
-        "primaryUrl": "https://www.meindirektlabor.de/standorte/standort/bioscientia-labor-freiburg",
-        "collectedAt": "2026-03-09T00:37:38Z"
-      },
-      "tags": [
-        "blutlabor",
-        "selbstzahler",
-        "freiburg im breisgau"
-      ]
-    },
-    {
-      "id": "blut-ful-075",
+      "id": "blut-de-012",
       "name": "Mein Direktlabor - Labor Fulda",
       "slug": "mein-direktlabor-labor-fulda",
       "categories": [
@@ -2287,7 +2446,7 @@
       ],
       "address": {
         "street": "Gerloser Weg 20",
-        "postalCode": "",
+        "postalCode": "36039",
         "city": "Fulda",
         "state": "Fulda",
         "country": "DE"
@@ -2303,7 +2462,7 @@
         "phone": "+4966195272922",
         "website": "https://www.meindirektlabor.de/standorte/standort/bioscientia-labor-fulda",
         "email": null,
-        "bookingUrl": null
+        "bookingUrl": "https://www.meindirektlabor.de/termine/"
       },
       "services": [
         {
@@ -2312,7 +2471,7 @@
           "description": null,
           "selfPay": true,
           "price": {
-            "amount": 18.0,
+            "amount": 18,
             "currency": "EUR",
             "note": "ab 18 "
           },
@@ -2340,15 +2499,15 @@
       ]
     },
     {
-      "id": "blut-gie-637",
+      "id": "blut-de-013",
       "name": "Bioscientia Labor Mittelhessen",
       "slug": "bioscientia-labor-mittelhessen",
       "categories": [
         "blutlabor"
       ],
       "address": {
-        "street": "",
-        "postalCode": "",
+        "street": "Rudolf-Diesel-Str. 4",
+        "postalCode": "35394",
         "city": "Gießen",
         "state": "Gießen",
         "country": "DE"
@@ -2361,10 +2520,10 @@
         ]
       },
       "contact": {
-        "phone": null,
+        "phone": "+49 641 300210",
         "website": "https://www.meindirektlabor.de/standorte/standort/labor-giessen",
         "email": null,
-        "bookingUrl": null
+        "bookingUrl": "https://www.meindirektlabor.de/termine/"
       },
       "services": [
         {
@@ -2373,7 +2532,7 @@
           "description": null,
           "selfPay": true,
           "price": {
-            "amount": 12.0,
+            "amount": 12,
             "currency": "EUR",
             "note": "ab 12 "
           },
@@ -2401,15 +2560,15 @@
       ]
     },
     {
-      "id": "blut-got-636",
+      "id": "blut-de-014",
       "name": "Bioscientia Labor Gotha",
       "slug": "bioscientia-labor-gotha",
       "categories": [
         "blutlabor"
       ],
       "address": {
-        "street": "",
-        "postalCode": "",
+        "street": "Huttenstraße 7",
+        "postalCode": "99867",
         "city": "Gotha",
         "state": "Gotha",
         "country": "DE"
@@ -2422,10 +2581,10 @@
         ]
       },
       "contact": {
-        "phone": null,
+        "phone": "+49 3641 401412",
         "website": "https://www.meindirektlabor.de/standorte/standort/labor-gotha",
         "email": null,
-        "bookingUrl": null
+        "bookingUrl": "https://www.meindirektlabor.de/termine/"
       },
       "services": [
         {
@@ -2434,7 +2593,7 @@
           "description": null,
           "selfPay": true,
           "price": {
-            "amount": 16.0,
+            "amount": 16,
             "currency": "EUR",
             "note": "ab 16 "
           },
@@ -2462,63 +2621,7 @@
       ]
     },
     {
-      "id": "blut-got-084",
-      "name": "Mein Direktlabor - Labor Gotha",
-      "slug": "mein-direktlabor-labor-gotha",
-      "categories": [
-        "blutlabor"
-      ],
-      "address": {
-        "street": "Huttenstraße 7",
-        "postalCode": "",
-        "city": "Gotha",
-        "state": "Gotha",
-        "country": "DE"
-      },
-      "location": {
-        "type": "Point",
-        "coordinates": [
-          10.7075175,
-          50.9512869
-        ]
-      },
-      "contact": {
-        "phone": "+493641401412",
-        "website": "https://www.meindirektlabor.de",
-        "email": null,
-        "bookingUrl": null
-      },
-      "services": [
-        {
-          "type": "blood_test_self_pay",
-          "name": "Blutuntersuchung Selbstzahler",
-          "description": null,
-          "selfPay": true,
-          "price": null,
-          "verification": {
-            "status": "unverified",
-            "confidence": 0.6,
-            "date": "2026-03-09",
-            "method": "google_places",
-            "notes": null
-          }
-        }
-      ],
-      "selfPay": true,
-      "verified": false,
-      "source": {
-        "origin": "apify",
-        "primaryUrl": "https://www.meindirektlabor.de",
-        "collectedAt": "2026-03-09T00:37:38Z"
-      },
-      "tags": [
-        "blutlabor",
-        "selbstzahler",
-        "gotha"
-      ]
-    },
-    {
-      "id": "blut-hh-048",
+      "id": "blut-de-015",
       "name": "Labor Dr. Heidrich & Kollegen MVZ GmbH",
       "slug": "labor-dr-heidrich-kollegen-mvz-gmbh",
       "categories": [
@@ -2542,7 +2645,7 @@
         "phone": "+494097079990",
         "website": "http://www.labor-heidrich.de",
         "email": null,
-        "bookingUrl": null
+        "bookingUrl": "https://www.labor-heidrich.de/fuer-patienten/ihr-labortermin/"
       },
       "services": [
         {
@@ -2574,119 +2677,7 @@
       ]
     },
     {
-      "id": "blut-hh-682",
-      "name": "Lademannbogen (Sonic Healthcare)",
-      "slug": "lademannbogen-sonic-healthcare",
-      "categories": [
-        "blutlabor"
-      ],
-      "address": {
-        "street": "Lademannbogen 61",
-        "postalCode": "22339",
-        "city": "Hamburg",
-        "state": "Hamburg",
-        "country": "DE"
-      },
-      "location": {
-        "type": "Point",
-        "coordinates": [
-          10.0283069,
-          53.6423539
-        ]
-      },
-      "contact": {
-        "phone": null,
-        "website": "https://www.labor-lademannbogen.de",
-        "email": null,
-        "bookingUrl": null
-      },
-      "services": [
-        {
-          "type": "blood_test_self_pay",
-          "name": "Blutuntersuchung Selbstzahler",
-          "description": null,
-          "selfPay": true,
-          "price": null,
-          "verification": {
-            "status": "verified",
-            "confidence": 0.95,
-            "date": "2026-03-09",
-            "method": "llm_recherche_manual",
-            "notes": null
-          }
-        }
-      ],
-      "selfPay": true,
-      "verified": true,
-      "source": {
-        "origin": "llm_recherche",
-        "primaryUrl": "https://www.labor-lademannbogen.de",
-        "collectedAt": "2026-03-09T00:37:38Z"
-      },
-      "tags": [
-        "blutlabor",
-        "selbstzahler",
-        "hamburg"
-      ]
-    },
-    {
-      "id": "blut-hh-675",
-      "name": "Medilys Hamburg",
-      "slug": "medilys-hamburg",
-      "categories": [
-        "blutlabor"
-      ],
-      "address": {
-        "street": "",
-        "postalCode": "",
-        "city": "Hamburg",
-        "state": "Hamburg",
-        "country": "DE"
-      },
-      "location": {
-        "type": "Point",
-        "coordinates": [
-          10.000654,
-          53.550341
-        ]
-      },
-      "contact": {
-        "phone": null,
-        "website": "https://medilys.de/fuer-privatpersonen",
-        "email": null,
-        "bookingUrl": null
-      },
-      "services": [
-        {
-          "type": "blood_test_self_pay",
-          "name": "Blutuntersuchung Selbstzahler",
-          "description": null,
-          "selfPay": true,
-          "price": null,
-          "verification": {
-            "status": "verified",
-            "confidence": 0.95,
-            "date": "2026-03-09",
-            "method": "llm_recherche_manual",
-            "notes": null
-          }
-        }
-      ],
-      "selfPay": true,
-      "verified": true,
-      "source": {
-        "origin": "llm_recherche",
-        "primaryUrl": "https://medilys.de/fuer-privatpersonen/",
-        "collectedAt": "2026-03-09T00:37:38Z"
-      },
-      "tags": [
-        "blutlabor",
-        "selbstzahler",
-        "hamburg"
-      ]
-    },
-    {
-      "id": "blut-hh-049",
+      "id": "blut-de-016",
       "name": "Mein Direktlabor - Labor Hamburg-Nord",
       "slug": "mein-direktlabor-labor-hamburg-nord",
       "categories": [
@@ -2694,7 +2685,7 @@
       ],
       "address": {
         "street": "Essener Str. 110",
-        "postalCode": "",
+        "postalCode": "22419",
         "city": "Hamburg",
         "state": "Hamburg",
         "country": "DE"
@@ -2710,7 +2701,7 @@
         "phone": "+494053805888",
         "website": "https://www.meindirektlabor.de/standorte/standort/mein-direktlabor-hamburg-nord",
         "email": null,
-        "bookingUrl": null
+        "bookingUrl": "https://www.meindirektlabor.de/termine/"
       },
       "services": [
         {
@@ -2743,15 +2734,15 @@
       ]
     },
     {
-      "id": "blut-hh-014",
+      "id": "blut-de-017",
       "name": "Mein Direktlabor - Labor Stephansplatz",
       "slug": "mein-direktlabor-labor-stephansplatz",
       "categories": [
         "blutlabor"
       ],
       "address": {
-        "street": "Stephanspl. 3",
-        "postalCode": "",
+        "street": "Stephansplatz 3",
+        "postalCode": "20354",
         "city": "Hamburg",
         "state": "Hamburg",
         "country": "DE"
@@ -2767,7 +2758,7 @@
         "phone": "+494076696700",
         "website": "https://www.meindirektlabor.de/standorte/standort/labor-stephansplatz",
         "email": null,
-        "bookingUrl": null
+        "bookingUrl": "https://www.meindirektlabor.de/termine/"
       },
       "services": [
         {
@@ -2776,7 +2767,7 @@
           "description": null,
           "selfPay": true,
           "price": {
-            "amount": 16.0,
+            "amount": 16,
             "currency": "EUR",
             "note": "ab 16 "
           },
@@ -2804,7 +2795,7 @@
       ]
     },
     {
-      "id": "blut-han-678",
+      "id": "blut-de-018",
       "name": "amedes Hannover (MVZ wagnerstibbe)",
       "slug": "amedes-hannover-mvz-wagnerstibbe",
       "categories": [
@@ -2860,7 +2851,7 @@
       ]
     },
     {
-      "id": "blut-han-179",
+      "id": "blut-de-019",
       "name": "MVZ Medizinisches Labor Hannover GmbH",
       "slug": "mvz-medizinisches-labor-hannover-gmbh",
       "categories": [
@@ -2882,7 +2873,7 @@
       },
       "contact": {
         "phone": "+49511856220",
-        "website": "http://www.mlh.de",
+        "website": "https://www.labor-limbach-hannover.de/",
         "email": null,
         "bookingUrl": null
       },
@@ -2916,7 +2907,7 @@
       ]
     },
     {
-      "id": "blut-han-679",
+      "id": "blut-de-020",
       "name": "Praxis Dr. Kirkamm",
       "slug": "praxis-dr-kirkamm",
       "categories": [
@@ -2949,7 +2940,7 @@
           "description": null,
           "selfPay": true,
           "price": {
-            "amount": 50.0,
+            "amount": 50,
             "currency": "EUR",
             "note": "€50"
           },
@@ -2976,7 +2967,7 @@
       ]
     },
     {
-      "id": "blut-hei-038",
+      "id": "blut-de-021",
       "name": "Mein Direktlabor - Labor Kiel",
       "slug": "mein-direktlabor-labor-kiel",
       "categories": [
@@ -3000,7 +2991,7 @@
         "phone": "+494312183866",
         "website": "https://www.meindirektlabor.de/standorte/standort/labor-kiel",
         "email": null,
-        "bookingUrl": null
+        "bookingUrl": "https://www.meindirektlabor.de/termine/"
       },
       "services": [
         {
@@ -3033,71 +3024,15 @@
       ]
     },
     {
-      "id": "blut-hei-263",
-      "name": "Labor Blackholm MVZ",
-      "slug": "labor-blackholm-mvz",
-      "categories": [
-        "blutlabor"
-      ],
-      "address": {
-        "street": "Bahnhofstraße 14",
-        "postalCode": "",
-        "city": "Heilbronn",
-        "state": "Heilbronn",
-        "country": "DE"
-      },
-      "location": {
-        "type": "Point",
-        "coordinates": [
-          9.2113994,
-          49.143281
-        ]
-      },
-      "contact": {
-        "phone": "+49713178760",
-        "website": "https://www.blackholm.com",
-        "email": null,
-        "bookingUrl": null
-      },
-      "services": [
-        {
-          "type": "blood_test_self_pay",
-          "name": "Blutuntersuchung Selbstzahler",
-          "description": null,
-          "selfPay": true,
-          "price": null,
-          "verification": {
-            "status": "unverified",
-            "confidence": 0.6,
-            "date": "2026-03-09",
-            "method": "google_places",
-            "notes": null
-          }
-        }
-      ],
-      "selfPay": true,
-      "verified": false,
-      "source": {
-        "origin": "apify",
-        "primaryUrl": "https://www.blackholm.com",
-        "collectedAt": "2026-03-09T00:37:38Z"
-      },
-      "tags": [
-        "blutlabor",
-        "selbstzahler",
-        "heilbronn"
-      ]
-    },
-    {
-      "id": "blut-ing-085",
+      "id": "blut-de-022",
       "name": "Mein Direktlabor - Labor Ingelheim",
       "slug": "mein-direktlabor-labor-ingelheim",
       "categories": [
         "blutlabor"
       ],
       "address": {
-        "street": "Konrad-Adenauer-Straße 17",
-        "postalCode": "",
+        "street": "Konrad-Adenauer-Str. 17",
+        "postalCode": "55218",
         "city": "Ingelheim am Rhein",
         "state": "Ingelheim am Rhein",
         "country": "DE"
@@ -3113,7 +3048,7 @@
         "phone": "+4961327817400",
         "website": "https://www.meindirektlabor.de/standorte/standort/labor-ingelheim",
         "email": null,
-        "bookingUrl": null
+        "bookingUrl": "https://www.meindirektlabor.de/termine/"
       },
       "services": [
         {
@@ -3146,15 +3081,15 @@
       ]
     },
     {
-      "id": "blut-jen-635",
+      "id": "blut-de-023",
       "name": "Bioscientia Labor Jena",
       "slug": "bioscientia-labor-jena",
       "categories": [
         "blutlabor"
       ],
       "address": {
-        "street": "",
-        "postalCode": "",
+        "street": "Löbstedter Str. 93",
+        "postalCode": "07749",
         "city": "Jena",
         "state": "Jena",
         "country": "DE"
@@ -3167,10 +3102,10 @@
         ]
       },
       "contact": {
-        "phone": null,
+        "phone": "+49 3641 401320",
         "website": "https://www.meindirektlabor.de/standorte/standort/bioscientia-labor-jena",
         "email": null,
-        "bookingUrl": null
+        "bookingUrl": "https://www.meindirektlabor.de/termine/"
       },
       "services": [
         {
@@ -3179,7 +3114,7 @@
           "description": null,
           "selfPay": true,
           "price": {
-            "amount": 16.0,
+            "amount": 16,
             "currency": "EUR",
             "note": "ab 16 "
           },
@@ -3207,63 +3142,7 @@
       ]
     },
     {
-      "id": "blut-jen-351",
-      "name": "Mein Direktlabor - Labor Jena",
-      "slug": "mein-direktlabor-labor-jena",
-      "categories": [
-        "blutlabor"
-      ],
-      "address": {
-        "street": "Löbstedter Str. 93",
-        "postalCode": "",
-        "city": "Jena",
-        "state": "Jena",
-        "country": "DE"
-      },
-      "location": {
-        "type": "Point",
-        "coordinates": [
-          11.6086611,
-          50.9458825
-        ]
-      },
-      "contact": {
-        "phone": "+493641401320",
-        "website": "https://www.meindirektlabor.de",
-        "email": null,
-        "bookingUrl": null
-      },
-      "services": [
-        {
-          "type": "blood_test_self_pay",
-          "name": "Blutuntersuchung Selbstzahler",
-          "description": null,
-          "selfPay": true,
-          "price": null,
-          "verification": {
-            "status": "unverified",
-            "confidence": 0.6,
-            "date": "2026-03-09",
-            "method": "google_places",
-            "notes": null
-          }
-        }
-      ],
-      "selfPay": true,
-      "verified": false,
-      "source": {
-        "origin": "apify",
-        "primaryUrl": "https://www.meindirektlabor.de",
-        "collectedAt": "2026-03-09T00:37:38Z"
-      },
-      "tags": [
-        "blutlabor",
-        "selbstzahler",
-        "jena"
-      ]
-    },
-    {
-      "id": "blut-kar-034",
+      "id": "blut-de-024",
       "name": "Mein Direktlabor - Labor Karlsruhe",
       "slug": "mein-direktlabor-labor-karlsruhe",
       "categories": [
@@ -3271,7 +3150,7 @@
       ],
       "address": {
         "street": "Am Rüppurrer Schloß 1",
-        "postalCode": "",
+        "postalCode": "76199",
         "city": "Karlsruhe",
         "state": "Karlsruhe",
         "country": "DE"
@@ -3287,7 +3166,7 @@
         "phone": "+497216277550",
         "website": "https://www.meindirektlabor.de/standorte/standort/bioscientia-labor-karlsruhe",
         "email": null,
-        "bookingUrl": null
+        "bookingUrl": "https://www.meindirektlabor.de/termine/"
       },
       "services": [
         {
@@ -3296,7 +3175,7 @@
           "description": null,
           "selfPay": true,
           "price": {
-            "amount": 18.0,
+            "amount": 18,
             "currency": "EUR",
             "note": "ab 18 "
           },
@@ -3324,15 +3203,15 @@
       ]
     },
     {
-      "id": "blut-kie-100",
+      "id": "blut-de-025",
       "name": "KiELab | Dr. med. Harald Erichsen",
       "slug": "kielab-dr-med-harald-erichsen",
       "categories": [
         "blutlabor"
       ],
       "address": {
-        "street": "Dreieckspl. 11",
-        "postalCode": "",
+        "street": "Dreiecksplatz 11",
+        "postalCode": "24103",
         "city": "Kiel",
         "state": "Kiel",
         "country": "DE"
@@ -3380,7 +3259,7 @@
       ]
     },
     {
-      "id": "blut-kli-216",
+      "id": "blut-de-026",
       "name": "Mein Direktlabor - Labor Klipphausen",
       "slug": "mein-direktlabor-labor-klipphausen",
       "categories": [
@@ -3404,7 +3283,7 @@
         "phone": "+49352046350",
         "website": "https://www.meindirektlabor.de",
         "email": null,
-        "bookingUrl": null
+        "bookingUrl": "https://www.meindirektlabor.de/termine/"
       },
       "services": [
         {
@@ -3437,7 +3316,7 @@
       ]
     },
     {
-      "id": "blut-cgn-674",
+      "id": "blut-de-027",
       "name": "Labor Dr. Quade & Kollegen",
       "slug": "labor-dr-quade-kollegen",
       "categories": [
@@ -3493,7 +3372,7 @@
       ]
     },
     {
-      "id": "blut-cgn-673",
+      "id": "blut-de-028",
       "name": "Labor Dr. Wisplinghoff",
       "slug": "labor-dr-wisplinghoff",
       "categories": [
@@ -3549,7 +3428,7 @@
       ]
     },
     {
-      "id": "blut-cgn-001",
+      "id": "blut-de-029",
       "name": "Mein Direktlabor - Labor Köln",
       "slug": "mein-direktlabor-labor-koeln",
       "categories": [
@@ -3573,7 +3452,7 @@
         "phone": "+492219355560",
         "website": "https://www.meindirektlabor.de",
         "email": null,
-        "bookingUrl": null
+        "bookingUrl": "https://www.meindirektlabor.de/termine/"
       },
       "services": [
         {
@@ -3605,72 +3484,15 @@
       ]
     },
     {
-      "id": "blut-cgn-626",
-      "name": "Mein Direktlabor auf der FIBO",
-      "slug": "mein-direktlabor-auf-der-fibo",
-      "categories": [
-        "blutlabor"
-      ],
-      "address": {
-        "street": "",
-        "postalCode": "",
-        "city": "Köln",
-        "state": "Nordrhein-Westfalen",
-        "country": "DE"
-      },
-      "location": {
-        "type": "Point",
-        "coordinates": [
-          6.959974,
-          50.938361
-        ]
-      },
-      "contact": {
-        "phone": null,
-        "website": "https://www.meindirektlabor.de/standorte/standort/fibo-2026",
-        "email": null,
-        "bookingUrl": null
-      },
-      "services": [
-        {
-          "type": "blood_test_self_pay",
-          "name": "Blutuntersuchung Selbstzahler",
-          "description": null,
-          "selfPay": true,
-          "price": null,
-          "verification": {
-            "status": "verified",
-            "confidence": 0.95,
-            "date": "2026-03-09",
-            "method": "official_directory",
-            "notes": null
-          }
-        }
-      ],
-      "selfPay": true,
-      "verified": true,
-      "source": {
-        "origin": "meindirektlabor",
-        "primaryUrl": "https://www.meindirektlabor.de/standorte/standort/fibo-2026",
-        "collectedAt": "2026-03-09T00:37:38Z"
-      },
-      "tags": [
-        "blutlabor",
-        "selbstzahler",
-        "köln",
-        "direktlabor"
-      ]
-    },
-    {
-      "id": "blut-lei-639",
+      "id": "blut-de-030",
       "name": "Bioscientia Labor Stuttgart",
       "slug": "bioscientia-labor-stuttgart",
       "categories": [
         "blutlabor"
       ],
       "address": {
-        "street": "",
-        "postalCode": "",
+        "street": "Leinfelder Str. 60",
+        "postalCode": "70771",
         "city": "Leinfelden-Echterdingen",
         "state": "Leinfelden-Echterdingen",
         "country": "DE"
@@ -3683,10 +3505,10 @@
         ]
       },
       "contact": {
-        "phone": null,
+        "phone": "+49 711 652243350",
         "website": "https://www.meindirektlabor.de/standorte/standort/bioscientia-labor-stuttgart",
         "email": null,
-        "bookingUrl": null
+        "bookingUrl": "https://www.meindirektlabor.de/termine/"
       },
       "services": [
         {
@@ -3695,7 +3517,7 @@
           "description": null,
           "selfPay": true,
           "price": {
-            "amount": 18.0,
+            "amount": 18,
             "currency": "EUR",
             "note": "ab 18 "
           },
@@ -3723,71 +3545,15 @@
       ]
     },
     {
-      "id": "blut-lei-030",
-      "name": "Mein Direktlabor - Labor Stuttgart",
-      "slug": "mein-direktlabor-labor-stuttgart",
-      "categories": [
-        "blutlabor"
-      ],
-      "address": {
-        "street": "Leinfelder Str. 60",
-        "postalCode": "",
-        "city": "Leinfelden-Echterdingen",
-        "state": "Leinfelden-Echterdingen",
-        "country": "DE"
-      },
-      "location": {
-        "type": "Point",
-        "coordinates": [
-          9.1597942,
-          48.691338
-        ]
-      },
-      "contact": {
-        "phone": "+497116522430",
-        "website": "https://www.meindirektlabor.de",
-        "email": null,
-        "bookingUrl": null
-      },
-      "services": [
-        {
-          "type": "blood_test_self_pay",
-          "name": "Blutuntersuchung Selbstzahler",
-          "description": null,
-          "selfPay": true,
-          "price": null,
-          "verification": {
-            "status": "unverified",
-            "confidence": 0.6,
-            "date": "2026-03-09",
-            "method": "google_places",
-            "notes": null
-          }
-        }
-      ],
-      "selfPay": true,
-      "verified": false,
-      "source": {
-        "origin": "apify",
-        "primaryUrl": "https://www.meindirektlabor.de",
-        "collectedAt": "2026-03-09T00:37:38Z"
-      },
-      "tags": [
-        "blutlabor",
-        "selbstzahler",
-        "leinfelden-echterdingen"
-      ]
-    },
-    {
-      "id": "blut-mai-033",
+      "id": "blut-de-031",
       "name": "Mein Direktlabor - Labor Mainz",
       "slug": "mein-direktlabor-labor-mainz",
       "categories": [
         "blutlabor"
       ],
       "address": {
-        "street": "Wallstraße 3",
-        "postalCode": "",
+        "street": "Wallstraße 3-5",
+        "postalCode": "55122",
         "city": "Mainz",
         "state": "Mainz",
         "country": "DE"
@@ -3800,10 +3566,10 @@
         ]
       },
       "contact": {
-        "phone": "+494961315760860",
+        "phone": "+49 6131 5760860",
         "website": "https://www.meindirektlabor.de/standorte/standort/labor-mainz",
         "email": null,
-        "bookingUrl": null
+        "bookingUrl": "https://www.meindirektlabor.de/termine/"
       },
       "services": [
         {
@@ -3812,7 +3578,7 @@
           "description": null,
           "selfPay": true,
           "price": {
-            "amount": 15.0,
+            "amount": 15,
             "currency": "EUR",
             "note": "ab 15 "
           },
@@ -3840,7 +3606,7 @@
       ]
     },
     {
-      "id": "blut-mai-235",
+      "id": "blut-de-032",
       "name": "MVZ GANZIMMUN GmbH - Arztpraxis",
       "slug": "mvz-ganzimmun-gmbh-arztpraxis",
       "categories": [
@@ -3896,7 +3662,7 @@
       ]
     },
     {
-      "id": "blut-muc-676",
+      "id": "blut-de-033",
       "name": "Labor Becker München",
       "slug": "labor-becker-muenchen",
       "categories": [
@@ -3920,7 +3686,7 @@
         "phone": "+49894509170",
         "website": "https://www.labor-becker.de/service/patienten",
         "email": null,
-        "bookingUrl": null
+        "bookingUrl": "https://www.labor-becker.de/termin"
       },
       "services": [
         {
@@ -3929,7 +3695,7 @@
           "description": null,
           "selfPay": true,
           "price": {
-            "amount": 30.0,
+            "amount": 30,
             "currency": "EUR",
             "note": "€30"
           },
@@ -3956,15 +3722,15 @@
       ]
     },
     {
-      "id": "blut-muc-641",
+      "id": "blut-de-034",
       "name": "Labor Staber München",
       "slug": "labor-staber-muenchen",
       "categories": [
         "blutlabor"
       ],
       "address": {
-        "street": "",
-        "postalCode": "",
+        "street": "Paul-Wassermann-Str. 1",
+        "postalCode": "81829",
         "city": "München",
         "state": "Bayern",
         "country": "DE"
@@ -3977,7 +3743,7 @@
         ]
       },
       "contact": {
-        "phone": null,
+        "phone": "+49 89 630238980",
         "website": "https://www.meindirektlabor.de/standorte/standort/labor-staber-muenchen",
         "email": null,
         "bookingUrl": null
@@ -3989,7 +3755,7 @@
           "description": null,
           "selfPay": true,
           "price": {
-            "amount": 18.0,
+            "amount": 18,
             "currency": "EUR",
             "note": "ab 18 "
           },
@@ -4017,183 +3783,15 @@
       ]
     },
     {
-      "id": "blut-muc-677",
-      "name": "Medicover Diagnostics München",
-      "slug": "medicover-diagnostics-muenchen",
-      "categories": [
-        "blutlabor"
-      ],
-      "address": {
-        "street": "Tal 12",
-        "postalCode": "80331",
-        "city": "München",
-        "state": "Bayern",
-        "country": "DE"
-      },
-      "location": {
-        "type": "Point",
-        "coordinates": [
-          11.5785095,
-          48.1359851
-        ]
-      },
-      "contact": {
-        "phone": "+49898955780",
-        "website": "https://www.medicover-diagnostics.de",
-        "email": null,
-        "bookingUrl": null
-      },
-      "services": [
-        {
-          "type": "blood_test_self_pay",
-          "name": "Blutuntersuchung Selbstzahler",
-          "description": null,
-          "selfPay": true,
-          "price": null,
-          "verification": {
-            "status": "verified",
-            "confidence": 0.95,
-            "date": "2026-03-09",
-            "method": "llm_recherche_manual",
-            "notes": null
-          }
-        }
-      ],
-      "selfPay": true,
-      "verified": true,
-      "source": {
-        "origin": "llm_recherche",
-        "primaryUrl": "https://www.medicover-diagnostics.de/",
-        "collectedAt": "2026-03-09T00:37:38Z"
-      },
-      "tags": [
-        "blutlabor",
-        "selbstzahler",
-        "münchen"
-      ]
-    },
-    {
-      "id": "blut-muc-019",
-      "name": "Mein Direktlabor - Labor München",
-      "slug": "mein-direktlabor-labor-muenchen",
-      "categories": [
-        "blutlabor"
-      ],
-      "address": {
-        "street": "Paul-Wassermann-Straße 1",
-        "postalCode": "",
-        "city": "München",
-        "state": "Bayern",
-        "country": "DE"
-      },
-      "location": {
-        "type": "Point",
-        "coordinates": [
-          11.6856535,
-          48.1374722
-        ]
-      },
-      "contact": {
-        "phone": "+4989630238980",
-        "website": "http://www.meindirektlabor.de",
-        "email": null,
-        "bookingUrl": null
-      },
-      "services": [
-        {
-          "type": "blood_test_self_pay",
-          "name": "Blutuntersuchung Selbstzahler",
-          "description": null,
-          "selfPay": true,
-          "price": null,
-          "verification": {
-            "status": "unverified",
-            "confidence": 0.6,
-            "date": "2026-03-09",
-            "method": "google_places",
-            "notes": null
-          }
-        }
-      ],
-      "selfPay": true,
-      "verified": false,
-      "source": {
-        "origin": "apify",
-        "primaryUrl": "http://www.meindirektlabor.de",
-        "collectedAt": "2026-03-09T00:37:38Z"
-      },
-      "tags": [
-        "blutlabor",
-        "selbstzahler",
-        "münchen"
-      ]
-    },
-    {
-      "id": "blut-muc-681",
-      "name": "Synlab München",
-      "slug": "synlab-muenchen",
-      "categories": [
-        "blutlabor"
-      ],
-      "address": {
-        "street": "Lindwurmstraße 129",
-        "postalCode": "80337",
-        "city": "München",
-        "state": "Bayern",
-        "country": "DE"
-      },
-      "location": {
-        "type": "Point",
-        "coordinates": [
-          11.5542863,
-          48.126612
-        ]
-      },
-      "contact": {
-        "phone": null,
-        "website": "https://www.synlab.de",
-        "email": null,
-        "bookingUrl": null
-      },
-      "services": [
-        {
-          "type": "blood_test_self_pay",
-          "name": "Blutuntersuchung Selbstzahler",
-          "description": null,
-          "selfPay": true,
-          "price": null,
-          "verification": {
-            "status": "verified",
-            "confidence": 0.95,
-            "date": "2026-03-09",
-            "method": "llm_recherche_manual",
-            "notes": null
-          }
-        }
-      ],
-      "selfPay": true,
-      "verified": true,
-      "source": {
-        "origin": "llm_recherche",
-        "primaryUrl": "https://www.synlab.de",
-        "collectedAt": "2026-03-09T00:37:38Z"
-      },
-      "tags": [
-        "blutlabor",
-        "selbstzahler",
-        "münchen"
-      ]
-    },
-    {
-      "id": "blut-nue-642",
+      "id": "blut-de-035",
       "name": "Labor Staber Nürnberg",
       "slug": "labor-staber-nuernberg",
       "categories": [
         "blutlabor"
       ],
       "address": {
-        "street": "",
-        "postalCode": "",
+        "street": "Deutschherrnstr. 15-19",
+        "postalCode": "90429",
         "city": "Nürnberg",
         "state": "Bayern",
         "country": "DE"
@@ -4206,7 +3804,7 @@
         ]
       },
       "contact": {
-        "phone": null,
+        "phone": "+49 911 9447076",
         "website": "https://www.meindirektlabor.de/standorte/standort/labor-staber-nuernberg",
         "email": null,
         "bookingUrl": null
@@ -4218,7 +3816,7 @@
           "description": null,
           "selfPay": true,
           "price": {
-            "amount": 18.0,
+            "amount": 18,
             "currency": "EUR",
             "note": "ab 18 "
           },
@@ -4246,63 +3844,7 @@
       ]
     },
     {
-      "id": "blut-nue-037",
-      "name": "Mein Direktlabor - Labor Nürnberg",
-      "slug": "mein-direktlabor-labor-nuernberg",
-      "categories": [
-        "blutlabor"
-      ],
-      "address": {
-        "street": "EG / Bauteil D",
-        "postalCode": "",
-        "city": "Nürnberg",
-        "state": "Bayern",
-        "country": "DE"
-      },
-      "location": {
-        "type": "Point",
-        "coordinates": [
-          11.077298,
-          49.453872
-        ]
-      },
-      "contact": {
-        "phone": "+499119447076",
-        "website": "https://www.meindirektlabor.de",
-        "email": null,
-        "bookingUrl": null
-      },
-      "services": [
-        {
-          "type": "blood_test_self_pay",
-          "name": "Blutuntersuchung Selbstzahler",
-          "description": null,
-          "selfPay": true,
-          "price": null,
-          "verification": {
-            "status": "unverified",
-            "confidence": 0.6,
-            "date": "2026-03-09",
-            "method": "google_places",
-            "notes": null
-          }
-        }
-      ],
-      "selfPay": true,
-      "verified": false,
-      "source": {
-        "origin": "apify",
-        "primaryUrl": "https://www.meindirektlabor.de",
-        "collectedAt": "2026-03-09T00:37:38Z"
-      },
-      "tags": [
-        "blutlabor",
-        "selbstzahler",
-        "nürnberg"
-      ]
-    },
-    {
-      "id": "blut-old-074",
+      "id": "blut-de-036",
       "name": "Mein Direktlabor - Labor Oldenburg",
       "slug": "mein-direktlabor-labor-oldenburg",
       "categories": [
@@ -4310,7 +3852,7 @@
       ],
       "address": {
         "street": "Koppelstraße 1",
-        "postalCode": "",
+        "postalCode": "26135",
         "city": "Oldenburg",
         "state": "Oldenburg",
         "country": "DE"
@@ -4326,7 +3868,7 @@
         "phone": "+4944136140833",
         "website": "https://www.meindirektlabor.de/standorte/standort/labor-oldenburg",
         "email": null,
-        "bookingUrl": null
+        "bookingUrl": "https://www.meindirektlabor.de/termine/"
       },
       "services": [
         {
@@ -4359,15 +3901,15 @@
       ]
     },
     {
-      "id": "blut-sch-628",
+      "id": "blut-de-037",
       "name": "Mein Direktlabor Scheeßel",
       "slug": "mein-direktlabor-scheessel",
       "categories": [
         "blutlabor"
       ],
       "address": {
-        "street": "",
-        "postalCode": "",
+        "street": "Am Meyerhof 7",
+        "postalCode": "27383",
         "city": "Scheeßel",
         "state": "Scheeßel",
         "country": "DE"
@@ -4380,10 +3922,10 @@
         ]
       },
       "contact": {
-        "phone": null,
+        "phone": "+49 4263 9859780",
         "website": "https://www.meindirektlabor.de/standorte/standort/mein-direktlabor-scheessel",
         "email": null,
-        "bookingUrl": null
+        "bookingUrl": "https://www.doctolib.de/praxis/scheessel/gerlach-jan/"
       },
       "services": [
         {
@@ -4416,7 +3958,7 @@
       ]
     },
     {
-      "id": "blut-st.-319",
+      "id": "blut-de-038",
       "name": "Mein Direktlabor - Labor Saar",
       "slug": "mein-direktlabor-labor-saar",
       "categories": [
@@ -4424,7 +3966,7 @@
       ],
       "address": {
         "street": "Otto-Kaiser-Str. 8a",
-        "postalCode": "",
+        "postalCode": "66386",
         "city": "St. Ingbert",
         "state": "St. Ingbert",
         "country": "DE"
@@ -4440,7 +3982,7 @@
         "phone": "+49689495500",
         "website": "https://www.meindirektlabor.de/standorte/standort/labor-saar",
         "email": null,
-        "bookingUrl": null
+        "bookingUrl": "https://www.meindirektlabor.de/termine/"
       },
       "services": [
         {
@@ -4449,7 +3991,7 @@
           "description": null,
           "selfPay": true,
           "price": {
-            "amount": 11.0,
+            "amount": 11,
             "currency": "EUR",
             "note": "ab 11 "
           },
@@ -4477,15 +4019,15 @@
       ]
     },
     {
-      "id": "blut-wes-627",
+      "id": "blut-de-039",
       "name": "Mein Direktlabor Sylt",
       "slug": "mein-direktlabor-sylt",
       "categories": [
         "blutlabor"
       ],
       "address": {
-        "street": "",
-        "postalCode": "",
+        "street": "Dr.-Nicolas-Straße 3",
+        "postalCode": "25980",
         "city": "Westerland",
         "state": "Westerland",
         "country": "DE"
@@ -4498,10 +4040,10 @@
         ]
       },
       "contact": {
-        "phone": null,
+        "phone": "+49 4651 8899777",
         "website": "https://www.meindirektlabor.de/standorte/standort/mein-direktlabor-sylt",
         "email": null,
-        "bookingUrl": null
+        "bookingUrl": "https://www.meindirektlabor.de/termine/"
       },
       "services": [
         {
@@ -4534,15 +4076,15 @@
       ]
     },
     {
-      "id": "blut-wor-638",
+      "id": "blut-de-040",
       "name": "Mein Direktlabor bei der WoGe",
       "slug": "mein-direktlabor-bei-der-woge",
       "categories": [
         "blutlabor"
       ],
       "address": {
-        "street": "",
-        "postalCode": "",
+        "street": "Von-Steuben-Str. 17",
+        "postalCode": "67549",
         "city": "Worms",
         "state": "Worms",
         "country": "DE"
@@ -4555,10 +4097,10 @@
         ]
       },
       "contact": {
-        "phone": null,
+        "phone": "+49 6241 977090",
         "website": "https://www.meindirektlabor.de/standorte/standort/mein-direktlabor-bei-der-woge",
         "email": null,
-        "bookingUrl": null
+        "bookingUrl": "https://www.meindirektlabor.de/termine/"
       },
       "services": [
         {
@@ -4567,7 +4109,7 @@
           "description": null,
           "selfPay": true,
           "price": {
-            "amount": 12.0,
+            "amount": 12,
             "currency": "EUR",
             "note": "ab 12 "
           },
