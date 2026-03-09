@@ -7,6 +7,7 @@ import {
   useCallback,
   useMemo,
   useEffect,
+  useRef,
   type ReactNode,
 } from "react";
 import Fuse from "fuse.js";
@@ -70,42 +71,37 @@ function hasCategory(provider: Provider, cat: ProviderCategory): boolean {
   return provider.categories.includes(cat);
 }
 
-// Read initial state from URL params
-function getInitialParams(): {
-  category: CategoryFilter;
-  selected: string | null;
-  search: string;
-} {
-  if (typeof window === "undefined")
-    return { category: "all", selected: null, search: "" };
-
-  const params = new URLSearchParams(window.location.search);
-  const category = params.get("category") as CategoryFilter | null;
-  const validCategories: CategoryFilter[] = [
-    "all",
-    "dexa_body_composition",
-    "knochendichte",
-    "blutlabor",
-  ];
-  return {
-    category: category && validCategories.includes(category) ? category : "all",
-    selected: params.get("selected"),
-    search: params.get("q") || "",
-  };
-}
+const VALID_CATEGORIES: CategoryFilter[] = [
+  "all",
+  "dexa_body_composition",
+  "knochendichte",
+  "blutlabor",
+];
 
 export function ProviderProvider({ children }: { children: ReactNode }) {
   const [providers, setProviders] = useState<Provider[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  const initial = useMemo(() => getInitialParams(), []);
-  const [selectedCategory, setSelectedCategory] = useState<CategoryFilter>(
-    initial.category
-  );
-  const [selectedProviderId, setSelectedProviderId] = useState<string | null>(
-    initial.selected
-  );
-  const [searchQuery, setSearchQuery] = useState(initial.search);
+  // Initialize with SSR-safe defaults, then sync from URL after mount
+  const [selectedCategory, setSelectedCategory] = useState<CategoryFilter>("all");
+  const [selectedProviderId, setSelectedProviderId] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  // Sync initial state from URL params after hydration
+  const urlSyncedRef = useRef(false);
+  useEffect(() => {
+    if (urlSyncedRef.current) return;
+    urlSyncedRef.current = true;
+    const params = new URLSearchParams(window.location.search);
+    const category = params.get("category") as CategoryFilter | null;
+    if (category && VALID_CATEGORIES.includes(category)) {
+      setSelectedCategory(category);
+    }
+    const selected = params.get("selected");
+    if (selected) setSelectedProviderId(selected);
+    const q = params.get("q");
+    if (q) setSearchQuery(q);
+  }, []);
   const [viewportBounds, setViewportBounds] = useState<ViewportBounds | null>(null);
   const [hoveredProviderId, setHoveredProviderId] = useState<string | null>(null);
   const [userPosition, setUserPosition] = useState<{ lat: number; lng: number } | null>(null);
