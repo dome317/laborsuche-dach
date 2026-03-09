@@ -27,7 +27,7 @@ Die wichtigste fachliche Unterscheidung in diesem Projekt:
 
 Die Aufgabe verlangt DEXA Body Composition und Blutlabor. Ich zeige zusätzlich 17 DXA-Knochendichte-Anbieter als eigene Kategorie, weil genau dort der häufigste Recherchefehler passiert: Websites schreiben „DEXA", bieten aber nur Knochendichte an.
 
-Die Kategorie ist kein Scope-Creep, sondern ein Transparenz-Layer: Sie zeigt, welche Treffer im Discovery-Schritt bewusst **nicht** als Body-Composition-Anbieter gezählt wurden.
+Die Kategorie ist kein Scope-Creep, sondern ein Transparenz-Layer: Sie zeigt, welche Treffer im Discovery-Schritt bewusst **nicht** als Body-Composition-Anbieter gezählt wurden. Die 17 Einträge sind kein Versuch einer vollständigen Abdeckung — Knochendichtemessung ist als IGeL-Leistung bei nahezu jeder Radiologie-Praxis verfügbar. Die Einträge stammen aus dem Discovery-Prozess und dokumentieren die bewusste Abgrenzung zu Body Composition.
 
 ## Schnellstart
 
