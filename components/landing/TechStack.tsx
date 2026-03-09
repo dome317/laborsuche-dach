@@ -34,7 +34,7 @@ export function TechStack() {
 
   return (
     <div className="w-full max-w-4xl mx-auto px-4 py-2">
-      <h2 className="text-center text-sm font-semibold text-white/60 uppercase tracking-wider mb-12">
+      <h2 className="text-center text-sm font-semibold text-gray-500 uppercase tracking-wider mb-12">
         Built With
       </h2>
 
@@ -42,9 +42,9 @@ export function TechStack() {
         {technologies.map((tech) => (
           <div
             key={tech.name}
-            className="flex items-center gap-4 px-6 py-2 rounded-2xl bg-white/10 hover:bg-white/20 transition-all duration-200 hover:scale-105 hover:shadow-lg group border border-white/20 backdrop-blur-sm"
+            className="flex items-center gap-4 px-6 py-2 rounded-2xl bg-white/60 hover:bg-white/80 transition-all duration-200 hover:scale-105 hover:shadow-lg group border border-gray-200 backdrop-blur-sm"
           >
-            <span className="text-lg sm:text-xl font-semibold text-white whitespace-nowrap">
+            <span className="text-lg sm:text-xl font-semibold text-gray-900 whitespace-nowrap">
               {tech.name}
             </span>
             <div className="relative w-6 h-6 sm:w-8 sm:h-8 flex-shrink-0 transition-transform duration-200 group-hover:scale-110">

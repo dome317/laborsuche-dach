@@ -14,42 +14,16 @@ import { TechStack } from "@/components/landing/TechStack";
  */
 export default function Home() {
   return (
-    <div className="relative min-h-screen overflow-hidden bg-black">
+    <div className="relative min-h-screen overflow-hidden bg-[#e8ecf4]">
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
-          src="/vimal-s-GBg3jyGS-Ug-unsplash.jpg"
-          alt="Map background"
+          src="/hero-map-dach.png"
+          alt="DACH-Karte mit Laborstandorten"
           fill
-          className="object-cover"
+          className="object-contain"
           priority
         />
-        {/* Darker overlay for better text readability on dark background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
-      </div>
-
-      {/* Unsplash attribution */}
-      <div className="absolute bottom-4 left-4 z-10 text-xs text-white/90">
-        <div className="flex items-center gap-1 px-3 py-2 bg-black/50 backdrop-blur-sm rounded-lg">
-          <span>Photo by</span>
-          <a
-            href="https://unsplash.com/@vimal_s?utm_source=laborsuche-dach&utm_medium=referral"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline hover:text-white transition-colors"
-          >
-            Vimal S
-          </a>
-          <span>on</span>
-          <a
-            href="https://unsplash.com?utm_source=laborsuche-dach&utm_medium=referral"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline hover:text-white transition-colors"
-          >
-            Unsplash
-          </a>
-        </div>
       </div>
 
       {/* Main content */}
