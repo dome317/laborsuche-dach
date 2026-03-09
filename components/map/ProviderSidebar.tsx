@@ -527,7 +527,7 @@ function ProviderDetail() {
                 Termin buchen
               </a>
             ) : provider.contact.phone ? (
-              <>
+              <div>
                 {/* Mobile: tel: link button */}
                 <a
                   href={`tel:${provider.contact.phone}`}
@@ -546,7 +546,7 @@ function ProviderDetail() {
                   <span className="truncate">{provider.contact.phone}</span>
                   <Copy className="h-3.5 w-3.5 flex-shrink-0 opacity-70" />
                 </button>
-              </>
+              </div>
             ) : null}
           </div>
 
