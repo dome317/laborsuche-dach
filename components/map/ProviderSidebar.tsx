@@ -520,13 +520,13 @@ function ProviderDetail() {
                 Termin buchen
               </a>
             ) : provider.contact.phone ? (
-              <div>
+              <div className="min-w-0">
                 {/* Mobile: tel: link button */}
                 <a
                   href={`tel:${provider.contact.phone}`}
-                  className="md:hidden flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-medium bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+                  className="md:hidden flex items-center justify-center gap-2 h-full py-2.5 rounded-lg text-sm font-medium bg-blue-600 text-white hover:bg-blue-700 transition-colors"
                 >
-                  <Phone className="h-4 w-4" />
+                  <Phone className="h-4 w-4 flex-shrink-0" />
                   Anrufen
                 </a>
                 {/* Desktop: readable phone number with copy */}
@@ -536,10 +536,10 @@ function ProviderDetail() {
                     setPhoneCopied(true);
                     setTimeout(() => setPhoneCopied(false), 2000);
                   }}
-                  className="hidden md:flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-medium bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+                  className="hidden md:flex w-full items-center justify-center gap-1.5 h-full py-2.5 rounded-lg text-xs font-medium bg-blue-600 text-white hover:bg-blue-700 transition-colors"
                   title="Telefonnummer kopieren"
                 >
-                  <Phone className="h-4 w-4" />
+                  <Phone className="h-3.5 w-3.5 flex-shrink-0" />
                   <span className="truncate">{phoneCopied ? "Kopiert!" : provider.contact.phone}</span>
                   {phoneCopied ? (
                     <Check className="h-3.5 w-3.5 flex-shrink-0" />
