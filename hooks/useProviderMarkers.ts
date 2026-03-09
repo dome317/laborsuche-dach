@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLeafletMap } from "@/hooks/useLeafletMap";
 import { useProviders } from "@/contexts/ProviderContext";
 import type { Provider, ProviderCategory } from "@/types/provider";
@@ -98,14 +98,23 @@ export function useProviderMarkers() {
   const clusterGroupRef = useRef<MarkerClusterGroup | null>(null);
   const leafletRef = useRef<typeof import("leaflet") | null>(null);
   const initialFitDoneRef = useRef(false);
+  const [leafletReady, setLeafletReady] = useState(false);
 
   // Load leaflet + markercluster once
   useEffect(() => {
+    const win = window as unknown as Record<string, unknown>;
+    // Reuse existing patched L if available (survives remount)
+    if (win.L && typeof (win.L as Record<string, unknown>).markerClusterGroup === "function") {
+      leafletRef.current = win.L as typeof import("leaflet");
+      setLeafletReady(true);
+      return;
+    }
     import("leaflet").then(async (L) => {
       const mutableL = Object.create(L) as typeof L;
-      (window as unknown as Record<string, unknown>).L = mutableL;
+      win.L = mutableL;
       await import("leaflet.markercluster");
       leafletRef.current = mutableL;
+      setLeafletReady(true);
     });
   }, []);
 
@@ -218,7 +227,7 @@ export function useProviderMarkers() {
       clusterGroup.addLayer(marker);
       markersRef.current.set(provider.id, marker);
     });
-  }, [map, filteredProviders, selectedProviderId, setSelectedProviderId, hoveredProviderId, setHoveredProviderId]);
+  }, [map, leafletReady, filteredProviders, selectedProviderId, setSelectedProviderId, hoveredProviderId, setHoveredProviderId]);
 
   // Fit bounds ONLY on initial load
   useEffect(() => {
