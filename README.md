@@ -1,21 +1,40 @@
 # Laborsuche DACH
 
-**Das Problem:** Wer in Deutschland, Österreich oder der Schweiz einen DEXA
-Body Composition Scan oder eine Blutuntersuchung als Selbstzahler sucht,
-steht vor einem Informationsvakuum. Google zeigt hauptsächlich Praxen die
-nur Knochendichtemessung anbieten — nicht Body Composition.
+Interaktive Karte für zwei konkrete Gesundheits-Use-Cases im DACH-Raum:
 
-Auf [janbahmann.de/blog/koerperfett-reduzieren](https://www.janbahmann.de/blog/koerperfett-reduzieren)
-wird die DEXA-Messung für Selbstzahler empfohlen — aber wohin genau? Diese
-Laborsuche schließt die Lücke zwischen Coaching-Empfehlung und konkretem
-Anbieter in der Nähe.
+- **DEXA Body Composition Scans** — Ganzkörper-Körperzusammensetzungsanalyse (Fett, Muskelmasse, viszerales Fett)
+- **Blutuntersuchungen als Selbstzahler** — Labore ohne ärztliche Überweisung
 
-<!-- Screenshots nach manueller Erstellung einbinden:
-![Desktop](docs/screenshots/desktop.png)
-![Mobile](docs/screenshots/mobile.png)
--->
+Die wichtigste fachliche Unterscheidung in diesem Projekt:
+**DEXA Body Composition ≠ Knochendichtemessung.** Viele Anbieter werben mit „DEXA", meinen aber nur Osteodensitometrie. Diese Unterscheidung ist der Kern der Datenerhebung.
 
-## Quick Start
+## Ergebnis in Zahlen
+
+| Metrik | Wert |
+|---|---:|
+| Provider gesamt | 89 |
+| DEXA Body Composition | 15 |
+| DXA Knochendichte (bone-only) | 17 |
+| Blutlabor Selbstzahler | 57 |
+| Verifiziert | 85 / 89 (95,5%) |
+| Mit Telefon | 89 / 89 (100%) |
+| Mit Adresse | 89 / 89 (100%) |
+| Mit öffentlichem Preis | 16 / 89 |
+| Länder | DE (61), AT (20), CH (8) |
+
+## Warum eine dritte Kategorie „Knochendichte"?
+
+Die Aufgabe verlangt DEXA Body Composition und Blutlabor. Wir zeigen zusätzlich 17 DXA-Knochendichte-Anbieter als eigene Kategorie, weil genau dort der häufigste Recherchefehler passiert: Websites schreiben „DEXA", bieten aber nur Knochendichte an.
+
+Die Kategorie ist kein Scope-Creep, sondern ein Transparenz-Layer: Sie zeigt, welche Treffer im Discovery-Schritt bewusst **nicht** als Body-Composition-Anbieter gezählt wurden.
+
+## Schnellstart
+
+### Voraussetzungen
+
+- Node.js 20+
+- npm 10+
+- Optional: Docker
 
 ### Lokal starten
 
@@ -25,133 +44,228 @@ npm run dev
 # → http://localhost:3000
 ```
 
+### Production Build
+
+```bash
+npm run build
+npm start
+```
+
 ### Mit Docker
 
 ```bash
-docker compose up
+docker compose up --build
 # → http://localhost:3000
 ```
 
-## Features
+## Screenshots
 
-- **Interaktive Karte** mit farbcodierten Markern (DEXA = Blau, Blutlabor = Grün, Beides = Violett)
-- **Filterfunktion** (Alle / DEXA Body Composition / Blutlabor Selbstzahler)
-- **Detail-Ansicht** mit Preisen, Kontakt, Buchungslinks
-- **Fuzzy-Suche** nach Name, Stadt oder PLZ
-- **Deep-Links** für Coaches: `?category=dexa&city=hannover`
-- **WhatsApp-Share** zum Teilen mit Coaching-Kunden
-- **Marker-Clustering** bei vielen Anbietern im gleichen Gebiet
-- **Geolocation** mit Entfernungsanzeige ("2,3 km entfernt")
-- **Responsive** — Desktop-Sidebar + Mobile Bottom-Drawer
-- **PWA-installierbar** — "Zum Startbildschirm hinzufügen"
-
-## Datenqualität
-
-| Metrik | Wert |
-|--------|------|
-| Gesamt-Einträge | [ZAHL] |
-| DEXA Body Composition | [ZAHL] |
-| Blutlabor Selbstzahler | [ZAHL] |
-| Verifiziert | [ZAHL] ([X]%) |
-| Telefonisch verifiziert | [ZAHL] DEXA-Anbieter |
-| Regionen | [LISTE] |
-
-### Recherche-Transparenz
-
-**DEXA Body Composition:** [X] Kandidaten via Google Places API gefunden →
-Keyword-Scoring klassifiziert [Y] als Body Composition → [Z] manuell +
-telefonisch bestätigt. Erkenntnis: [N] von [M] angerufenen Praxen boten
-nur Knochendichte, obwohl die Website "DEXA Scan" bewarb.
-
-**Blutlabor:** meindirektlabor.de (Sonic Healthcare) lieferte [X] Standorte
-als Basis. Ergänzt durch Bioscientia, Synlab und Einzellabore.
-
-## Recherche-Methodik
-
-### 1. Kandidatensuche
-
-Google Places API via Apify (kostenloser Tier) + manuelle Recherche auf
-megeni.com, dexascan.com, meindirektlabor.de.
-
-### 2. Klassifikation (DEXA Body Comp vs. Knochendichte)
-
-Keyword-Scoring auf Website-Texten:
-- "Body Composition" / "Körperzusammensetzung" / "viszerales Fett" → +Score
-- "Osteoporose" ohne Body-Comp-Kontext / "nur Knochendichte" → −Score
-- Grenzfälle: Claude API als Classifier (mit Confidence-Score)
-
-### 3. Verifizierung
-
-Website-Prüfung + telefonische Verifizierung bei [X] DEXA-Anbietern.
-Jeder Eintrag hat eine nachvollziehbare `verification`-Chain im Schema.
+![Desktop — Sidebar mit Suche, Filtern und Anbieterliste](docs/screenshots/desktop-map.png)
+![Mobil — Vollbild-Karte mit Filter-Chips und Anbieterliste](docs/screenshots/mobile-drawer.png)
+![Mobil — Anbieter-Detailansicht mit Leistungen und Preisen](docs/screenshots/provider-detail.png)
 
 ## Architektur-Entscheidungen
 
-**Next.js + Leaflet:** Basierend auf einem bewährten Leaflet-Starter,
-angepasst auf den Provider-Use-Case. Kein API-Key nötig — Reviewer
-kann sofort starten.
+### Next.js + statisches JSON statt Backend
 
-**Statisches JSON statt Backend:** Für [ZAHL] Einträge ist kein
-Backend/DB nötig. JSON liegt im Repo, ist versionierbar und
-vom Reviewer direkt prüfbar.
+Für 89 Standorte ist ein Backend nicht nötig. Ein eingechecktes JSON hat für eine Coding Challenge klare Vorteile: Reviewer kann das Ergebnis direkt prüfen, Daten sind versionierbar, kein API-Key nötig, lokaler Start in unter einer Minute.
 
-**DEXA ≠ Knochendichte:** Die zentrale Designentscheidung im Datenmodell.
-Das `services`-Array trennt explizit `dexa_body_composition` von
-`dexa_bone_density`. Ein Anbieter kann beides anbieten.
+### Vanilla Leaflet statt Google Maps
+
+Keine API-Kosten, keine Secrets im Repo, sofort lauffähig. Leaflet deckt alle Anforderungen ab: Marker, Clustering, Sidebar-Interaktion, Geolocation, Mobile Bottom Drawer.
+
+### Service-Level statt Provider-Level Modellierung
+
+Ein Anbieter kann gleichzeitig DEXA Body Composition, Knochendichte und Bluttest anbieten. Deshalb ist `services[]` das Kernobjekt — `categories[]` dient nur der UI-Filterung.
+
+### Datenqualität vor Datenmenge
+
+Der Discovery-Teil liefert absichtlich viel zu viele Kandidaten (779). Danach wird streng aussortiert: falsche DEXA-Treffer, generische Labore ohne Selbstzahler-Hinweis, Duplikate, unvollständige Datensätze. Das Verhältnis Discovery → Export (779 → 89) ist bewusst streng.
+
+## Datenerhebung
+
+### Quellen
+
+| Quelle | Einträge | Beschreibung |
+|---|---:|---|
+| Apify / Google Maps | ~700 Kandidaten | Breite Discovery für DEXA + Blutlabor |
+| meindirektlabor.de | 31 Standorte | Offizielle Standortliste (Sonic Healthcare) |
+| LLM-Recherche | 37 Einträge | 3 LLMs parallel, händisch verifiziert |
+| Manuelle Recherche | ~10 Einträge | Wien, Zürich, Spezialfälle |
+| browser-use Validierung | 78 URLs | Automatisierte Nachprüfung aller Einträge |
+
+### Pipeline
+
+```
+data/raw/*.json
+  → ingest_merge.py      # 779 Kandidaten aus 7 Quellen
+  → enrich.py            # Website-Texte laden
+  → classify.py          # Keyword-Scoring, Kategorie-Trennung
+  → geocode.py           # Koordinaten via Nominatim
+  → deduplicate.py       # Domain, Telefon, Geo-Nähe
+  → validate_export.py   # Schema-Validierung, Export
+  → public/data/providers.json
+```
+
+**classify.py** ist das Herzstück: Dual-Axis Keyword-Scoring trennt Body Composition von Knochendichte und echte Selbstzahler-Labore von Radiologien die „Blutentnahme" nur im Kontrastmittel-Kontext erwähnen.
+
+### Verifikation
+
+Die Priorität war Datenqualität vor Datenmenge. Pro Anbieter werden erfasst: Name, Kategorie, Leistungen, Adresse, Koordinaten, Telefon, Website, Selbstzahler-Status, Preise (falls öffentlich), Quelle, Verifikationsstatus.
+
+Verifikationsmethoden:
+- Website-Abgleich (Service-Seite bestätigt Leistung)
+- LLM-Cross-Check (3 LLMs parallel, nur Übereinstimmungen übernommen)
+- browser-use Validierung (automatisierte URL-Prüfung aller Einträge)
+- Händische Prüfung aller 15 DEXA Body Comp Anbieter
+- Plausibilitätsprüfung (Preise, Telefonnummern, Koordinaten, Duplikate)
+
+## Domänen-Insight: DEXA und Strahlenschutz
+
+### Deutschland
+
+DEXA fällt unter das Strahlenschutzgesetz ([§ 83 StrlSchG](https://www.gesetze-im-internet.de/strlschg/__83.html)). Jede Röntgenanwendung am Menschen braucht eine rechtfertigende Indikation durch eine fachkundige Ärztin oder einen fachkundigen Arzt. „Lifestyle-DXA" ohne medizinische Begründung ist regulatorisch problematisch. Das erklärt, warum es in Deutschland nur 3 offen beworbene DEXA Body Composition Anbieter gibt — die meisten bieten es im sportmedizinischen oder endokrinologischen Kontext an.
+
+### Österreich
+
+Auch hier gilt die [Medizinische Strahlenschutzverordnung](https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20010088). In der Praxis sind privat beworbene DXA-Body-Composition-Angebote in Österreich aber deutlich sichtbarer als in Deutschland. Mit 9 Anbietern hat AT die beste Abdeckung im DACH-Raum.
+
+### Schweiz
+
+Die [Verordnung über den Strahlenschutz bei medizinischen Anwendungen](https://www.fedlex.admin.ch/eli/cc/2019/748/de) regelt den Rahmen. DXA-Body-Composition-Angebote existieren, sind aber häufig stärker medizinisch oder sportdiagnostisch gerahmt.
+
+**Wichtig:** Diese Einordnung ist eine arbeitspraktische Recherche-Logik, keine Rechtsberatung.
 
 ## Datenmodell
 
-```json
-{
-  "id": "dexa-muc-001",
-  "name": "DEXA Zentrum München",
-  "categories": ["dexa_body_composition"],
-  "address": { "street": "...", "city": "München", "country": "DE" },
-  "location": { "type": "Point", "coordinates": [11.582, 48.155] },
-  "contact": { "phone": "...", "website": "...", "bookingUrl": "..." },
-  "services": [{
-    "type": "dexa_body_composition",
-    "name": "DEXA Ganzkörper Body Composition",
-    "selfPay": true,
-    "price": { "amount": 149, "currency": "EUR" }
-  }],
-  "verification": {
-    "status": "verified",
-    "confidence": 0.9,
-    "date": "2026-03-01",
-    "method": "website + phone"
-  }
+### Provider
+
+```typescript
+interface Provider {
+  id: string;                    // "dexa-at-001"
+  name: string;
+  categories: ProviderCategory[];
+  address: {
+    street: string;
+    postalCode: string;
+    city: string;
+    state: string;
+    country: "DE" | "AT" | "CH";
+  };
+  location: {
+    type: "Point";
+    coordinates: [number, number]; // [lng, lat] GeoJSON
+  };
+  contact: {
+    phone: string;
+    website: string;
+    bookingUrl?: string;
+  };
+  services: ProviderService[];
+  selfPay: boolean;
+  verified: boolean;
+  source: {
+    origin: string;
+    primaryUrl: string;
+    collectedAt: string;
+  };
 }
 ```
 
-Das `verification`-Objekt mit `confidence` Score und `method`
-zeigt für jeden Eintrag: woher stammt er, wie sicher sind wir,
-wann wurde er geprüft.
+### Service (pro Leistung)
+
+```typescript
+interface ProviderService {
+  type: "dexa_body_composition" | "dexa_bone_density" | "blood_test_self_pay";
+  name: string;
+  selfPay: boolean;
+  price?: { amount: number; currency: "EUR" | "CHF"; note: string };
+  verification: {
+    status: "verified" | "unverified";
+    confidence: number;  // 0-1
+    date: string;
+    method: string;
+  };
+}
+```
+
+### Warum dieses Modell?
+
+- `services[]` ist erweiterbar (neue Leistungstypen ohne Schema-Änderung)
+- Verification ist pro Service möglich, nicht nur pro Provider
+- `source` macht die Herkunft nachvollziehbar
+- `location.coordinates` ist GeoJSON-kompatibel
+- Das Format ist direkt API-tauglich
+
+## Features
+
+- **Filter:** Alle / DEXA Body Scan / Knochendichte / Blutlabor mit Live-Zähler
+- **Marker-Clustering** bei hoher Dichte
+- **Custom Icons:** Körpersilhouette (DEXA), Knochen (Knochendichte), Tropfen (Blutlabor)
+- **Farbschema:** Violett (DEXA), Blau (Knochendichte), Rot (Blutlabor)
+- **Suche:** Fuzzy-Search nach Name, Stadt, PLZ (fuse.js)
+- **Detail-Panel:** Leistungen, Preise, Verifizierung, CTA-Buttons
+- **Mobile:** Bottom Drawer mit Snap-Points, Touch-optimierte Tap-Targets
+- **Geolocation** mit Entfernungssortierung
+- **CTAs:** Route planen (Google Maps), Anrufen/Nummer kopieren, Website, Termin buchen, WhatsApp teilen
+- **Deutsche Karten-Labels** (OSM DE Tiles)
+- **Responsive** Desktop-Sidebar + Mobile-Drawer
+
+## Projektstruktur
+
+```
+app/                        Next.js App Router
+  map/page.tsx              Kartenansicht
+components/
+  map/                      Karte, Controls, Sidebar
+  landing/                  Hero, Navigation
+  icons/                    Custom SVG Icons
+  ui/                       UI-Primitive (Drawer, Dropdown)
+contexts/                   React Contexts (Map, Provider, Theme)
+hooks/                      Leaflet- und UI-Hooks
+public/data/                Finales providers.json
+scripts/process/            Datenpipeline (6 Stufen)
+types/                      TypeScript-Datenmodell
+data/raw/                   Rohdaten-Samples
+```
+
+## Bekannte Grenzen
+
+- Öffentliche Preise sind im Markt selten — fehlende Preise sind absichtlich `null` statt geraten
+- 4 Einträge sind aktuell noch `unverified` und sollten vor produktiver Nutzung nachverifiziert werden
+- Die Rohdaten aus dem Apify-Discovery-Schritt sind als Sample (je 50 Einträge) eingecheckt, nicht vollständig
+- DEXA Body Composition in Deutschland ist regulierungsbedingt dünn besetzt (3 Anbieter) — das ist kein Datenleck, sondern Marktgegebenheit
+
+## Was ich bei mehr Zeit noch machen würde
+
+- **Evidenz-Links** pro Service direkt im Datensatz speichern (source_url pro Leistung)
+- **Service-spezifische Verifikation** konsequent durchziehen statt teilweise provider-weit
+- Die letzten 4 **unverified Einträge** manuell schließen oder entfernen
+- **Preisextraktion** für Direktlabor-Standorte systematisieren (GOÄ-Preislisten parsen)
+- **E2E-Tests** für Karte, Filter und Reset-View (Playwright)
+- Bone-only standardmäßig als optionalen **Transparenz-Layer** statt gleichrangige Primärkategorie
+- **Automatisches Monitoring** für Änderungen auf Anbieter-Websites
 
 ## Tech Stack
 
-| Komponente | Wahl |
-|-----------|------|
-| Framework | Next.js 16 + TypeScript |
-| Karte | Leaflet + Carto Voyager Tiles |
-| Clustering | leaflet.markercluster |
+| Bereich | Wahl |
+|---|---|
+| Frontend | Next.js + TypeScript |
+| Karte | Leaflet + leaflet.markercluster |
 | Suche | fuse.js |
-| Styling | Tailwind CSS 4 |
-| Container | Docker (standalone build) |
+| Styling | Tailwind CSS |
+| Datenpipeline | Python |
+| Geocoding | geopy / Nominatim |
+| Validierung | Pydantic |
+| Dedup | rapidfuzz |
+| Container | Docker |
 
-## Was ich bei mehr Zeit machen würde
+## Lokale Verifikation
 
-- **Feedback-Loop:** Coaches/Kunden melden Aktualisierungen zurück (~1 Woche)
-- **Embed-Modus:** `<iframe>` Integration für bestehende Plattformen (~2 Tage)
-- **Automatisiertes Monitoring:** Scraper als Cron-Job prüft ob Anbieter noch aktiv (~3 Tage)
-- **Coach vs. Kunden-Ansicht:** Interne Ansicht mit Notizen, externe mit vereinfachter Sprache (~1 Woche)
-- **Aggregierte DEXA-Benchmarks:** Anonymisierte Scan-Ergebnisse als Coaching-KPI (Vision)
-
-## Abschließender Gedanke
-
-Diese Laborsuche löst ein konkretes Problem für Coaching-Kunden,
-die objektive Daten zu ihrem Körperfettanteil und ihren Blutwerten
-brauchen. Der eigentliche Wert liegt nicht in der Karte — sondern
-darin, dass ein datenbasiertes Coaching-Unternehmen zum ersten Mal
-eine kuratierte Infrastruktur für die diagnostischen Touchpoints
-seiner Kunden aufbaut.
+```bash
+npm install
+npm run lint
+npm run build
+npm run dev
+docker compose up --build
+```
