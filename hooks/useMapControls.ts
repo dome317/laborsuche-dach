@@ -33,8 +33,7 @@ export function useMapControls() {
 
     const resetView = useCallback(() => {
         if (map) {
-            // Reset to default view
-            map.setView([-2.911154, 120.074263], 5);
+            map.setView([48.5, 10.5], 6);
         }
     }, [map]);
 

@@ -46,7 +46,6 @@ qualified.slice(0, 5).forEach((e, i) => {
 // 4. Deduplicate by name similarity - remove duplicates (same org, different locations named similarly)
 // Also remove entries already in providers.json
 const existingNames = new Set(providersData.providers.map(p => p.name.toLowerCase()));
-const existingSlugs = new Set(providersData.providers.map(p => p.slug));
 
 // Deduplicate: keep highest score per unique base name
 const seen = new Map();

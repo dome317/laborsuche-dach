@@ -143,7 +143,7 @@ export function useGeolocation() {
 
     // Request user's location
     map.locate({ setView: true, maxZoom: 16 });
-  }, [map, cleanupEventHandlers, clearLocationMarkers]);
+  }, [map, cleanupEventHandlers, clearLocationMarkers, setCtxPosition]);
 
   // Cleanup on unmount
   useEffect(() => {

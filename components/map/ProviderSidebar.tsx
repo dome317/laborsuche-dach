@@ -334,7 +334,6 @@ function ProviderDetail() {
   const provider = selectedProvider;
   const category = getMainCategory(provider);
   const color = CATEGORY_COLORS[category];
-  const label = CATEGORY_LABELS[category];
   const [lng, lat] = provider.location.coordinates;
 
   const isVerified = provider.verified;
@@ -582,7 +581,7 @@ function ProviderDetail() {
 
 // --- Main Sidebar ---
 export function ProviderSidebar() {
-  const { selectedProvider, setSelectedProviderId } = useProviders();
+  const { selectedProvider } = useProviders();
   const [isMobile, setIsMobile] = useState(false);
   const snapPoints = [0.5, 0.65, 1];
   const [snap, setSnap] = useState<number | string | null>(snapPoints[0]);

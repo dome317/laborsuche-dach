@@ -4,10 +4,8 @@ import {
   createContext,
   useContext,
   useState,
-  useCallback,
   useMemo,
   useEffect,
-  useRef,
   type ReactNode,
 } from "react";
 import Fuse from "fuse.js";
@@ -82,26 +80,19 @@ export function ProviderProvider({ children }: { children: ReactNode }) {
   const [providers, setProviders] = useState<Provider[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  // Initialize with SSR-safe defaults, then sync from URL after mount
-  const [selectedCategory, setSelectedCategory] = useState<CategoryFilter>("all");
-  const [selectedProviderId, setSelectedProviderId] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState("");
-
-  // Sync initial state from URL params after hydration
-  const urlSyncedRef = useRef(false);
-  useEffect(() => {
-    if (urlSyncedRef.current) return;
-    urlSyncedRef.current = true;
-    const params = new URLSearchParams(window.location.search);
-    const category = params.get("category") as CategoryFilter | null;
-    if (category && VALID_CATEGORIES.includes(category)) {
-      setSelectedCategory(category);
-    }
-    const selected = params.get("selected");
-    if (selected) setSelectedProviderId(selected);
-    const q = params.get("q");
-    if (q) setSearchQuery(q);
-  }, []);
+  const [selectedCategory, setSelectedCategory] = useState<CategoryFilter>(() => {
+    if (typeof window === "undefined") return "all";
+    const cat = new URLSearchParams(window.location.search).get("category") as CategoryFilter | null;
+    return cat && VALID_CATEGORIES.includes(cat) ? cat : "all";
+  });
+  const [selectedProviderId, setSelectedProviderId] = useState<string | null>(() => {
+    if (typeof window === "undefined") return null;
+    return new URLSearchParams(window.location.search).get("selected");
+  });
+  const [searchQuery, setSearchQuery] = useState(() => {
+    if (typeof window === "undefined") return "";
+    return new URLSearchParams(window.location.search).get("q") ?? "";
+  });
   const [viewportBounds, setViewportBounds] = useState<ViewportBounds | null>(null);
   const [hoveredProviderId, setHoveredProviderId] = useState<string | null>(null);
   const [userPosition, setUserPosition] = useState<{ lat: number; lng: number } | null>(null);

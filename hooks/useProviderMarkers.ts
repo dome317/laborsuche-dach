@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useLeafletMap } from "@/hooks/useLeafletMap";
 import { useProviders } from "@/contexts/ProviderContext";
-import type { Provider, ProviderCategory } from "@/types/provider";
+import type { Provider } from "@/types/provider";
 import type { Marker, MarkerClusterGroup } from "leaflet";
 
 /** Visual category for marker rendering — derived from categories array */
@@ -286,13 +286,15 @@ export function useProviderMarkers() {
 
   // Cleanup on unmount
   useEffect(() => {
+    const markers = markersRef.current;
+    const clusterGroup = clusterGroupRef.current;
     return () => {
-      if (clusterGroupRef.current) {
-        clusterGroupRef.current.clearLayers();
-        clusterGroupRef.current.remove();
+      if (clusterGroup) {
+        clusterGroup.clearLayers();
+        clusterGroup.remove();
         clusterGroupRef.current = null;
       }
-      markersRef.current.clear();
+      markers.clear();
     };
   }, []);
 }

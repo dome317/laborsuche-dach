@@ -2568,62 +2568,6 @@
       ]
     },
     {
-      "id": "blut-de-005",
-      "name": "Labor Berlin - Charité Vivantes GmbH",
-      "slug": "labor-berlin-charit-vivantes-gmbh",
-      "categories": [
-        "blutlabor"
-      ],
-      "address": {
-        "street": "Sylter Str. 2",
-        "postalCode": "13353",
-        "city": "Berlin",
-        "state": "Berlin",
-        "country": "DE"
-      },
-      "location": {
-        "type": "Point",
-        "coordinates": [
-          13.338093,
-          52.5415198
-        ]
-      },
-      "contact": {
-        "phone": "+49 304 050260",
-        "website": "https://mein.laborberlin.com",
-        "email": null,
-        "bookingUrl": null
-      },
-      "services": [
-        {
-          "type": "blood_test_self_pay",
-          "name": "Blutuntersuchung Selbstzahler",
-          "description": null,
-          "selfPay": true,
-          "price": null,
-          "verification": {
-            "status": "unverified",
-            "confidence": 0.6,
-            "date": "2026-03-09",
-            "method": "google_places",
-            "notes": null
-          }
-        }
-      ],
-      "selfPay": true,
-      "verified": false,
-      "source": {
-        "origin": "apify",
-        "primaryUrl": "http://www.laborberlin.com",
-        "collectedAt": "2026-03-09T00:37:38Z"
-      },
-      "tags": [
-        "blutlabor",
-        "selbstzahler",
-        "berlin"
-      ]
-    },
-    {
       "id": "blut-de-006",
       "name": "MDI Limbach Berlin GmbH",
       "slug": "mdi-limbach-berlin-gmbh",
@@ -2776,7 +2720,7 @@
           "price": {
             "amount": null,
             "currency": "EUR",
-            "note": "Blutentnahme 4,20\u20ac + Auslagen, Einzelpreise nach GO\u00c4"
+            "note": "Blutentnahme 4,20€ + Auslagen, Einzelpreise nach GOÄ"
           },
           "verification": {
             "status": "verified",
@@ -3746,62 +3690,6 @@
       ]
     },
     {
-      "id": "blut-de-025",
-      "name": "KiELab | Dr. med. Harald Erichsen",
-      "slug": "kielab-dr-med-harald-erichsen",
-      "categories": [
-        "blutlabor"
-      ],
-      "address": {
-        "street": "Dreiecksplatz 11",
-        "postalCode": "24103",
-        "city": "Kiel",
-        "state": "Schleswig-Holstein",
-        "country": "DE"
-      },
-      "location": {
-        "type": "Point",
-        "coordinates": [
-          10.1349392,
-          54.3282783
-        ]
-      },
-      "contact": {
-        "phone": "+49 431 6673300",
-        "website": "https://www.kielab.de",
-        "email": null,
-        "bookingUrl": null
-      },
-      "services": [
-        {
-          "type": "blood_test_self_pay",
-          "name": "Blutuntersuchung Selbstzahler",
-          "description": null,
-          "selfPay": true,
-          "price": null,
-          "verification": {
-            "status": "unverified",
-            "confidence": 0.6,
-            "date": "2026-03-09",
-            "method": "google_places",
-            "notes": null
-          }
-        }
-      ],
-      "selfPay": true,
-      "verified": false,
-      "source": {
-        "origin": "apify",
-        "primaryUrl": "https://www.kielab.de",
-        "collectedAt": "2026-03-09T00:37:38Z"
-      },
-      "tags": [
-        "blutlabor",
-        "selbstzahler",
-        "kiel"
-      ]
-    },
-    {
       "id": "blut-de-026",
       "name": "Mein Direktlabor - Labor Klipphausen",
       "slug": "mein-direktlabor-labor-klipphausen",
@@ -3971,62 +3859,6 @@
       ]
     },
     {
-      "id": "blut-de-029",
-      "name": "Mein Direktlabor - Labor Köln",
-      "slug": "mein-direktlabor-labor-koeln",
-      "categories": [
-        "blutlabor"
-      ],
-      "address": {
-        "street": "Hauptstraße 71-73",
-        "postalCode": "50670",
-        "city": "Köln",
-        "state": "Nordrhein-Westfalen",
-        "country": "DE"
-      },
-      "location": {
-        "type": "Point",
-        "coordinates": [
-          6.9952764,
-          50.8933481
-        ]
-      },
-      "contact": {
-        "phone": "+49 221 9355560",
-        "website": "https://www.meindirektlabor.de",
-        "email": null,
-        "bookingUrl": "https://www.meindirektlabor.de/termine/"
-      },
-      "services": [
-        {
-          "type": "blood_test_self_pay",
-          "name": "Blutuntersuchung Selbstzahler",
-          "description": null,
-          "selfPay": true,
-          "price": null,
-          "verification": {
-            "status": "unverified",
-            "confidence": 0.6,
-            "date": "2026-03-09",
-            "method": "google_places",
-            "notes": null
-          }
-        }
-      ],
-      "selfPay": true,
-      "verified": false,
-      "source": {
-        "origin": "apify",
-        "primaryUrl": "https://www.meindirektlabor.de",
-        "collectedAt": "2026-03-09T00:37:38Z"
-      },
-      "tags": [
-        "blutlabor",
-        "selbstzahler",
-        "köln"
-      ]
-    },
-    {
       "id": "blut-de-030",
       "name": "Bioscientia Labor Stuttgart",
       "slug": "bioscientia-labor-stuttgart",
@@ -4146,62 +3978,6 @@
         "selbstzahler",
         "mainz",
         "direktlabor"
-      ]
-    },
-    {
-      "id": "blut-de-032",
-      "name": "MVZ GANZIMMUN GmbH - Arztpraxis",
-      "slug": "mvz-ganzimmun-gmbh-arztpraxis",
-      "categories": [
-        "blutlabor"
-      ],
-      "address": {
-        "street": "Erich-Dombrowski-Straße 3",
-        "postalCode": "55116",
-        "city": "Mainz",
-        "state": "Rheinland-Pfalz",
-        "country": "DE"
-      },
-      "location": {
-        "type": "Point",
-        "coordinates": [
-          8.2097649,
-          49.9587847
-        ]
-      },
-      "contact": {
-        "phone": "+49 613 17205220",
-        "website": "https://www.mvz-ganzimmun.de",
-        "email": null,
-        "bookingUrl": null
-      },
-      "services": [
-        {
-          "type": "blood_test_self_pay",
-          "name": "Blutuntersuchung Selbstzahler",
-          "description": null,
-          "selfPay": true,
-          "price": null,
-          "verification": {
-            "status": "unverified",
-            "confidence": 0.6,
-            "date": "2026-03-09",
-            "method": "google_places",
-            "notes": null
-          }
-        }
-      ],
-      "selfPay": true,
-      "verified": false,
-      "source": {
-        "origin": "apify",
-        "primaryUrl": "https://www.mvz-ganzimmun.de",
-        "collectedAt": "2026-03-09T00:37:38Z"
-      },
-      "tags": [
-        "blutlabor",
-        "selbstzahler",
-        "mainz"
       ]
     },
     {
