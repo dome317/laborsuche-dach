@@ -9,7 +9,6 @@
  * - MapMain: Main map layout with all controls
  * - MapControls: Zoom, fullscreen, location controls
  * - MapTopBar: Theme switcher and user menu
- * - MapTileSwitcher: Base map layer switcher
  * - MapThemeSwitcher: Light/dark theme toggle
  *
  * Utilities:
@@ -25,7 +24,6 @@ export { MapErrorBoundary } from './MapErrorBoundary';
 export { MapLoadingSpinner } from './MapLoadingSpinner';
 export { MapMain } from './MapMain';
 export { MapTopBar } from './MapTopBar';
-export { MapTileSwitcher } from './MapTileSwitcher';
 export { MapControls } from './MapControls';
 export { MapThemeSwitcher } from './MapThemeSwitcher';
 export { MapUser } from './MapUser';
