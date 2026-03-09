@@ -10,7 +10,7 @@ export function NavigationButtons() {
       {/* Go to Map button */}
       <Link
         href="/map"
-        className="group flex w-64 items-center justify-between rounded-full bg-amber-600/90 pl-6 pr-2 py-2 text-sm font-semibold text-zinc-900 transition-colors hover:bg-amber-600"
+        className="group flex w-64 items-center justify-between rounded-full bg-blue-600 pl-6 pr-2 py-2 text-sm font-semibold text-white shadow-md transition-colors hover:bg-blue-700"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +37,7 @@ export function NavigationButtons() {
         href="https://github.com/dome317/laborsuche-dach"
         target="_blank"
         rel="noopener noreferrer"
-        className="group flex w-64 items-center justify-between rounded-full bg-white/70 pl-6 pr-2 py-2 text-sm font-semibold text-zinc-900 transition-colors hover:bg-white"
+        className="group flex w-64 items-center justify-between rounded-full bg-white/90 pl-6 pr-2 py-2 text-sm font-semibold text-zinc-900 shadow-md backdrop-blur-sm transition-colors hover:bg-white"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

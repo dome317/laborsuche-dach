@@ -1,0 +1,101 @@
+[
+  {
+    "name": "Diagnosezentrum Meidling (Diagnostikum)",
+    "city": "Wien",
+    "country": "AT",
+    "address": "Meidlinger Hauptstraße 7-9, 1120 Wien",
+    "phone": "+43 1 81 333 81",
+    "website": "https://diagnostikum.at/de/locations/diagnosezentrum-meidling/",
+    "category": "dexa",
+    "services_mentioned": "Body Composition (Fettmessung/Muskelmasse), Knochendichtemessung",
+    "source_type": "manual"
+  },
+  {
+    "name": "Radiologie Währing",
+    "city": "Wien",
+    "country": "AT",
+    "address": "Währinger Straße 138, 1180 Wien",
+    "phone": "+43 1 4706862",
+    "website": "https://www.radiologiewaehring.at/unsere-leistungen/",
+    "category": "dexa",
+    "services_mentioned": "Body Composition (Körperfettmessung / DXA Body-Scan), Knochendichtemessung",
+    "source_type": "manual"
+  },
+  {
+    "name": "Röntgen Wien Nord",
+    "city": "Wien",
+    "country": "AT",
+    "address": "Pastorstraße 2a, 1210 Wien",
+    "phone": "+43 1 25841750",
+    "website": "https://www.roentgen-wien-nord.at/knochendichtemessung/",
+    "category": "dexa",
+    "services_mentioned": "Knochendichtemessung nur (Osteoporose)",
+    "source_type": "manual"
+  },
+  {
+    "name": "DZ10 Diagnosezentrum Favoriten",
+    "city": "Wien",
+    "country": "AT",
+    "address": "Am Hauptbahnhof 2, 1100 Wien",
+    "phone": "+43 1 602 28 29",
+    "website": "https://www.dz10.at",
+    "category": "dexa",
+    "services_mentioned": "Knochendichtemessung nur (DEXA mit TBS)",
+    "source_type": "manual"
+  },
+  {
+    "name": "Radiologicum Margareten",
+    "city": "Wien",
+    "country": "AT",
+    "address": "Nikolsdorfergasse 32-36, 1050 Wien",
+    "phone": "+43 1 544 42 62",
+    "website": "https://www.radiologicum.wien",
+    "category": "dexa",
+    "services_mentioned": "Knochendichtemessung nur (DEXA)",
+    "source_type": "manual"
+  },
+  {
+    "name": "Radiologicum Penzing",
+    "city": "Wien",
+    "country": "AT",
+    "address": "Kuefsteingasse 15-19, 1140 Wien",
+    "phone": "+43 1 982 55 88",
+    "website": "https://www.radiologicum.wien",
+    "category": "dexa",
+    "services_mentioned": "Knochendichtemessung nur (DEXA)",
+    "source_type": "manual"
+  },
+  {
+    "name": "Diagnosehaus 3",
+    "city": "Wien",
+    "country": "AT",
+    "address": "Landstraßer Hauptstraße 71, 1030 Wien",
+    "phone": "+43 1 713 80 18",
+    "website": "https://www.diagnosehaus3.at/knochendichte",
+    "category": "dexa",
+    "services_mentioned": "Knochendichtemessung nur (DEXA, TBS optional)",
+    "source_type": "manual"
+  },
+  {
+    "name": "Diagnosehaus 11",
+    "city": "Wien",
+    "country": "AT",
+    "address": "Simmeringer Hauptstraße 101, 1110 Wien",
+    "phone": "+43 1 749 71 76",
+    "website": "https://www.diagnosehaus3.at/knochendichte",
+    "category": "dexa",
+    "services_mentioned": "Knochendichtemessung nur (DEXA, TBS optional)",
+    "source_type": "manual"
+  },
+  {
+    "name": "Diagnosehaus 18",
+    "city": "Wien",
+    "country": "AT",
+    "address": "Hans-Sachs-Gasse 10-12, 1180 Wien",
+    "phone": "+43 1 402 80 62",
+    "website": "https://www.diagnosehaus3.at/knochendichte",
+    "category": "dexa",
+    "services_mentioned": "Knochendichtemessung nur (DEXA, TBS optional)",
+    "source_type": "manual"
+  }
+]

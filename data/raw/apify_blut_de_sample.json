@@ -1,0 +1,814 @@
+[
+  {
+    "title": "Mein Direktlabor - Labor Köln",
+    "totalScore": 5,
+    "reviewsCount": 9,
+    "street": "Hauptstraße 71-73",
+    "city": "Köln",
+    "state": null,
+    "countryCode": "DE",
+    "website": "https://www.meindirektlabor.de/",
+    "phone": "+49 221 9355560",
+    "categories": [
+      "Medizinisches Labor"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=Mein%20Direktlabor%20-%20Labor%20K%C3%B6ln&query_place_id=ChIJUW3fQdYnv0cR_L7DoJaNuZQ",
+    "categoryName": "Medizinisches Labor"
+  },
+  {
+    "title": "Labor Dr. Wisplinghoff",
+    "totalScore": 2.8,
+    "reviewsCount": 451,
+    "street": "Horbeller Str. 18-20",
+    "city": "Köln",
+    "state": null,
+    "countryCode": "DE",
+    "website": "https://www.wisplinghoff.de/",
+    "phone": "+49 221 9405050",
+    "categories": [
+      "Medizinisches Labor"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=Labor%20Dr.%20Wisplinghoff&query_place_id=ChIJgThDlOEkv0cR6hQowvwcx8k",
+    "categoryName": "Medizinisches Labor"
+  },
+  {
+    "title": "MVZ Labor Dr. Quade & Kollegen GmbH",
+    "totalScore": 3.7,
+    "reviewsCount": 171,
+    "street": "Hugo-Eckener-Straße 45",
+    "city": "Köln",
+    "state": null,
+    "countryCode": "DE",
+    "website": "https://www.lab-quade.de/",
+    "phone": "+49 221 9405640",
+    "categories": [
+      "Medizinisches Labor"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=MVZ%20Labor%20Dr.%20Quade%20%26%20Kollegen%20GmbH&query_place_id=ChIJ4-lanCglv0cRWEuGpk1HY3o",
+    "categoryName": "Medizinisches Labor"
+  },
+  {
+    "title": "SYNLAB MVZ Leverkusen",
+    "totalScore": 2.8,
+    "reviewsCount": 87,
+    "street": "Paracelsusstraße 13",
+    "city": "Leverkusen",
+    "state": null,
+    "countryCode": "DE",
+    "website": "https://www.synlab.de/lab/leverkusen",
+    "phone": "+49 214 3740",
+    "categories": [
+      "Medizinisches Labor"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=SYNLAB%20MVZ%20Leverkusen&query_place_id=ChIJjUR9rkkpv0cRpxBdB2vmhQU",
+    "categoryName": "Medizinisches Labor"
+  },
+  {
+    "title": "MLD Medizinische Laboratorien Düsseldorf",
+    "totalScore": 3.3,
+    "reviewsCount": 150,
+    "street": "Nordstraße 44",
+    "city": "Düsseldorf",
+    "state": null,
+    "countryCode": "DE",
+    "website": "http://www.labor-duesseldorf.de/",
+    "phone": "+49 211 49780",
+    "categories": [
+      "Medizinisches Labor"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=MLD%20Medizinische%20Laboratorien%20D%C3%BCsseldorf&query_place_id=ChIJr5Gb1vTJuEcRzUwsJPjblHA",
+    "categoryName": "Medizinisches Labor"
+  },
+  {
+    "title": "SYNLAB MVZ Hämatologisches Labor Köln",
+    "totalScore": 2.3,
+    "reviewsCount": 3,
+    "street": "Kerpener Str. 62",
+    "city": "Köln",
+    "state": null,
+    "countryCode": "DE",
+    "website": "https://www.synlab.de/lab/koeln",
+    "phone": "+49 221 47898650",
+    "categories": [
+      "Medizinisches Labor"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=SYNLAB%20MVZ%20H%C3%A4matologisches%20Labor%20K%C3%B6ln&query_place_id=ChIJNd_dL-Ykv0cRhc1tnzasQ10",
+    "categoryName": "Medizinisches Labor"
+  },
+  {
+    "title": "Praxis für Labormedizin und Mikrobiologie",
+    "totalScore": 3.1,
+    "reviewsCount": 64,
+    "street": "Universitätsstraße 62",
+    "city": "Bochum",
+    "state": null,
+    "countryCode": "DE",
+    "website": "https://medlab-bochum.de/",
+    "phone": "+49 234 3077100",
+    "categories": [
+      "Medizinisches Labor",
+      "Arzt"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=Praxis%20f%C3%BCr%20Labormedizin%20und%20Mikrobiologie&query_place_id=ChIJ_8kCaBDguEcRuRgnl8UtsqU",
+    "categoryName": "Medizinisches Labor"
+  },
+  {
+    "title": "LIS - Labor im Sommershof",
+    "totalScore": 3,
+    "reviewsCount": 32,
+    "street": "Hauptstraße 71-73",
+    "city": "Köln",
+    "state": null,
+    "countryCode": "DE",
+    "website": "https://lis.koeln/",
+    "phone": "+49 221 9355560",
+    "categories": [
+      "Medizinisches Labor"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=LIS%20-%20Labor%20im%20Sommershof&query_place_id=ChIJbaMEXK4mv0cRYsBMWLU9Ndk",
+    "categoryName": "Medizinisches Labor"
+  },
+  {
+    "title": "Labmed Dortmund GmbH",
+    "totalScore": 5,
+    "reviewsCount": 4,
+    "street": "Prinzenstraße 7",
+    "city": "Dortmund",
+    "state": null,
+    "countryCode": "DE",
+    "website": "http://www.labmed.de/",
+    "phone": "+49 231 95720",
+    "categories": [
+      "Labor"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=Labmed%20Dortmund%20GmbH&query_place_id=ChIJK5m_LeAZuUcRl3IJi_uLJIQ",
+    "categoryName": "Labor"
+  },
+  {
+    "title": "Praxis für Labormedizin und Mikrobiologie ÜbaG GbR",
+    "totalScore": 4.3,
+    "reviewsCount": 6,
+    "street": "Carnaper Str. 73-75",
+    "city": "Wuppertal",
+    "state": null,
+    "countryCode": "DE",
+    "website": "http://www.medlab-wuppertal.de/",
+    "phone": "+49 202 255770",
+    "categories": [
+      "Medizinisches Labor",
+      "Arzt"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=Praxis%20f%C3%BCr%20Labormedizin%20und%20Mikrobiologie%20%C3%9CbaG%20GbR&query_place_id=ChIJvZ--dT0ouUcRx1Dfl3M06G8",
+    "categoryName": "Medizinisches Labor"
+  },
+  {
+    "title": "Dr. Wisplinghoff MPU",
+    "totalScore": 4.1,
+    "reviewsCount": 23,
+    "street": "Rüttenscheider Stern 5",
+    "city": "Essen",
+    "state": null,
+    "countryCode": "DE",
+    "website": "https://mpu.wisplinghoff.de/",
+    "phone": "+49 221 940505405",
+    "categories": [
+      "Labor"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=Dr.%20Wisplinghoff%20MPU&query_place_id=ChIJNwkIGHjDuEcR3CW8bMUOFp0",
+    "categoryName": "Labor"
+  },
+  {
+    "title": "Prof. Dr. med. habil. Heiner Trobisch",
+    "totalScore": 4.3,
+    "reviewsCount": 40,
+    "street": "Königstraße 61",
+    "city": "Duisburg",
+    "state": null,
+    "countryCode": "DE",
+    "website": "https://www.mvz-trobisch.de/",
+    "phone": "+49 203 31960190",
+    "categories": [
+      "Labor",
+      "Hämatologe"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=Prof.%20Dr.%20med.%20habil.%20Heiner%20Trobisch&query_place_id=ChIJ45cUJBO_uEcRTEz6xRYSecE",
+    "categoryName": "Labor"
+  },
+  {
+    "title": "MVZ amedes für Praenatal-Medizin und Genetik GmbH",
+    "totalScore": 4,
+    "reviewsCount": 203,
+    "street": "Graf-Adolf-Straße 35",
+    "city": "Düsseldorf",
+    "state": null,
+    "countryCode": "DE",
+    "website": "http://www.praenatal.de/",
+    "phone": "+49 211 384570",
+    "categories": [
+      "Arzt",
+      "Frauenarzt/-ärztin"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=MVZ%20amedes%20f%C3%BCr%20Praenatal-Medizin%20und%20Genetik%20GmbH&query_place_id=ChIJ7SfDVjnKuEcRrV5Z2FYZ4Pk",
+    "categoryName": "Arzt"
+  },
+  {
+    "title": "MVZ MEDICOVER Köln",
+    "totalScore": 3.5,
+    "reviewsCount": 118,
+    "street": "Weißhausstraße 28",
+    "city": "Köln",
+    "state": null,
+    "countryCode": "DE",
+    "website": "http://www.medicover.de/de/facilities/medicover-koeln-mvz",
+    "phone": "+49 221 9440560",
+    "categories": [
+      "Endokrinologe",
+      "Diabetologe"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=MVZ%20MEDICOVER%20K%C3%B6ln&query_place_id=ChIJqR9CDPckv0cRY_ydwmVpsiE",
+    "categoryName": "Endokrinologe"
+  },
+  {
+    "title": "Mein Direktlabor - Labor Stephansplatz",
+    "totalScore": 4.8,
+    "reviewsCount": 157,
+    "street": "Stephanspl. 3",
+    "city": "Hamburg",
+    "state": null,
+    "countryCode": "DE",
+    "website": "https://www.meindirektlabor.de/standorte/standort/labor-stephansplatz/",
+    "phone": "+49 40 76696700",
+    "categories": [
+      "Medizinisches Labor"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=Mein%20Direktlabor%20-%20Labor%20Stephansplatz&query_place_id=ChIJf2SrGxiPsUcRgcuQUAV92pM",
+    "categoryName": "Medizinisches Labor"
+  },
+  {
+    "title": "Praxis für Endokrinologie Köln",
+    "totalScore": 3.1,
+    "reviewsCount": 27,
+    "street": "Kattenbug 1",
+    "city": "Köln",
+    "state": null,
+    "countryCode": "DE",
+    "website": "https://endokonsilamkattenbug.de/",
+    "phone": "+49 221 65084080",
+    "categories": [
+      "Arzt"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=Praxis%20f%C3%BCr%20Endokrinologie%20K%C3%B6ln&query_place_id=ChIJ-xRoOVUlv0cRMoEhBsiEbik",
+    "categoryName": "Arzt"
+  },
+  {
+    "title": "Meinkabtest GmbH",
+    "reviewsCount": null,
+    "street": "Siegburger Str. 231",
+    "city": "Köln",
+    "state": null,
+    "countryCode": "DE",
+    "website": "https://www.meinlabtest.de/",
+    "phone": "+49 271 3846000",
+    "categories": [
+      "E-Commerce-Dienst",
+      "Gesundheitsberater"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=Meinkabtest%20GmbH&query_place_id=ChIJqXD8GXQlv0cRrPUPGjf_Pcs",
+    "categoryName": "E-Commerce-Dienst"
+  },
+  {
+    "title": "Endokonsil | Praxis am Kortumhaus",
+    "totalScore": 4.5,
+    "reviewsCount": 62,
+    "street": "Harmoniestraße 1",
+    "city": "Bochum",
+    "state": null,
+    "countryCode": "DE",
+    "website": "https://www.endokonsil-gruppe.de/",
+    "phone": "+49 234 904990",
+    "categories": [
+      "Arztpraxis",
+      "Arzt",
+      "Endokrinologe"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=Endokonsil%20%7C%20Praxis%20am%20Kortumhaus&query_place_id=ChIJQUIZD2ThuEcRyF6RYqFfCGM",
+    "categoryName": "Arztpraxis"
+  },
+  {
+    "title": "Endokrinologische Gemeinschaftspraxis am Aachener Platz GbR",
+    "totalScore": 2.8,
+    "reviewsCount": 95,
+    "street": "Aachener Str. 196",
+    "city": "Düsseldorf",
+    "state": null,
+    "countryCode": "DE",
+    "website": "http://www.endo-duesseldorf.de/",
+    "phone": "+49 211 155857",
+    "categories": [
+      "Arzt"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=Endokrinologische%20Gemeinschaftspraxis%20am%20Aachener%20Platz%20GbR&query_place_id=ChIJtb54A-7LuEcR9BB90RuGLZo",
+    "categoryName": "Arzt"
+  },
+  {
+    "title": "Mein Direktlabor - Labor München",
+    "totalScore": 4.9,
+    "reviewsCount": 122,
+    "street": "Paul-Wassermann-Straße 1",
+    "city": "München",
+    "state": null,
+    "countryCode": "DE",
+    "website": "http://www.meindirektlabor.de/",
+    "phone": "+49 89 630238980",
+    "categories": [
+      "Medizinisches Labor"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=Mein%20Direktlabor%20-%20Labor%20M%C3%BCnchen&query_place_id=ChIJH4IsnNrfnUcRsnFt-dJ2N58",
+    "categoryName": "Medizinisches Labor"
+  },
+  {
+    "title": "Medizinisches Versorgungszentrum für Labormedizin und Mikrobiologie Ruhr GmbH (mvzlm Ruhr)",
+    "totalScore": 4.4,
+    "reviewsCount": 16,
+    "street": "Huttropstraße 58",
+    "city": "Essen",
+    "state": null,
+    "countryCode": "DE",
+    "website": "http://www.mvzlm.de/",
+    "phone": "+49 201 45152101",
+    "categories": [
+      "Medizinisches Labor",
+      "Arztpraxis"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=Medizinisches%20Versorgungszentrum%20f%C3%BCr%20Labormedizin%20und%20Mikrobiologie%20Ruhr%20GmbH%20(mvzlm%20Ruhr)&query_place_id=ChIJWSDYMzrduEcR2eOKvAuDOIA",
+    "categoryName": "Medizinisches Labor"
+  },
+  {
+    "title": "BMA-Labor",
+    "totalScore": 5,
+    "reviewsCount": 3,
+    "street": "Universitätsstraße 142",
+    "city": "Bochum",
+    "state": null,
+    "countryCode": "DE",
+    "website": "http://www.bma-labor.de/",
+    "phone": "+49 234 978300",
+    "categories": [
+      "Labor"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=BMA-Labor&query_place_id=ChIJ2ezOQxYguUcRWvx47sbQYSg",
+    "categoryName": "Labor"
+  },
+  {
+    "title": "MVZ Labor Bochum Mlb GmbH",
+    "totalScore": 2.3,
+    "reviewsCount": 15,
+    "street": "Universitätsstraße 140",
+    "city": "Bochum",
+    "state": null,
+    "countryCode": "DE",
+    "website": "https://labor-augsburg-mvz.de/laborgruppe/mvz-labor-bochum-mlb",
+    "phone": "+49 234 970670",
+    "categories": [
+      "Medizinisches Labor"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=MVZ%20Labor%20Bochum%20Mlb%20GmbH&query_place_id=ChIJG4uGehYguUcR0VECEbAVfAE",
+    "categoryName": "Medizinisches Labor"
+  },
+  {
+    "title": "Ärztliche Laborgemeinschaft Dortmund GbR",
+    "totalScore": 5,
+    "reviewsCount": 2,
+    "street": "Rosental 25",
+    "city": "Dortmund",
+    "state": null,
+    "countryCode": "DE",
+    "website": "http://laborzentrum-rosental.de/",
+    "phone": "+49 231 525062",
+    "categories": [
+      "Medizinisches Labor"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=%C3%84rztliche%20Laborgemeinschaft%20Dortmund%20GbR&query_place_id=ChIJPTPmA18XuUcRFdNszwbcKzs",
+    "categoryName": "Medizinisches Labor"
+  },
+  {
+    "title": "BIO-LABOR Hemer",
+    "totalScore": 5,
+    "reviewsCount": 15,
+    "street": "Bembergstraße 3",
+    "city": "Hemer",
+    "state": null,
+    "countryCode": "DE",
+    "website": "https://www.biolabor-hemer.de/",
+    "phone": "+49 2372 50980",
+    "categories": [
+      "Medizinisches Labor",
+      "Labor"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=BIO-LABOR%20Hemer&query_place_id=ChIJsfq-w4ZBuUcRg3SJll3r0Uw",
+    "categoryName": "Medizinisches Labor"
+  },
+  {
+    "title": "Eurofins Medizinisches Labor Iserlohn",
+    "totalScore": 3.1,
+    "reviewsCount": 19,
+    "street": "Bethanienallee 6",
+    "city": "Iserlohn",
+    "state": null,
+    "countryCode": "DE",
+    "website": "http://www.gelamed.de/",
+    "phone": "+49 2371 82560",
+    "categories": [
+      "Medizinisches Labor"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=Eurofins%20Medizinisches%20Labor%20Iserlohn&query_place_id=ChIJQdFv9wtBuUcR5xQZXePa3f4",
+    "categoryName": "Medizinisches Labor"
+  },
+  {
+    "title": "Institut für Medizinische Laboratoriumsdiagnostik (IML) Bochum GmbH",
+    "totalScore": 2.8,
+    "reviewsCount": 4,
+    "street": "Castroper Str. 45",
+    "city": "Bochum",
+    "state": null,
+    "countryCode": "DE",
+    "website": "http://www.iml-bochum.de/",
+    "phone": "+49 234 7778400",
+    "categories": [
+      "Medizinisches Labor"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=Institut%20f%C3%BCr%20Medizinische%20Laboratoriumsdiagnostik%20(IML)%20Bochum%20GmbH&query_place_id=ChIJ8USnVTzguEcRolwXDW5d24A",
+    "categoryName": "Medizinisches Labor"
+  },
+  {
+    "title": "Institut für Laboranalytik Essen-Nord GmbH",
+    "reviewsCount": null,
+    "street": "Hospitalstraße 24",
+    "city": "Essen",
+    "state": null,
+    "countryCode": "DE",
+    "phone": "+49 201 64000",
+    "categories": [
+      "Labor"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=Institut%20f%C3%BCr%20Laboranalytik%20Essen-Nord%20GmbH&query_place_id=ChIJ3TOsCGrouEcRH1LF6bPymzo",
+    "categoryName": "Labor"
+  },
+  {
+    "title": "MVZ Labor Limbach Aachen",
+    "totalScore": 3.3,
+    "reviewsCount": 23,
+    "street": "Karl-Carstens-Straße 19",
+    "city": "Würselen",
+    "state": null,
+    "countryCode": "DE",
+    "website": "https://www.labor-aachen.de/unser-labor/",
+    "phone": "+49 2405 48910",
+    "categories": [
+      "Medizinisches Labor"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=MVZ%20Labor%20Limbach%20Aachen&query_place_id=ChIJHUX5bDifwEcRc_QPyYpz8Eo",
+    "categoryName": "Medizinisches Labor"
+  },
+  {
+    "title": "MVZ Laboratoriumsmedizin Dres. med. Wisplinghoff und Kollegen",
+    "totalScore": 5,
+    "reviewsCount": 1,
+    "street": "Kurbrunnenstraße 5",
+    "city": "Aachen",
+    "state": null,
+    "countryCode": "DE",
+    "website": "https://www.wisplinghoff.de/das-labor/standort-aachen",
+    "phone": "+49 241 990920",
+    "categories": [
+      "Labor"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=MVZ%20Laboratoriumsmedizin%20Dres.%20med.%20Wisplinghoff%20und%20Kollegen&query_place_id=ChIJaVl2HpCbwEcRsJ4egvNlofQ",
+    "categoryName": "Labor"
+  },
+  {
+    "title": "Mein Direktlabor - Labor Stuttgart",
+    "totalScore": 4.9,
+    "reviewsCount": 37,
+    "street": "Leinfelder Str. 60",
+    "city": "Leinfelden-Echterdingen",
+    "state": null,
+    "countryCode": "DE",
+    "website": "https://www.meindirektlabor.de/",
+    "phone": "+49 711 6522430",
+    "categories": [
+      "Labor",
+      "Bluttest-Service",
+      "Medizinisches Labor"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=Mein%20Direktlabor%20-%20Labor%20Stuttgart&query_place_id=ChIJ_QcCStrDmUcRUVezjUPSqOY",
+    "categoryName": "Labor"
+  },
+  {
+    "title": "Mein Direktlabor - Labor Bayreuth",
+    "totalScore": 4.9,
+    "reviewsCount": 37,
+    "street": "Karl-Marx-Straße 7A",
+    "city": "Bayreuth",
+    "state": null,
+    "countryCode": "DE",
+    "website": "https://www.meindirektlabor.de/standorte/standort/labor-staber-bayreuth/",
+    "phone": "+49 921 507204566",
+    "categories": [
+      "Medizinisches Labor"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=Mein%20Direktlabor%20-%20Labor%20Bayreuth&query_place_id=ChIJW-d7HsGjoUcRrlehG1jG__g",
+    "categoryName": "Medizinisches Labor"
+  },
+  {
+    "title": "Labor Amedes",
+    "totalScore": 3,
+    "reviewsCount": 2,
+    "street": "Peterstraße 20-24",
+    "city": "Aachen",
+    "state": null,
+    "countryCode": "DE",
+    "categories": [
+      "Labor"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=Labor%20Amedes&query_place_id=ChIJ5RTgo9-ZwEcRrgox4c37L90",
+    "categoryName": "Labor"
+  },
+  {
+    "title": "Bioscientia Labor Stuttgart",
+    "totalScore": 4.8,
+    "reviewsCount": 39,
+    "street": "Leinfelder Str. 60",
+    "city": "Leinfelden-Echterdingen",
+    "state": null,
+    "countryCode": "DE",
+    "website": "https://labor-stuttgart.bioscientia.de/",
+    "phone": "+49 711 6522430",
+    "categories": [
+      "Labor",
+      "Bluttest-Service",
+      "Medizinisches Labor"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=Bioscientia%20Labor%20Stuttgart&query_place_id=ChIJzSBO5bPCmUcRXvtr3MDKUmw",
+    "categoryName": "Labor"
+  },
+  {
+    "title": "Mein Direktlabor - Labor Mainz",
+    "totalScore": 4.9,
+    "reviewsCount": 19,
+    "street": "Wallstraße 3",
+    "city": "Mainz",
+    "state": null,
+    "countryCode": "DE",
+    "website": "https://www.meindirektlabor.de/standorte/standort/labor-mainz/",
+    "phone": "+49 4961 315760860",
+    "categories": [
+      "Medizinisches Labor"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=Mein%20Direktlabor%20-%20Labor%20Mainz&query_place_id=ChIJ10fwpVaXvUcRaKTdGTJdmPU",
+    "categoryName": "Medizinisches Labor"
+  },
+  {
+    "title": "Mein Direktlabor - Labor Karlsruhe",
+    "totalScore": 4.9,
+    "reviewsCount": 47,
+    "street": "Am Rüppurrer Schloß 1",
+    "city": "Karlsruhe",
+    "state": null,
+    "countryCode": "DE",
+    "website": "https://www.meindirektlabor.de/standorte/standort/bioscientia-labor-karlsruhe/",
+    "phone": "+49 721 6277550",
+    "categories": [
+      "Labor",
+      "Medizinisches Labor"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=Mein%20Direktlabor%20-%20Labor%20Karlsruhe&query_place_id=ChIJy7OfiPUHl0cRdp1TJV8kXjI",
+    "categoryName": "Labor"
+  },
+  {
+    "title": "Bioscientia MVZ Labor Karlsruhe GmbH",
+    "totalScore": 4.6,
+    "reviewsCount": 106,
+    "street": "Am Rüppurrer Schloß 1",
+    "city": "Karlsruhe",
+    "state": null,
+    "countryCode": "DE",
+    "website": "http://labor-karlsruhe.bioscientia.de/",
+    "phone": "+49 721 6277500",
+    "categories": [
+      "Medizinisches Labor",
+      "Bluttest-Service",
+      "Labor"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=Bioscientia%20MVZ%20Labor%20Karlsruhe%20GmbH&query_place_id=ChIJXVbQQnQHl0cRygcL4mVcUDA",
+    "categoryName": "Medizinisches Labor"
+  },
+  {
+    "title": "Med Laborunion GmbH",
+    "totalScore": 4.7,
+    "reviewsCount": 141,
+    "street": "Albert-Einstein-Straße 13",
+    "city": "Reichshof",
+    "state": null,
+    "countryCode": "DE",
+    "website": "https://www.laborunion.de/",
+    "phone": "+49 2265 99290",
+    "categories": [
+      "Labor"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=Med%20Laborunion%20GmbH&query_place_id=ChIJjyupEdCwvkcR_f5-jy9noW4",
+    "categoryName": "Labor"
+  },
+  {
+    "title": "Mein Direktlabor - Labor Nürnberg",
+    "totalScore": 5,
+    "reviewsCount": 9,
+    "street": "EG / Bauteil D, Deutschherrnstraße 15-19",
+    "city": "Nürnberg",
+    "state": null,
+    "countryCode": "DE",
+    "website": "https://www.meindirektlabor.de/",
+    "phone": "+49 911 9447076",
+    "categories": [
+      "Medizinisches Labor"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=Mein%20Direktlabor%20-%20Labor%20N%C3%BCrnberg&query_place_id=ChIJffRuKkdXn0cRlNLSiyjP2hI",
+    "categoryName": "Medizinisches Labor"
+  },
+  {
+    "title": "Mein Direktlabor - Labor Kiel",
+    "totalScore": 4.9,
+    "reviewsCount": 268,
+    "street": "Laboer Weg 20A",
+    "city": "Heikendorf",
+    "state": null,
+    "countryCode": "DE",
+    "website": "https://www.meindirektlabor.de/standorte/standort/labor-kiel/",
+    "phone": "+49 431 2183866",
+    "categories": [
+      "Medizinisches Labor"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=Mein%20Direktlabor%20-%20Labor%20Kiel&query_place_id=ChIJm02NI75VskcR4j__A3uacpw",
+    "categoryName": "Medizinisches Labor"
+  },
+  {
+    "title": "City Labor",
+    "totalScore": 4.6,
+    "reviewsCount": 85,
+    "street": "Messe-Allee 23",
+    "city": "Leipzig",
+    "state": null,
+    "countryCode": "DE",
+    "website": "http://city-labor.de/",
+    "phone": "+49 341 22179500",
+    "categories": [
+      "Medizinisches Labor",
+      "Gesundheitsberater",
+      "Labor",
+      "Ernährungsberater"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=City%20Labor&query_place_id=ChIJ60FGFCH4pkcRXNZJ2-xY1bM",
+    "categoryName": "Medizinisches Labor"
+  },
+  {
+    "title": "Bioscientia MVZ Labor Mittelhessen GmbH",
+    "totalScore": 4.3,
+    "reviewsCount": 100,
+    "street": "Rudolf-Diesel-Straße 4",
+    "city": "Gießen",
+    "state": null,
+    "countryCode": "DE",
+    "website": "https://ldm-labor.de/",
+    "phone": "+49 641 300210",
+    "categories": [
+      "Labor",
+      "Medizinisches Labor"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=Bioscientia%20MVZ%20Labor%20Mittelhessen%20GmbH&query_place_id=ChIJS7PN1qhYvEcRjp3y7cQtX_0",
+    "categoryName": "Labor"
+  },
+  {
+    "title": "Laborgemeinschaft",
+    "totalScore": 5,
+    "reviewsCount": 3,
+    "street": "Großer Kolonnenweg 18 C",
+    "city": "Hannover",
+    "state": null,
+    "countryCode": "DE",
+    "phone": "+49 511 85625711",
+    "categories": [
+      "Labor"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=Laborgemeinschaft&query_place_id=ChIJvZeeHkFzsEcRKWUF84c7vOU",
+    "categoryName": "Labor"
+  },
+  {
+    "title": "Med Laborunion GmbH",
+    "totalScore": 5,
+    "reviewsCount": 3,
+    "street": "Mauritiuswall 48",
+    "city": "Köln",
+    "state": null,
+    "countryCode": "DE",
+    "phone": "+49 221 20190290",
+    "categories": [
+      "Medizinisches Labor"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=Med%20Laborunion%20GmbH&query_place_id=ChIJhV5LywElv0cRQ6E_5YCHwCM",
+    "categoryName": "Medizinisches Labor"
+  },
+  {
+    "title": "MPU - Labor Dr. Wisplinghoff",
+    "totalScore": 3.9,
+    "reviewsCount": 35,
+    "street": "Geibelstraße 2",
+    "city": "Köln",
+    "state": null,
+    "countryCode": "DE",
+    "website": "https://mpu.wisplinghoff.de/",
+    "phone": "+49 221 940505405",
+    "categories": [
+      "Medizinisches Labor"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=MPU%20-%20Labor%20Dr.%20Wisplinghoff&query_place_id=ChIJG1LAz2Mlv0cROV8ir3I9L7c",
+    "categoryName": "Medizinisches Labor"
+  },
+  {
+    "title": "MVZ Gerinnungsdiagnostik und Medizinische Genetik Essen GbR - ZOTZ | KLIMAS",
+    "totalScore": 3.7,
+    "reviewsCount": 45,
+    "street": "Rüttenscheider Str. 14",
+    "city": "Essen",
+    "state": null,
+    "countryCode": "DE",
+    "website": "http://www.zotzklimas.de/",
+    "phone": "+49 201 87892720",
+    "categories": [
+      "Arzt"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=MVZ%20Gerinnungsdiagnostik%20und%20Medizinische%20Genetik%20Essen%20GbR%20-%20ZOTZ%20%7C%20KLIMAS&query_place_id=ChIJYVxzKdDCuEcR7dzY4fST-lQ",
+    "categoryName": "Arzt"
+  },
+  {
+    "title": "Laborarztpraxis Rhein-Main MVZ GbR",
+    "totalScore": 3.5,
+    "reviewsCount": 36,
+    "street": "Berner Str. 117",
+    "city": "Frankfurt am Main",
+    "state": null,
+    "countryCode": "DE",
+    "website": "https://www.laborarztpraxis.de/",
+    "phone": "+49 69 669003900",
+    "categories": [
+      "Medizinisches Labor"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=Laborarztpraxis%20Rhein-Main%20MVZ%20GbR&query_place_id=ChIJSY6pjJ0IvUcRHdIFaIDJ7l0",
+    "categoryName": "Medizinisches Labor"
+  },
+  {
+    "title": "Mein Direktlabor - Labor Berlin-Tiergarten",
+    "totalScore": 4.6,
+    "reviewsCount": 32,
+    "street": "Lützowstraße 24-26",
+    "city": "Berlin",
+    "state": null,
+    "countryCode": "DE",
+    "website": "https://www.meindirektlabor.de/",
+    "phone": "+49 30 48526136",
+    "categories": [
+      "Medizinisches Labor"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=Mein%20Direktlabor%20-%20Labor%20Berlin-Tiergarten&query_place_id=ChIJi71qmkpRqEcRvP8Zxr2iuDI",
+    "categoryName": "Medizinisches Labor"
+  },
+  {
+    "title": "Mein Direktlabor - Labor Berlin-Spandau",
+    "totalScore": 5,
+    "reviewsCount": 12,
+    "street": "Siemensdamm 50",
+    "city": "Berlin",
+    "state": null,
+    "countryCode": "DE",
+    "website": "https://www.meindirektlabor.de/",
+    "phone": "+49 30 48526208",
+    "categories": [
+      "Medizinisches Labor"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=Mein%20Direktlabor%20-%20Labor%20Berlin-Spandau&query_place_id=ChIJ9RReYrBXqEcRhfev0DAl5Rk",
+    "categoryName": "Medizinisches Labor"
+  },
+  {
+    "title": "BMP Labor für medizinische Materialprüfung GmbH",
+    "reviewsCount": null,
+    "street": "Parkplatz, Pauwelsstraße 19",
+    "city": "Aachen",
+    "state": null,
+    "countryCode": "DE",
+    "phone": "+49 241 9632390",
+    "categories": [
+      "Labor"
+    ],
+    "url": "https://www.google.com/maps/search/?api=1&query=BMP%20Labor%20f%C3%BCr%20medizinische%20Materialpr%C3%BCfung%20GmbH&query_place_id=ChIJ7YwpFouZwEcReb1urrQ76hs",
+    "categoryName": "Labor"
+  }
+]

@@ -52,5 +52,8 @@ __pycache__/
 # scraping raw data (not in repo)
 data/raw/
 
+# intermediate pipeline data
+data/processed/
+
 # logs
 *.log

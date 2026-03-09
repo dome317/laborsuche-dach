@@ -6,7 +6,7 @@ import type { MapConfig } from '@/types/map';
 
 /**
  * Default map configuration
- * Center: Indonesia coordinates
+ * Center: DACH region
  */
 export const DEFAULT_MAP_CONFIG: MapConfig = {
   defaultCenter: [48.5, 10.5],  // DACH region center

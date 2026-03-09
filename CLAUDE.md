@@ -17,7 +17,7 @@ Basis: Fork von wellywahyudi/nextjs-leaflet-starter.
 
 ## Architektur-Regeln
 - Das Repo nutzt vanilla Leaflet (L.map, L.marker) — NIEMALS react-leaflet importieren
-- Kein shadcn/ui, kein shadcn-map — das Repo hat eigenes Komponentensystem
+- Kein shadcn-map — Radix UI Primitives (Dialog, Dropdown) werden direkt genutzt
 - TypeScript strict, keine `any`
 - GeoJSON coordinates sind [lng, lat], NICHT [lat, lng]
 - Unnötige Repo-Features (Measurement, Drawing, Context Menu) werden NICHT gelöscht, nur nicht gerendert/importiert

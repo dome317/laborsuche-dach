@@ -1,16 +1,9 @@
 import Image from "next/image";
 import { Hero } from "@/components/landing/Hero";
 import { NavigationButtons } from "@/components/landing/NavigationButtons";
-import { TechStack } from "@/components/landing/TechStack";
 
 /**
  * Landing page component (Server Component)
- *
- * Following Next.js 16 best practices:
- * - Server Component by default for better performance
- * - Only child components that need interactivity are Client Components
- * - Image optimization with Next.js Image component
- * - Optimized for dark background with light text
  */
 export default function Home() {
   return (
@@ -18,7 +11,7 @@ export default function Home() {
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
-          src="/hero-map-dach.png"
+          src="/hero-map-dach.webp"
           alt="DACH-Karte mit Laborstandorten"
           fill
           className="object-contain"
@@ -36,11 +29,6 @@ export default function Home() {
         {/* Navigation buttons */}
         <section className="w-full py-8">
           <NavigationButtons />
-        </section>
-
-        {/* Tech stack */}
-        <section className="w-full py-8">
-          <TechStack />
         </section>
       </main>
     </div>
