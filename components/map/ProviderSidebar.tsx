@@ -12,10 +12,10 @@ import {
   AlertTriangle,
   X,
   ExternalLink,
-  Shield,
   Calendar,
   Droplet,
   Copy,
+  Check,
   Bone,
 } from "lucide-react";
 import { Drawer } from "vaul";
@@ -328,6 +328,7 @@ function ProviderList() {
 // --- Provider Detail ---
 function ProviderDetail() {
   const { selectedProvider, setSelectedProviderId, userPosition } = useProviders();
+  const [phoneCopied, setPhoneCopied] = useState(false);
   if (!selectedProvider) return null;
 
   const provider = selectedProvider;
@@ -497,14 +498,6 @@ function ProviderDetail() {
 
         {/* Sticky CTA Footer */}
         <div className="px-4 py-3 border-t border-gray-100 dark:border-gray-800 space-y-3">
-          {/* Verification trust box */}
-          {isVerified && (
-            <div className="bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-300 rounded-xl px-3 py-2 text-xs flex items-center gap-2">
-              <Shield className="h-4 w-4 flex-shrink-0" />
-              <span>Daten verifiziert</span>
-            </div>
-          )}
-
           {/* Button Grid */}
           <div className="grid grid-cols-2 gap-2">
             <a
@@ -538,13 +531,21 @@ function ProviderDetail() {
                 </a>
                 {/* Desktop: readable phone number with copy */}
                 <button
-                  onClick={() => navigator.clipboard.writeText(provider.contact.phone!)}
+                  onClick={() => {
+                    navigator.clipboard.writeText(provider.contact.phone!);
+                    setPhoneCopied(true);
+                    setTimeout(() => setPhoneCopied(false), 2000);
+                  }}
                   className="hidden md:flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-medium bg-blue-600 text-white hover:bg-blue-700 transition-colors"
                   title="Telefonnummer kopieren"
                 >
                   <Phone className="h-4 w-4" />
-                  <span className="truncate">{provider.contact.phone}</span>
-                  <Copy className="h-3.5 w-3.5 flex-shrink-0 opacity-70" />
+                  <span className="truncate">{phoneCopied ? "Kopiert!" : provider.contact.phone}</span>
+                  {phoneCopied ? (
+                    <Check className="h-3.5 w-3.5 flex-shrink-0" />
+                  ) : (
+                    <Copy className="h-3.5 w-3.5 flex-shrink-0 opacity-70" />
+                  )}
                 </button>
               </div>
             ) : null}
